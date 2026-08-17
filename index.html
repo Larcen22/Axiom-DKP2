@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EverQuest DKP Metrics</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PapaParse (for the CSV loader in data.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <!-- ================= TOP NAV ================= -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <h1 class="brand"><span class="brand-icon">⚔</span> EverQuest <span class="accent">DKP Metrics</span></h1>
+      <span class="topbar-meta">Axiom · read-only · local data</span>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <nav class="side-nav" aria-label="Dashboard sections">
+        <button class="nav-link active" data-target="overview">Overview</button>
+        <button class="nav-link" data-target="standings">Raider Standings</button>
+        <button class="nav-link" data-target="loot">Loot</button>
+        <button class="nav-link" data-target="raids">Raids</button>
+      </nav>
+      <div class="sidebar-footer">
+        Item lookups via<br /><a href="https://www.pqdi.cc" target="_blank" rel="noopener">pqdi.cc</a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="content">
+
+      <!-- ========== OVERVIEW ========== -->
+      <section id="overview" class="view active">
+        <h2>Overview</h2>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-total-dkp">–</div>
+            <div class="stat-label">Total DKP Available</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-items-awarded">–</div>
+            <div class="stat-label">Items Awarded · past week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-top-earner">–</div>
+            <div class="stat-label">Top Spender</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-raiders">–</div>
+            <div class="stat-label">Active Raiders</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Recent Loot</h3>
+          <div id="loot-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="recent-loot-table" hidden>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Player</th>
+                  <th>Item</th>
+                  <th>Raid</th>
+                  <th class="num">DKP Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ITEM DATABASE ========== -->
+      <section id="items" class="view">
+        <h2>Item Database</h2>
+        <div class="panel">
+          <div class="item-search-row">
+            <input type="search" id="item-search" placeholder="Search items (e.g. Blade, Shard, Breastplate)…" />
+            <span class="panel-status" id="item-count"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="items-table">
+              <thead>
+                <tr>
+                  <th class="num">ID</th>
+                  <th>Item</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== RAIDER STANDINGS ========== -->
+      <section id="standings" class="view">
+        <h2>Raider Standings</h2>
+        <div class="panel">
+          <div id="standings-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="standings-table" hidden>
+              <thead>
+                <tr>
+                  <th class="num">#</th>
+                  <th>Raider</th>
+                  <th class="num">Active DKP</th>
+                  <th class="num">Earned</th>
+                  <th class="num">Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="standings-pager" class="pager" hidden></div>
+        </div>
+      </section>
+
+      <!-- ========== LOOT HISTORY ========== -->
+      <section id="loot" class="view">
+        <h2>Loot History</h2>
+        <div class="panel">
+          <div id="loot-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="loot-table" hidden>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Player</th>
+                  <th>Item</th>
+                  <th class="num">DKP Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="loot-pager" class="pager" hidden></div>
+        </div>
+      </section>
+
+      <!-- ========== RAID HISTORY ========== -->
+      <section id="raids" class="view">
+        <h2>Raid History</h2>
+        <div class="panel">
+          <div id="raids-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="raids-table" hidden>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Raid</th>
+                  <th class="num">DKP</th>
+                  <th>Raiders</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="raids-pager" class="pager" hidden></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    Axiom-DKP2 · client-side read-only dashboard · data from local JSON/CSV exports
+  </footer>
+</body>
+</html>
