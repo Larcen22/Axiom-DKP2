@@ -1,5 +1,5 @@
 /**
- * app.js — EverQuest DKP Metrics: navigation + rendering
+ * app.js — Axiom DKP Metrics: navigation + rendering
  */
 (() => {
   "use strict";
@@ -71,7 +71,7 @@
     `).join("");
 
     $("#recent-loot-table").hidden = rows.length === 0;
-    const status = $("#loot-status");
+    const status = $("#recent-loot-status");
     status.textContent = dated.length
       ? `Showing ${rows.length} of ${dated.length.toLocaleString()} dated awards (most recent first)`
       : "No dated loot records found.";
