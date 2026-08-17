@@ -147,6 +147,32 @@ const Data = (() => {
     }));
   }
 
+  /* ---------------- roster-export.csv ---------------- */
+
+  /**
+   * Load the roster export (one row per character).
+   * @returns {Promise<Array<object>>}
+   *   each row: { member, character, cls, level, race, mainAlt, rank,
+   *               availableDkp, earnedDkp, spentDkp, applied, memberSince }
+   */
+  async function loadRoster() {
+    const { data } = await loadCsv("roster-export.csv");
+    return data.map((r) => ({
+      member: r.MemberName || "",
+      character: r.CharacterName || "",
+      cls: r.Class || "",
+      level: Number(r.Level) || 0,
+      race: r.Race || "",
+      mainAlt: r["Main/Alt"] || "",
+      rank: r.Rank || "",
+      availableDkp: Number(r.AvailableDKP) || 0,
+      earnedDkp: Number(r.EarnedDKP) || 0,
+      spentDkp: Number(r.SpentDKP) || 0,
+      applied: r.ApplicationDate ? String(r.ApplicationDate).slice(0, 10) : "",
+      memberSince: r.MembershipDate ? String(r.MembershipDate).slice(0, 10) : "",
+    }));
+  }
+
   /* ---------------- generic CSV (PapaParse) ---------------- */
 
   /**
@@ -181,6 +207,7 @@ const Data = (() => {
     loadRaids,
     loadRaidInfo,
     loadUsers,
+    loadRoster,
     loadCsv,
     itemLink,
     escapeHtml,

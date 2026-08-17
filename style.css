@@ -242,6 +242,48 @@ th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
   box-shadow: 0 0 0 3px rgba(224, 164, 53, 0.15);
 }
 
+/* ================= ROSTER CONTROLS ================= */
+.roster-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+#roster-search {
+  flex: 1;
+  min-width: 200px;
+  max-width: 420px;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font: inherit;
+  font-size: 0.9rem;
+}
+#roster-search:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(224, 164, 53, 0.15);
+}
+.roster-filter {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.roster-filter:focus { outline: none; border-color: var(--accent); }
+
+/* sortable roster headers */
+th.sortable { cursor: pointer; user-select: none; }
+th.sortable:hover { color: var(--text); }
+th.sorted-asc::after  { content: " ↑"; color: var(--accent); }
+th.sorted-desc::after { content: " ↓"; color: var(--accent); }
+
 /* ================= FOOTER ================= */
 .site-footer {
   padding: 0.9rem 1.25rem;

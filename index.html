@@ -29,6 +29,7 @@
         <button class="nav-link active" data-target="overview">Overview</button>
         <button class="nav-link" data-target="standings">Raider Standings</button>
         <button class="nav-link" data-target="loot">Loot</button>
+        <button class="nav-link" data-target="roster">Roster</button>
         <button class="nav-link" data-target="raids">Raids</button>
       </nav>
       <div class="sidebar-footer">
@@ -146,6 +147,36 @@
             </table>
           </div>
           <div id="loot-pager" class="pager" hidden></div>
+        </div>
+      </section>
+
+      <!-- ========== ROSTER ========== -->
+      <section id="roster" class="view">
+        <h2>Roster</h2>
+        <div class="panel">
+          <div class="roster-controls">
+            <input type="search" id="roster-search" placeholder="Filter by character or member…" />
+            <select id="roster-filter-rank" class="roster-filter" aria-label="Filter by rank"></select>
+            <select id="roster-filter-mainalt" class="roster-filter" aria-label="Filter by main/alt"></select>
+            <select id="roster-filter-class" class="roster-filter" aria-label="Filter by class"></select>
+          </div>
+          <div id="roster-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="roster-table" hidden>
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort="character">Character</th>
+                  <th class="sortable" data-sort="member">Member</th>
+                  <th class="sortable" data-sort="cls">Class / Race</th>
+                  <th class="sortable" data-sort="mainAlt">Main/Alt</th>
+                  <th class="sortable" data-sort="rank">Rank</th>
+                  <th class="sortable" data-sort="memberSince">Member Since</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="roster-pager" class="pager" hidden></div>
         </div>
       </section>
 

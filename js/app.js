@@ -218,6 +218,63 @@
       `<button class="pager-btn" data-page="${lootPage + 1}"${lootPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
   }
 
+  /* ---------------- roster ---------------- */
+  const ROSTER_PAGE_SIZE = 25;
+  let rosterSorted = [];
+  let rosterPage = 1;
+
+  function renderRoster(rows) {
+    rosterSorted = [...rows].sort((a, b) =>
+      a.member.localeCompare(b.member) || a.character.localeCompare(b.character));
+    renderRosterPage(1);
+  }
+
+  function renderRosterPage(page) {
+    const totalPages = Math.max(1, Math.ceil(rosterSorted.length / ROSTER_PAGE_SIZE));
+    rosterPage = Math.min(Math.max(1, page), totalPages);
+    const start = (rosterPage - 1) * ROSTER_PAGE_SIZE;
+    const rows = rosterSorted.slice(start, start + ROSTER_PAGE_SIZE);
+
+    $("#roster-table tbody").innerHTML = rows.map((r) => `
+      <tr>
+        <td>${esc(r.character)}</td>
+        <td>${esc(r.member)}</td>
+        <td>${esc(r.cls)} · ${esc(r.race)} (${r.level})</td>
+        <td>${esc(r.mainAlt)}</td>
+        <td>${esc(r.rank)}</td>
+        <td>${r.memberSince ? esc(r.memberSince) : "—"}</td>
+      </tr>`).join("");
+
+    $("#roster-table").hidden = rows.length === 0;
+    const members = new Set(rosterSorted.map((r) => r.member)).size;
+    $("#roster-status").textContent = `${rosterSorted.length.toLocaleString()} characters · ${members.toLocaleString()} members · ` +
+      (rows.length
+        ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${rosterPage} of ${totalPages.toLocaleString()})`
+        : "no characters");
+
+    renderRosterPager(totalPages);
+  }
+
+  function renderRosterPager(totalPages) {
+    const el = $("#roster-pager");
+    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
+    el.hidden = false;
+
+    const pages = [1];
+    const lo = Math.max(2, rosterPage - 2), hi = Math.min(totalPages - 1, rosterPage + 2);
+    if (lo > 2) pages.push("…");
+    for (let p = lo; p <= hi; p++) pages.push(p);
+    if (hi < totalPages - 1) pages.push("…");
+    if (totalPages > 1) pages.push(totalPages);
+
+    el.innerHTML =
+      `<button class="pager-btn" data-page="${rosterPage - 1}"${rosterPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
+      pages.map((p) => p === "…"
+        ? `<span class="pager-ellipsis">…</span>`
+        : `<button class="pager-btn${p === rosterPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
+      `<button class="pager-btn" data-page="${rosterPage + 1}"${rosterPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
+  }
+
   /* ---------------- raid history ---------------- */
   const RAID_PAGE_SIZE = 5;
   let raidsSorted = [];
@@ -274,17 +331,19 @@
     setupNav();
 
     try {
-      const [items, loot, users, raids] = await Promise.all([
+      const [items, loot, users, raids, roster] = await Promise.all([
         Data.loadItems(),
         Data.loadLoot(),
         Data.loadUsers(),
         Data.loadRaids(),
+        Data.loadRoster(),
       ]);
 
       renderOverview(users, loot, items, raids);
       renderStandings(users);
       renderItems(items);
       renderLoot(loot, items);
+      renderRoster(roster);
       renderRaids(raids);
 
       // Paginations (delegated — pager buttons are re-created each render)
@@ -302,6 +361,11 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderLootPage(Number(btn.dataset.page), items);
+      });
+      $("#roster-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderRosterPage(Number(btn.dataset.page));
       });
 
       // Debounced item search
