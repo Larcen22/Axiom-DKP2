@@ -180,6 +180,51 @@
         </div>
       </section>
 
+      <!-- ========== MEMBER DETAIL ========== -->
+      <section id="member" class="view">
+        <button id="member-back" class="member-back" type="button">← Back to Roster</button>
+        <h2 id="member-name">Member</h2>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="member-available">–</div>
+            <div class="stat-label">Available DKP</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="member-earned">–</div>
+            <div class="stat-label">DKP Earned</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="member-spent">–</div>
+            <div class="stat-label">DKP Spent</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Characters</h3>
+          <div id="member-characters" class="member-characters"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Loot History</h3>
+          <div id="member-loot-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="member-loot-table" hidden>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Character</th>
+                  <th>Item</th>
+                  <th>Raid</th>
+                  <th class="num">DKP Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <!-- ========== RAID HISTORY ========== -->
       <section id="raids" class="view">
         <h2>Raid History</h2>

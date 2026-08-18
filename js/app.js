@@ -220,25 +220,62 @@
 
   /* ---------------- roster ---------------- */
   const ROSTER_PAGE_SIZE = 25;
-  let rosterSorted = [];
+  let rosterAll = [];
+  let rosterFiltered = [];
   let rosterPage = 1;
+  let rosterState = { search: "", rank: "", mainAlt: "", cls: "", sortKey: "member", sortDir: 1 };
 
   function renderRoster(rows) {
-    rosterSorted = [...rows].sort((a, b) =>
-      a.member.localeCompare(b.member) || a.character.localeCompare(b.character));
+    rosterAll = [...rows];
+    populateRosterFilters();
+    applyRosterFilters();
     renderRosterPage(1);
   }
 
+  function populateRosterFilters() {
+    const uniq = (key) => [...new Set(rosterAll.map((r) => r[key]).filter(Boolean))]
+      .sort((a, b) => String(a).localeCompare(String(b)));
+    const fill = (sel, label, values) => {
+      $(sel).innerHTML = `<option value="">All ${label}</option>` +
+        values.map((v) => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
+    };
+    fill("#roster-filter-rank", "rank", uniq("rank"));
+    fill("#roster-filter-mainalt", "Main/Alt", uniq("mainAlt"));
+    fill("#roster-filter-class", "class", uniq("cls"));
+  }
+
+  function applyRosterFilters() {
+    const s = rosterState;
+    const q = s.search.trim().toLowerCase();
+    const filtered = rosterAll.filter((r) => {
+      if (q && !(r.character.toLowerCase().includes(q) || r.member.toLowerCase().includes(q))) return false;
+      if (s.rank && r.rank !== s.rank) return false;
+      if (s.mainAlt && r.mainAlt !== s.mainAlt) return false;
+      if (s.cls && r.cls !== s.cls) return false;
+      return true;
+    });
+    const key = s.sortKey;
+    filtered.sort((a, b) => {
+      let av = a[key], bv = b[key];
+      let cmp;
+      if (typeof av === "number" && typeof bv === "number") cmp = av - bv;
+      else cmp = String(av ?? "").localeCompare(String(bv ?? ""));
+      if (cmp === 0) cmp = a.member.localeCompare(b.member) || a.character.localeCompare(b.character);
+      return cmp * s.sortDir;
+    });
+    rosterFiltered = filtered;
+  }
+
   function renderRosterPage(page) {
-    const totalPages = Math.max(1, Math.ceil(rosterSorted.length / ROSTER_PAGE_SIZE));
+    const totalPages = Math.max(1, Math.ceil(rosterFiltered.length / ROSTER_PAGE_SIZE));
     rosterPage = Math.min(Math.max(1, page), totalPages);
     const start = (rosterPage - 1) * ROSTER_PAGE_SIZE;
-    const rows = rosterSorted.slice(start, start + ROSTER_PAGE_SIZE);
+    const rows = rosterFiltered.slice(start, start + ROSTER_PAGE_SIZE);
 
     $("#roster-table tbody").innerHTML = rows.map((r) => `
       <tr>
         <td>${esc(r.character)}</td>
-        <td>${esc(r.member)}</td>
+        <td><a href="#member" class="member-link" data-member="${esc(r.member)}">${esc(r.member)}</a></td>
         <td>${esc(r.cls)} · ${esc(r.race)} (${r.level})</td>
         <td>${esc(r.mainAlt)}</td>
         <td>${esc(r.rank)}</td>
@@ -246,8 +283,8 @@
       </tr>`).join("");
 
     $("#roster-table").hidden = rows.length === 0;
-    const members = new Set(rosterSorted.map((r) => r.member)).size;
-    $("#roster-status").textContent = `${rosterSorted.length.toLocaleString()} characters · ${members.toLocaleString()} members · ` +
+    const members = new Set(rosterFiltered.map((r) => r.member)).size;
+    $("#roster-status").textContent = `${rosterFiltered.length.toLocaleString()} of ${rosterAll.length.toLocaleString()} characters · ${members.toLocaleString()} members · ` +
       (rows.length
         ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${rosterPage} of ${totalPages.toLocaleString()})`
         : "no characters");
@@ -273,6 +310,64 @@
         ? `<span class="pager-ellipsis">…</span>`
         : `<button class="pager-btn${p === rosterPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
       `<button class="pager-btn" data-page="${rosterPage + 1}"${rosterPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
+  }
+
+  /* ---------------- member detail ---------------- */
+  const MEMBER_LOOT_CAP = 50;
+  let db = null; // { users, loot, items, roster } — set in init()
+
+  function showView(id) {
+    document.querySelectorAll(".view").forEach((v) => v.classList.remove("active"));
+    $(`#${id}`).classList.add("active");
+    window.scrollTo({ top: 0 });
+  }
+
+  function openMember(member) {
+    if (!db) return;
+    const m = member.toLowerCase();
+    const user = db.users.find((u) => u.username.toLowerCase() === m) || null;
+    const chars = db.roster.filter((r) => r.member.toLowerCase() === m);
+    const charNames = new Set(chars.map((c) => c.character.toLowerCase()));
+
+    // Prefer the account-level DKP from users.json; fall back to roster sums.
+    const available = user ? user.activeDkp : chars.reduce((s, c) => s + c.availableDkp, 0);
+    const earned = user ? user.earned : chars.reduce((s, c) => s + c.earnedDkp, 0);
+    const spent = user ? user.spent : chars.reduce((s, c) => s + c.spentDkp, 0);
+
+    $("#member-name").textContent = member;
+    $("#member-available").textContent = available.toLocaleString();
+    $("#member-earned").textContent = earned.toLocaleString();
+    $("#member-spent").textContent = spent.toLocaleString();
+
+    $("#member-characters").innerHTML = chars.length
+      ? chars.map((c) =>
+          `<span class="member-char">${esc(c.character)} · ${esc(c.cls)} (${c.level}) · ${esc(c.mainAlt || "—")}</span>`
+        ).join("")
+      : "<span class=\"panel-status\">No roster characters found.</span>";
+
+    const memberLoot = db.loot.filter((l) => charNames.has(String(l.player).toLowerCase()));
+    memberLoot.sort((a, b) => {
+      if (a.date && b.date) return b.date.localeCompare(a.date);
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return 0;
+    });
+    const shown = memberLoot.slice(0, MEMBER_LOOT_CAP);
+    $("#member-loot-table tbody").innerHTML = shown.map((l) => `
+      <tr>
+        <td>${l.date ? esc(l.date) : "—"}</td>
+        <td>${esc(l.player)}</td>
+        <td>${Data.itemLink(l.item, db.items.byName)}</td>
+        <td>${l.raid ? esc(l.raid) : "—"}</td>
+        <td class="num">${l.dkpSpent}</td>
+      </tr>`).join("");
+    $("#member-loot-table").hidden = shown.length === 0;
+    $("#member-loot-status").textContent = memberLoot.length
+      ? `${memberLoot.length.toLocaleString()} awards` +
+        (memberLoot.length > MEMBER_LOOT_CAP ? ` · showing first ${MEMBER_LOOT_CAP}` : "")
+      : "No loot awards found.";
+
+    showView("member");
   }
 
   /* ---------------- raid history ---------------- */
@@ -345,6 +440,7 @@
       renderLoot(loot, items);
       renderRoster(roster);
       renderRaids(raids);
+      db = { users, loot, items, roster };
 
       // Paginations (delegated — pager buttons are re-created each render)
       $("#raids-pager").addEventListener("click", (e) => {
@@ -366,6 +462,58 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderRosterPage(Number(btn.dataset.page));
+      });
+
+      // Roster search + filters (debounced search; instant selects)
+      let rosterTimer;
+      $("#roster-search").addEventListener("input", (e) => {
+        clearTimeout(rosterTimer);
+        rosterTimer = setTimeout(() => {
+          rosterState.search = e.target.value;
+          applyRosterFilters();
+          renderRosterPage(1);
+        }, 200);
+      });
+      $("#roster-filter-rank").addEventListener("change", (e) => {
+        rosterState.rank = e.target.value;
+        applyRosterFilters();
+        renderRosterPage(1);
+      });
+      $("#roster-filter-mainalt").addEventListener("change", (e) => {
+        rosterState.mainAlt = e.target.value;
+        applyRosterFilters();
+        renderRosterPage(1);
+      });
+      $("#roster-filter-class").addEventListener("change", (e) => {
+        rosterState.cls = e.target.value;
+        applyRosterFilters();
+        renderRosterPage(1);
+      });
+
+      // Sortable roster headers (delegated on the persistent thead)
+      $("#roster-table thead").addEventListener("click", (e) => {
+        const th = e.target.closest("th.sortable");
+        if (!th) return;
+        const key = th.dataset.sort;
+        if (rosterState.sortKey === key) rosterState.sortDir *= -1;
+        else { rosterState.sortKey = key; rosterState.sortDir = 1; }
+        applyRosterFilters();
+        renderRosterPage(1);
+      });
+
+      // Member drill-down: delegated on the persistent roster tbody
+      $("#roster-table tbody").addEventListener("click", (e) => {
+        const link = e.target.closest(".member-link");
+        if (!link) return;
+        e.preventDefault();
+        openMember(link.dataset.member);
+      });
+
+      // Back from member page to the roster view
+      $("#member-back").addEventListener("click", () => {
+        showView("roster");
+        document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
+        document.querySelector('.nav-link[data-target="roster"]')?.classList.add("active");
       });
 
       // Debounced item search
