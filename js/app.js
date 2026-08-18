@@ -160,6 +160,8 @@
   /* ---------------- loot history ---------------- */
   const LOOT_PAGE_SIZE = 25;
   let lootSorted = [];
+  let lootFiltered = [];
+  let lootSearch = "";
   let lootPage = 1;
 
   function renderLoot(loot, items) {
@@ -170,14 +172,25 @@
       if (b.date) return 1;
       return 0;
     });
+    applyLootFilter();
     renderLootPage(1, items);
   }
 
+  function applyLootFilter() {
+    const q = lootSearch.trim().toLowerCase();
+    lootFiltered = q
+      ? lootSorted.filter((l) =>
+          (l.player && l.player.toLowerCase().includes(q)) ||
+          (l.item && l.item.toLowerCase().includes(q)) ||
+          (l.raid && l.raid.toLowerCase().includes(q)))
+      : lootSorted;
+  }
+
   function renderLootPage(page, items) {
-    const totalPages = Math.max(1, Math.ceil(lootSorted.length / LOOT_PAGE_SIZE));
+    const totalPages = Math.max(1, Math.ceil(lootFiltered.length / LOOT_PAGE_SIZE));
     lootPage = Math.min(Math.max(1, page), totalPages);
     const start = (lootPage - 1) * LOOT_PAGE_SIZE;
-    const rows = lootSorted.slice(start, start + LOOT_PAGE_SIZE);
+    const rows = lootFiltered.slice(start, start + LOOT_PAGE_SIZE);
 
     $("#loot-table tbody").innerHTML = rows.map((l) => `
       <tr>
@@ -188,11 +201,12 @@
       </tr>`).join("");
 
     $("#loot-table").hidden = rows.length === 0;
-    const undated = lootSorted.filter((l) => !l.date).length;
-    $("#loot-status").textContent = `${lootSorted.length.toLocaleString()} loot awards · newest first · ` +
+    const undated = lootFiltered.filter((l) => !l.date).length;
+    const searched = lootSearch.trim() ? ` · matching “${lootSearch.trim()}”` : "";
+    $("#loot-status").textContent = `${lootFiltered.length.toLocaleString()} loot awards · newest first${searched} · ` +
       (rows.length
         ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${lootPage} of ${totalPages.toLocaleString()})`
-        : "no loot") +
+        : "no matches") +
       (undated ? ` · ${undated.toLocaleString()} undated` : "");
 
     renderLootPager(totalPages);
@@ -457,6 +471,17 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderLootPage(Number(btn.dataset.page), items);
+      });
+
+      // Loot search (debounced)
+      let lootTimer;
+      $("#loot-search").addEventListener("input", (e) => {
+        clearTimeout(lootTimer);
+        lootTimer = setTimeout(() => {
+          lootSearch = e.target.value;
+          applyLootFilter();
+          renderLootPage(1, items);
+        }, 200);
       });
       $("#roster-pager").addEventListener("click", (e) => {
         const btn = e.target.closest(".pager-btn");

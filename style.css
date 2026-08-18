@@ -249,7 +249,8 @@ th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
   align-items: center;
   gap: 0.6rem;
 }
-#roster-search {
+#roster-search,
+#loot-search {
   flex: 1;
   min-width: 200px;
   max-width: 420px;
@@ -261,7 +262,8 @@ th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
   font: inherit;
   font-size: 0.9rem;
 }
-#roster-search:focus {
+#roster-search:focus,
+#loot-search:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(224, 164, 53, 0.15);
