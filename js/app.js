@@ -6,8 +6,8 @@
 
   const $ = (sel) => document.querySelector(sel);
   const esc = Data.escapeHtml;
-  const RECENT_LOOT_COUNT = 15;
   const ITEMS_RENDER_CAP = 100;
+  const RECENT_LOOT_PAGE_SIZE = 25;
   const STANDINGS_PAGE_SIZE = 25;
 
   /* ---------------- sidebar navigation ---------------- */
@@ -28,6 +28,9 @@
   }
 
   /* ---------------- overview ---------------- */
+  let recentLootAll = [];
+  let recentLootPage = 1;
+
   function renderOverview(users, loot, items, raids) {
     // Stat cards
     const totalDkpAvailable = users.reduce((s, u) => s + u.activeDkp, 0);
@@ -56,9 +59,17 @@
     setStat("stat-top-earner", topSpender ? topSpender.username : "–");
     setStat("stat-raiders", activeRaiders.toLocaleString());
 
-    // Recent loot — newest first (dates resolved via raids.json in data.js)
-    const dated = loot.filter((l) => l.date).sort((a, b) => b.date.localeCompare(a.date));
-    const rows = dated.slice(0, RECENT_LOOT_COUNT);
+    // Recent loot — all awards in the past 7 days, newest first (dates resolved via raids.json in data.js)
+    recentLootAll = loot.filter((l) => l.date && l.date >= cutoffStr)
+      .sort((a, b) => b.date.localeCompare(a.date));
+    renderRecentLootPage(1, items);
+  }
+
+  function renderRecentLootPage(page, items) {
+    const totalPages = Math.max(1, Math.ceil(recentLootAll.length / RECENT_LOOT_PAGE_SIZE));
+    recentLootPage = Math.min(Math.max(1, page), totalPages);
+    const start = (recentLootPage - 1) * RECENT_LOOT_PAGE_SIZE;
+    const rows = recentLootAll.slice(start, start + RECENT_LOOT_PAGE_SIZE);
 
     $("#recent-loot-table tbody").innerHTML = rows.map((l) => `
       <tr>
@@ -71,10 +82,31 @@
     `).join("");
 
     $("#recent-loot-table").hidden = rows.length === 0;
-    const status = $("#recent-loot-status");
-    status.textContent = dated.length
-      ? `Showing ${rows.length} of ${dated.length.toLocaleString()} dated awards (most recent first)`
-      : "No dated loot records found.";
+    $("#recent-loot-status").textContent = recentLootAll.length
+      ? `Showing ${start + 1}–${start + rows.length.toLocaleString()} of ${recentLootAll.length.toLocaleString()} awards from the past 7 days (page ${recentLootPage} of ${totalPages.toLocaleString()})`
+      : "No loot awards in the past 7 days.";
+
+    renderRecentLootPager(totalPages);
+  }
+
+  function renderRecentLootPager(totalPages) {
+    const el = $("#recent-loot-pager");
+    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
+    el.hidden = false;
+
+    const pages = [1];
+    const lo = Math.max(2, recentLootPage - 2), hi = Math.min(totalPages - 1, recentLootPage + 2);
+    if (lo > 2) pages.push("…");
+    for (let p = lo; p <= hi; p++) pages.push(p);
+    if (hi < totalPages - 1) pages.push("…");
+    pages.push(totalPages);
+
+    el.innerHTML =
+      `<button class="pager-btn" data-page="${recentLootPage - 1}"${recentLootPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
+      pages.map((p) => p === "…"
+        ? `<span class="pager-ellipsis">…</span>`
+        : `<button class="pager-btn${p === recentLootPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
+      `<button class="pager-btn" data-page="${recentLootPage + 1}"${recentLootPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
   }
 
   /* ---------------- item database ---------------- */
@@ -471,6 +503,11 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderLootPage(Number(btn.dataset.page), items);
+      });
+      $("#recent-loot-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderRecentLootPage(Number(btn.dataset.page), items);
       });
 
       // Loot search (debounced)
