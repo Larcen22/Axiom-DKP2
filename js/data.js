@@ -74,10 +74,25 @@ const Data = (() => {
 
   /* ---------------- raids.json ---------------- */
 
+  // Shared cache: loadRaidInfo() (via loadLoot) and loadRaids() both need this file;
+  // without it the ~8 MB JSON is fetched + parsed twice per page load.
+  let raidsPromise = null;
+  function fetchRaids() {
+    if (!raidsPromise) {
+      raidsPromise = (async () => {
+        const data = await fetchJson("raids.json");
+        if (!Array.isArray(data.raids)) throw new Error("raids.json: expected { raids: [...] }");
+        return data;
+      })();
+      // Don't cache failures — a future retry can re-fetch.
+      raidsPromise.catch(() => { raidsPromise = null; });
+    }
+    return raidsPromise;
+  }
+
   /** @returns {Promise<Map<string, {date: string|null, name: string}>>} raid_id -> {date, name} */
   async function loadRaidInfo() {
-    const data = await fetchJson("raids.json");
-    if (!Array.isArray(data.raids)) throw new Error("raids.json: expected { raids: [...] }");
+    const data = await fetchRaids();
     const map = new Map();
     for (const raid of data.raids) {
       if (raid.raid_id) map.set(raid.raid_id, {
@@ -120,8 +135,7 @@ const Data = (() => {
    * @returns {Promise<Array<{ date: string|null, name: string, dkpValue: number, attendees: string[] }>>}
    */
   async function loadRaids() {
-    const data = await fetchJson("raids.json");
-    if (!Array.isArray(data.raids)) throw new Error("raids.json: expected { raids: [...] }");
+    const data = await fetchRaids();
     return data.raids.map((r) => ({
       date: r.date ? String(r.date).slice(0, 10) : null,
       name: r.raid_name || "",

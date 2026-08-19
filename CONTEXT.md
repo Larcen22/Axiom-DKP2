@@ -72,7 +72,7 @@ Key design points:
 | `itemLink(name, byName)` | Returns a safe HTML anchor to pqdi.cc, or escaped text fallback. |
 | `escapeHtml(str)` | Escapes `& < > " '`. |
 
-Note: `loadLoot()` and `loadRaids()` each fetch `raids.json` independently (no shared cache) — two ~8 MB fetches per page load.
+Note: ~~`loadLoot()` and `loadRaids()` each fetch `raids.json` independently~~ — **fixed**: both go through a shared cached promise (`fetchRaids()`, resets on failure so retries re-fetch), so raids.json is fetched + parsed once per page load.
 
 ---
 
@@ -136,7 +136,7 @@ Constants: `ITEMS_RENDER_CAP = 100`, `STANDINGS_PAGE_SIZE = 25`, `LOOT_PAGE_SIZE
 - ~~Duplicate `id="loot-status"`~~ — **fixed**: Overview panel now uses `#recent-loot-status`; previously the Loot History status line was written into the Overview panel and its own status stayed "Loading…" forever.
 - ~~`renderOverview` required the `raids` argument~~ — **fixed**: signature is now `renderOverview(users, loot, items, raids, roster)`; all five args are required (`raids` for Active Raiders / Avg Raid Size, `roster` for Applicants) and `init()` passes them.
 - `transactions.json` is in the repo but referenced by no code (dead data).
-- `raids.json` is fetched **twice** per load (`loadRaidInfo()` and `loadRaids()`) with no shared cache — ~16 MB of redundant parsing.
+- ~~`raids.json` is fetched **twice** per load~~ — **fixed**: `fetchRaids()` caches the fetch promise; one ~8 MB fetch + parse per page load.
 - Four nearly identical pager implementations (`renderStandingsPager`, `renderLootPager`, `renderRosterPager`, `renderRaidsPager`) — could be one generic helper.
 - No tests, no package.json, no bundler. Only external dependency is PapaParse via CDN.
 - Item↔loot join is name-based; a loot item not present in `items.json` renders as unlinked text.
