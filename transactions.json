@@ -17773,6 +17773,15 @@
       "transaction_amount": 1,
       "reason": "VT kite assistance - 8/13",
       "date": "2026-08-14T06:49:00.273089+00:00"
+    },
+    {
+      "transaction_id": "2369089c-1d37-40cb-870d-789eee7a99b3",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "username": "Poppernug",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-08-19T00:23:38.764706+00:00"
     }
   ]
 }

@@ -58695,6 +58695,206 @@
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "raid_id": "69a6cc57-78cf-4e9a-bc84-78d4364bb0d4",
       "item_dkp_value": 7
+    },
+    {
+      "item": "Brother Xave's Headband",
+      "character_id": "6f06a35f-bf32-4b72-bcf1-38c8970ed10c",
+      "character_name": "Kelon",
+      "username_id": "2b7d4c65-2458-46da-aab3-0dfdb934fcdc",
+      "raid_id": "1437960a-774b-45cd-8f02-0b8ce6366c49",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Maclaer's Boots of Silence",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "1437960a-774b-45cd-8f02-0b8ce6366c49",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Hobart's War Helmet",
+      "character_id": "18bf01c7-7722-4533-a91f-8813c0504f9e",
+      "character_name": "Bailler",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "1437960a-774b-45cd-8f02-0b8ce6366c49",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Solist's Earring of Insight",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "1437960a-774b-45cd-8f02-0b8ce6366c49",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "539c311f-eb21-4ecb-ae98-6cadf92bb516",
+      "character_name": "Daluna",
+      "username_id": "d50788cc-0f1d-4539-9c20-a273d60b61c8",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Yttrium Wrapped Leggings",
+      "character_id": "61363371-0d3a-44f9-87e4-a2e2574155ce",
+      "character_name": "Killman",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Glowing Amber Band",
+      "character_id": "a631f65b-0b1b-4603-96fb-ac7f2edb63da",
+      "character_name": "Ahmezu",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Yttrium Wrapped Sleeves",
+      "character_id": "f4476953-bc6c-444d-867b-07ecc1a53c2c",
+      "character_name": "Rhettsu",
+      "username_id": "aa950297-325a-4763-addf-bef51734b701",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Veil of Hidden Thought",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Sleeves of Elemental Auras",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shard from Unfathomable Depths",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ancient Burrower Hide Tunic",
+      "character_id": "18bf01c7-7722-4533-a91f-8813c0504f9e",
+      "character_name": "Bailler",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Bile Drenched Flesh Robe",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "75ef17a8-fbf3-4720-aeac-e5caf98671ac",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Windspeeder",
+      "character_id": "09a5828b-8a4d-4304-ac08-04853ea3a0da",
+      "character_name": "Sever",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Geomantic Focus",
+      "character_id": "420c08c2-029f-4ae3-8a53-ec3ca34efd05",
+      "character_name": "Bigglesworth",
+      "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Scorched Silver Pauldrons",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Khalshazar",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Wistful Tunic of the Void",
+      "character_id": "f66e3fdc-c068-4daa-89ee-d02a6e99d369",
+      "character_name": "Feyah",
+      "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Opaline Charm",
+      "character_id": "74c0ac37-6ffd-41ec-8a0e-61604d1b857f",
+      "character_name": "Tildaria",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "93eec341-dbac-48b9-b654-ca726923f1c2",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Grey Dusted Wraps",
+      "character_id": "6c727a01-6bd6-41f4-a9bc-7285f4748811",
+      "character_name": "Ramphis",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "raid_id": "41e190ed-5c5b-4064-9cff-50e44400a974",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Shield of the Creator",
+      "character_id": "c52cdb1c-e475-442c-983a-2ca19d6f6381",
+      "character_name": "Redonkulous",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "41e190ed-5c5b-4064-9cff-50e44400a974",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Willful Dirk of Domination",
+      "character_id": "420c08c2-029f-4ae3-8a53-ec3ca34efd05",
+      "character_name": "Bigglesworth",
+      "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+      "raid_id": "41e190ed-5c5b-4064-9cff-50e44400a974",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ivory Crystal Greaves",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "298be186-7e05-492e-903c-a0f1bf7a3215",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Blackout",
+      "character_id": "f4476953-bc6c-444d-867b-07ecc1a53c2c",
+      "character_name": "Rhettsu",
+      "username_id": "aa950297-325a-4763-addf-bef51734b701",
+      "raid_id": "298be186-7e05-492e-903c-a0f1bf7a3215",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Ivory Crystal Greaves",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "298be186-7e05-492e-903c-a0f1bf7a3215",
+      "item_dkp_value": 1
     }
   ]
 }

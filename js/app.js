@@ -462,6 +462,7 @@
         <td>${esc(r.name)}</td>
         <td class="num">${r.dkpValue}</td>
         <td class="raid-attendees">${r.attendees.map(esc).join(", ")}</td>
+        <td class="num">${r.attendees.length}</td>
       </tr>`).join("");
 
     $("#raids-table").hidden = rows.length === 0;
