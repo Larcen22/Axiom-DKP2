@@ -47,7 +47,7 @@ Key mechanics:
 | `loadRaidInfo()` | `Map<raid_id, { date: "YYYY-MM-DD" \| null, name }>` for loot resolution. |
 | `loadLoot()` | Normalized rows `{ date?, player, item, raid?, dkpSpent:Number }` (date = own ?? raid date; `dkpSpent` = `item_dkp_value`). |
 | `loadRaids()` | `[{ date, name, dkpValue, attendees:string[], attendeeUserIds:string[] }]` — attendees = character names, ids = owner ids. |
-| `loadUsers()` | `{ username, activeDkp, earned, spent }`. |
+| `loadUsers()` | `{ username, usernameId, activeDkp, earned, spent }`. |
 | `loadRoster()` | CSV → `{ member, character, cls, level, race, mainAlt, rank, availableDkp, earnedDkp, spentDkp, applied, memberSince }` (dates truncated to `YYYY-MM-DD`). |
 | `itemLink(name)`, `escapeHtml(str)` | pqdi.cc anchor with text fallback; escapes `& < > " '`. |
 
@@ -77,7 +77,7 @@ Key mechanics:
 ## DKP semantics
 
 - **Earned** per raid attendance (raid has `raid_dkp_value`); **spent** = Σ `item_dkp_value` on awarded loot; **available** = earned − spent (+ `dkp_adjustments`).
-- Joins: `users[].username_id ↔ loot[].username_id / raids[].attendees[].username_id`; `loot[].raid_id ↔ raids[].raid_id`; **loot item ↔ items by name string** (hence the `byName` map).
+- Joins: `users[].username_id ↔ loot[].character_name / raids[].attendees[].character_name`; `loot[].raid_id ↔ raids[].raid_id`; **loot item ↔ items by name string** (hence the `byName` map).
 - `roster-export.csv` duplicates users/roster info in a flatter per-character form; its DKP columns are normalized but not displayed.
 - IDs are opaque (UUIDs for loot/raids/users, numeric game ids for items). Data spans 2024-10 → mid-2026 (~1,787 raids / 304 users / 7,284 loot rows); the 7-day windows have live data — trust the data, not expectations.
 
