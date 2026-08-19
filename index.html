@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1015" />
   <title>Axiom DKP Metrics</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -26,11 +27,21 @@
     <!-- ================= SIDEBAR ================= -->
     <aside class="sidebar">
       <nav class="side-nav" aria-label="Dashboard sections">
-        <button class="nav-link active" data-target="overview">Overview</button>
-        <button class="nav-link" data-target="standings">Raider Standings</button>
-        <button class="nav-link" data-target="loot">Loot</button>
-        <button class="nav-link" data-target="roster">Roster</button>
-        <button class="nav-link" data-target="raids">Raids</button>
+        <button class="nav-link active" data-target="overview" data-short="Overview">
+          <span class="nav-icon" aria-hidden="true">📊</span><span class="nav-label">Overview</span>
+        </button>
+        <button class="nav-link" data-target="standings" data-short="Standings">
+          <span class="nav-icon" aria-hidden="true">🏆</span><span class="nav-label">Raider Standings</span>
+        </button>
+        <button class="nav-link" data-target="loot" data-short="Loot">
+          <span class="nav-icon" aria-hidden="true">💰</span><span class="nav-label">Loot</span>
+        </button>
+        <button class="nav-link" data-target="roster" data-short="Roster">
+          <span class="nav-icon" aria-hidden="true">👥</span><span class="nav-label">Roster</span>
+        </button>
+        <button class="nav-link" data-target="raids" data-short="Raids">
+          <span class="nav-icon" aria-hidden="true">⚔️</span><span class="nav-label">Raids</span>
+        </button>
       </nav>
       <div class="sidebar-footer">
         Item lookups via<br /><a href="https://www.pqdi.cc" target="_blank" rel="noopener">pqdi.cc</a>

@@ -104,6 +104,9 @@ a:hover { text-decoration: underline; }
   color: var(--text-dim);
   font: inherit;
   font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   text-align: left;
   padding: 0.6rem 0.8rem;
   border-radius: 8px;
@@ -379,7 +382,45 @@ th.sorted-desc::after { content: " ↓"; color: var(--accent); }
   .brand { font-size: 1rem; }
 }
 
-@media (max-width: 480px) {
-  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
-  .stat-value { font-size: 1.2rem; }
+/* ================= MOBILE BOTTOM TAB BAR (≤700px) ================= */
+@media (max-width: 700px) {
+  /* dissolve the sidebar box so content starts at the top;
+     .side-nav escapes flow as a fixed bottom bar below */
+  .sidebar { display: contents; }
+
+  .side-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    flex-direction: row;
+    background: var(--bg-panel);
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .side-nav .nav-link {
+    flex: 1 1 0;          /* five equal-width tabs */
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0;
+    font-size: 0.7rem;
+  }
+  .side-nav .nav-icon { font-size: 1.15rem; line-height: 1; }
+  .side-nav .nav-label { display: none; }   /* swap long label for data-short */
+  .side-nav .nav-link::after { content: attr(data-short); }
+
+  /* keep the last pager row clear of the tab bar */
+  .content { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 }
+
+@media (max-width: 700px) {
+  #item-search,
+  #roster-search,
+  #loot-search {
+    font-size: 16px;
+  }
+}
+
