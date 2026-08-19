@@ -31,7 +31,7 @@
   let recentLootAll = [];
   let recentLootPage = 1;
 
-  function renderOverview(users, loot, items, raids) {
+  function renderOverview(users, loot, items, raids, roster) {
     // Stat cards
     const totalDkpAvailable = users.reduce((s, u) => s + u.activeDkp, 0);
     const topSpender = users.reduce(
@@ -45,19 +45,43 @@
     const cutoffStr = `${cutoff.getFullYear()}-${String(cutoff.getMonth() + 1).padStart(2, "0")}-${String(cutoff.getDate()).padStart(2, "0")}`;
     const itemsLastWeek = loot.filter((l) => l.date && l.date >= cutoffStr).length;
 
-    // Unique raiders who attended a raid in the past 7 days (from raids.json attendees)
+    // Unique members who attended a raid in the past 7 days (from raids.json attendees).
+    // Counted by owner (username_id), so a member on multiple characters counts once.
     const recentRaiders = new Set();
     for (const r of raids) {
       if (r.date && r.date >= cutoffStr) {
-        for (const name of r.attendees) recentRaiders.add(name);
+        for (const uid of r.attendeeUserIds) recentRaiders.add(uid);
       }
     }
     const activeRaiders = recentRaiders.size;
+
+    // Average raid size over the past 30 days (attendees per raid). Dates are "YYYY-MM-DD".
+    const cutoff30 = new Date();
+    cutoff30.setDate(cutoff30.getDate() - 30);
+    const cutoff30Str = `${cutoff30.getFullYear()}-${String(cutoff30.getMonth() + 1).padStart(2, "0")}-${String(cutoff30.getDate()).padStart(2, "0")}`;
+    let recentRaidCount = 0, recentRaidAttendees = 0;
+    for (const r of raids) {
+      if (r.date && r.date >= cutoff30Str) {
+        recentRaidCount++;
+        recentRaidAttendees += r.attendees.length;
+      }
+    }
+    const avgRaidSize = recentRaidCount ? recentRaidAttendees / recentRaidCount : null;
+
+    // New members: unique roster members whose application date falls in the past 30 days.
+    // (A member on multiple characters counts once.)
+    const newMembers = new Set(
+      roster.filter((r) => r.applied && r.applied >= cutoff30Str).map((r) => r.member)
+    ).size;
 
     setStat("stat-total-dkp", totalDkpAvailable.toLocaleString());
     setStat("stat-items-awarded", itemsLastWeek.toLocaleString());
     setStat("stat-top-earner", topSpender ? topSpender.username : "–");
     setStat("stat-raiders", activeRaiders.toLocaleString());
+    setStat("stat-avg-raid-size", avgRaidSize != null
+      ? Math.round(avgRaidSize).toLocaleString()
+      : "–");
+    setStat("stat-new-members", newMembers.toLocaleString());
 
     // Recent loot — all awards in the past 7 days, newest first (dates resolved via raids.json in data.js)
     recentLootAll = loot.filter((l) => l.date && l.date >= cutoffStr)
@@ -480,7 +504,7 @@
         Data.loadRoster(),
       ]);
 
-      renderOverview(users, loot, items, raids);
+      renderOverview(users, loot, items, raids, roster);
       renderStandings(users);
       renderItems(items);
       renderLoot(loot, items);

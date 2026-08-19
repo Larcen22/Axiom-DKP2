@@ -1,2 +1,7 @@
 .pi/
 .pi/.vscode-ready
+users.json
+transactions.json
+roster-export.csv
+loot.json
+raids.json

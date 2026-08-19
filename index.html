@@ -63,6 +63,21 @@
           </div>
         </div>
 
+        <!-- Second row: same auto-fit template + 2 spacers = same item count as the row above,
+             so the cards match the others' width and the top cards never reflow. -->
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-avg-raid-size">–</div>
+            <div class="stat-label">Avg Raid Size · past 30d</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-new-members">–</div>
+            <div class="stat-label">New Members · past 30d</div>
+          </div>
+          <div class="stat-spacer"></div>
+          <div class="stat-spacer"></div>
+        </div>
+
         <div class="panel">
           <h3>Recent Loot</h3>
           <div id="recent-loot-status" class="panel-status">Loading…</div>

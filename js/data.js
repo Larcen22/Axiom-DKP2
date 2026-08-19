@@ -127,6 +127,7 @@ const Data = (() => {
       name: r.raid_name || "",
       dkpValue: Number(r.raid_dkp_value) || 0,
       attendees: (r.attendees || []).map((a) => a.character_name).filter(Boolean),
+      attendeeUserIds: (r.attendees || []).map((a) => a.username_id).filter(Boolean),
     }));
   }
 
@@ -141,6 +142,7 @@ const Data = (() => {
     if (!Array.isArray(data.users)) throw new Error("users.json: expected { users: [...] }");
     return data.users.map((u) => ({
       username: u.username,
+      usernameId: u.username_id,
       activeDkp: Number(u.available_dkp) || 0,
       earned: Number(u.dkp_earned) || 0,
       spent: Number(u.dkp_spent) || 0,
