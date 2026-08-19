@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  --color-bg: #0d1015;
+  --color-bg-panel: #151a22;
+  --color-bg-card: #1b222d;
+  --color-bg-hover: #212a37;
+  --color-border: #2a3342;
+  --color-text: #d8dfe9;
+  --color-text-muted: #8b96a5;
+  --color-accent: #e0a435;               /* gold */
+  --color-accent-blue: #4fa3e0;          /* steel blue */
+  --color-accent-soft: rgba(224, 164, 53, 0.10);
+  --color-success: #5cbf7a;
+  --color-error: #e0605a;
+  
+  /* Spacing & Shapes */
+  --radius: 10px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Layout Dimensions */
+  --header-height: 56px;
+  --sidebar-width: 220px;
+}

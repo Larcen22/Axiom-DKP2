@@ -5,6 +5,10 @@
   "use strict";
 
   const $ = (sel) => document.querySelector(sel);
+  const setStat = (id, value) => {
+    const el = $(`#${id}`);
+    if (el) el.textContent = value;
+  };
   const esc = Data.escapeHtml;
   const ITEMS_RENDER_CAP = 100;
   const RECENT_LOOT_PAGE_SIZE = 25;
@@ -23,8 +27,24 @@
     );
   }
 
-  function setStat(id, text) {
-    $(`#${id}`).textContent = text;
+  function renderPager(containerId, currentPage, totalPages) {
+    const el = $(`#${containerId}`);
+    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
+    el.hidden = false;
+
+    const pages = [1];
+    const lo = Math.max(2, currentPage - 2), hi = Math.min(totalPages - 1, currentPage + 2);
+    if (lo > 2) pages.push("…");
+    for (let p = lo; p <= hi; p++) pages.push(p);
+    if (hi < totalPages - 1) pages.push("…");
+    if (totalPages > 1) pages.push(totalPages);
+
+    el.innerHTML =
+      `<button class="pager-btn" data-page="${currentPage - 1}"${currentPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
+      pages.map((p) => p === "…"
+        ? `<span class="pager-ellipsis">…</span>`
+        : `<button class="pager-btn${p === currentPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
+      `<button class="pager-btn" data-page="${currentPage + 1}"${currentPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
   }
 
   /* ---------------- overview ---------------- */

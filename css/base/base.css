@@ -1,0 +1,28 @@
+/* ================= BASE RESET & TYPOGRAPHY ================= */
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  font-size: 16px; 
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { 
+  color: var(--color-accent-blue); 
+  text-decoration: none; 
+}
+a:hover { 
+  text-decoration: underline; 
+}
