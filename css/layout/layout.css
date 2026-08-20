@@ -1,3 +1,46 @@
+/* ================= TOP BAR ================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-border);
+}
+.topbar-inner {
+  max-width: 1400px; /* matches .layout */
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* brand centered, not left-adjusted */
+  position: relative;
+}
+.brand {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* guild icon is circular (Discord style) */
+  object-fit: cover;
+}
+.accent { color: var(--color-accent); }
+.topbar-meta {
+  position: absolute;
+  right: 1.25rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+@media (max-width: 640px) {
+  .topbar-meta { display: none; }
+}
+
 /* ================= LAYOUT SHELL ================= */
 .layout {
   flex: 1;
