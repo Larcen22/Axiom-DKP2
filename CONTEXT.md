@@ -43,7 +43,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 ## Key Mechanics
 
 - **Date resolution:** Loot rows missing `date` resolve via `raid_id → raids[].date` (truncated `YYYY-MM-DD`).
-- **Item links:** `Data.itemLink(itemName, byName)` joins by **name string** via `byName: Map<lowercase NAME, id>` → `https://www.pqdi.cc/item/{id}`; falls back to escaped plain text when the name is unknown.
+- **Item links:** `Data.itemLink(itemName, byName)` joins by **name string** via `byName: Map<lowercase NAME, id>` → `https://www.pqdi.cc/item/{id}`; falls back to escaped plain text when the name is unknown. Names mapping to **multiple ids are ambiguous** and excluded from `byName` (rendered as plain text — owner decision: never guess an expansion); `loadItems()` also returns them in an `ambiguous: Set<string>`.
 - **Security:** `Data.escapeHtml` is applied to all user-generated data rendered into `innerHTML`.
 - **Pagination:** Client-side via event delegation on `#*-pager` containers. Page sizes: 25 (most views), 5 (raids).
 - **Errors:** Load failures replace `.panel-status` elements with an error message.
@@ -66,7 +66,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 - **Views:** Five sidebar views — Overview, Standings, Loot, Roster, Raids — plus Member Detail (drill-down, not in the nav).
 - **Overview Stats:** Active DKP (summed over members seen on a raid past 30d), Items Awarded (past week), Avg DKP Spent · past week, Active Raiders (unique owners past 7d), Avg Raid Size (past 30d), and Applicants (roster `ApplicationDate` in past 30d).
 - **Roster:** Features search, filters (Rank, Main/Alt, Class), and sortable headers (`th.sortable`).
-- **Member Detail:** Drill-down via `.member-link`. DKP prefers `users.json` account values, falling back to roster sums. Characters come from the roster (matched by member name). Member loot is scoped by **character name** (case-insensitive) — not username_id — and capped at `MEMBER_LOOT_CAP` rows.
+- **Member Detail:** Drill-down via `.member-link`. DKP prefers `users.json` account values, falling back to roster sums. Characters come from the roster (matched by member name). Member loot is scoped by **character name** (case-insensitive) — not username_id — and capped at `MEMBER_LOOT_CAP` rows. Also shows **Raids Attended** (raids where any of the member's characters or their `username_id` appears in attendees), **Raids Since Joined** (raids dated on/after the earliest of roster `ApplicationDate` / `MembershipDate`; "–" when neither date exists), and a **Raid Attendance %** panel: attended ÷ total raids for 30/60/90-day windows, each **clamped to the member's join date** (a 2-week member's "30D" covers only their actual 2 weeks; no join date → full window) plus Lifetime (raids since the join date). Windows with zero raids — or a missing join date for Lifetime — show "–". All computed in one pass over `db.raids`.
 - **Search:** Debounced (200ms) for Loot and Roster views.
 
 ## DKP Semantics

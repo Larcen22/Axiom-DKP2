@@ -28,10 +28,13 @@ const Data = (() => {
 
   /**
    * Load the item database and build lookup indexes.
+   * Names that map to more than one id are AMBIGUOUS and excluded from byName
+   * (itemLink then renders them as plain text rather than guessing an expansion).
    * @returns {Promise<{
-   *   byId:   Map<number, string>,       // id -> NAME
-   *   byName: Map<string, number>,       // NAME (lowercase) -> id  (for pqdi.cc links)
-   *   rows:   Array<{ id: number, NAME: string }>
+   *   byId:       Map<number, string>,       // id -> NAME
+   *   byName:     Map<string, number>,       // NAME (lowercase) -> id  (for pqdi.cc links; unambiguous only)
+   *   ambiguous:  Set<string>,               // lowercase names with >1 id (no link)
+   *   rows:       Array<{ id: number, NAME: string }>
    * }>}
    */
   async function loadItems() {
@@ -42,20 +45,27 @@ const Data = (() => {
 
     const byId = new Map();
     const byName = new Map();
+    const ambiguous = new Set();
     const rows = [];
     for (const row of data.rows) {
       if (typeof row.id !== "number" || typeof row.NAME !== "string") continue;
       byId.set(row.id, row.NAME);
-      byName.set(row.NAME.toLowerCase(), row.id);
+      const key = row.NAME.toLowerCase();
+      if (!ambiguous.has(key)) {
+        const existing = byName.get(key);
+        if (existing === undefined) byName.set(key, row.id);
+        else if (existing !== row.id) { byName.delete(key); ambiguous.add(key); }
+      }
       rows.push(row);
     }
-    return { byId, byName, rows };
+    return { byId, byName, ambiguous, rows };
   }
 
   /**
    * Build an anchor for a loot item name using the items.json id:
    *   <a href="https://www.pqdi.cc/item/1001">Cloth Cap</a>
-   * Falls back to plain text if the name isn't in the database.
+   * Falls back to plain text if the name isn't in the database or is ambiguous
+   * (multiple ids — see loadItems).
    * @param {string} itemName
    * @param {Map<string, number>} byName - from loadItems()
    * @returns {string} safe HTML (name must already be trusted/local data)

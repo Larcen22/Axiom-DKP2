@@ -4,6 +4,18 @@
 (() => {
   "use strict";
 
+  // data.js failed to load (missing file, syntax error, blocked script): fail visibly instead of shimmering forever.
+  if (typeof Data === "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("app-loading");
+      const msg = document.createElement("div");
+      msg.className = "panel-status";
+      msg.textContent = "Failed to load js/data.js — the dashboard cannot start. Check that the file exists and is uncorrupted.";
+      (document.querySelector(".view.active") || document.body).prepend(msg);
+    });
+    return;
+  }
+
   const $ = (sel) => document.querySelector(sel);
   const setStat = (id, value) => {
     const el = $(`#${id}`);
@@ -413,10 +425,61 @@
     const earned = user ? user.earned : chars.reduce((s, c) => s + c.earnedDkp, 0);
     const spent = user ? user.spent : chars.reduce((s, c) => s + c.spentDkp, 0);
 
+    // Attendance: a raid counts as attended when one of this member's characters (or their account) was present.
+    const userIds = new Set(user && user.usernameId ? [user.usernameId] : []);
+    const isPresent = (r) =>
+      r.attendeeUserIds.some((id) => userIds.has(id)) ||
+      r.attendees.some((c) => charNames.has(String(c).toLowerCase()));
+
+    // Join date: earliest of ApplicationDate / MembershipDate.
+    const joinDates = chars.flatMap((c) => [c.applied, c.memberSince]).filter(Boolean).sort();
+    const joinedOn = joinDates[0] || null;
+
+    // Single pass over raids: total attended + per-window totals (30/60/90d and lifetime-since-join).
+    const cutoffFor = (days) => {
+      const d = new Date();
+      d.setDate(d.getDate() - days);
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    };
+    // Windows are clamped to the member's join date: a 2-week member's "30D" covers their actual 2 weeks.
+    const sinceJoin = (base) => (joinedOn && joinedOn > base ? joinedOn : base);
+    const windows = [
+      ["30", sinceJoin(cutoffFor(30))],
+      ["60", sinceJoin(cutoffFor(60))],
+      ["90", sinceJoin(cutoffFor(90))],
+      ["lifetime", joinedOn || ""], // no join date -> window stays empty, stat shows "–"
+    ];
+    let raidsAttended = 0;
+    const winTotal = Object.fromEntries(windows.map(([k]) => [k, 0]));
+    const winAttended = Object.fromEntries(windows.map(([k]) => [k, 0]));
+    for (const r of db.raids) {
+      if (isPresent(r)) raidsAttended++;
+      if (!r.date) continue; // undated raids can't be placed in a window
+      const present = isPresent(r);
+      for (const [key, cutoff] of windows) {
+        if (cutoff && r.date >= cutoff) {
+          winTotal[key]++;
+          if (present) winAttended[key]++;
+        }
+      }
+    }
+    const raidsSinceJoin = joinedOn ? winTotal.lifetime : null;
+    const pct = (a, t) => (t ? `${Math.round((a / t) * 100)}%` : "–");
+
     $("#member-name").textContent = member;
     $("#member-available").textContent = available.toLocaleString();
     $("#member-earned").textContent = earned.toLocaleString();
     $("#member-spent").textContent = spent.toLocaleString();
+    $("#member-raids-attended").textContent = raidsAttended.toLocaleString();
+    $("#member-raids-since").textContent = raidsSinceJoin != null ? raidsSinceJoin.toLocaleString() : "–";
+    $("#member-raids-since-label").textContent = joinedOn
+      ? `Raids Since ${joinedOn}`
+      : "Raids Since Joined (no join date)";
+    $("#member-att-30").textContent = pct(winAttended["30"], winTotal["30"]);
+    $("#member-att-60").textContent = pct(winAttended["60"], winTotal["60"]);
+    $("#member-att-90").textContent = pct(winAttended["90"], winTotal["90"]);
+    $("#member-att-lifetime").textContent = pct(winAttended.lifetime, winTotal.lifetime);
+    $("#member-att-lifetime-label").textContent = joinedOn ? `Lifetime (since ${joinedOn})` : "Lifetime";
 
     $("#member-characters").innerHTML = chars.length
       ? chars.map((c) =>
@@ -519,7 +582,7 @@
       renderLoot(loot, items);
       renderRoster(roster);
       renderRaids(raids);
-      db = { users, loot, items, roster };
+      db = { users, loot, items, roster, raids };
 
       // Paginations (delegated — pager buttons are re-created each render)
       $("#raids-pager").addEventListener("click", (e) => {
