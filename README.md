@@ -20,7 +20,7 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 | View | What it shows |
 |---|---|
 | **Overview** | Total DKP available, items awarded in the past 7 days, top spender, active raiders; recent loot (past 7 days, paginated) |
-| **Item Database** | Full item table with ID + linked name (pqdi.cc links). ⚠ Not yet reachable via sidebar nav. |
+| **Item Search** | Full item database, searchable by name; IDs link to pqdi.cc (first 100 matches rendered) |
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown (paginated) |
 | **Loot** | Full loot history, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
@@ -46,12 +46,30 @@ transactions.json    Pre-processed: account-level DKP adjustments already baked 
 
 - **Data flow:** `js/data.js` fetches the local data files, validates shapes, normalizes field names, builds lookup indexes, resolves missing loot dates via raid log. `js/app.js` renders everything on `DOMContentLoaded`.
 - **DKP model:** DKP is earned per raid attendance (`raid_dkp_value`) and spent on awarded loot (`item_dkp_value`). Active/available DKP = earned − spent (+ adjustments). Item↔loot joins are by name string, not id (which is why a `byName` map exists in `Data`).
-- **External dependency:** [PapaParse](https://www.papaparse.com/) via CDN (CSV parsing only; no npm deps to install).
+- **External dependency:** [PapaParse](https://www.papaparse.com/) via CDN (runtime CSV parsing only).
+- **Dev dependencies** (tests only, never loaded by the app): `vitest`, `papaparse` (CSV parity in unit tests), `@playwright/test`.
 - **Security:** all user data rendered into the DOM is HTML-escaped.
+
+## Testing
+
+Three layers, all runnable with plain Node (no browser needed for the first two):
+
+```bash
+npm install          # dev deps only; the app itself stays dependency-free
+npm test             # unit tests + data integrity checks (Vitest)
+npm run test:e2e     # Playwright smoke suite against a local static server
+```
+
+| Layer | What it verifies |
+|---|---|
+| `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
+| `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
+| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all six nav views switch and render, search filters work, raids pagination advances, member drill-down opens/returns, item links point at pqdi.cc. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
+
+CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 ## Known gaps / limitations
 
-- The **Item Database** view has no sidebar nav link — currently not reachable without manual URL/hash editing.
 - `transactions.json` (~597KB) is pre-processed: DKP adjustments are already baked into `users.json`. Not loaded directly by the app (already folded into balances).
 - `raids.json` is fetched twice per page load (`loadRaidInfo()` + `loadRaids()`) with no shared cache — ~16 MB of redundant parsing on init.
 - Four nearly identical pager implementations exist (`renderStandingsPager`, `renderLootPager`, `renderRosterPager`, `renderRaidsPager`); could be consolidated into a single generic helper.

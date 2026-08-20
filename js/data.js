@@ -229,3 +229,8 @@ const Data = (() => {
     escapeHtml,
   };
 })();
+
+// Test hook — expose Data when loaded via CommonJS require() (Vitest / Node scripts).
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = Data;
+}
