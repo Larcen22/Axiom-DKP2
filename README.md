@@ -24,7 +24,8 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 | **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
 | **Member** | Drill-down (from Roster or Overview panels): account DKP, rank, characters, raid attendance %, paginated member-scoped loot history |
-| **Raids** | Full raid log with date, DKP value, and attendee list (paginated) |
+| **Raid** | Drill-down (click any raid name in Recent Raids or Raid History): attendees grouped by member with their characters, items awarded and total DKP spent for that exact raid (joined on `raid_id`), paginated loot table with owner drill-downs |
+| **Raids** | Full raid log with date, DKP value, and attendee list; raid names link to the Raid detail view (paginated) |
 
 ## Project structure
 

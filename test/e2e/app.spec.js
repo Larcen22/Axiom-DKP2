@@ -256,6 +256,40 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#roster.view.active")).toBeVisible();
   });
 
+  test("raid drill-down opens detail and back returns to origin", async () => {
+    // Entry point: overview Recent Raids.
+    await goTo("overview");
+    const link = page.locator("#recent-raids-table tbody tr:first-child .raid-link");
+    const raidName = (await link.textContent()).trim();
+
+    await link.click();
+    await expect(page.locator("#raid.view.active")).toBeVisible();
+    await expect(page.locator("#raid-name")).toHaveText(raidName);
+    for (const id of ["raid-attendees", "raid-items", "raid-dkp-spent"]) {
+      await expect(page.locator(`#${id}`)).toHaveText(/^(?:[\d,]+|–)$/);
+    }
+    // Loot rows on the first page match the item count (capped at one page of 10).
+    const items = Number((await page.locator("#raid-items").textContent()).replace(/[\s,]/g, ""));
+    if (items > 0) {
+      await expect(page.locator("#raid-loot-table")).toBeVisible();
+      await expect(page.locator("#raid-loot-table tbody tr")).toHaveCount(Math.min(items, 10));
+    } else {
+      await expect(page.locator("#raid-loot-status")).toContainText(/No loot awarded/);
+    }
+
+    // Back returns to the entry point (overview).
+    await page.click("#raid-back");
+    await expect(page.locator("#overview.view.active")).toBeVisible();
+
+    // From Raid History, back should return there instead.
+    await goTo("raids");
+    const link2 = page.locator("#raids-table tbody tr:first-child .raid-link");
+    await link2.click();
+    await expect(page.locator("#raid.view.active")).toBeVisible();
+    await page.click("#raid-back");
+    await expect(page.locator("#raids.view.active")).toBeVisible();
+  });
+
   test("item links point at pqdi.cc", async () => {
     await goTo("loot");
     const firstLink = page.locator("#loot-table tbody a[href^='https://www.pqdi.cc/item/']").first();

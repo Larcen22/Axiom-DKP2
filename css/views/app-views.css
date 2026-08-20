@@ -151,7 +151,8 @@
   gap: var(--space-sm);
   flex-wrap: wrap;
 }
-#member-name {
+#member-name,
+#raid-name {
   margin: 0;
   font-size: 1.75rem;
   letter-spacing: -0.01em;
@@ -204,12 +205,13 @@
   font-variant-numeric: tabular-nums;
 }
 
-.member-link {
+.member-link,
+.raid-link {
   color: var(--color-accent);
   text-decoration: none;
   border-bottom: 1px dotted transparent;
 }
-.member-link:hover { border-bottom-color: var(--color-accent); }
+.member-link:hover, .raid-link:hover { border-bottom-color: var(--color-accent); }
 
 .member-characters {
   display: flex;

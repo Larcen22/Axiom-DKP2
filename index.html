@@ -308,6 +308,55 @@
         </div>
       </section>
 
+      <!-- ========== RAID DETAIL ========== -->
+      <section id="raid" class="view">
+        <button id="raid-back" class="member-back" type="button">← Back</button>
+        <header class="member-header">
+          <h2 id="raid-name">Raid</h2>
+          <span id="raid-date" class="member-rank" hidden></span>
+        </header>
+
+        <div class="stat-grid member-dkp-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="raid-attendees">–</div>
+            <div class="stat-label">Members Attended</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="raid-items">–</div>
+            <div class="stat-label">Items Awarded</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="raid-dkp-spent">–</div>
+            <div class="stat-label">DKP Spent</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Attendees</h3>
+          <div id="raid-attendees-status" class="panel-status">Loading…</div>
+          <ol id="raid-attendee-list" class="rank-list"></ol>
+        </div>
+
+        <div class="panel">
+          <h3>Loot Awarded</h3>
+          <div id="raid-loot-status" class="panel-status">Loading…</div>
+          <div class="table-wrap">
+            <table id="raid-loot-table" hidden>
+              <thead>
+                <tr>
+                  <th>Character</th>
+                  <th>Item</th>
+                  <th>Owner</th>
+                  <th class="num">DKP Spent</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="raid-loot-pager" class="pager" hidden></div>
+        </div>
+      </section>
+
       <!-- ========== RAID HISTORY ========== -->
       <section id="raids" class="view">
         <h2>Raid History</h2>

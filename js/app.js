@@ -157,7 +157,7 @@
     $("#recent-raids-table tbody").innerHTML = recentRaids.map((r) => `
       <tr>
         <td>${esc(r.date)}</td>
-        <td>${esc(r.name || r.id)}</td>
+        <td><a href="#raid" class="raid-link" data-id="${esc(r.id)}" data-return="overview">${esc(r.name || r.id)}</a></td>
         <td class="num">${r.attendees.length}</td>
         <td class="num">${lootByRaidId.get(r.id) || 0}</td>
       </tr>`).join("");
@@ -724,6 +724,95 @@
     renderPager("member-loot-pager", memberLootPage, totalPages);
   }
 
+  /* ---------------- raid detail ---------------- */
+  const RAID_LOOT_PAGE_SIZE = 10;
+  let raidLootSorted = [];
+  let raidLootPage = 1;
+  let raidReturnView = "raids"; // where the back button returns to (set by the clicked link)
+
+  function openRaid(raidId, returnView) {
+    if (!db || !raidId) return;
+    const r = db.raids.find((x) => x.id === raidId);
+    if (!r) return;
+    raidReturnView = returnView || "raids";
+
+    $("#raid-name").textContent = r.name || "Unknown raid";
+    $("#raid-date").hidden = !r.date;
+    $("#raid-date").textContent = r.date || "";
+
+    // Loot for this exact raid — joined on raid_id (names repeat over time).
+    const lootHere = db.loot.filter((l) => l.raidId === raidId);
+    $("#raid-items").textContent = lootHere.length.toLocaleString();
+    $("#raid-dkp-spent").textContent = lootHere.reduce((sum, l) => sum + l.dkpSpent, 0).toLocaleString();
+
+    // Group attendees by member via roster character names; unrostered characters stand alone.
+    const charToMember = new Map(db.roster.map((row) => [row.character.toLowerCase(), row.member]));
+    const byMember = new Map(); // member -> [character, ...]
+    const loose = [];
+    for (const c of r.attendees) {
+      const m = charToMember.get(String(c).toLowerCase());
+      if (m) {
+        if (!byMember.has(m)) byMember.set(m, []);
+        byMember.get(m).push(c);
+      } else loose.push(c);
+    }
+    $("#raid-attendees").textContent = (byMember.size + loose.length).toLocaleString();
+
+    const attendeeRows = [
+      ...[...byMember.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([m, chars]) => `
+        <li>
+          <a href="#member" class="member-link rank-name" data-member="${esc(m)}">${esc(m)}</a>
+          <span class="rank-sub">${chars.map(esc).join(", ")}</span>
+        </li>`),
+      ...loose.sort((a, b) => String(a).localeCompare(String(b))).map((c) => `
+        <li>
+          <span class="rank-name">${esc(c)}</span>
+          <span class="rank-sub">no roster account</span>
+        </li>`),
+    ];
+    $("#raid-attendee-list").innerHTML = attendeeRows.join("");
+    $("#raid-attendees-status").textContent = r.attendees.length
+      ? `${byMember.size} members \u00b7 ${r.attendees.length} characters attended` + (loose.length ? ` (${loose.length} not in roster)` : "")
+      : "No attendees recorded.";
+
+    raidLootSorted = [...lootHere].sort(
+      (a, b) => b.dkpSpent - a.dkpSpent || String(a.item).localeCompare(String(b.item))
+    );
+    renderRaidLootPage(1);
+    showView("raid");
+  }
+
+  function renderRaidLootPage(page) {
+    const totalPages = Math.max(1, Math.ceil(raidLootSorted.length / RAID_LOOT_PAGE_SIZE));
+    raidLootPage = Math.min(Math.max(1, page), totalPages);
+    const start = (raidLootPage - 1) * RAID_LOOT_PAGE_SIZE;
+    const rows = raidLootSorted.slice(start, start + RAID_LOOT_PAGE_SIZE);
+
+    // Owner: resolve the character to a roster member for the profile drill-down.
+    const charToMember = new Map(db.roster.map((row) => [row.character.toLowerCase(), row.member]));
+    $("#raid-loot-table tbody").innerHTML = rows.map((l) => {
+      const owner = charToMember.get(String(l.player).toLowerCase());
+      return `
+      <tr>
+        <td>${esc(l.player)}</td>
+        <td>${Data.itemLink(l.item, db.items.byName)}</td>
+        <td>${owner ? `<a href="#member" class="member-link" data-member="${esc(owner)}">${esc(owner)}</a>` : "\u2014"}</td>
+        <td class="num">${l.dkpSpent.toLocaleString()}</td>
+      </tr>`;
+    }).join("");
+
+    $("#raid-loot-table").hidden = rows.length === 0;
+    $("#raid-loot-status").textContent = raidLootSorted.length
+      ? `${raidLootSorted.length.toLocaleString()} awards \u00b7 biggest first \u00b7 ` +
+        (rows.length
+          ? `showing ${start + 1}\u2013${(start + rows.length).toLocaleString()} (page ${raidLootPage} of ${totalPages.toLocaleString()})`
+          : "no awards")
+      : "No loot awarded in this raid.";
+
+    renderPager("raid-loot-pager", raidLootPage, totalPages);
+  }
+
+
   /* ---------------- raid history ---------------- */
   const RAID_PAGE_SIZE = 5;
   let raidsSorted = [];
@@ -743,7 +832,7 @@
     $("#raids-table tbody").innerHTML = rows.map((r) => `
       <tr>
         <td>${esc(r.date || "—")}</td>
-        <td>${esc(r.name)}</td>
+        <td><a href="#raid" class="raid-link" data-id="${esc(r.id)}" data-return="raids">${esc(r.name)}</a></td>
         <td class="num">${r.dkpValue}</td>
         <td class="raid-attendees">${r.attendees.map(esc).join(", ")}</td>
         <td class="num">${r.attendees.length}</td>
@@ -824,6 +913,11 @@
         if (!btn || btn.disabled) return;
         renderMemberLootPage(Number(btn.dataset.page));
       });
+      $("#raid-loot-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderRaidLootPage(Number(btn.dataset.page));
+      });
 
       // Roster search + filters (debounced search; instant selects)
       let rosterTimer;
@@ -886,6 +980,21 @@
         showView("roster");
         document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
         document.querySelector('.nav-link[data-target="roster"]')?.classList.add("active");
+      });
+
+      // Raid drill-down: raid names are clickable in any view (Recent Raids, Raid History).
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest(".raid-link");
+        if (!link) return;
+        e.preventDefault();
+        openRaid(link.dataset.id, link.dataset.return);
+      });
+
+      // Back from the raid page to wherever we came in from (overview or raids).
+      $("#raid-back").addEventListener("click", () => {
+        showView(raidReturnView);
+        document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
+        document.querySelector(`.nav-link[data-target="${raidReturnView}"]`)?.classList.add("active");
       });
 
       document.body.classList.remove("app-loading");
