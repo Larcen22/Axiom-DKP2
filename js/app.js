@@ -63,7 +63,13 @@
     const cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - 7);
     const cutoffStr = `${cutoff.getFullYear()}-${String(cutoff.getMonth() + 1).padStart(2, "0")}-${String(cutoff.getDate()).padStart(2, "0")}`;
-    const itemsLastWeek = loot.filter((l) => l.date && l.date >= cutoffStr).length;
+    const weekLoot = loot.filter((l) => l.date && l.date >= cutoffStr);
+    const itemsLastWeek = weekLoot.length;
+
+    // Avg DKP spent per unique player (character) in the past 7 days.
+    const totalSpentWeek = weekLoot.reduce((s, l) => s + l.dkpSpent, 0);
+    const spendersWeek = new Set(weekLoot.map((l) => l.player)).size;
+    const avgSpentWeek = spendersWeek ? totalSpentWeek / spendersWeek : null;
 
     // Unique members who attended a raid in the past 7 days (from raids.json attendees).
     // Counted by owner (username_id), so a member on multiple characters counts once.
@@ -96,6 +102,9 @@
 
     setStat("stat-total-dkp", totalDkpAvailable.toLocaleString());
     setStat("stat-items-awarded", itemsLastWeek.toLocaleString());
+    setStat("stat-avg-spent-week", avgSpentWeek != null
+      ? Math.round(avgSpentWeek).toLocaleString()
+      : "–");
     setStat("stat-top-earner", topSpender ? topSpender.username : "–");
     setStat("stat-raiders", activeRaiders.toLocaleString());
     setStat("stat-avg-raid-size", avgRaidSize != null
