@@ -10,6 +10,9 @@ html {
   font-size: 16px; 
 }
 
+/* Author display rules (e.g. .pager { display: flex }) would otherwise override the UA [hidden] rule. */
+[hidden] { display: none !important; }
+
 body {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   background: var(--color-bg);

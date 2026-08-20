@@ -140,13 +140,15 @@ const Data = (() => {
   }
 
   /**
-   * Normalize any exported date value to "YYYY-MM-DD" (or null when empty).
+   * Normalize any exported date value to "YYYY-MM-DD" (or null when empty/unparseable).
    * Exports occasionally carry full timestamps ("2024-12-10T20:42:05.793672+00:00",
    * "2024-10-25 23:43:34"); the UI only ever shows the date part.
+   * Anything that doesn't start with YYYY-MM-DD is treated as missing (null),
+   * so junk values can never leak into a date cell.
    */
   function isoDate(v) {
     const s = v == null ? "" : String(v).trim();
-    return /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : (s || null);
+    return /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : null;
   }
 
   /* ---------------- raids.json ---------------- */

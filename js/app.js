@@ -274,11 +274,13 @@
 
     // --- Raider trend: unique attendees per week over the last ACTIVITY_WEEKS weeks
     const raiderSets = Array.from({ length: ACTIVITY_WEEKS }, () => new Set());
+    const raidCountsWeeks = Array(ACTIVITY_WEEKS).fill(0);
     for (const r of raids) {
       if (!r.date || !r.attendeeUserIds) continue;
       const d = daysAgoOf(r.date);
       if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
       const idx = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      raidCountsWeeks[idx]++;
       for (const uid of r.attendeeUserIds) raiderSets[idx].add(uid);
     }
     const raidersWeeks = raiderSets.map((s) => s.size);
@@ -289,8 +291,12 @@
       const label = `${ws.getFullYear()}-${String(ws.getMonth() + 1).padStart(2, "0")}-${String(ws.getDate()).padStart(2, "0")}`;
       return `<div class="activity-bar bar-raiders${n ? "" : " zero"}" style="height:${n ? Math.max(8, (n / maxRaiders) * 100) : 3}%" title="${label}: ${n} unique raiders"></div>`;
     }).join("");
-    const avgRaiders = Math.round(raidersWeeks.reduce((a, b) => a + b, 0) / ACTIVITY_WEEKS);
-    $("#raider-trend-status").textContent = `Avg ${avgRaiders} unique raiders per week · peak ${Math.max(...raidersWeeks)} in one week`;
+    // Average over weeks that actually had raids, so empty weeks (e.g. a young guild)
+    // don't drag the number down.
+    const activeWeeks = raidCountsWeeks.filter((c) => c > 0).length;
+    const avgRaiders = activeWeeks ? Math.round(raidersWeeks.reduce((a, b) => a + b, 0) / activeWeeks) : 0;
+    const scopeNote = activeWeeks === ACTIVITY_WEEKS ? "" : ` across ${activeWeeks} active weeks`;
+    $("#raider-trend-status").textContent = `Avg ${avgRaiders} unique raiders per week${scopeNote} · peak ${Math.max(...raidersWeeks)} in one week`;
   }
 
 
@@ -494,7 +500,7 @@
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, items.byName)}</td>
         <td>${l.raid ? esc(l.raid) : "—"}</td>
-        <td class="num">${l.dkpSpent}</td>
+        <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`).join("");
 
     $("#loot-table").hidden = rows.length === 0;
@@ -636,9 +642,9 @@
     const winTotal = Object.fromEntries(windows.map(([k]) => [k, 0]));
     const winAttended = Object.fromEntries(windows.map(([k]) => [k, 0]));
     for (const r of db.raids) {
-      if (isPresent(r)) raidsAttended++;
+      const present = isPresent(r); // computed once per raid (used below + for the lifetime count)
+      if (present) raidsAttended++;
       if (!r.date) continue; // undated raids can't be placed in a window
-      const present = isPresent(r);
       for (const [key, cutoff] of windows) {
         if (cutoff && r.date >= cutoff) {
           winTotal[key]++;
@@ -700,7 +706,7 @@
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, db.items.byName)}</td>
         <td>${l.raid ? esc(l.raid) : "—"}</td>
-        <td class="num">${l.dkpSpent}</td>
+        <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`).join("");
 
     $("#member-loot-table").hidden = rows.length === 0;
