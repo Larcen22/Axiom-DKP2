@@ -55,7 +55,7 @@ app.js init(): Promise.all([loadItems, loadLoot, loadUsers, loadRaids, loadRoste
 ## app.js — Views & UI
 
 - **Views:** Overview, Standings, Loot, Roster, Raids, Item Search, and Member Detail.
-- **Overview Stats:** Total DKP, Items (past week), Top Spender, Active Raiders (past 7d), Avg Raid Size (past 30d), and Applicants (past 30d).
+- **Overview Stats:** Active DKP (members seen past 30d), Items (past week), Avg DKP Spent · past week, Top Spender, Active Raiders (past 7d), Avg Raid Size (past 30d), and Applicants (past 30d).
 - **Roster:** Features search, filters (Rank, Main/Alt, Class), and sortable headers (`th.sortable`).
 - **Member Detail:** Drill-down via `.member-link`. Shows account DKP, character list, and member-scoped loot history.
 - **Search:** Debounced (200ms) for Item, Loot, and Roster views.

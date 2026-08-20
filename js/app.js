@@ -53,7 +53,6 @@
 
   function renderOverview(users, loot, items, raids, roster) {
     // Stat cards
-    const totalDkpAvailable = users.reduce((s, u) => s + u.activeDkp, 0);
     const topSpender = users.reduce(
       (best, u) => (u.spent > (best?.spent ?? -1) ? u : best),
       null
@@ -86,13 +85,22 @@
     cutoff30.setDate(cutoff30.getDate() - 30);
     const cutoff30Str = `${cutoff30.getFullYear()}-${String(cutoff30.getMonth() + 1).padStart(2, "0")}-${String(cutoff30.getDate()).padStart(2, "0")}`;
     let recentRaidCount = 0, recentRaidAttendees = 0;
+    // Members seen on a raid in the past 30 days (by owner username_id), used to scope Total DKP.
+    const activeUserIds = new Set();
     for (const r of raids) {
       if (r.date && r.date >= cutoff30Str) {
         recentRaidCount++;
         recentRaidAttendees += r.attendees.length;
+        for (const uid of r.attendeeUserIds) activeUserIds.add(uid);
       }
     }
     const avgRaidSize = recentRaidCount ? recentRaidAttendees / recentRaidCount : null;
+
+    // Total DKP Available: only members seen on a raid in the past 30 days.
+    const totalDkpAvailable = users.reduce(
+      (s, u) => s + (activeUserIds.has(u.usernameId) ? u.activeDkp : 0),
+      0
+    );
 
     // New members: unique roster members whose application date falls in the past 30 days.
     // (A member on multiple characters counts once.)
