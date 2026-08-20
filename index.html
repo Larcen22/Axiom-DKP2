@@ -74,44 +74,68 @@
             <div class="stat-label">Avg DKP Spent · past week</div>
           </div>
           <div class="stat-card">
-            <div class="stat-value" id="stat-raiders">–</div>
-            <div class="stat-label">Active Raiders</div>
-          </div>
-        </div>
-
-        <!-- Second row: same auto-fit template + 2 spacers = same item count as the row above,
-             so the cards match the others' width and the top cards never reflow. -->
-        <div class="stat-grid">
-          <div class="stat-card">
             <div class="stat-value" id="stat-avg-raid-size">–</div>
             <div class="stat-label">Avg Raid Size · past 30d</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-new-members">–</div>
-            <div class="stat-label">Applicants</div>
-          </div>
-          <div class="stat-spacer"></div>
-          <div class="stat-spacer"></div>
         </div>
 
-        <div class="panel">
-          <h3>Recent Loot</h3>
-          <div id="recent-loot-status" class="panel-status">Loading…</div>
-          <div class="table-wrap">
-            <table id="recent-loot-table" hidden>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Player</th>
-                  <th>Item</th>
-                  <th>Raid</th>
-                  <th class="num">DKP Spent</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+        <div class="overview-grid">
+          <div class="panel overview-wide">
+            <h3>Guild Activity</h3>
+            <div id="activity-status" class="panel-status">Loading…</div>
+            <div class="chart-legend">
+              <span><i class="swatch swatch-raids"></i>Raids</span>
+              <span><i class="swatch swatch-spent"></i>DKP spent</span>
+            </div>
+            <div id="activity-chart" class="activity-chart"></div>
           </div>
-          <div id="recent-loot-pager" class="pager" hidden></div>
+
+          <div class="panel">
+            <h3>Recent Raids</h3>
+            <div id="recent-raids-status" class="panel-status">Loading…</div>
+            <div class="table-wrap">
+              <table id="recent-raids-table" hidden>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Raid</th>
+                    <th class="num">Raiders</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Top Spenders · past 30 days</h3>
+            <div id="top-spenders-status" class="panel-status">Loading…</div>
+            <ol id="top-spenders-list" class="rank-list"></ol>
+          </div>
+
+          <div class="panel">
+            <h3>Biggest Spends · past 30 days</h3>
+            <div id="biggest-spends-status" class="panel-status">Loading…</div>
+            <ol id="biggest-spends-list" class="rank-list"></ol>
+          </div>
+
+          <div class="panel">
+            <h3>Characters by Class · active 30d</h3>
+            <div id="class-comp-status" class="panel-status">Loading…</div>
+            <div id="class-comp-list" class="bar-list"></div>
+          </div>
+
+          <div class="panel">
+            <h3>Recent Joiners</h3>
+            <div id="recent-joiners-status" class="panel-status">Loading…</div>
+            <ol id="recent-joiners-list" class="rank-list"></ol>
+          </div>
+
+          <div class="panel">
+            <h3>Raider Trend · 12 weeks</h3>
+            <div id="raider-trend-status" class="panel-status">Loading…</div>
+            <div id="raider-chart" class="activity-chart"></div>
+          </div>
         </div>
       </section>
 
@@ -153,6 +177,7 @@
                   <th>Date</th>
                   <th>Player</th>
                   <th>Item</th>
+                  <th>Raid</th>
                   <th class="num">DKP Spent</th>
                 </tr>
               </thead>

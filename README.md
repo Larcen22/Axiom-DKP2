@@ -19,11 +19,11 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 
 | View | What it shows |
 |---|---|
-| **Overview** | Total DKP available, items awarded in the past 7 days, active raiders; recent loot (past 7 days, paginated) |
+| **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), recent raids, top spenders (30d), biggest spends (30d), active characters by class (30d), recent joiners, raider trend |
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown (paginated) |
-| **Loot** | Full loot history, newest first, searchable by player / item / raid (paginated) |
+| **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
-| **Member** | Drill-down from the Roster: account DKP, characters, member-scoped loot history |
+| **Member** | Drill-down (from Roster or Overview panels): account DKP, rank, characters, raid attendance %, member-scoped loot history |
 | **Raids** | Full raid log with date, DKP value, and attendee list (paginated) |
 
 ## Project structure

@@ -10,11 +10,115 @@
 }
 
 /* OVERVIEW */
-#recent-loot-status {
-  margin-bottom: var(--space-sm);
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  align-items: start;
 }
-#recent-loot-table {
-  margin-top: var(--space-sm);
+.overview-wide { grid-column: 1 / -1; }
+
+/* Activity chart: one group per week, height = value that week */
+.chart-legend {
+  display: flex;
+  gap: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 0.35em;
+  vertical-align: -1px;
+}
+.swatch-raids { background: var(--color-accent); }
+.swatch-spent { background: var(--color-accent-blue); }
+
+.activity-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 96px;
+}
+.week-group {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 100%;
+}
+.activity-bar {
+  flex: 1;
+  min-height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--color-accent);
+  opacity: 0.85;
+}
+.bar-raids { background: var(--color-accent); }
+.bar-spent { background: var(--color-accent-blue); }
+.bar-raiders { background: var(--color-success); }
+.activity-bar.zero { background: var(--color-bg-hover); opacity: 1; }
+
+/* Ranked lists (top spenders, recent joiners) */
+.rank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.rank-list li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: 0.45rem 0.6rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+.rank-num {
+  color: var(--color-text-muted);
+  width: 1.2em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.rank-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank-sub {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.rank-val {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Class composition bars */
+.bar-list { display: flex; flex-direction: column; gap: 0.4rem; }
+.bar-row {
+  display: grid;
+  grid-template-columns: 7em 2.5em 1fr;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+}
+.bar-count { color: var(--color-text-muted); text-align: right; font-variant-numeric: tabular-nums; }
+.bar-track {
+  background: var(--color-bg-hover);
+  border-radius: 99px;
+  height: 10px;
+  overflow: hidden;
+}
+.bar-fill { height: 100%; background: var(--color-accent-blue); border-radius: 99px; }
+
+@media (max-width: 860px) {
+  .overview-grid { grid-template-columns: 1fr; }
 }
 
 /* MEMBER DETAIL */

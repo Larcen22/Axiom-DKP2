@@ -59,8 +59,10 @@
   }
 
   /* ---------------- overview ---------------- */
-  let recentLootAll = [];
-  let recentLootPage = 1;
+  const RECENT_RAIDS_SHOWN = 8;
+  const TOP_SPENDERS_N = 5;
+  const ACTIVITY_WEEKS = 12;
+  const JOINERS_SHOWN = 5;
 
   function renderOverview(users, loot, items, raids, roster) {
     // Stat cards
@@ -71,20 +73,10 @@
     const weekLoot = loot.filter((l) => l.date && l.date >= cutoffStr);
     const itemsLastWeek = weekLoot.length;
 
-    // Avg DKP spent per unique player (character) in the past 7 days.
+    // Avg DKP spent per unique member (owner username_id) in the past 7 days.
     const totalSpentWeek = weekLoot.reduce((s, l) => s + l.dkpSpent, 0);
-    const spendersWeek = new Set(weekLoot.map((l) => l.player)).size;
+    const spendersWeek = new Set(weekLoot.map((l) => l.user || l.player)).size;
     const avgSpentWeek = spendersWeek ? totalSpentWeek / spendersWeek : null;
-
-    // Unique members who attended a raid in the past 7 days (from raids.json attendees).
-    // Counted by owner (username_id), so a member on multiple characters counts once.
-    const recentRaiders = new Set();
-    for (const r of raids) {
-      if (r.date && r.date >= cutoffStr) {
-        for (const uid of r.attendeeUserIds) recentRaiders.add(uid);
-      }
-    }
-    const activeRaiders = recentRaiders.size;
 
     // Average raid size over the past 30 days (attendees per raid). Dates are "YYYY-MM-DD".
     const cutoff30 = new Date();
@@ -108,72 +100,174 @@
       0
     );
 
-    // New members: unique roster members whose application date falls in the past 30 days.
-    // (A member on multiple characters counts once.)
-    const newMembers = new Set(
-      roster.filter((r) => r.applied && r.applied >= cutoff30Str).map((r) => r.member)
-    ).size;
-
     setStat("stat-total-dkp", totalDkpAvailable.toLocaleString());
     setStat("stat-items-awarded", itemsLastWeek.toLocaleString());
     setStat("stat-avg-spent-week", avgSpentWeek != null
       ? Math.round(avgSpentWeek).toLocaleString()
       : "–");
-    setStat("stat-raiders", activeRaiders.toLocaleString());
     setStat("stat-avg-raid-size", avgRaidSize != null
       ? Math.round(avgRaidSize).toLocaleString()
       : "–");
-    setStat("stat-new-members", newMembers.toLocaleString());
 
-    // Recent loot — all awards in the past 7 days, newest first (dates resolved via raids.json in data.js)
-    recentLootAll = loot.filter((l) => l.date && l.date >= cutoffStr)
-      .sort((a, b) => b.date.localeCompare(a.date));
-    renderRecentLootPage(1, items);
+    // Insight panels: activity chart, recent raids, top spenders, biggest spends, class mix, joiners, raider trend
+    renderOverviewPanels(users, loot, items, raids, roster);
   }
 
-  function renderRecentLootPage(page, items) {
-    const totalPages = Math.max(1, Math.ceil(recentLootAll.length / RECENT_LOOT_PAGE_SIZE));
-    recentLootPage = Math.min(Math.max(1, page), totalPages);
-    const start = (recentLootPage - 1) * RECENT_LOOT_PAGE_SIZE;
-    const rows = recentLootAll.slice(start, start + RECENT_LOOT_PAGE_SIZE);
+  function renderOverviewPanels(users, loot, items, raids, roster) {
+    const now = new Date();
+    const daysAgoOf = (dateStr) => Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
 
-    $("#recent-loot-table tbody").innerHTML = rows.map((l) => `
+    // --- Guild activity: raids + DKP spent per week over the last ACTIVITY_WEEKS weeks (7-day buckets from today)
+    const counts = new Array(ACTIVITY_WEEKS).fill(0);
+    const spentWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    let windowTotal = 0, spentTotal = 0;
+    for (const r of raids) {
+      if (!r.date) continue;
+      const d = daysAgoOf(r.date);
+      if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
+      counts[ACTIVITY_WEEKS - 1 - Math.floor(d / 7)]++;
+      windowTotal++;
+    }
+    for (const l of loot) {
+      if (!l.date) continue; // undated awards can't be bucketed
+      const d = daysAgoOf(l.date);
+      if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
+      spentWeeks[ACTIVITY_WEEKS - 1 - Math.floor(d / 7)] += l.dkpSpent;
+      spentTotal += l.dkpSpent;
+    }
+    const maxCount = Math.max(...counts, 1);
+    const maxSpent = Math.max(...spentWeeks, 1);
+    $("#activity-chart").innerHTML = counts.map((c, i) => {
+      const ws = new Date(now);
+      ws.setDate(ws.getDate() - (ACTIVITY_WEEKS - 1 - i) * 7);
+      const label = `${ws.getFullYear()}-${String(ws.getMonth() + 1).padStart(2, "0")}-${String(ws.getDate()).padStart(2, "0")}`;
+      const s = spentWeeks[i];
+      return `<div class="week-group" title="${label}: ${c} raid${c === 1 ? "" : "s"} · ${s.toLocaleString()} DKP spent">` +
+        `<div class="activity-bar bar-raids${c ? "" : " zero"}" style="height:${c ? Math.max(8, (c / maxCount) * 100) : 3}%"></div>` +
+        `<div class="activity-bar bar-spent${s > 0 ? "" : " zero"}" style="height:${s > 0 ? Math.max(8, (s / maxSpent) * 100) : 3}%"></div></div>`;
+    }).join("");
+    $("#activity-status").textContent = `${windowTotal.toLocaleString()} raids · ${spentTotal.toLocaleString()} DKP spent in the past ${ACTIVITY_WEEKS} weeks`;
+
+    // --- Recent raids (newest first)
+    const recentRaids = [...raids].sort((a, b) => b.date.localeCompare(a.date)).slice(0, RECENT_RAIDS_SHOWN);
+    $("#recent-raids-table tbody").innerHTML = recentRaids.map((r) => `
       <tr>
-        <td>${esc(l.date)}</td>
-        <td>${esc(l.player)}</td>
-        <td>${Data.itemLink(l.item, items.byName)}</td>
-        <td>${l.raid ? esc(l.raid) : "—"}</td>
-        <td class="num">${l.dkpSpent}</td>
-      </tr>
-    `).join("");
+        <td>${esc(r.date)}</td>
+        <td>${esc(r.name || r.raidId)}</td>
+        <td class="num">${r.attendees.length}</td>
+      </tr>`).join("");
+    $("#recent-raids-table").hidden = recentRaids.length === 0;
+    $("#recent-raids-status").textContent = recentRaids.length
+      ? `Last ${recentRaids.length} of ${raids.length.toLocaleString()} raids`
+      : "No raids recorded.";
 
-    $("#recent-loot-table").hidden = rows.length === 0;
-    $("#recent-loot-status").textContent = recentLootAll.length
-      ? `Showing ${start + 1}–${start + rows.length.toLocaleString()} of ${recentLootAll.length.toLocaleString()} awards from the past 7 days (page ${recentLootPage} of ${totalPages.toLocaleString()})`
-      : "No loot awards in the past 7 days.";
+    // --- Top spenders, past 30 days (loot entries carry raid-resolved dates from data.js)
+    const cutoff30 = new Date(now);
+    cutoff30.setDate(cutoff30.getDate() - 30);
+    const cutoff30Str = `${cutoff30.getFullYear()}-${String(cutoff30.getMonth() + 1).padStart(2, "0")}-${String(cutoff30.getDate()).padStart(2, "0")}`;
+    const memberByUser = new Map(users.map((u) => [u.usernameId, u.username]));
+    const spent30 = new Map();
+    for (const l of loot) {
+      if (!l.date || l.date < cutoff30Str) continue;
+      const name = memberByUser.get(l.user) || l.player;
+      spent30.set(name, (spent30.get(name) || 0) + l.dkpSpent);
+    }
+    const topSpenders = [...spent30.entries()].sort((a, b) => b[1] - a[1]).slice(0, TOP_SPENDERS_N);
+    $("#top-spenders-list").innerHTML = topSpenders.map(([name, amt], i) => `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <span class="rank-val">${amt.toLocaleString()}</span>
+      </li>`).join("");
+    $("#top-spenders-status").textContent = topSpenders.length
+      ? `Top ${topSpenders.length} of ${spent30.size.toLocaleString()} members who spent DKP in the past 30 days`
+      : "No DKP spent in the past 30 days.";
 
-    renderRecentLootPager(totalPages);
+    // --- Biggest single spends, past 30 days
+    const biggest = loot.filter((l) => l.date && l.date >= cutoff30Str)
+      .sort((a, b) => b.dkpSpent - a.dkpSpent).slice(0, TOP_SPENDERS_N);
+    $("#biggest-spends-list").innerHTML = biggest.map((l, i) => `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <span class="rank-name">${Data.itemLink(l.item, items.byName)}</span>
+        <span class="rank-sub">${esc(l.player)}</span>
+        <span class="rank-val">${l.dkpSpent.toLocaleString()}</span>
+      </li>`).join("");
+    $("#biggest-spends-status").textContent = biggest.length
+      ? `Top ${biggest.length} single awards in the past 30 days`
+      : "No loot awarded in the past 30 days.";
+
+    // --- Characters by class (roster is one row per character), scoped to members seen on a raid in the past 30 days
+    const activeUserIds = new Set();
+    for (const r of raids) {
+      if (!r.date || r.date < cutoff30Str) continue;
+      for (const uid of r.attendeeUserIds) activeUserIds.add(uid);
+    }
+    const userByName = new Map(users.map((u) => [u.username, u.usernameId]));
+    const clsCount = new Map();
+    const activeMembers = new Set();
+    for (const row of roster) {
+      if (!row.cls) continue;
+      if (!activeUserIds.has(userByName.get(row.member))) continue;
+      activeMembers.add(row.member);
+      clsCount.set(row.cls, (clsCount.get(row.cls) || 0) + 1);
+    }
+    const classes = [...clsCount.entries()].sort((a, b) => b[1] - a[1]);
+    const maxCls = Math.max(...classes.map(([, n]) => n), 1);
+    $("#class-comp-list").innerHTML = classes.map(([cls, n]) => `
+      <div class="bar-row">
+        <span class="bar-name">${esc(cls)}</span>
+        <span class="bar-count">${n}</span>
+        <div class="bar-track"><div class="bar-fill" style="width:${(n / maxCls) * 100}%"></div></div>
+      </div>`).join("");
+    $("#class-comp-status").textContent = classes.length
+      ? `${[...clsCount.values()].reduce((a, b) => a + b, 0).toLocaleString()} characters from ${activeMembers.size.toLocaleString()} members seen in the past 30 days · ${classes.length} classes`
+      : "No members seen on raids in the past 30 days.";
+
+    // --- Recent joiners (earliest applied/memberSince per member, newest first)
+    const joined = new Map();
+    for (const row of roster) {
+      const d = [row.applied, row.memberSince].filter(Boolean).sort()[0];
+      if (!d) continue;
+      const prev = joined.get(row.member);
+      if (!prev || d < prev) joined.set(row.member, d);
+    }
+    const joiners = [...joined.entries()].sort((a, b) => b[1].localeCompare(a[1])).slice(0, JOINERS_SHOWN);
+    $("#recent-joiners-list").innerHTML = joiners.map(([name, d], i) => {
+      const days = Math.max(0, daysAgoOf(d));
+      return `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <span class="rank-val">${d} · ${days === 0 ? "today" : `${days}d ago`}</span>
+      </li>`;
+    }).join("");
+    const joinedLast30 = [...joined.values()].filter((d) => d >= cutoff30Str).length;
+    $("#recent-joiners-status").textContent = joiners.length
+      ? `Newest members · ${joinedLast30.toLocaleString()} joined in the past 30 days (of ${joined.size.toLocaleString()} with a recorded join date)`
+      : "No join dates in the roster export.";
+
+    // --- Raider trend: unique attendees per week over the last ACTIVITY_WEEKS weeks
+    const raiderSets = Array.from({ length: ACTIVITY_WEEKS }, () => new Set());
+    for (const r of raids) {
+      if (!r.date || !r.attendeeUserIds) continue;
+      const d = daysAgoOf(r.date);
+      if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
+      const idx = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      for (const uid of r.attendeeUserIds) raiderSets[idx].add(uid);
+    }
+    const raidersWeeks = raiderSets.map((s) => s.size);
+    const maxRaiders = Math.max(...raidersWeeks, 1);
+    $("#raider-chart").innerHTML = raidersWeeks.map((n, i) => {
+      const ws = new Date(now);
+      ws.setDate(ws.getDate() - (ACTIVITY_WEEKS - 1 - i) * 7);
+      const label = `${ws.getFullYear()}-${String(ws.getMonth() + 1).padStart(2, "0")}-${String(ws.getDate()).padStart(2, "0")}`;
+      return `<div class="activity-bar bar-raiders${n ? "" : " zero"}" style="height:${n ? Math.max(8, (n / maxRaiders) * 100) : 3}%" title="${label}: ${n} unique raiders"></div>`;
+    }).join("");
+    const avgRaiders = Math.round(raidersWeeks.reduce((a, b) => a + b, 0) / ACTIVITY_WEEKS);
+    $("#raider-trend-status").textContent = `Avg ${avgRaiders} unique raiders per week · peak ${Math.max(...raidersWeeks)} in one week`;
   }
 
-  function renderRecentLootPager(totalPages) {
-    const el = $("#recent-loot-pager");
-    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
-    el.hidden = false;
-
-    const pages = [1];
-    const lo = Math.max(2, recentLootPage - 2), hi = Math.min(totalPages - 1, recentLootPage + 2);
-    if (lo > 2) pages.push("…");
-    for (let p = lo; p <= hi; p++) pages.push(p);
-    if (hi < totalPages - 1) pages.push("…");
-    pages.push(totalPages);
-
-    el.innerHTML =
-      `<button class="pager-btn" data-page="${recentLootPage - 1}"${recentLootPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
-      pages.map((p) => p === "…"
-        ? `<span class="pager-ellipsis">…</span>`
-        : `<button class="pager-btn${p === recentLootPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
-      `<button class="pager-btn" data-page="${recentLootPage + 1}"${recentLootPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
 
   /* ---------------- raider standings ---------------- */
   let standingsSorted = [];
@@ -274,6 +368,7 @@
         <td>${l.date ? esc(l.date) : "—"}</td>
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, items.byName)}</td>
+        <td>${l.raid ? esc(l.raid) : "—"}</td>
         <td class="num">${l.dkpSpent}</td>
       </tr>`).join("");
 
@@ -602,12 +697,6 @@
         if (!btn || btn.disabled) return;
         renderLootPage(Number(btn.dataset.page), items);
       });
-      $("#recent-loot-pager").addEventListener("click", (e) => {
-        const btn = e.target.closest(".pager-btn");
-        if (!btn || btn.disabled) return;
-        renderRecentLootPage(Number(btn.dataset.page), items);
-      });
-
       // Loot search (debounced)
       let lootTimer;
       $("#loot-search").addEventListener("input", (e) => {
@@ -661,8 +750,8 @@
         renderRosterPage(1);
       });
 
-      // Member drill-down: delegated on the persistent roster tbody
-      $("#roster-table tbody").addEventListener("click", (e) => {
+      // Member drill-down: delegated globally so .member-link works in any view
+      document.addEventListener("click", (e) => {
         const link = e.target.closest(".member-link");
         if (!link) return;
         e.preventDefault();

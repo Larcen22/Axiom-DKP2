@@ -118,7 +118,7 @@ const Data = (() => {
   /**
    * Load loot awards, resolving missing dates via raid_id → raids.json.
    * @returns {Promise<Array<object>>}
-   *   each row: { date, player, item, raid, dkpSpent }
+   *   each row: { date, player, user, item, raid, dkpSpent }  (user = owner username_id or null)
    *   (date is "YYYY-MM-DD" or null when unresolvable; raid is the raid name or null)
    */
   async function loadLoot() {
@@ -131,6 +131,7 @@ const Data = (() => {
         // Prefer the loot's own date; fall back to the raid's date.
         date: (l.date || (raid && raid.date) || null),
         player: l.character_name,
+        user: l.username_id || null, // owner username_id (for member-level grouping)
         item: l.item,
         raid: (raid && raid.name) || null,
         dkpSpent: Number(l.item_dkp_value) || 0,
