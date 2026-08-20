@@ -223,7 +223,7 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#raids-status")).toContainText(/\(page 1 of/);
   });
 
-  test("member drill-down opens detail and back returns to roster", async () => {
+  test("member drill-down opens detail and back returns to origin", async () => {
     await goTo("roster");
     const link = page.locator("#roster-table tbody tr:first-child .member-link");
     const memberName = (await link.textContent()).trim();
@@ -254,6 +254,16 @@ test.describe.serial("Axiom DKP dashboard", () => {
 
     await page.click("#member-back");
     await expect(page.locator("#roster.view.active")).toBeVisible();
+
+    // From Overview, back should return there instead.
+    await goTo("overview");
+    const ovLink = page.locator("#overview .member-link").first();
+    if (await ovLink.count()) {
+      await ovLink.click();
+      await expect(page.locator("#member.view.active")).toBeVisible();
+      await page.click("#member-back");
+      await expect(page.locator("#overview.view.active")).toBeVisible();
+    }
   });
 
   test("raid drill-down opens detail and back returns to origin", async () => {

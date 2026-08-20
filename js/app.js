@@ -181,7 +181,7 @@
     $("#top-spenders-list").innerHTML = topSpenders.map(([name, amt], i) => `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
         <span class="rank-val">${amt.toLocaleString()}</span>
       </li>`).join("");
     $("#top-spenders-status").textContent = topSpenders.length
@@ -200,7 +200,7 @@
       return `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
         <span class="rank-val">${n} raid${n === 1 ? "" : "s"}</span>
       </li>`;
     }).join("");
@@ -267,7 +267,7 @@
       return `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
         <span class="rank-val">${d} · ${days === 0 ? "today" : `${days}d ago`}</span>
       </li>`;
     }).join("");
@@ -439,7 +439,7 @@
       return `
       <tr>
         <td class="num rank-medal${medal}">${rank}</td>
-        <td><a href="#member" class="member-link" data-member="${esc(u.username)}">${esc(u.username)}</a></td>
+        <td><a href="#member" class="member-link" data-member="${esc(u.username)}" data-return="standings">${esc(u.username)}</a></td>
         <td class="num ${dkpCls}">${u.activeDkp.toLocaleString()}</td>
         <td class="num">${u.earned.toLocaleString()}</td>
         <td class="num">${u.spent.toLocaleString()}</td>
@@ -577,7 +577,7 @@
     $("#roster-table tbody").innerHTML = rows.map((r) => `
       <tr>
         <td>${esc(r.character)}</td>
-        <td><a href="#member" class="member-link" data-member="${esc(r.member)}">${esc(r.member)}</a></td>
+        <td><a href="#member" class="member-link" data-member="${esc(r.member)}" data-return="roster">${esc(r.member)}</a></td>
         <td>${esc(r.cls)} · ${esc(r.race)} (${r.level})</td>
         <td>${esc(r.mainAlt)}</td>
         <td>${esc(r.rank)}</td>
@@ -606,8 +606,11 @@
     window.scrollTo({ top: 0 });
   }
 
-  function openMember(member) {
+  let memberReturnView = "roster"; // where the back button returns to (set by the clicked link)
+
+  function openMember(member, returnView) {
     if (!db) return;
+    memberReturnView = returnView || "roster";
     const m = member.toLowerCase();
     const user = db.users.find((u) => u.username.toLowerCase() === m) || null;
     const chars = db.roster.filter((r) => r.member.toLowerCase() === m);
@@ -761,7 +764,7 @@
     const attendeeRows = [
       ...[...byMember.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([m, chars]) => `
         <li>
-          <a href="#member" class="member-link rank-name" data-member="${esc(m)}">${esc(m)}</a>
+          <a href="#member" class="member-link rank-name" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>
           <span class="rank-sub">${chars.map(esc).join(", ")}</span>
         </li>`),
       ...loose.sort((a, b) => String(a).localeCompare(String(b))).map((c) => `
@@ -796,7 +799,7 @@
       <tr>
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, db.items.byName)}</td>
-        <td>${owner ? `<a href="#member" class="member-link" data-member="${esc(owner)}">${esc(owner)}</a>` : "\u2014"}</td>
+        <td>${owner ? `<a href="#member" class="member-link" data-member="${esc(owner)}" data-return="raid">${esc(owner)}</a>` : "\u2014"}</td>
         <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`;
     }).join("");
@@ -972,14 +975,14 @@
         const link = e.target.closest(".member-link");
         if (!link) return;
         e.preventDefault();
-        openMember(link.dataset.member);
+        openMember(link.dataset.member, link.dataset.return);
       });
 
-      // Back from member page to the roster view
+      // Back from the member page to wherever we came in from (any view with a .member-link).
       $("#member-back").addEventListener("click", () => {
-        showView("roster");
+        showView(memberReturnView);
         document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-        document.querySelector('.nav-link[data-target="roster"]')?.classList.add("active");
+        document.querySelector(`.nav-link[data-target="${memberReturnView}"]`)?.classList.add("active");
       });
 
       // Raid drill-down: raid names are clickable in any view (Recent Raids, Raid History).
