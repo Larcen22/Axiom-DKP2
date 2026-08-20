@@ -44,7 +44,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 ## Key Mechanics
 
 - **Date resolution:** Loot rows missing `date` resolve via `raid_id → raids[].date` (truncated `YYYY-MM-DD`).
-- **Item links:** `Data.itemLink(itemName, byName)` joins by **name string** via `byName: Map<lowercase NAME, id>` → `https://www.pqdi.cc/item/{id}`; falls back to escaped plain text when the name is unknown. Names mapping to **multiple ids are ambiguous** and excluded from `byName` (rendered as plain text — owner decision: never guess an expansion); `loadItems()` also returns them in an `ambiguous: Set<string>`.
+- **Item links:** `Data.itemLink(itemName, byName)` joins by **name string** via `byName: Map<lowercase NAME, id>` → `https://www.pqdi.cc/item/{id}`; falls back to escaped plain text when the name is unknown. Names mapping to **multiple ids are ambiguous**: `byName` keeps the **largest id** deterministically (every candidate is a pqdi.cc page for an item bearing that exact name, and the larger/newer entry carries more complete data — owner decision 2026-08: link rather than plain text); `loadItems()` also returns them in an `ambiguous: Set<string>`.
 - **Security:** `Data.escapeHtml` is applied to all user-generated data rendered into `innerHTML`.
 - **Pagination:** Client-side via event delegation on `#*-pager` containers, all rendered by one shared `renderPager(containerId, currentPage, totalPages)` helper (windowed page buttons with ellipses; hidden when ≤1 page). Page sizes: 25 (standings/loot/roster), 5 (raids), 10 (member loot + raid loot).
 - **Errors:** Load failures replace `.panel-status` elements with an error message.
@@ -54,7 +54,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 
 | Export | Returns / does |
 |---|---|
-| `loadItems()` | `{ byId, byName, ambiguous: Set<string>, rows }` — names mapping to multiple ids are excluded from `byName` and listed in `ambiguous`. |
+| `loadItems()` | `{ byId, byName, ambiguous: Set<string>, rows }` — for names mapping to multiple ids, the largest id is kept in `byName` (linked) and the name is also listed in `ambiguous`. |
 | `loadRaidInfo()` | `Map<raid_id, { date, name }>` for loot resolution. |
 | `loadLoot()` | Normalized rows `{ date, player, user, item, raid, raidId, dkpSpent }` — `date`/`raid` are null when unresolvable; `user` is the owner username_id (or null) for member-level grouping; `raidId` is the raw `raid_id` (kept even when unknown) for exact joins. All dates normalized to `YYYY-MM-DD` via `isoDate()` (exports occasionally carry full ISO timestamps; empty/unparseable values become null so junk can never reach a date cell). |
 | `loadRaids()` | `[{ id, date, name, dkpValue, attendees:string[], attendeeUserIds:string[] }]` — dates likewise normalized to `YYYY-MM-DD`. `id` is the raw `raid_id`; raid **names repeat over time** (multi-raid days), so per-raid joins must use `id`, never `name`. |

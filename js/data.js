@@ -28,12 +28,15 @@ const Data = (() => {
 
   /**
    * Load the item database and build lookup indexes.
-   * Names that map to more than one id are AMBIGUOUS and excluded from byName
-   * (itemLink then renders them as plain text rather than guessing an expansion).
+   * Names that map to more than one id are AMBIGUOUS (pqdi.cc lists the same
+   * name under several ids — duplicate imports / variants). byName keeps the
+   * LARGEST id deterministically: every candidate is a pqdi.cc page for an item
+   * bearing that exact name, and in practice the larger (newer) pqdi.cc entry
+   * carries the more complete data (owner decision 2026-08).
    * @returns {Promise<{
    *   byId:       Map<number, string>,       // id -> NAME
-   *   byName:     Map<string, number>,       // NAME (lowercase) -> id  (for pqdi.cc links; unambiguous only)
-   *   ambiguous:  Set<string>,               // lowercase names with >1 id (no link)
+   *   byName:     Map<string, number>,       // NAME (lowercase) -> id  (for pqdi.cc links; largest id when ambiguous)
+   *   ambiguous:  Set<string>,               // lowercase names with >1 id (still linked — to the smallest id)
    *   rows:       Array<{ id: number, NAME: string }>
    * }>}
    */
@@ -51,10 +54,12 @@ const Data = (() => {
       if (typeof row.id !== "number" || typeof row.NAME !== "string") continue;
       byId.set(row.id, row.NAME);
       const key = row.NAME.toLowerCase();
-      if (!ambiguous.has(key)) {
-        const existing = byName.get(key);
-        if (existing === undefined) byName.set(key, row.id);
-        else if (existing !== row.id) { byName.delete(key); ambiguous.add(key); }
+      const existing = byName.get(key);
+      if (existing === undefined) {
+        byName.set(key, row.id);
+      } else if (existing !== row.id) {
+        ambiguous.add(key);
+        if (row.id > existing) byName.set(key, row.id); // deterministic pick: largest id
       }
       rows.push(row);
     }
@@ -64,8 +69,8 @@ const Data = (() => {
   /**
    * Build an anchor for a loot item name using the items.json id:
    *   <a href="https://www.pqdi.cc/item/1001">Cloth Cap</a>
-   * Falls back to plain text if the name isn't in the database or is ambiguous
-   * (multiple ids — see loadItems).
+   * Falls back to plain text only when the name isn't in the database.
+   * Ambiguous names (multiple ids) link to the largest id — see loadItems().
    * @param {string} itemName
    * @param {Map<string, number>} byName - from loadItems()
    * @returns {string} safe HTML (name must already be trusted/local data)

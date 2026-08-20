@@ -132,20 +132,20 @@ describe("loadItems", () => {
     await expect(Data.loadItems()).rejects.toThrow(/unexpected structure/);
   });
 
-  it("excludes ambiguous names (multiple ids) from byName -> plain text link", async () => {
+  it("links ambiguous names (multiple ids) to the largest id deterministically", async () => {
     vi.stubGlobal("fetch", makeFetchStub({
       "items.json": { table: "items", rows: [
-        { id: 1, NAME: "Mark of Shadows" },
-        { id: 2, NAME: "mark of shadows" }, // same name (case-insensitive), different id
+        { id: 2, NAME: "mark of shadows" }, // larger id first in file order
+        { id: 1, NAME: "Mark of Shadows" }, // same name (case-insensitive), smaller id last — must not win (not last-write-wins)
         { id: 3, NAME: "Cloth Cap" },
       ]},
     }));
     const Data = loadData();
     const { byName, ambiguous } = await Data.loadItems();
-    expect(byName.has("mark of shadows")).toBe(false);
+    expect(byName.get("mark of shadows")).toBe(2); // largest id wins regardless of file order
     expect(ambiguous.has("mark of shadows")).toBe(true);
     expect(byName.get("cloth cap")).toBe(3); // unambiguous names unaffected
-    expect(Data.itemLink("Mark of Shadows", byName)).toBe("Mark of Shadows"); // no link
+    expect(Data.itemLink("Mark of Shadows", byName)).toContain('href="https://www.pqdi.cc/item/2"');
   });
 
   it("treats duplicate rows with the same id as unambiguous", async () => {
