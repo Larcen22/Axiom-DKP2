@@ -196,9 +196,13 @@
       <!-- ========== MEMBER DETAIL ========== -->
       <section id="member" class="view">
         <button id="member-back" class="member-back" type="button">← Back to Roster</button>
-        <h2 id="member-name">Member</h2>
+        <header class="member-header">
+          <h2 id="member-name">Member</h2>
+          <span id="member-rank" class="member-rank" hidden></span>
+        </header>
+        <div id="member-characters" class="member-characters"></div>
 
-        <div class="stat-grid">
+        <div class="stat-grid member-dkp-grid">
           <div class="stat-card">
             <div class="stat-value" id="member-available">–</div>
             <div class="stat-label">Available DKP</div>
@@ -211,41 +215,32 @@
             <div class="stat-value" id="member-spent">–</div>
             <div class="stat-label">DKP Spent</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="member-raids-attended">–</div>
-            <div class="stat-label">Raids Attended</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="member-raids-since">–</div>
-            <div class="stat-label" id="member-raids-since-label">Raids Since Joined</div>
-          </div>
         </div>
 
         <div class="panel">
-          <h3>Raid Attendance %</h3>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <div class="stat-value" id="member-att-30">–</div>
-              <div class="stat-label">Past 30 Days</div>
+          <h3>Raid Attendance</h3>
+          <div class="att-strip">
+            <div class="att-cell">
+              <span class="att-value" id="member-att-30">–</span>
+              <span class="att-label">Past 30 Days</span>
             </div>
-            <div class="stat-card">
-              <div class="stat-value" id="member-att-60">–</div>
-              <div class="stat-label">Past 60 Days</div>
+            <div class="att-cell">
+              <span class="att-value" id="member-att-60">–</span>
+              <span class="att-label">Past 60 Days</span>
             </div>
-            <div class="stat-card">
-              <div class="stat-value" id="member-att-90">–</div>
-              <div class="stat-label">Past 90 Days</div>
+            <div class="att-cell">
+              <span class="att-value" id="member-att-90">–</span>
+              <span class="att-label">Past 90 Days</span>
             </div>
-            <div class="stat-card">
-              <div class="stat-value" id="member-att-lifetime">–</div>
-              <div class="stat-label" id="member-att-lifetime-label">Lifetime</div>
+            <div class="att-cell">
+              <span class="att-value" id="member-att-lifetime">–</span>
+              <span class="att-label" id="member-att-lifetime-label">Lifetime</span>
             </div>
           </div>
-        </div>
-
-        <div class="panel">
-          <h3>Characters</h3>
-          <div id="member-characters" class="member-characters"></div>
+          <div class="panel-status member-summary-line">
+            <strong id="member-raids-attended">–</strong>&nbsp;raids attended ·
+            <strong id="member-raids-since">–</strong>&nbsp;raids <span id="member-raids-since-label"></span>
+          </div>
         </div>
 
         <div class="panel">

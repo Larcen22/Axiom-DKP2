@@ -467,14 +467,16 @@
     const pct = (a, t) => (t ? `${Math.round((a / t) * 100)}%` : "–");
 
     $("#member-name").textContent = member;
+    // Roster Rank: hide the default ("member"), surface officer / guild leader / inactive / applicant / former.
+    const rank = chars.map((c) => c.rank).find(Boolean) || "";
+    $("#member-rank").hidden = !rank || rank.toLowerCase() === "member";
+    $("#member-rank").textContent = rank;
     $("#member-available").textContent = available.toLocaleString();
     $("#member-earned").textContent = earned.toLocaleString();
     $("#member-spent").textContent = spent.toLocaleString();
     $("#member-raids-attended").textContent = raidsAttended.toLocaleString();
     $("#member-raids-since").textContent = raidsSinceJoin != null ? raidsSinceJoin.toLocaleString() : "–";
-    $("#member-raids-since-label").textContent = joinedOn
-      ? `Raids Since ${joinedOn}`
-      : "Raids Since Joined (no join date)";
+    $("#member-raids-since-label").textContent = joinedOn ? `since ${joinedOn}` : "(no join date)";
     $("#member-att-30").textContent = pct(winAttended["30"], winTotal["30"]);
     $("#member-att-60").textContent = pct(winAttended["60"], winTotal["60"]);
     $("#member-att-90").textContent = pct(winAttended["90"], winTotal["90"]);

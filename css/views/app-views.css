@@ -31,6 +31,65 @@
 }
 .member-back:hover { background: var(--color-bg-hover); }
 
+.member-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+#member-name {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+}
+.member-rank {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Compact attendance strip (4 cells, hairline dividers via gap+bg trick) */
+.att-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.att-cell {
+  background: var(--color-bg-card);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+.att-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+}
+.att-label {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.member-summary-line strong {
+  color: var(--color-text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .member-link {
   color: var(--color-accent);
   text-decoration: none;
@@ -38,10 +97,15 @@
 }
 .member-link:hover { border-bottom-color: var(--color-accent); }
 
-.member-characters { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: var(--space-sm); 
+.member-characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 640px) {
+  .att-strip { grid-template-columns: repeat(2, 1fr); }
 }
 .member-char {
   padding: 0.35rem 0.75rem;
