@@ -242,6 +242,16 @@ test.describe.serial("Axiom DKP dashboard", () => {
       await expect(page.locator(`#${id}`)).toHaveText(/^(?:\d+%|–)$/);
     }
 
+    // Character names link out to Quarmy (non-www host) in a new tab — roster cell and profile chip.
+    const firstCharCell = page.locator("#roster-table tbody tr:first-child td:nth-child(1) .char-link");
+    await expect(firstCharCell).toHaveAttribute("href", /^https:\/\/quarmy\.com\/public\?q=.+/);
+    await expect(firstCharCell).toHaveAttribute("target", "_blank");
+    const profileChar = page.locator("#member-characters .char-link").first();
+    if (await profileChar.count()) {
+      await expect(profileChar).toHaveAttribute("href", /^https:\/\/quarmy\.com\/public\?q=.+/);
+      await expect(profileChar).toHaveAttribute("target", "_blank");
+    }
+
     // Member loot shares the standard pagination: pager visible only when >10 awards.
     const m = /page 1 of (\d+)/.exec((await page.locator("#member-loot-status").textContent()) || "");
     if (m && Number(m[1]) > 1) {

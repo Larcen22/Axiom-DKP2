@@ -22,6 +22,9 @@
     if (el) el.textContent = value;
   };
   const esc = Data.escapeHtml;
+  // Quarmy character lookup: opens a name search on quarmy.com (non-www host only —
+  // www.quarmy.com returns 503). Opens in a new tab.
+  const quarmyLink = (name) => `<a class="char-link" href="https://quarmy.com/public?q=${encodeURIComponent(name)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`;
   const RECENT_LOOT_PAGE_SIZE = 25;
   const STANDINGS_PAGE_SIZE = 25;
 
@@ -576,7 +579,7 @@
 
     $("#roster-table tbody").innerHTML = rows.map((r) => `
       <tr>
-        <td>${esc(r.character)}</td>
+        <td>${quarmyLink(r.character)}</td>
         <td><a href="#member" class="member-link" data-member="${esc(r.member)}" data-return="roster">${esc(r.member)}</a></td>
         <td>${esc(r.cls)} · ${esc(r.race)} (${r.level})</td>
         <td>${esc(r.mainAlt)}</td>
@@ -681,7 +684,7 @@
 
     $("#member-characters").innerHTML = chars.length
       ? chars.map((c) =>
-          `<span class="member-char">${esc(c.character)} · ${esc(c.cls)} (${c.level}) · ${esc(c.mainAlt || "—")}</span>`
+          `<span class="member-char">${quarmyLink(c.character)} · ${esc(c.cls)} (${c.level}) · ${esc(c.mainAlt || "—")}</span>`
         ).join("")
       : "<span class=\"panel-status\">No roster characters found.</span>";
 
@@ -767,10 +770,10 @@
     const attendeeRows = [
       ...[...byMember.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([m, chars]) => `
         <li>
-          <a href="#member" class="member-link" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>${chars.length > 1 ? `<span class="chip-chars">${chars.map(esc).join(", ")}</span>` : ""}
+          <a href="#member" class="member-link" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>${chars.length > 1 ? `<span class="chip-chars">${chars.map((c) => quarmyLink(c)).join(", ")}</span>` : ""}
         </li>`),
       ...loose.sort((a, b) => String(a).localeCompare(String(b))).map((c) => `
-        <li class="loose"><span class="chip-name">${esc(c)}</span></li>`),
+        <li class="loose"><span class="chip-name">${quarmyLink(c)}</span></li>`),
     ];
     $("#raid-attendee-list").innerHTML = attendeeRows.join("");
     $("#raid-attendees-status").textContent = r.attendees.length

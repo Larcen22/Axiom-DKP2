@@ -45,6 +45,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 
 - **Date resolution:** Loot rows missing `date` resolve via `raid_id → raids[].date` (truncated `YYYY-MM-DD`).
 - **Item links:** `Data.itemLink(itemName, byName)` joins by **name string** via `byName: Map<lowercase NAME, id>` → `https://www.pqdi.cc/item/{id}`; falls back to escaped plain text when the name is unknown. Names mapping to **multiple ids are ambiguous**: `byName` keeps the **largest id** deterministically (every candidate is a pqdi.cc page for an item bearing that exact name, and the larger/newer entry carries more complete data — owner decision 2026-08: link rather than plain text); `loadItems()` also returns them in an `ambiguous: Set<string>`.
+- **Quarmy character links:** `quarmyLink(name)` in app.js → `<a class="char-link" href="https://quarmy.com/public?q={encodeURIComponent(name)}" target="_blank">`. Rendered wherever a single character name appears: Member Detail character chips, Raid Detail attendee chips (multi-boxed `.chip-chars` + unrostered loose chips), and the Roster table Character column. **Non-www host only — `www.quarmy.com` returns 503.**
 - **Security:** `Data.escapeHtml` is applied to all user-generated data rendered into `innerHTML`.
 - **Pagination:** Client-side via event delegation on `#*-pager` containers, all rendered by one shared `renderPager(containerId, currentPage, totalPages)` helper (windowed page buttons with ellipses; hidden when ≤1 page). Page sizes: 25 (standings/loot/roster), 5 (raids), 10 (member loot + raid loot).
 - **Errors:** Load failures replace `.panel-status` elements with an error message.
@@ -92,7 +93,7 @@ Three layers — see README for details:
 
 - **Unit** (`test/unit/`, Vitest): data-layer logic with mocked `fetch`/`Papa`.
 - **Integrity** (`test/integrity/`, Vitest): cross-file invariants on the real exports when present locally (unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness + earned-drift bounds, item-name coverage); falls back to `test/fixtures/sample-data/` otherwise.
-- **E2E** (`test/e2e/`, Playwright): loads the real UI over HTTP via `serve.mjs` (real data locally, sample dataset in CI) — no console/page errors, all views render, search/sort/pagination/drill-down (member + raid) work, pqdi.cc links correct, every visible date is plain YYYY-MM-DD, PWA manifest + icons load with the right content types, mobile bottom nav stays pinned under iPhone emulation.
+- **E2E** (`test/e2e/`, Playwright): loads the real UI over HTTP via `serve.mjs` (real data locally, sample dataset in CI) — no console/page errors, all views render, search/sort/pagination/drill-down (member + raid) work, pqdi.cc item + quarmy character links correct, every visible date is plain YYYY-MM-DD, PWA manifest + icons load with the right content types, mobile bottom nav stays pinned under iPhone emulation.
 
 Run: `npm test` and `npm run test:e2e`. CI (`.github/workflows/ci.yml`) runs both on push/PR.
 
