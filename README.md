@@ -19,18 +19,19 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 
 | View | What it shows |
 |---|---|
-| **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), recent raids, top spenders (30d), biggest spends (30d), active characters by class (30d), recent joiners, raider trend |
-| **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown (paginated) |
+| **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids |
+| **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown and 30D/60D/90D/Lifetime raid attendance as `NN% (attended/total)`; all data columns sortable (raid windows by %), searchable by raider name (paginated) |
 | **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
-| **Member** | Drill-down (from Roster or Overview panels): account DKP, rank, characters, raid attendance %, member-scoped loot history |
+| **Member** | Drill-down (from Roster or Overview panels): account DKP, rank, characters, raid attendance %, paginated member-scoped loot history |
 | **Raids** | Full raid log with date, DKP value, and attendee list (paginated) |
 
 ## Project structure
 
 ```
 index.html           App shell: top bar, sidebar nav, view sections
-style.css            Dark theme, layout, components
+style.css            Import manifest (variables → base → layout → components → views)
+css/                 Modular stylesheets: variables/, base/, layout/, components/, views/
 js/data.js           Data layer (global `Data`): fetch, validate, normalize, index
 js/app.js            Presentation layer: navigation, rendering, pagination, search
 items.json           Item database (id + name), used for pqdi.cc links
@@ -70,16 +71,15 @@ CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 ## Known gaps / limitations
 
 - `transactions.json` (~597KB) is pre-processed: DKP adjustments are already baked into `users.json`. Not loaded directly by the app (already folded into balances).
-- Four nearly identical pager implementations exist (`renderStandingsPager`, `renderLootPager`, `renderRosterPager`, `renderRaidsPager`); could be consolidated into a single generic helper.
 
 ## File sizes (approximate)
 
 | File | Size | Purpose |
 |---|---|---|
-| `index.html` | 257 lines | App shell, top bar, nav, view sections, footer |
-| `style.css` | ~383 lines | Dark theme, layout, components |
-| `js/data.js` | 215 lines | Global `Data` object: fetch / validate / normalize |
-| `js/app.js` | 535 lines | Navigation, view rendering, pagination, search |
+| `index.html` | ~326 lines | App shell, top bar, nav, view sections, footer |
+| `style.css` + `css/` | ~700 lines total | Dark theme: variables, base, layout, components (cards/tables/pagination/loading/inputs), views |
+| `js/data.js` | ~247 lines | Global `Data` object: fetch / validate / normalize |
+| `js/app.js` | ~805 lines | Navigation, view rendering, pagination, search, overview insight panels |
 | `items.json` | ~1.6 MB | Item database (id + name), pqdi.cc links |
 | `loot.json` | ~2.1 MB | Loot awards (player, item, DKP spent) |
 | `raids.json` | ~8.2 MB | Raid log (date, DKP value, attendees) |

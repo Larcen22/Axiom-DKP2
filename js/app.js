@@ -63,6 +63,7 @@
   const TOP_SPENDERS_N = 5;
   const ACTIVITY_WEEKS = 12;
   const JOINERS_SHOWN = 5;
+  const CORE_RAIDS_MIN = 8; // raids in 30d to count as a "core" raider
 
   function renderOverview(users, loot, items, raids, roster) {
     // Stat cards
@@ -183,6 +184,27 @@
       ? `Top ${topSpenders.length} of ${spent30.size.toLocaleString()} members who spent DKP in the past 30 days`
       : "No DKP spent in the past 30 days.";
 
+    // --- Most active members, past 30 days (raids attended by owner username_id)
+    const attendance = new Map();
+    for (const r of raids) {
+      if (!r.date || r.date < cutoff30Str) continue;
+      for (const uid of r.attendeeUserIds) attendance.set(uid, (attendance.get(uid) || 0) + 1);
+    }
+    const mostActive = [...attendance.entries()].sort((a, b) => b[1] - a[1]).slice(0, TOP_SPENDERS_N);
+    $("#most-active-list").innerHTML = mostActive.map(([uid, n], i) => {
+      const name = memberByUser.get(uid) || uid;
+      return `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <a href="#member" class="member-link rank-name" data-member="${esc(name)}">${esc(name)}</a>
+        <span class="rank-val">${n} raid${n === 1 ? "" : "s"}</span>
+      </li>`;
+    }).join("");
+    const coreCount = [...attendance.values()].filter((n) => n >= CORE_RAIDS_MIN).length;
+    $("#most-active-status").textContent = attendance.size
+      ? `${coreCount.toLocaleString()} core raiders (${CORE_RAIDS_MIN}+ raids) of ${attendance.size.toLocaleString()} active members`
+      : "No raids in the past 30 days.";
+
     // --- Biggest single spends, past 30 days
     const biggest = loot.filter((l) => l.date && l.date >= cutoff30Str)
       .sort((a, b) => b.dkpSpent - a.dkpSpent).slice(0, TOP_SPENDERS_N);
@@ -206,11 +228,14 @@
     const userByName = new Map(users.map((u) => [u.username, u.usernameId]));
     const clsCount = new Map();
     const activeMembers = new Set();
+    let mains = 0, alts = 0;
     for (const row of roster) {
       if (!row.cls) continue;
       if (!activeUserIds.has(userByName.get(row.member))) continue;
       activeMembers.add(row.member);
       clsCount.set(row.cls, (clsCount.get(row.cls) || 0) + 1);
+      if (row.mainAlt === "main") mains++;
+      else if (row.mainAlt === "alternate") alts++;
     }
     const classes = [...clsCount.entries()].sort((a, b) => b[1] - a[1]);
     const maxCls = Math.max(...classes.map(([, n]) => n), 1);
@@ -221,7 +246,7 @@
         <div class="bar-track"><div class="bar-fill" style="width:${(n / maxCls) * 100}%"></div></div>
       </div>`).join("");
     $("#class-comp-status").textContent = classes.length
-      ? `${[...clsCount.values()].reduce((a, b) => a + b, 0).toLocaleString()} characters from ${activeMembers.size.toLocaleString()} members seen in the past 30 days · ${classes.length} classes`
+      ? `${[...clsCount.values()].reduce((a, b) => a + b, 0).toLocaleString()} characters from ${activeMembers.size.toLocaleString()} members seen in the past 30 days · ${classes.length} classes · ${mains} mains / ${alts} alts`
       : "No members seen on raids in the past 30 days.";
 
     // --- Recent joiners (earliest applied/memberSince per member, newest first)
@@ -270,19 +295,132 @@
 
 
   /* ---------------- raider standings ---------------- */
+  let standingsAll = []; // enriched users (unsorted)
   let standingsSorted = [];
+  let standingsFiltered = [];
+  let standingsSearch = "";
+  let standingsSort = { key: "activeDkp", dir: -1 }; // default: active DKP, biggest first
   let standingsPage = 1;
 
-  function renderStandings(users) {
-    standingsSorted = [...users].sort((a, b) => b.activeDkp - a.activeDkp);
+  function renderStandings(users, raids, roster) {
+    // Same window semantics as Member Detail: windows are clamped to each member's join date,
+    // lifetime starts at the join date (no join date -> "–"), presence = username_id OR character name.
+    const cutoffFor = (days) => {
+      const d = new Date();
+      d.setDate(d.getDate() - days);
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    };
+    const cutoffs = [30, 60, 90].map(cutoffFor);
+
+    // Earliest applied/memberSince per member (same as openMember).
+    const joinedByMember = new Map();
+    for (const row of roster) {
+      for (const d of [row.applied, row.memberSince]) {
+        if (!d) continue;
+        const prev = joinedByMember.get(row.member);
+        if (!prev || d < prev) joinedByMember.set(row.member, d);
+      }
+    }
+    const uidOfUser = new Map(users.map((u) => [u.username, u.usernameId]));
+    const joinedById = new Map();
+    for (const u of users) joinedById.set(u.usernameId, joinedByMember.get(u.username) || "");
+
+    // Character name -> username_id, so presence also matches roster names (openMember's isPresent union).
+    const charNameToUid = new Map();
+    for (const row of roster) {
+      const uid = uidOfUser.get(row.member);
+      if (uid && !charNameToUid.has(row.character.toLowerCase())) charNameToUid.set(row.character.toLowerCase(), uid);
+    }
+
+    // Sorted raid dates -> O(log n) "total raids since X" lookups.
+    const raidDates = raids.map((r) => r.date).filter(Boolean).sort();
+    const totalSince = (start) => {
+      if (!start) return 0;
+      let lo = 0, hi = raidDates.length;
+      while (lo < hi) {
+        const mid = (lo + hi) >> 1;
+        if (raidDates[mid] < start) lo = mid + 1; else hi = mid;
+      }
+      return raidDates.length - lo;
+    };
+
+    // Single pass over raids: per-member attended counts for the three clamped windows + lifetime.
+    const counts = new Map(); // usernameId -> [n30, n60, n90, nLife]
+    for (const r of raids) {
+      if (!r.date) continue;
+      const credited = new Set(r.attendeeUserIds);
+      for (const name of r.attendees) {
+        const uid = charNameToUid.get(name.toLowerCase());
+        if (uid) credited.add(uid);
+      }
+      for (const uid of credited) {
+        let c = counts.get(uid);
+        if (!c) { c = [0, 0, 0, 0]; counts.set(uid, c); }
+        const jo = joinedById.get(uid) || "";
+        for (let i = 0; i < 3; i++) {
+          const start = jo > cutoffs[i] ? jo : cutoffs[i];
+          if (r.date >= start) c[i]++;
+        }
+        if (jo && r.date >= jo) c[3]++;
+      }
+    }
+
+    const fmt = (a, t) => (t ? `${Math.round((a / t) * 100)}% (${a}/${t})` : "–");
+    const pctOf = (a, t) => (t ? Math.round((a / t) * 100) : null);
+
+    standingsAll = users.map((u) => {
+      const c = counts.get(u.usernameId) || [0, 0, 0, 0];
+      const jo = joinedById.get(u.usernameId) || "";
+      const totals = [
+        totalSince(jo > cutoffs[0] ? jo : cutoffs[0]),
+        totalSince(jo > cutoffs[1] ? jo : cutoffs[1]),
+        totalSince(jo > cutoffs[2] ? jo : cutoffs[2]),
+        totalSince(jo),
+      ];
+      return {
+        ...u,
+        att30: fmt(c[0], totals[0]), p30: pctOf(c[0], totals[0]),
+        att60: fmt(c[1], totals[1]), p60: pctOf(c[1], totals[1]),
+        att90: fmt(c[2], totals[2]), p90: pctOf(c[2], totals[2]),
+        attLife: fmt(c[3], totals[3]), pLife: pctOf(c[3], totals[3]),
+      };
+    });
+    applyStandingsSort();
     renderStandingsPage(1);
   }
 
+  function applyStandingsSort() {
+    const { key, dir } = standingsSort;
+    standingsSorted = [...standingsAll].sort((a, b) => {
+      const av = a[key], bv = b[key];
+      // "–" (no raids in window / no join date) always sorts last.
+      if (av == null || bv == null) return av == null ? 1 : -1;
+      const cmp = typeof av === "number" && typeof bv === "number"
+        ? av - bv
+        : String(av).localeCompare(String(bv));
+      return (cmp || a.username.localeCompare(b.username)) * dir;
+    });
+    applyStandingsFilter();
+  }
+
+  function markSortHeaders(tableSel, sortKey, dir) {
+    document.querySelectorAll(`${tableSel} thead th`).forEach((th) => th.classList.remove("sorted-asc", "sorted-desc"));
+    const th = document.querySelector(`${tableSel} thead th[data-sort="${sortKey}"]`);
+    if (th) th.classList.add(dir === 1 ? "sorted-asc" : "sorted-desc");
+  }
+
+  function applyStandingsFilter() {
+    const q = standingsSearch.trim().toLowerCase();
+    standingsFiltered = q
+      ? standingsSorted.filter((u) => u.username.toLowerCase().includes(q))
+      : standingsSorted;
+  }
+
   function renderStandingsPage(page) {
-    const totalPages = Math.max(1, Math.ceil(standingsSorted.length / STANDINGS_PAGE_SIZE));
+    const totalPages = Math.max(1, Math.ceil(standingsFiltered.length / STANDINGS_PAGE_SIZE));
     standingsPage = Math.min(Math.max(1, page), totalPages);
     const start = (standingsPage - 1) * STANDINGS_PAGE_SIZE;
-    const rows = standingsSorted.slice(start, start + STANDINGS_PAGE_SIZE);
+    const rows = standingsFiltered.slice(start, start + STANDINGS_PAGE_SIZE);
 
     $("#standings-table tbody").innerHTML = rows.map((u, i) => {
       const rank = start + i + 1;
@@ -291,42 +429,29 @@
       return `
       <tr>
         <td class="num rank-medal${medal}">${rank}</td>
-        <td>${esc(u.username)}</td>
+        <td><a href="#member" class="member-link" data-member="${esc(u.username)}">${esc(u.username)}</a></td>
         <td class="num ${dkpCls}">${u.activeDkp.toLocaleString()}</td>
         <td class="num">${u.earned.toLocaleString()}</td>
         <td class="num">${u.spent.toLocaleString()}</td>
+        <td class="num" title="Attended / available raids in the past 30 days (clamped to join date)">${u.att30}</td>
+        <td class="num" title="Attended / available raids in the past 60 days (clamped to join date)">${u.att60}</td>
+        <td class="num" title="Attended / available raids in the past 90 days (clamped to join date)">${u.att90}</td>
+        <td class="num" title="Attended / available raids since joining">${u.attLife}</td>
       </tr>`;
     }).join("");
 
     $("#standings-table").hidden = rows.length === 0;
     const status = $("#standings-status");
-    status.textContent = `${standingsSorted.length.toLocaleString()} raiders by active DKP · ` +
+    const searched = standingsSearch.trim() ? ` · matching “${standingsSearch.trim()}”` : "";
+    status.textContent = `${standingsFiltered.length.toLocaleString()} raiders by active DKP${searched} · ` +
       (rows.length
-        ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${standingsPage} of ${totalPages.toLocaleString()})`
+        ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${standingsPage} of ${totalPages.toLocaleString()})`
         : "no raiders");
 
-    renderStandingsPager(totalPages);
+    markSortHeaders("#standings-table", standingsSort.key, standingsSort.dir);
+    renderPager("standings-pager", standingsPage, totalPages);
   }
 
-  function renderStandingsPager(totalPages) {
-    const el = $("#standings-pager");
-    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
-    el.hidden = false;
-
-    const pages = [1];
-    const lo = Math.max(2, standingsPage - 2), hi = Math.min(totalPages - 1, standingsPage + 2);
-    if (lo > 2) pages.push("…");
-    for (let p = lo; p <= hi; p++) pages.push(p);
-    if (hi < totalPages - 1) pages.push("…");
-    if (totalPages > 1) pages.push(totalPages);
-
-    el.innerHTML =
-      `<button class="pager-btn" data-page="${standingsPage - 1}"${standingsPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
-      pages.map((p) => p === "…"
-        ? `<span class="pager-ellipsis">…</span>`
-        : `<button class="pager-btn${p === standingsPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
-      `<button class="pager-btn" data-page="${standingsPage + 1}"${standingsPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
 
   /* ---------------- loot history ---------------- */
   const LOOT_PAGE_SIZE = 25;
@@ -377,32 +502,13 @@
     const searched = lootSearch.trim() ? ` · matching “${lootSearch.trim()}”` : "";
     $("#loot-status").textContent = `${lootFiltered.length.toLocaleString()} loot awards · newest first${searched} · ` +
       (rows.length
-        ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${lootPage} of ${totalPages.toLocaleString()})`
+        ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${lootPage} of ${totalPages.toLocaleString()})`
         : "no matches") +
       (undated ? ` · ${undated.toLocaleString()} undated` : "");
 
-    renderLootPager(totalPages);
+    renderPager("loot-pager", lootPage, totalPages);
   }
 
-  function renderLootPager(totalPages) {
-    const el = $("#loot-pager");
-    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
-    el.hidden = false;
-
-    const pages = [1];
-    const lo = Math.max(2, lootPage - 2), hi = Math.min(totalPages - 1, lootPage + 2);
-    if (lo > 2) pages.push("…");
-    for (let p = lo; p <= hi; p++) pages.push(p);
-    if (hi < totalPages - 1) pages.push("…");
-    if (totalPages > 1) pages.push(totalPages);
-
-    el.innerHTML =
-      `<button class="pager-btn" data-page="${lootPage - 1}"${lootPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
-      pages.map((p) => p === "…"
-        ? `<span class="pager-ellipsis">…</span>`
-        : `<button class="pager-btn${p === lootPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
-      `<button class="pager-btn" data-page="${lootPage + 1}"${lootPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
 
   /* ---------------- roster ---------------- */
   const ROSTER_PAGE_SIZE = 25;
@@ -472,34 +578,16 @@
     const members = new Set(rosterFiltered.map((r) => r.member)).size;
     $("#roster-status").textContent = `${rosterFiltered.length.toLocaleString()} of ${rosterAll.length.toLocaleString()} characters · ${members.toLocaleString()} members · ` +
       (rows.length
-        ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${rosterPage} of ${totalPages.toLocaleString()})`
+        ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${rosterPage} of ${totalPages.toLocaleString()})`
         : "no characters");
 
-    renderRosterPager(totalPages);
+    markSortHeaders("#roster-table", rosterState.sortKey, rosterState.sortDir);
+    renderPager("roster-pager", rosterPage, totalPages);
   }
 
-  function renderRosterPager(totalPages) {
-    const el = $("#roster-pager");
-    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
-    el.hidden = false;
-
-    const pages = [1];
-    const lo = Math.max(2, rosterPage - 2), hi = Math.min(totalPages - 1, rosterPage + 2);
-    if (lo > 2) pages.push("…");
-    for (let p = lo; p <= hi; p++) pages.push(p);
-    if (hi < totalPages - 1) pages.push("…");
-    if (totalPages > 1) pages.push(totalPages);
-
-    el.innerHTML =
-      `<button class="pager-btn" data-page="${rosterPage - 1}"${rosterPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
-      pages.map((p) => p === "…"
-        ? `<span class="pager-ellipsis">…</span>`
-        : `<button class="pager-btn${p === rosterPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
-      `<button class="pager-btn" data-page="${rosterPage + 1}"${rosterPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
 
   /* ---------------- member detail ---------------- */
-  const MEMBER_LOOT_CAP = 50;
+
   let db = null; // { users, loot, items, roster } — set in init()
 
   function showView(id) {
@@ -584,15 +672,29 @@
         ).join("")
       : "<span class=\"panel-status\">No roster characters found.</span>";
 
-    const memberLoot = db.loot.filter((l) => charNames.has(String(l.player).toLowerCase()));
-    memberLoot.sort((a, b) => {
+    memberLootSorted = db.loot.filter((l) => charNames.has(String(l.player).toLowerCase()));
+    memberLootSorted.sort((a, b) => {
       if (a.date && b.date) return b.date.localeCompare(a.date);
       if (a.date) return -1;
       if (b.date) return 1;
       return 0;
     });
-    const shown = memberLoot.slice(0, MEMBER_LOOT_CAP);
-    $("#member-loot-table tbody").innerHTML = shown.map((l) => `
+    renderMemberLootPage(1);
+
+    showView("member");
+  }
+
+  const MEMBER_LOOT_PAGE_SIZE = 10;
+  let memberLootSorted = [];
+  let memberLootPage = 1;
+
+  function renderMemberLootPage(page) {
+    const totalPages = Math.max(1, Math.ceil(memberLootSorted.length / MEMBER_LOOT_PAGE_SIZE));
+    memberLootPage = Math.min(Math.max(1, page), totalPages);
+    const start = (memberLootPage - 1) * MEMBER_LOOT_PAGE_SIZE;
+    const rows = memberLootSorted.slice(start, start + MEMBER_LOOT_PAGE_SIZE);
+
+    $("#member-loot-table tbody").innerHTML = rows.map((l) => `
       <tr>
         <td>${l.date ? esc(l.date) : "—"}</td>
         <td>${esc(l.player)}</td>
@@ -600,13 +702,16 @@
         <td>${l.raid ? esc(l.raid) : "—"}</td>
         <td class="num">${l.dkpSpent}</td>
       </tr>`).join("");
-    $("#member-loot-table").hidden = shown.length === 0;
-    $("#member-loot-status").textContent = memberLoot.length
-      ? `${memberLoot.length.toLocaleString()} awards` +
-        (memberLoot.length > MEMBER_LOOT_CAP ? ` · showing first ${MEMBER_LOOT_CAP}` : "")
+
+    $("#member-loot-table").hidden = rows.length === 0;
+    $("#member-loot-status").textContent = memberLootSorted.length
+      ? `${memberLootSorted.length.toLocaleString()} awards · newest first · ` +
+        (rows.length
+          ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${memberLootPage} of ${totalPages.toLocaleString()})`
+          : "no awards")
       : "No loot awards found.";
 
-    showView("member");
+    renderPager("member-loot-pager", memberLootPage, totalPages);
   }
 
   /* ---------------- raid history ---------------- */
@@ -636,30 +741,11 @@
 
     $("#raids-table").hidden = rows.length === 0;
     $("#raids-status").textContent = `${raidsSorted.length.toLocaleString()} raids · newest first · ` +
-      (rows.length ? `showing ${start + 1}–${start + rows.length.toLocaleString()} (page ${raidPage} of ${totalPages.toLocaleString()})` : "no raids");
+      (rows.length ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${raidPage} of ${totalPages.toLocaleString()})` : "no raids");
 
-    renderRaidsPager(totalPages);
+    renderPager("raids-pager", raidPage, totalPages);
   }
 
-  function renderRaidsPager(totalPages) {
-    const el = $("#raids-pager");
-    if (totalPages <= 1) { el.innerHTML = ""; el.hidden = true; return; }
-    el.hidden = false;
-
-    const pages = [1];
-    const lo = Math.max(2, raidPage - 2), hi = Math.min(totalPages - 1, raidPage + 2);
-    if (lo > 2) pages.push("…");
-    for (let p = lo; p <= hi; p++) pages.push(p);
-    if (hi < totalPages - 1) pages.push("…");
-    if (totalPages > 1) pages.push(totalPages);
-
-    el.innerHTML =
-      `<button class="pager-btn" data-page="${raidPage - 1}"${raidPage === 1 ? " disabled" : ""} aria-label="Previous page">‹</button>` +
-      pages.map((p) => p === "…"
-        ? `<span class="pager-ellipsis">…</span>`
-        : `<button class="pager-btn${p === raidPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
-      `<button class="pager-btn" data-page="${raidPage + 1}"${raidPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
 
   /* ---------------- init ---------------- */
   async function init() {
@@ -675,7 +761,18 @@
       ]);
 
       renderOverview(users, loot, items, raids, roster);
-      renderStandings(users);
+      renderStandings(users, raids, roster);
+
+      // Standings search (debounced)
+      let standingsTimer;
+      $("#standings-search").addEventListener("input", (e) => {
+        clearTimeout(standingsTimer);
+        standingsTimer = setTimeout(() => {
+          standingsSearch = e.target.value;
+          applyStandingsFilter();
+          renderStandingsPage(1);
+        }, 200);
+      });
       renderLoot(loot, items);
       renderRoster(roster);
       renderRaids(raids);
@@ -711,6 +808,11 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderRosterPage(Number(btn.dataset.page));
+      });
+      $("#member-loot-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderMemberLootPage(Number(btn.dataset.page));
       });
 
       // Roster search + filters (debounced search; instant selects)
@@ -748,6 +850,17 @@
         else { rosterState.sortKey = key; rosterState.sortDir = 1; }
         applyRosterFilters();
         renderRosterPage(1);
+      });
+
+      // Sortable standings headers (numeric columns start biggest-first)
+      $("#standings-table thead").addEventListener("click", (e) => {
+        const th = e.target.closest("th.sortable");
+        if (!th) return;
+        const key = th.dataset.sort;
+        if (standingsSort.key === key) standingsSort.dir *= -1;
+        else standingsSort = { key, dir: -1 };
+        applyStandingsSort();
+        renderStandingsPage(1);
       });
 
       // Member drill-down: delegated globally so .member-link works in any view

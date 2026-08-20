@@ -106,7 +106,7 @@ const Data = (() => {
     const map = new Map();
     for (const raid of data.raids) {
       if (raid.raid_id) map.set(raid.raid_id, {
-        date: raid.date ? String(raid.date).slice(0, 10) : null,
+        date: isoDate(raid.date),
         name: raid.raid_name || "",
       });
     }
@@ -128,8 +128,8 @@ const Data = (() => {
     return data.loot.map((l) => {
       const raid = raidInfo.get(l.raid_id) || null;
       return {
-        // Prefer the loot's own date; fall back to the raid's date.
-        date: (l.date || (raid && raid.date) || null),
+        // Prefer the loot's own date; fall back to the raid's date. Both normalized to YYYY-MM-DD.
+        date: isoDate(l.date || (raid && raid.date)),
         player: l.character_name,
         user: l.username_id || null, // owner username_id (for member-level grouping)
         item: l.item,
@@ -137,6 +137,16 @@ const Data = (() => {
         dkpSpent: Number(l.item_dkp_value) || 0,
       };
     });
+  }
+
+  /**
+   * Normalize any exported date value to "YYYY-MM-DD" (or null when empty).
+   * Exports occasionally carry full timestamps ("2024-12-10T20:42:05.793672+00:00",
+   * "2024-10-25 23:43:34"); the UI only ever shows the date part.
+   */
+  function isoDate(v) {
+    const s = v == null ? "" : String(v).trim();
+    return /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : (s || null);
   }
 
   /* ---------------- raids.json ---------------- */
@@ -148,7 +158,7 @@ const Data = (() => {
   async function loadRaids() {
     const data = await fetchRaids();
     return data.raids.map((r) => ({
-      date: r.date ? String(r.date).slice(0, 10) : null,
+      date: isoDate(r.date),
       name: r.raid_name || "",
       dkpValue: Number(r.raid_dkp_value) || 0,
       attendees: (r.attendees || []).map((a) => a.character_name).filter(Boolean),
@@ -195,8 +205,8 @@ const Data = (() => {
       availableDkp: Number(r.AvailableDKP) || 0,
       earnedDkp: Number(r.EarnedDKP) || 0,
       spentDkp: Number(r.SpentDKP) || 0,
-      applied: r.ApplicationDate ? String(r.ApplicationDate).slice(0, 10) : "",
-      memberSince: r.MembershipDate ? String(r.MembershipDate).slice(0, 10) : "",
+      applied: isoDate(r.ApplicationDate) || "",
+      memberSince: isoDate(r.MembershipDate) || "",
     }));
   }
 
@@ -238,6 +248,7 @@ const Data = (() => {
     loadCsv,
     itemLink,
     escapeHtml,
+    isoDate,
   };
 })();
 

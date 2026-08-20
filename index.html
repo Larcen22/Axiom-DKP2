@@ -91,20 +91,9 @@
           </div>
 
           <div class="panel">
-            <h3>Recent Raids</h3>
-            <div id="recent-raids-status" class="panel-status">Loading…</div>
-            <div class="table-wrap">
-              <table id="recent-raids-table" hidden>
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Raid</th>
-                    <th class="num">Raiders</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
+            <h3>Most Active · past 30 days</h3>
+            <div id="most-active-status" class="panel-status">Loading…</div>
+            <ol id="most-active-list" class="rank-list"></ol>
           </div>
 
           <div class="panel">
@@ -136,12 +125,32 @@
             <div id="raider-trend-status" class="panel-status">Loading…</div>
             <div id="raider-chart" class="activity-chart"></div>
           </div>
+
+          <div class="panel overview-wide">
+            <h3>Recent Raids</h3>
+            <div id="recent-raids-status" class="panel-status">Loading…</div>
+            <div class="table-wrap">
+              <table id="recent-raids-table" hidden>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Raid</th>
+                    <th class="num">Raiders</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- ========== RAIDER STANDINGS ========== -->
       <section id="standings" class="view">
         <h2>Raider Standings</h2>
+        <div class="roster-controls">
+          <input type="search" id="standings-search" placeholder="Search by raider…" />
+        </div>
         <div class="panel">
           <div id="standings-status" class="panel-status">Loading…</div>
           <div class="table-wrap">
@@ -150,9 +159,13 @@
                 <tr>
                   <th class="num">#</th>
                   <th>Raider</th>
-                  <th class="num">Active DKP</th>
-                  <th class="num">Earned</th>
-                  <th class="num">Spent</th>
+                  <th class="num sortable" data-sort="activeDkp">Active DKP</th>
+                  <th class="num sortable" data-sort="earned">Earned</th>
+                  <th class="num sortable" data-sort="spent">Spent</th>
+                  <th class="num sortable" data-sort="p30" title="Attended / available raids, past 30 days (clamped to join date)">30D</th>
+                  <th class="num sortable" data-sort="p60" title="Attended / available raids, past 60 days (clamped to join date)">60D</th>
+                  <th class="num sortable" data-sort="p90" title="Attended / available raids, past 90 days (clamped to join date)">90D</th>
+                  <th class="num sortable" data-sort="pLife" title="Attended / available raids since joining">Lifetime</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -285,6 +298,7 @@
               <tbody></tbody>
             </table>
           </div>
+          <div id="member-loot-pager" class="pager" hidden></div>
         </div>
       </section>
 
