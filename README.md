@@ -65,7 +65,7 @@ npm run test:e2e     # Playwright smoke suite against a local static server
 |---|---|
 | `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
 | `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
-| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search filters work, raids pagination advances, member drill-down opens/returns, item links point at pqdi.cc. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
+| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, item links point at pqdi.cc, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
 
 CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
