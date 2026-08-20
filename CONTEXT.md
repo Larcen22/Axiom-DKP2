@@ -92,3 +92,7 @@ Three layers — see README for details:
 - **E2E** (`test/e2e/`, Playwright): loads the real UI over HTTP via `serve.mjs` (real data locally, sample dataset in CI) — no console/page errors, all views render, search/pagination/drill-down work, pqdi.cc links correct.
 
 Run: `npm test` and `npm run test:e2e`. CI (`.github/workflows/ci.yml`) runs both on push/PR.
+
+## Commit workflow
+
+The agent commits + pushes to `main` after each verified change. **Rule: nothing is committed or pushed unless `npm test` AND `npm run test:e2e` are fully green first** (plus a syntax check where relevant). Guild data files stay gitignored and must never be staged.
