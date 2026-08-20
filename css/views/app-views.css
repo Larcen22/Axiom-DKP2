@@ -116,9 +116,19 @@
   overflow: hidden;
 }
 .bar-fill { height: 100%; background: var(--color-accent-blue); border-radius: 99px; }
+/* Class list is paired with a short panel — two inner columns at half width keep the row balanced */
+#class-comp-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem var(--space-md);
+}
+
+/* Raider Trend chart is taller than Guild Activity's so it fills its paired row */
+#raider-chart { height: 200px; }
 
 @media (max-width: 860px) {
   .overview-grid { grid-template-columns: 1fr; }
+  #class-comp-list { grid-template-columns: 1fr; }
 }
 
 /* MEMBER DETAIL */
