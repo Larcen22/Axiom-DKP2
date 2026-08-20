@@ -280,10 +280,28 @@ describe("loadLoot", () => {
     expect(loot[2].user).toBe("u2");
   });
 
+  it("exposes raidId for exact joins to raids.json", async () => {
+    const Data = loadData();
+    const loot = await Data.loadLoot();
+    expect(loot[0].raidId).toBe("r1");
+    expect(loot[2].raidId).toBe("nope"); // unknown ids are kept, not dropped
+  });
+
   it("throws on unexpected structure", async () => {
     vi.stubGlobal("fetch", makeFetchStub({ ...JSON_FIXTURES, "loot.json": { wrong: true } }));
     const Data = loadData();
     await expect(Data.loadLoot()).rejects.toThrow(/expected \{ loot/);
+  });
+});
+
+/* ---------------- raids ---------------- */
+
+describe("loadRaids", () => {
+  it("exposes the raid id for exact joins (loot, per-raid stats)", async () => {
+    const Data = loadData();
+    const raids = await Data.loadRaids();
+    expect(raids[0].id).toBe("r1");
+    expect(raids[1].id).toBe("r2");
   });
 });
 

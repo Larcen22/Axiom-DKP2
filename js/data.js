@@ -118,7 +118,7 @@ const Data = (() => {
   /**
    * Load loot awards, resolving missing dates via raid_id → raids.json.
    * @returns {Promise<Array<object>>}
-   *   each row: { date, player, user, item, raid, dkpSpent }  (user = owner username_id or null)
+   *   each row: { date, player, user, item, raid, raidId, dkpSpent }  (user = owner username_id or null)
    *   (date is "YYYY-MM-DD" or null when unresolvable; raid is the raid name or null)
    */
   async function loadLoot() {
@@ -134,6 +134,7 @@ const Data = (() => {
         user: l.username_id || null, // owner username_id (for member-level grouping)
         item: l.item,
         raid: (raid && raid.name) || null,
+        raidId: l.raid_id || null, // exact join key to raids.json (names repeat over time)
         dkpSpent: Number(l.item_dkp_value) || 0,
       };
     });
@@ -160,6 +161,7 @@ const Data = (() => {
   async function loadRaids() {
     const data = await fetchRaids();
     return data.raids.map((r) => ({
+      id: r.raid_id || null,
       date: isoDate(r.date),
       name: r.raid_name || "",
       dkpValue: Number(r.raid_dkp_value) || 0,

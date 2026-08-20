@@ -151,11 +151,15 @@
 
     // --- Recent raids (newest first)
     const recentRaids = [...raids].sort((a, b) => b.date.localeCompare(a.date)).slice(0, RECENT_RAIDS_SHOWN);
+    // Items awarded per raid, joined on the exact raid id (raid names repeat over time).
+    const lootByRaidId = new Map();
+    for (const l of loot) if (l.raidId) lootByRaidId.set(l.raidId, (lootByRaidId.get(l.raidId) || 0) + 1);
     $("#recent-raids-table tbody").innerHTML = recentRaids.map((r) => `
       <tr>
         <td>${esc(r.date)}</td>
-        <td>${esc(r.name || r.raidId)}</td>
+        <td>${esc(r.name || r.id)}</td>
         <td class="num">${r.attendees.length}</td>
+        <td class="num">${lootByRaidId.get(r.id) || 0}</td>
       </tr>`).join("");
     $("#recent-raids-table").hidden = recentRaids.length === 0;
     $("#recent-raids-status").textContent = recentRaids.length
