@@ -41,6 +41,18 @@
   .topbar-meta { display: none; }
 }
 
+/* ================= SITE FOOTER ================= */
+.site-footer {
+  background: var(--color-bg-panel);
+  border-top: 1px solid var(--color-border);
+  padding: 0.65rem 1.25rem;
+  /* keep the line clear of the iOS home indicator when it's the bottom-most element */
+  padding-bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
 /* ================= LAYOUT SHELL ================= */
 .layout {
   flex: 1;
