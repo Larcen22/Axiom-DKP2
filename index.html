@@ -14,7 +14,7 @@
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </head>
-<body>
+<body class="app-loading">
   <!-- ================= TOP NAV ================= -->
   <nav class="topbar">
     <div class="topbar-inner">
@@ -42,9 +42,7 @@
         <button class="nav-link" data-target="raids" data-short="Raids">
           <span class="nav-icon" aria-hidden="true">⚔️</span><span class="nav-label">Raids</span>
         </button>
-        <button class="nav-link" data-target="items" data-short="Items">
-          <span class="nav-icon" aria-hidden="true">🔍</span><span class="nav-label">Item Search</span>
-        </button>
+
       </nav>
       <div class="sidebar-footer">
         Item lookups via<br /><a href="https://www.pqdi.cc" target="_blank" rel="noopener">pqdi.cc</a>
@@ -110,28 +108,6 @@
             </table>
           </div>
           <div id="recent-loot-pager" class="pager" hidden></div>
-        </div>
-      </section>
-
-      <!-- ========== ITEM DATABASE ========== -->
-      <section id="items" class="view">
-        <h2>Item Database</h2>
-        <div class="panel">
-          <div class="item-search-row">
-            <input type="search" id="item-search" placeholder="Search items (e.g. Blade, Shard, Breastplate)…" />
-            <span class="panel-status" id="item-count"></span>
-          </div>
-          <div class="table-wrap">
-            <table id="items-table">
-              <thead>
-                <tr>
-                  <th class="num">ID</th>
-                  <th>Item</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
         </div>
       </section>
 

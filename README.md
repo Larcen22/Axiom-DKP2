@@ -2,7 +2,7 @@
 
 A read-only, fully client-side web dashboard for **EverQuest raid DKP** (Dragon Kill Points) accounting for the guild **Axiom**.
 
-It loads local JSON/CSV data exports via `fetch` and renders overview stats, an item database, raider standings, loot history, a roster (with per-member drill-down), and raid history. No server, no build step, no framework — plain HTML/CSS/JS. Item names link out to the community database [pqdi.cc](https://www.pqdi.cc).
+It loads local JSON/CSV data exports via `fetch` and renders overview stats, raider standings, loot history, a roster (with per-member drill-down), and raid history. No server, no build step, no framework — plain HTML/CSS/JS. Item names link out to the community database [pqdi.cc](https://www.pqdi.cc).
 
 ## Running
 
@@ -19,8 +19,7 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 
 | View | What it shows |
 |---|---|
-| **Overview** | Total DKP available, items awarded in the past 7 days, top spender, active raiders; recent loot (past 7 days, paginated) |
-| **Item Search** | Full item database, searchable by name; IDs link to pqdi.cc (first 100 matches rendered) |
+| **Overview** | Total DKP available, items awarded in the past 7 days, active raiders; recent loot (past 7 days, paginated) |
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown (paginated) |
 | **Loot** | Full loot history, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
@@ -64,14 +63,13 @@ npm run test:e2e     # Playwright smoke suite against a local static server
 |---|---|
 | `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
 | `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
-| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all six nav views switch and render, search filters work, raids pagination advances, member drill-down opens/returns, item links point at pqdi.cc. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
+| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search filters work, raids pagination advances, member drill-down opens/returns, item links point at pqdi.cc. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
 
 CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 ## Known gaps / limitations
 
 - `transactions.json` (~597KB) is pre-processed: DKP adjustments are already baked into `users.json`. Not loaded directly by the app (already folded into balances).
-- `raids.json` is fetched twice per page load (`loadRaidInfo()` + `loadRaids()`) with no shared cache — ~16 MB of redundant parsing on init.
 - Four nearly identical pager implementations exist (`renderStandingsPager`, `renderLootPager`, `renderRosterPager`, `renderRaidsPager`); could be consolidated into a single generic helper.
 
 ## File sizes (approximate)

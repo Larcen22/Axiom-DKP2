@@ -11,6 +11,7 @@
 @import 'css/layout/layout.css';
 
 /* Components */
+@import 'css/components/loading.css';
 @import 'css/components/cards.css';
 @import 'css/components/inputs.css';
 @import 'css/components/tables.css';

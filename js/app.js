@@ -10,7 +10,6 @@
     if (el) el.textContent = value;
   };
   const esc = Data.escapeHtml;
-  const ITEMS_RENDER_CAP = 100;
   const RECENT_LOOT_PAGE_SIZE = 25;
   const STANDINGS_PAGE_SIZE = 25;
 
@@ -53,11 +52,6 @@
 
   function renderOverview(users, loot, items, raids, roster) {
     // Stat cards
-    const topSpender = users.reduce(
-      (best, u) => (u.spent > (best?.spent ?? -1) ? u : best),
-      null
-    );
-
     // Items awarded in the past 7 days (dates are "YYYY-MM-DD", safe to compare as strings)
     const cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - 7);
@@ -113,7 +107,6 @@
     setStat("stat-avg-spent-week", avgSpentWeek != null
       ? Math.round(avgSpentWeek).toLocaleString()
       : "–");
-    setStat("stat-top-earner", topSpender ? topSpender.username : "–");
     setStat("stat-raiders", activeRaiders.toLocaleString());
     setStat("stat-avg-raid-size", avgRaidSize != null
       ? Math.round(avgRaidSize).toLocaleString()
@@ -168,27 +161,6 @@
         ? `<span class="pager-ellipsis">…</span>`
         : `<button class="pager-btn${p === recentLootPage ? " active" : ""}" data-page="${p}">${p.toLocaleString()}</button>`).join("") +
       `<button class="pager-btn" data-page="${recentLootPage + 1}"${recentLootPage === totalPages ? " disabled" : ""} aria-label="Next page">›</button>`;
-  }
-
-  /* ---------------- item database ---------------- */
-  function renderItems(items, query = "") {
-    const q = query.trim().toLowerCase();
-    const matches = q
-      ? items.rows.filter((r) => r.NAME.toLowerCase().includes(q))
-      : items.rows;
-
-    const shown = matches.slice(0, ITEMS_RENDER_CAP);
-    $("#items-table tbody").innerHTML = shown.map((r) => `
-      <tr>
-        <td class="num">${r.id}</td>
-        <td><a href="https://www.pqdi.cc/item/${r.id}" target="_blank" rel="noopener">${esc(r.NAME)}</a></td>
-      </tr>
-    `).join("");
-
-    $("#item-count").textContent = q
-      ? `${matches.length.toLocaleString()} match${matches.length === 1 ? "" : "es"}` +
-        (matches.length > ITEMS_RENDER_CAP ? ` · showing first ${ITEMS_RENDER_CAP}` : "")
-      : `${items.rows.length.toLocaleString()} items · showing first ${ITEMS_RENDER_CAP}`;
   }
 
   /* ---------------- raider standings ---------------- */
@@ -544,7 +516,6 @@
 
       renderOverview(users, loot, items, raids, roster);
       renderStandings(users);
-      renderItems(items);
       renderLoot(loot, items);
       renderRoster(roster);
       renderRaids(raids);
@@ -640,14 +611,10 @@
         document.querySelector('.nav-link[data-target="roster"]')?.classList.add("active");
       });
 
-      // Debounced item search
-      let t;
-      $("#item-search").addEventListener("input", (e) => {
-        clearTimeout(t);
-        t = setTimeout(() => renderItems(items, e.target.value), 200);
-      });
+      document.body.classList.remove("app-loading");
     } catch (err) {
       console.error(err);
+      document.body.classList.remove("app-loading");
       document.querySelectorAll(".panel-status").forEach((el) => {
         el.textContent = `Failed to load data: ${err.message}`;
         el.classList.add("error");

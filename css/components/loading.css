@@ -1,0 +1,57 @@
+/* ================= LOADING SKELETONS ================= */
+/* body.app-loading is present from first paint until init() finishes loading data.
+   Pure CSS — no markup changes; render functions replace content as usual. */
+
+@keyframes skeleton-sweep {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Stat cards: hide the "–" placeholder, show a shimmering bar */
+.app-loading .stat-value { color: transparent; position: relative; user-select: none; }
+.app-loading .stat-value::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 64px; height: 18px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--color-bg-hover) 25%, #2b3648 50%, var(--color-bg-hover) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-sweep 1.4s ease-in-out infinite;
+}
+
+/* Status lines: spinner before the "Loading…" text */
+.app-loading .panel-status::before {
+  content: "";
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  animation: spin 0.8s linear infinite;
+  vertical-align: -1px;
+}
+
+/* Tables are hidden while loading — fake skeleton rows in the wrapper */
+.app-loading .table-wrap { position: relative; min-height: 240px; }
+.app-loading .table-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(to bottom, var(--color-bg-card) 0 16px, transparent 16px 34px);
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-loading .stat-value::after,
+  .app-loading .table-wrap::before,
+  .app-loading .panel-status::before { animation: none; }
+}
