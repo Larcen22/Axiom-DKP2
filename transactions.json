@@ -17782,6 +17782,42 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-08-19T00:23:38.764706+00:00"
+    },
+    {
+      "transaction_id": "ecf59730-4d43-4740-9a0f-278b4a8e4af4",
+      "username_id": "1c60b4c4-a836-4afe-923e-d75a47b3a30e",
+      "username": "Cyboogie",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-08-20T04:38:48.805317+00:00"
+    },
+    {
+      "transaction_id": "e4beef0c-e777-4ed9-bb63-31cb43d550f3",
+      "username_id": "1c60b4c4-a836-4afe-923e-d75a47b3a30e",
+      "username": "Cyboogie",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-08-20T04:38:48.805317+00:00"
+    },
+    {
+      "transaction_id": "c63e76a2-5ddb-434a-8212-4ed80096f75f",
+      "username_id": "1c60b4c4-a836-4afe-923e-d75a47b3a30e",
+      "username": "Cyboogie",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-08-20T04:38:48.805317+00:00"
+    },
+    {
+      "transaction_id": "c05462fa-0244-4d43-b5b1-63ccf117ad30",
+      "username_id": "a7a24038-3e15-4108-a5a3-64e08267b3be",
+      "username": "Wagon",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-08-20T06:32:08.122324+00:00"
     }
   ]
 }
