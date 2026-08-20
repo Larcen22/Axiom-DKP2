@@ -47,6 +47,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 - **Security:** `Data.escapeHtml` is applied to all user-generated data rendered into `innerHTML`.
 - **Pagination:** Client-side via event delegation on `#*-pager` containers, all rendered by one shared `renderPager(containerId, currentPage, totalPages)` helper (windowed page buttons with ellipses; hidden when ≤1 page). Page sizes: 25 (standings/loot/roster), 5 (raids), 10 (member loot).
 - **Errors:** Load failures replace `.panel-status` elements with an error message.
+- **Mobile bottom nav (≤700px):** The sidebar is ordered *after* the content in flow (`order: 1` on a flex-column `.layout`) and pins with `position: sticky; bottom: 0`. Do NOT revert to `position: fixed` — iOS/Android leave fixed elements behind when the dynamic layout viewport resizes as content grows (bar scrolled away once cards expanded). Sticky stays in flow, so it survives viewport-height changes. Full-bleed via `width: calc(100% + 2.5rem); margin-left: -1.25rem`; `.content` keeps a 96px bottom clearance for the pinned bar.
 
 ## `Data` exports (js/data.js)
 

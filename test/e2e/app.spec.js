@@ -9,7 +9,7 @@
  * One shared page across the serial suite: the app fetches ~12 MB of JSON on
  * load, so re-navigating per test would be wasteful.
  */
-const { test, expect } = require("@playwright/test");
+const { test, expect, devices } = require("@playwright/test");
 
 test.describe.serial("Axiom DKP dashboard", () => {
   let page;
@@ -306,4 +306,38 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(firstLink).toBeVisible();
     expect(await firstLink.getAttribute("href")).toMatch(/^https:\/\/www\.pqdi\.cc\/item\/\d+$/);
   });
+});
+// ---------------------------------------------------------------------------
+// Mobile bottom nav regression: the bar must stay pinned to the viewport's
+// bottom edge after data loads and content expands. It used to be
+// `position: fixed`, which iOS/Android leave behind when the dynamic layout
+// viewport resizes as content grows; it is now an in-flow sticky element
+// (see css/views/app-views.css).
+// ---------------------------------------------------------------------------
+test("mobile bottom nav stays pinned while scrolling", async ({ browser }) => {
+  const ctx = await browser.newContext({ ...devices["iPhone 14"] });
+  const page = await ctx.newPage();
+  await page.goto("/index.html");
+  await page.waitForFunction(() => document.querySelectorAll("#standings-table tbody tr").length > 0);
+
+  const check = () =>
+    page.evaluate(() => {
+      const r = document.querySelector(".sidebar").getBoundingClientRect();
+      const el = document.elementFromPoint(
+        Math.round(r.left + r.width / 2),
+        Math.round(r.bottom - 10)
+      );
+      return {
+        pinned: Math.abs(r.bottom - innerHeight) <= 2,
+        hitNav: !!el && !!el.closest(".sidebar"),
+      };
+    });
+
+  expect(await check(), "bar pinned at top of page").toEqual({ pinned: true, hitNav: true });
+
+  await page.evaluate(() => window.scrollTo(0, 1500));
+  await new Promise((r) => setTimeout(r, 250));
+  expect(await check(), "bar pinned mid-page after cards expanded").toEqual({ pinned: true, hitNav: true });
+
+  await ctx.close();
 });

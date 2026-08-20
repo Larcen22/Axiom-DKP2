@@ -232,16 +232,24 @@
 
 /* RESPONSIVE OVERRIDES (Mobile Tab Bar) */
 @media (max-width: 700px) {
+  /* Flex column so the sidebar can be ordered AFTER the content in flow.
+     It then pins with `position: sticky; bottom: 0` — unlike `fixed`, sticky
+     elements stay in normal flow and are not left behind when mobile browsers
+     resize the dynamic layout viewport as content grows (iOS/Android). */
   .layout {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* grid's `start` would shrink-to-fit flex children */
+    padding-bottom: 0;    /* bar sits flush at the end of the page */
   }
 
   .sidebar {
-    position: fixed;
+    order: 1;             /* after main.content in flow (DOM keeps it first for desktop) */
+    position: sticky;
     bottom: 0;
-    left: 0;
-    width: 100%;
     top: auto;
+    width: calc(100% + 2.5rem); /* full-bleed across .layout's side padding */
+    margin-left: -1.25rem;
     flex-direction: row;
     border-radius: 0;
     border-top: 1px solid var(--color-border);
@@ -276,8 +284,9 @@
     display: none;
   }
 
+  /* Clearance so the last content rows aren't hidden behind the pinned bar. */
   .content {
-    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
   }
 }
 
