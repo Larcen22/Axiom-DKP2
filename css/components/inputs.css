@@ -7,7 +7,8 @@
   gap: 0.6rem;
 }
 #roster-search,
-#loot-search {
+#loot-search,
+#standings-search {
   flex: 1;
   min-width: 200px;
   max-width: 420px;
@@ -20,7 +21,8 @@
   font-size: 0.9rem;
 }
 #roster-search:focus,
-#loot-search:focus {
+#loot-search:focus,
+#standings-search:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(224, 164, 53, 0.15);
