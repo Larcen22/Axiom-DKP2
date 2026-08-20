@@ -92,6 +92,33 @@
   font-size: 0.8rem;
   white-space: nowrap;
 }
+/* Raid detail attendees — compact wrapping chips (a tall row list per member
+   was ~2000px for a typical raid; chips wrap to a few lines instead). */
+.attendee-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.attendee-chips li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.28rem 0.7rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+.attendee-chips .chip-chars {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+}
+.attendee-chips li.loose { border-style: dashed; }
+.attendee-chips li.loose .chip-name { color: var(--color-text-muted); }
+
 .rank-val {
   color: var(--color-accent);
   font-weight: 600;

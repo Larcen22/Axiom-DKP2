@@ -761,17 +761,16 @@
     }
     $("#raid-attendees").textContent = (byMember.size + loose.length).toLocaleString();
 
+    // Compact wrapping chips: member name (clickable) + characters only when a
+    // member multi-boxed. Unrostered characters get dashed "loose" chips — the
+    // status line already explains how many those are.
     const attendeeRows = [
       ...[...byMember.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([m, chars]) => `
         <li>
-          <a href="#member" class="member-link rank-name" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>
-          <span class="rank-sub">${chars.map(esc).join(", ")}</span>
+          <a href="#member" class="member-link" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>${chars.length > 1 ? `<span class="chip-chars">${chars.map(esc).join(", ")}</span>` : ""}
         </li>`),
       ...loose.sort((a, b) => String(a).localeCompare(String(b))).map((c) => `
-        <li>
-          <span class="rank-name">${esc(c)}</span>
-          <span class="rank-sub">no roster account</span>
-        </li>`),
+        <li class="loose"><span class="chip-name">${esc(c)}</span></li>`),
     ];
     $("#raid-attendee-list").innerHTML = attendeeRows.join("");
     $("#raid-attendees-status").textContent = r.attendees.length
