@@ -25,7 +25,7 @@ The guild exports (`loot.json`, `raids.json`, `users.json`, `roster-export.csv`)
 |---|---|
 | **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), raid-activity heatmap (past year, one cell per day), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids |
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown and 30D/60D/90D/Lifetime raid attendance as `NN% (attended/total)`; all data columns sortable (raid windows by %), searchable by raider name (paginated) |
-| **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
+| **Loot** | Full loot history with raid names (deep-linking into Raid detail), newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
 | **Member** | Drill-down (member links in Standings, Roster, Overview panels, and Raid Detail): account DKP, rank, characters, raid attendance %, paginated member-scoped loot history |
 | **Raid** | Drill-down (click any raid name in Recent Raids or Raid History): attendees grouped by member with their characters, items awarded and total DKP spent for that exact raid (joined on `raid_id`), paginated loot table with owner drill-downs |

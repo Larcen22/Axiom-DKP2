@@ -211,6 +211,21 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#loot-status")).not.toContainText(/matching/);
   });
 
+  test("topbar shows data-as-of date from newest raid", async () => {
+    // Newest raid date in the export (normalized YYYY-MM-DD) — holds for real and sample data alike.
+    await expect(page.locator("#data-asof")).toHaveText(/^Data through \d{4}-\d{2}-\d{2}$/);
+  });
+
+  test("loot history raid names link to raid detail", async () => {
+    await goTo("loot");
+    const link = page.locator("#loot-table tbody tr:first-child .raid-link").first();
+    await expect(link).toBeVisible();
+    expect(await link.getAttribute("href")).toMatch(/^#\/raid\//);
+    await link.click();
+    // Native anchor navigation: hashchange fires as a separate task — retrying assertion.
+    await expect(page.locator("#raid.view.active")).toHaveCount(1);
+  });
+
   test("raids pagination advances pages", async () => {
     await goTo("raids");
     // CI's sample dataset can fit on a single page — nothing to paginate then.

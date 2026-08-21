@@ -599,7 +599,9 @@
         <td>${l.date ? esc(l.date) : "—"}</td>
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, items.byName)}</td>
-        <td>${l.raid ? esc(l.raid) : "—"}</td>
+        <td>${l.raidId && l.raid
+          ? `<a href="#/raid/${encodeURIComponent(l.raidId)}" class="raid-link">${esc(l.raid)}</a>`
+          : (l.raid ? esc(l.raid) : "—")}</td>
         <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`).join("");
 
@@ -1140,6 +1142,16 @@
   }
 
 
+  // Topbar "Data through YYYY-MM-DD": newest raid date in the export — tells officers
+  // at a glance how fresh the data is. Dates are normalized YYYY-MM-DD, so string max works.
+  function setDataAsOf(raids) {
+    const el = $("#data-asof");
+    if (!el) return;
+    let max = "";
+    for (const r of raids || []) if (r.date && r.date > max) max = r.date;
+    el.textContent = max ? `Data through ${max}` : "";
+  }
+
   /* ---------------- init ---------------- */
   async function init() {
     setupNav();
@@ -1166,6 +1178,7 @@
         Data.loadRoster(),
       ]);
 
+      setDataAsOf(raids);
       renderOverview(users, loot, items, raids, roster);
       renderStandings(users, raids, roster);
 
