@@ -269,6 +269,30 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(await page.locator("#raids-table tbody tr").count()).toBe(before);
   });
 
+  test("roster hides members without recent raids by default", async () => {
+    await goTo("roster");
+    const box = page.locator("#roster-hide-inactive");
+    // On by default: at most the full roster is visible.
+    await expect(box).toBeChecked();
+    const shownOfTotal = async () => {
+      const m = /(\d[\d,]*) of (\d[\d,]*) characters/.exec((await page.locator("#roster-status").textContent()) || "");
+      return [Number(m[1].replace(/,/g, "")), Number(m[2].replace(/,/g, ""))];
+    };
+    let shown = (await shownOfTotal())[0];
+    const total = (await shownOfTotal())[1];
+    expect(shown).toBeLessThanOrEqual(total);
+
+    // Unchecking removes the filter — every character is visible again.
+    await box.uncheck();
+    [shown] = await shownOfTotal();
+    expect(shown).toBe(total);
+
+    // Re-checking hides inactive members again (restores default state for later tests).
+    await box.check();
+    [shown] = await shownOfTotal();
+    expect(shown).toBeLessThanOrEqual(total);
+  });
+
   test("member drill-down opens detail and back returns to origin", async () => {
     await goTo("roster");
     const link = page.locator("#roster-table tbody tr:first-child .member-link");

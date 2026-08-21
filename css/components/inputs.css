@@ -38,6 +38,16 @@
   cursor: pointer;
 }
 .roster-filter:focus { outline: none; border-color: var(--color-accent); }
+.roster-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+.roster-check input { margin: 0; accent-color: var(--color-accent); }
 
 /* sortable roster headers */
 th.sortable { cursor: pointer; user-select: none; }

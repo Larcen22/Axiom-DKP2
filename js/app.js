@@ -623,7 +623,35 @@
   let rosterAll = [];
   let rosterFiltered = [];
   let rosterPage = 1;
-  let rosterState = { search: "", rank: "", mainAlt: "", cls: "", sortKey: "member", sortDir: 1 };
+  let rosterState = { search: "", rank: "", mainAlt: "", cls: "", sortKey: "member", sortDir: 1, hideInactive: true };
+
+  // Members seen on at least one raid within 30 days of the newest raid date (data-relative,
+  // so a stale export still describes the guild as of its latest activity).
+  let rosterActiveMembers = new Set();
+
+  function computeRosterActiveMembers(raids, roster, users) {
+    const dated = raids.filter((r) => r.date);
+    if (!dated.length) return new Set();
+    const latest = dated.reduce((m, r) => (r.date > m ? r.date : m), dated[0].date);
+    const ref = new Date(latest + "T00:00:00Z");
+    ref.setUTCDate(ref.getUTCDate() - 30);
+    const cutoff = `${ref.getUTCFullYear()}-${String(ref.getUTCMonth() + 1).padStart(2, "0")}-${String(ref.getUTCDate()).padStart(2, "0")}`;
+    const usernameById = new Map(users.map((u) => [u.usernameId, u.username]));
+    const memberByChar = new Map(roster.filter((r) => r.character).map((r) => [r.character, r.member]));
+    const active = new Set();
+    for (const r of raids) {
+      if (!r.date || r.date < cutoff) continue;
+      for (const uid of r.attendeeUserIds) {
+        const m = usernameById.get(uid);
+        if (m) active.add(m);
+      }
+      for (const name of r.attendees) {
+        const m = memberByChar.get(name);
+        if (m) active.add(m);
+      }
+    }
+    return active;
+  }
 
   function renderRoster(rows) {
     rosterAll = [...rows];
@@ -649,6 +677,7 @@
     const q = s.search.trim().toLowerCase();
     const filtered = rosterAll.filter((r) => {
       if (q && !(r.character.toLowerCase().includes(q) || r.member.toLowerCase().includes(q))) return false;
+      if (s.hideInactive && !rosterActiveMembers.has(r.member)) return false;
       if (s.rank && r.rank !== s.rank) return false;
       if (s.mainAlt && r.mainAlt !== s.mainAlt) return false;
       if (s.cls && r.cls !== s.cls) return false;
@@ -1193,6 +1222,7 @@
         }, 200);
       });
       renderLoot(loot, items);
+      rosterActiveMembers = computeRosterActiveMembers(raids, roster, users);
       renderRoster(roster);
       renderRaids(raids);
       db = { users, loot, items, roster, raids };
@@ -1271,6 +1301,11 @@
       });
       $("#roster-filter-class").addEventListener("change", (e) => {
         rosterState.cls = e.target.value;
+        applyRosterFilters();
+        renderRosterPage(1);
+      });
+      $("#roster-hide-inactive").addEventListener("change", (e) => {
+        rosterState.hideInactive = e.target.checked;
         applyRosterFilters();
         renderRosterPage(1);
       });

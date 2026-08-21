@@ -35,6 +35,18 @@
       "characters": [ { "name": "CharC", "class": "Shaman", "role": "main", "level": 60, "race": "Drukk" } ],
       "ApplicationDate": "2026-08-18T00:00:00",
       "MembershipDate": "2026-08-01T00:00:00"
+    },
+    {
+      "username": "Dave",
+      "username_id": "u4-dave",
+      "rank": "",
+      "available_dkp": 0,
+      "dkp_earned": 0,
+      "dkp_spent": 0,
+      "dkp_adjustments": 0,
+      "characters": [ { "name": "CharD", "class": "Berserker", "role": "main", "level": 52, "race": "Froglok" } ],
+      "ApplicationDate": "2024-06-01T00:00:00",
+      "MembershipDate": "2024-05-01T00:00:00"
     }
   ]
 }
