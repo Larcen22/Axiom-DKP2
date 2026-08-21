@@ -18,22 +18,11 @@ tbody td {
 }
 tbody tr:hover { background: var(--color-accent-soft); }
 
-/* raid attendees: wrap text so row height grows instead of widening the table */
-#raids-table td.raid-attendees {
-  white-space: normal;
-  word-break: break-word;
-  max-width: 42rem;
-  line-height: 1.5;
-}
+/* raid attendees are collapsed (first 3 + "+N more"); full list in the title attr / Raid Detail */
+.attendees-more { opacity: 0.65; }
 
 @media (max-width: 700px) {
-  #raids-table td.raid-attendees {
-    max-width: 20rem;
-    word-break: keep-all;
-  }
-  #raids-table {
-    min-width: 1000px;
-  }
+  #raids-table { min-width: 1000px; }
 }
 tbody tr:last-child td { border-bottom: none; }
 th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }

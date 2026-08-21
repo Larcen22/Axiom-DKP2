@@ -934,33 +934,53 @@
 
 
   /* ---------------- raid history ---------------- */
-  const RAID_PAGE_SIZE = 5;
+  const RAID_PAGE_SIZE = 25;
   let raidsSorted = [];
+  let raidsFiltered = [];
+  let raidSearch = "";
   let raidPage = 1;
 
   function renderRaids(raids) {
     raidsSorted = [...raids].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    applyRaidFilter();
     renderRaidsPage(1);
   }
 
+  function applyRaidFilter() {
+    const q = raidSearch.trim().toLowerCase();
+    raidsFiltered = q
+      ? raidsSorted.filter((r) =>
+          (r.name && r.name.toLowerCase().includes(q)) ||
+          (r.date && r.date.includes(q)) ||
+          r.attendees.some((a) => a.toLowerCase().includes(q)))
+      : raidsSorted;
+  }
+
   function renderRaidsPage(page) {
-    const totalPages = Math.max(1, Math.ceil(raidsSorted.length / RAID_PAGE_SIZE));
+    const totalPages = Math.max(1, Math.ceil(raidsFiltered.length / RAID_PAGE_SIZE));
     raidPage = Math.min(Math.max(1, page), totalPages);
     const start = (raidPage - 1) * RAID_PAGE_SIZE;
-    const rows = raidsSorted.slice(start, start + RAID_PAGE_SIZE);
+    const rows = raidsFiltered.slice(start, start + RAID_PAGE_SIZE);
 
-    $("#raids-table tbody").innerHTML = rows.map((r) => `
+    // Attendees are collapsed to the first three names (+N more); the full list stays in a
+    // title tooltip and in Raid Detail — the old per-row text wall made this table unreadable.
+    $("#raids-table tbody").innerHTML = rows.map((r) => {
+      const shown = r.attendees.slice(0, 3).map(esc).join(", ");
+      const extra = r.attendees.length - 3;
+      return `
       <tr>
         <td>${esc(r.date || "—")}</td>
         <td><a href="#/raid/${encodeURIComponent(r.id)}" class="raid-link">${esc(r.name)}</a></td>
         <td class="num">${r.dkpValue}</td>
-        <td class="raid-attendees">${r.attendees.map(esc).join(", ")}</td>
+        <td class="raid-attendees" title="${r.attendees.map(esc).join(", ")}">${shown}${extra > 0 ? ` <span class="attendees-more">+${extra} more</span>` : ""}</td>
         <td class="num">${r.attendees.length}</td>
-      </tr>`).join("");
+      </tr>`;
+    }).join("");
 
     $("#raids-table").hidden = rows.length === 0;
-    $("#raids-status").textContent = `${raidsSorted.length.toLocaleString()} raids · newest first · ` +
-      (rows.length ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${raidPage} of ${totalPages.toLocaleString()})` : "no raids");
+    const searched = raidSearch.trim() ? ` · matching “${raidSearch.trim()}”` : "";
+    $("#raids-status").textContent = `${raidsFiltered.length.toLocaleString()} raids · newest first${searched} · ` +
+      (rows.length ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${raidPage} of ${totalPages.toLocaleString()})` : "no matches");
 
     renderPager("raids-pager", raidPage, totalPages);
   }
@@ -1171,6 +1191,16 @@
           lootSearch = e.target.value;
           applyLootFilter();
           renderLootPage(1, items);
+        }, 200);
+      });
+      // Raid history search (debounced)
+      let raidsTimer;
+      $("#raids-search").addEventListener("input", (e) => {
+        clearTimeout(raidsTimer);
+        raidsTimer = setTimeout(() => {
+          raidSearch = e.target.value;
+          applyRaidFilter();
+          renderRaidsPage(1);
         }, 200);
       });
       $("#roster-pager").addEventListener("click", (e) => {

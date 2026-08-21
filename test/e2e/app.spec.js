@@ -213,6 +213,13 @@ test.describe.serial("Axiom DKP dashboard", () => {
 
   test("raids pagination advances pages", async () => {
     await goTo("raids");
+    // CI's sample dataset can fit on a single page — nothing to paginate then.
+    const total = Number(/\(page \d+ of (\d+)\)/.exec((await page.locator("#raids-status").textContent()) || "")?.[1] ?? 0);
+    if (total < 2) {
+      test.skip(true, `dataset fits on one page (${total}) — nothing to paginate`);
+      return;
+    }
+
     // Compare the whole row: adjacent raids can share a date.
     const firstBefore = (await page.locator("#raids-table tbody tr:first-child").innerText()).replace(/\s+/g, " ");
     await expect(page.locator("#raids-pager")).toBeVisible(); // 1700+ raids -> many pages
@@ -224,6 +231,27 @@ test.describe.serial("Axiom DKP dashboard", () => {
 
     await page.locator("#raids-pager .pager-btn").first().click(); // "prev" back to 1
     await expect(page.locator("#raids-status")).toContainText(/\(page 1 of/);
+  });
+
+  test("raids search filters by raid name or attendee", async () => {
+    await goTo("raids");
+    const before = await page.locator("#raids-table tbody tr").count();
+    // Search a full raid name from the first row (names repeat over time in real data — every
+    // matching row must still contain it).
+    const name = (await page.locator("#raids-table tbody tr:first-child .raid-link").textContent()).trim();
+
+    await page.fill("#raids-search", name);
+    await expect(page.locator("#raids-status")).toContainText(/matching/);
+    const after = await page.locator("#raids-table tbody tr").count();
+    expect(after).toBeGreaterThanOrEqual(1);
+    for (const t of await page.locator("#raids-table tbody tr").allTextContents()) {
+      expect(t.toLowerCase()).toContain(name.toLowerCase());
+    }
+
+    // Clearing restores the full list.
+    await page.fill("#raids-search", "");
+    await expect(page.locator("#raids-status")).not.toContainText(/matching/);
+    await expect(await page.locator("#raids-table tbody tr").count()).toBe(before);
   });
 
   test("member drill-down opens detail and back returns to origin", async () => {
@@ -471,8 +499,10 @@ test("service worker enables an offline reload", async ({ browser }) => {
   await ctx.setOffline(true);
   await page.reload({ waitUntil: "load" });
   await rowsReady();
-  const dkp = (await page.locator("#stat-total-dkp").textContent()).trim();
-  expect(dkp, "total DKP should render from cached data offline").toMatch(/^(?:[\d,]+|–)$/);
+  // Retrying assertion: a raw textContent read can catch the count-up animation (or the
+  // navigation swap) mid-frame; retry until a settled value matches.
+  await expect(page.locator("#stat-total-dkp"), "total DKP should render from cached data offline")
+    .toHaveText(/^(?:[\d,]+|–)$/, { timeout: 15000 });
 
   await ctx.close();
 });
