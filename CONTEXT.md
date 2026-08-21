@@ -36,10 +36,13 @@ data.js: fetch + validate + normalize + Map indexes
   - shared cached `fetchRaids()` promise: raids.json is fetched + parsed once per page load,
     even though both loadLoot (via loadRaidInfo) and loadRaids need it; failures are not
     cached, so a retry re-fetches
-app.js init(): Promise.all([loadItems, loadLoot, loadUsers, loadRaids, loadRoster])
-         → render all views, wire nav / pagers / search; module state db = { users, loot, items, roster, raids }
-         → hash routing bootstrap: window "hashchange" listener + initial renderRoute(parseHash())
-           (empty hash normalized to #/overview via replaceState)
+app.js init(): hash routing bootstrap FIRST — nav wiring, window "hashchange" listener,
+         immediate renderRoute(parseHash()) (empty hash normalized to #/overview via
+         replaceState), SW registration — so the shell stays navigable even when every
+         fetch fails (e.g. the GitHub Pages site without guild exports)
+         → Promise.all([loadItems, loadLoot, loadUsers, loadRaids, loadRoster])
+         → render all views, wire pagers / search; module state db = { users, loot, items, roster, raids }
+         → re-apply the initial route (restores drill-down deep links that no-op'd pre-load)
 test hook: data.js ends with `if (typeof module !== "undefined") module.exports = Data` —
   no-op in the browser, lets Vitest/Node require() the IIFE result
 ```
@@ -54,7 +57,7 @@ test hook: data.js ends with `if (typeof module !== "undefined") module.exports 
 - **Pagination:** client-side via event delegation on `#*-pager` containers, all rendered by one shared `renderPager()` helper (windowed page buttons with ellipses; hidden when ≤1 page). Per-view page sizes are constants at the top of app.js.
 - **Errors:** Load failures replace `.panel-status` elements with an error message.
 - **Mobile bottom nav (≤700px):** the sidebar is ordered *after* the content in flow and pins with `position: sticky; bottom: 0`. Do NOT revert to `position: fixed` — iOS/Android leave fixed elements behind when the dynamic layout viewport resizes as content grows. Sticky stays in flow, so it survives viewport-height changes.
-- **Hash routing:** the URL is the source of truth for the current view: `#/<view>` for the five nav views, `#/member/<name>` and `#/raid/<id>` for drill-downs (segments percent-encoded). Nav clicks, member/raid links, and palette rows all push history entries via `navigate()`, so browser back/forward (incl. mobile hardware back) work natively, refresh keeps state, and deep links restore the exact view on load (`renderRoute(parseHash())` after data loads; an empty hash is normalized to `#/overview` with replaceState). Drill-downs clear the nav highlight while open; returning restores it. The ← Back buttons call `history.back()`, falling back to Overview when there's no history entry (e.g. a deep link opened in a fresh tab).
+- **Hash routing:** the URL is the source of truth for the current view: `#/<view>` for the five nav views, `#/member/<name>` and `#/raid/<id>` for drill-downs (segments percent-encoded). Nav clicks, member/raid links, and palette rows all push history entries via `navigate()`, so browser back/forward (incl. mobile hardware back) work natively, refresh keeps state, and deep links restore the exact view on load (an empty hash is normalized to `#/overview` with replaceState). Routing is wired **before** data loads: nav-view deep links apply immediately even when all fetches fail (the hosted GitHub Pages site has no guild exports — it shows error statuses but stays navigable); drill-down routes no-op until `db` exists and are re-applied after a successful load. Drill-downs clear the nav highlight while open; returning restores it. The ← Back buttons call `history.back()`, falling back to Overview when there's no history entry (e.g. a deep link opened in a fresh tab).
 - **Command palette:** Ctrl+K / "/" (outside inputs) / topbar button opens an overlay searching members, characters, items (loot names), raids, plus view quick-jumps when the query is empty. Enter/click navigates via hash routing — member/char rows → `#/member/<name>`, raid rows → `#/raid/<id>` — so browser back returns to the origin view; item rows open pqdi.cc in a new tab; view rows switch nav views.
 - **Offline PWA:** `sw.js` precaches the app shell at install; navigations are network-first with cached index.html fallback; every other GET (data JSON/CSV, static assets, cross-origin PapaParse — opaque responses are cacheable) is stale-while-revalidate, so an offline reload boots from last-known-good data. Registered **directly in init()**, not on window "load" — that event fires before async data init completes, so a load listener never runs.
 - **Motion:** `.view.active` fade/slide-in, stat-card count-up (`animateCount`, ~650ms ease-out) + hover lift, pager transitions. All disabled under `prefers-reduced-motion` (CSS media query + JS matchMedia guard).

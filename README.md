@@ -15,6 +15,10 @@ python3 -m http.server 8000
 
 Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:8000`).
 
+### Hosting without guild data
+
+The guild exports (`loot.json`, `raids.json`, `users.json`, `roster-export.csv`) are gitignored, so a hosted deployment (e.g. GitHub Pages) only ever has the committed files. The app handles this gracefully: it renders its normal error statuses instead of crashing, and navigation / deep links / browser back still work — but no data is shown until the exports are present next to `index.html`.
+
 ## Views
 
 | View | What it shows |

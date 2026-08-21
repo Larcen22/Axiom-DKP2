@@ -79,10 +79,14 @@
   // Renders whatever the URL says. Nav views activate their section + nav item;
   // drill-downs clear the nav highlight (restored when back returns to a view).
   function renderRoute(route) {
-    if (!db) return;
     document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-    if (route.view === "member") { openMember(route.name); return; }
-    if (route.view === "raid") { openRaid(route.id); return; }
+    if (route.view === "member" || route.view === "raid") {
+      // Drill-downs need loaded data; until then (or if loading failed, e.g. the hosted
+      // site without guild exports) stay put — nav views below still work.
+      if (!db) return;
+      if (route.view === "member") openMember(route.name); else openRaid(route.id);
+      return;
+    }
     document.querySelector(`.nav-link[data-target="${route.view}"]`)?.classList.add("active");
     showView(route.view);
   }
@@ -1140,6 +1144,19 @@
   async function init() {
     setupNav();
 
+    // Hash routing + SW registration happen before data loads so the shell stays navigable
+    // even when every fetch fails (e.g. the GitHub Pages site without guild exports).
+    window.addEventListener("hashchange", () => renderRoute(parseHash()));
+    if (!location.hash) history.replaceState(null, "", "#/overview"); // normalize for shareability
+    renderRoute(parseHash()); // apply the deep link immediately (nav views need no data)
+
+    // Offline support: register the service worker (never blocks the app).
+    // Registered directly rather than on window "load" — that event fires
+    // before our async data init finishes, so a load listener would never run.
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    }
+
     try {
       const [items, loot, users, raids, roster] = await Promise.all([
         Data.loadItems(),
@@ -1277,18 +1294,9 @@
       // Command palette (needs db, so wired after it is set).
       setupPalette();
 
-      // Hash routing: browser back/forward drive view switches; deep links restore state.
-      window.addEventListener("hashchange", () => renderRoute(parseHash()));
-      const initialRoute = parseHash();
-      if (!location.hash) history.replaceState(null, "", "#/overview"); // normalize for shareability
-      renderRoute(initialRoute);
-
-      // Offline support: register the service worker (never blocks the app).
-      // Registered directly rather than on window "load" — that event fires
-      // before our async data init finishes, so a load listener would never run.
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js").catch(() => {});
-      }
+      // Re-apply the initial route now that data exists — a deep link into a drill-down
+      // can't be rendered until db is set (renderRoute no-ops those early).
+      renderRoute(parseHash());
 
       document.body.classList.remove("app-loading");
     } catch (err) {
