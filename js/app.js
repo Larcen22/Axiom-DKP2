@@ -43,16 +43,61 @@
   const RECENT_LOOT_PAGE_SIZE = 25;
   const STANDINGS_PAGE_SIZE = 25;
 
+  /* ---------------- hash routing ---------------- */
+  // The URL is the source of truth for the current view: #/<view> for nav views,
+  // #/member/<name> and #/raid/<id> for drill-downs (segments percent-encoded).
+  // Every navigation pushes a history entry, so browser back/forward (incl. mobile
+  // hardware back) work natively, refresh keeps state, and deep links restore the
+  // exact view on load.
+  const NAV_VIEWS = ["overview", "standings", "loot", "roster", "raids"];
+
+  function parseHash() {
+    const raw = location.hash.replace(/^#\/?/, "");
+    if (!raw) return { view: "overview" };
+    const [head, ...rest] = raw.split("/");
+    if (head === "member") return { view: "member", name: decodeURIComponent(rest.join("/") || "") };
+    if (head === "raid") return { view: "raid", id: rest.join("/") || "" };
+    if (NAV_VIEWS.includes(head)) return { view: head };
+    return { view: "overview" }; // unknown fragment -> default view
+  }
+
+  function routeToHash(route) {
+    if (route.view === "member") return `#/member/${encodeURIComponent(route.name)}`;
+    if (route.view === "raid") return `#/raid/${encodeURIComponent(route.id)}`;
+    return `#/${route.view}`;
+  }
+
+  // Pushes a history entry unless the hash is already current. replace=true is only
+  // used to normalize the URL on load without polluting history.
+  function navigate(route, replace = false) {
+    const hash = routeToHash(route);
+    if (location.hash === hash) return;
+    if (replace) history.replaceState(null, "", hash);
+    else location.hash = hash;
+  }
+
+  // Renders whatever the URL says. Nav views activate their section + nav item;
+  // drill-downs clear the nav highlight (restored when back returns to a view).
+  function renderRoute(route) {
+    if (!db) return;
+    document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
+    if (route.view === "member") { openMember(route.name); return; }
+    if (route.view === "raid") { openRaid(route.id); return; }
+    document.querySelector(`.nav-link[data-target="${route.view}"]`)?.classList.add("active");
+    showView(route.view);
+  }
+
+  // ← Back buttons: native history when there's an entry to go back to, else
+  // Overview (e.g. a deep link opened directly in a fresh tab).
+  function goBack() {
+    if (window.history.length > 1) history.back();
+    else navigate({ view: "overview" });
+  }
+
   /* ---------------- sidebar navigation ---------------- */
   function setupNav() {
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach((link) =>
-      link.addEventListener("click", () => {
-        links.forEach((l) => l.classList.remove("active"));
-        link.classList.add("active");
-        document.querySelectorAll(".view").forEach((v) => v.classList.remove("active"));
-        $(`#${link.dataset.target}`).classList.add("active");
-      })
+    document.querySelectorAll(".nav-link").forEach((link) =>
+      link.addEventListener("click", () => navigate({ view: link.dataset.target }))
     );
   }
 
@@ -204,7 +249,7 @@
     $("#recent-raids-table tbody").innerHTML = recentRaids.map((r) => `
       <tr>
         <td>${esc(r.date || "")}</td>
-        <td><a href="#raid" class="raid-link" data-id="${esc(r.id)}" data-return="overview">${esc(r.name || r.id)}</a></td>
+        <td><a href="#/raid/${encodeURIComponent(r.id)}" class="raid-link">${esc(r.name || r.id)}</a></td>
         <td class="num">${r.attendees.length}</td>
         <td class="num">${lootByRaidId.get(r.id) || 0}</td>
       </tr>`).join("");
@@ -228,7 +273,7 @@
     $("#top-spenders-list").innerHTML = topSpenders.map(([name, amt], i) => `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
+        <a href="#/member/${encodeURIComponent(name)}" class="member-link rank-name">${esc(name)}</a>
         <span class="rank-val">${amt.toLocaleString()}</span>
       </li>`).join("");
     $("#top-spenders-status").textContent = topSpenders.length
@@ -247,7 +292,7 @@
       return `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
+        <a href="#/member/${encodeURIComponent(name)}" class="member-link rank-name">${esc(name)}</a>
         <span class="rank-val">${n} raid${n === 1 ? "" : "s"}</span>
       </li>`;
     }).join("");
@@ -314,7 +359,7 @@
       return `
       <li>
         <span class="rank-num">${i + 1}</span>
-        <a href="#member" class="member-link rank-name" data-member="${esc(name)}" data-return="overview">${esc(name)}</a>
+        <a href="#/member/${encodeURIComponent(name)}" class="member-link rank-name">${esc(name)}</a>
         <span class="rank-val">${d} · ${days === 0 ? "today" : `${days}d ago`}</span>
       </li>`;
     }).join("");
@@ -486,7 +531,7 @@
       return `
       <tr>
         <td class="num rank-medal${medal}">${rank}</td>
-        <td><a href="#member" class="member-link" data-member="${esc(u.username)}" data-return="standings">${esc(u.username)}</a></td>
+        <td><a href="#/member/${encodeURIComponent(u.username)}" class="member-link">${esc(u.username)}</a></td>
         <td class="num ${dkpCls}">${u.activeDkp.toLocaleString()}</td>
         <td class="num">${u.earned.toLocaleString()}</td>
         <td class="num">${u.spent.toLocaleString()}</td>
@@ -624,7 +669,7 @@
     $("#roster-table tbody").innerHTML = rows.map((r) => `
       <tr>
         <td>${quarmyLink(r.character)}</td>
-        <td><a href="#member" class="member-link" data-member="${esc(r.member)}" data-return="roster">${esc(r.member)}</a></td>
+        <td><a href="#/member/${encodeURIComponent(r.member)}" class="member-link">${esc(r.member)}</a></td>
         <td>${esc(r.cls)} · ${esc(r.race)} (${r.level})</td>
         <td>${esc(r.mainAlt)}</td>
         <td>${esc(r.rank)}</td>
@@ -653,15 +698,29 @@
     window.scrollTo({ top: 0 });
   }
 
-  let memberReturnView = "roster"; // where the back button returns to (set by the clicked link)
-
-  function openMember(member, returnView) {
+  function openMember(name) {
     if (!db) return;
-    memberReturnView = returnView || "roster";
-    const m = member.toLowerCase();
+    const m = name.toLowerCase();
     const user = db.users.find((u) => u.username.toLowerCase() === m) || null;
     const chars = db.roster.filter((r) => r.member.toLowerCase() === m);
     const charNames = new Set(chars.map((c) => c.character.toLowerCase()));
+
+    // Unknown deep link (e.g. a stale shared URL): show an explicit not-found state
+    // instead of zeros that would look like real data.
+    if (!user && chars.length === 0) {
+      $("#member-name").textContent = name;
+      $("#member-rank").hidden = true;
+      for (const id of ["member-available", "member-earned", "member-spent"]) $(`#${id}`).textContent = "\u2013";
+      for (const id of ["member-att-30", "member-att-60", "member-att-90", "member-att-lifetime"]) $(`#${id}`).textContent = "\u2013";
+      $("#member-raids-attended").textContent = "\u2013";
+      $("#member-raids-since").textContent = "\u2013";
+      $("#member-raids-since-label").textContent = "";
+      $("#member-characters").innerHTML = `<span class="panel-status error">No member or roster character named \u201c${esc(name)}\u201d was found in the data.</span>`;
+      memberLootSorted = [];
+      renderMemberLootPage(1);
+      showView("member");
+      return;
+    }
 
     // Prefer the account-level DKP from users.json; fall back to roster sums.
     const available = user ? user.activeDkp : chars.reduce((s, c) => s + c.availableDkp, 0);
@@ -709,7 +768,7 @@
     const raidsSinceJoin = joinedOn ? winTotal.lifetime : null;
     const pct = (a, t) => (t ? `${Math.round((a / t) * 100)}%` : "–");
 
-    $("#member-name").textContent = member;
+    $("#member-name").textContent = name;
     // Roster Rank: hide the default ("member"), surface officer / guild leader / inactive / applicant / former.
     const rank = chars.map((c) => c.rank).find(Boolean) || "";
     $("#member-rank").hidden = !rank || rank.toLowerCase() === "member";
@@ -778,13 +837,23 @@
   const RAID_LOOT_PAGE_SIZE = 10;
   let raidLootSorted = [];
   let raidLootPage = 1;
-  let raidReturnView = "raids"; // where the back button returns to (set by the clicked link)
-
-  function openRaid(raidId, returnView) {
+  function openRaid(raidId) {
     if (!db || !raidId) return;
     const r = db.raids.find((x) => x.id === raidId);
-    if (!r) return;
-    raidReturnView = returnView || "raids";
+    // Unknown deep link: show an explicit not-found state instead of stale content.
+    if (!r) {
+      $("#raid-name").textContent = "Unknown raid";
+      $("#raid-date").hidden = true;
+      for (const id of ["raid-attendees", "raid-items", "raid-dkp-spent"]) $(`#${id}`).textContent = "\u2013";
+      $("#raid-attendee-list").innerHTML = "";
+      const notFoundStatus = $("#raid-attendees-status");
+      notFoundStatus.classList.add("error");
+      notFoundStatus.textContent = `No raid with id \u201c${esc(raidId)}\u201d was found in the data.`;
+      raidLootSorted = [];
+      renderRaidLootPage(1);
+      showView("raid");
+      return;
+    }
 
     $("#raid-name").textContent = r.name || "Unknown raid";
     $("#raid-date").hidden = !r.date;
@@ -814,13 +883,15 @@
     const attendeeRows = [
       ...[...byMember.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([m, chars]) => `
         <li>
-          <a href="#member" class="member-link" data-member="${esc(m)}" data-return="raid">${esc(m)}</a>${chars.length > 1 ? `<span class="chip-chars">${chars.map((c) => quarmyLink(c)).join(", ")}</span>` : ""}
+          <a href="#/member/${encodeURIComponent(m)}" class="member-link">${esc(m)}</a>${chars.length > 1 ? `<span class="chip-chars">${chars.map((c) => quarmyLink(c)).join(", ")}</span>` : ""}
         </li>`),
       ...loose.sort((a, b) => String(a).localeCompare(String(b))).map((c) => `
         <li class="loose"><span class="chip-name">${quarmyLink(c)}</span></li>`),
     ];
     $("#raid-attendee-list").innerHTML = attendeeRows.join("");
-    $("#raid-attendees-status").textContent = r.attendees.length
+    const attendeesStatus = $("#raid-attendees-status");
+    attendeesStatus.classList.remove("error"); // clear a not-found state from an earlier deep link
+    attendeesStatus.textContent = r.attendees.length
       ? `${byMember.size} members \u00b7 ${r.attendees.length} characters attended` + (loose.length ? ` (${loose.length} not in roster)` : "")
       : "No attendees recorded.";
 
@@ -845,7 +916,7 @@
       <tr>
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, db.items.byName)}</td>
-        <td>${owner ? `<a href="#member" class="member-link" data-member="${esc(owner)}" data-return="raid">${esc(owner)}</a>` : "\u2014"}</td>
+        <td>${owner ? `<a href="#/member/${encodeURIComponent(owner)}" class="member-link">${esc(owner)}</a>` : "\u2014"}</td>
         <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`;
     }).join("");
@@ -881,7 +952,7 @@
     $("#raids-table tbody").innerHTML = rows.map((r) => `
       <tr>
         <td>${esc(r.date || "—")}</td>
-        <td><a href="#raid" class="raid-link" data-id="${esc(r.id)}" data-return="raids">${esc(r.name)}</a></td>
+        <td><a href="#/raid/${encodeURIComponent(r.id)}" class="raid-link">${esc(r.name)}</a></td>
         <td class="num">${r.dkpValue}</td>
         <td class="raid-attendees">${r.attendees.map(esc).join(", ")}</td>
         <td class="num">${r.attendees.length}</td>
@@ -984,15 +1055,11 @@
 
   function activatePaletteRow(row) {
     closePalette();
-    // Return to the view we were in when the palette was opened, so ← Back works.
-    const origin = document.querySelector(".view.active")?.id || "overview";
-    if (row.kind === "member" || row.kind === "char") openMember(row.value, origin);
-    else if (row.kind === "raid") openRaid(row.value, origin);
-    else if (row.kind === "view") {
-      showView(row.value);
-      document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-      document.querySelector(`.nav-link[data-target="${row.value}"]`)?.classList.add("active");
-    } else if (row.kind === "item") {
+    // Hash navigation pushes a history entry, so browser back returns to the origin view.
+    if (row.kind === "member" || row.kind === "char") navigate({ view: "member", name: row.value });
+    else if (row.kind === "raid") navigate({ view: "raid", id: row.value });
+    else if (row.kind === "view") navigate({ view: row.value });
+    else if (row.kind === "item") {
       const id = db.items.byName.get(row.value);
       if (id) window.open(`https://www.pqdi.cc/item/${id}`, "_blank", "noopener");
     }
@@ -1170,38 +1237,21 @@
         renderStandingsPage(1);
       });
 
-      // Member drill-down: delegated globally so .member-link works in any view
-      document.addEventListener("click", (e) => {
-        const link = e.target.closest(".member-link");
-        if (!link) return;
-        e.preventDefault();
-        openMember(link.dataset.member, link.dataset.return);
-      });
+      // Member/raid drill-down links are plain anchors (#/member/<name>, #/raid/<id>):
+      // the browser updates location.hash and the hashchange listener renders the route.
 
-      // Back from the member page to wherever we came in from (any view with a .member-link).
-      $("#member-back").addEventListener("click", () => {
-        showView(memberReturnView);
-        document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-        document.querySelector(`.nav-link[data-target="${memberReturnView}"]`)?.classList.add("active");
-      });
-
-      // Raid drill-down: raid names are clickable in any view (Recent Raids, Raid History).
-      document.addEventListener("click", (e) => {
-        const link = e.target.closest(".raid-link");
-        if (!link) return;
-        e.preventDefault();
-        openRaid(link.dataset.id, link.dataset.return);
-      });
-
-      // Back from the raid page to wherever we came in from (overview or raids).
-      $("#raid-back").addEventListener("click", () => {
-        showView(raidReturnView);
-        document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-        document.querySelector(`.nav-link[data-target="${raidReturnView}"]`)?.classList.add("active");
-      });
+      // ← Back: native history (falls back to Overview when there's no entry).
+      $("#member-back").addEventListener("click", goBack);
+      $("#raid-back").addEventListener("click", goBack);
 
       // Command palette (needs db, so wired after it is set).
       setupPalette();
+
+      // Hash routing: browser back/forward drive view switches; deep links restore state.
+      window.addEventListener("hashchange", () => renderRoute(parseHash()));
+      const initialRoute = parseHash();
+      if (!location.hash) history.replaceState(null, "", "#/overview"); // normalize for shareability
+      renderRoute(initialRoute);
 
       // Offline support: register the service worker (never blocks the app).
       // Registered directly rather than on window "load" — that event fires

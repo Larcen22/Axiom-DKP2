@@ -86,6 +86,8 @@ test.describe.serial("Axiom DKP dashboard", () => {
       const statusId = { overview: "recent-raids-status" }[t] || `${t}-status`;
       const status = page.locator(`#${statusId}`);
       await expect(status).not.toHaveText(/Loading/);
+      // Hash routing: the URL reflects the active view.
+      await expect(page).toHaveURL(new RegExp("#" + "/" + t + "$"));
     }
   });
 
@@ -174,11 +176,12 @@ test.describe.serial("Axiom DKP dashboard", () => {
       expect(t.trim()).toMatch(DATE_RE);
     }
 
-    // Member detail join-date label.
+    // Member detail join-date label. The route renders in the hashchange task right
+    // after the click, so use retrying expectations (a raw textContent read would race it).
     await goTo("roster");
     await page.click("#roster-table tbody tr:first-child .member-link");
-    const label = (await page.locator("#member-raids-since-label").textContent()).trim();
-    expect(label).toMatch(/^(?:since \d{4}-\d{2}-\d{2}$|\(no join date\))$/);
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await expect(page.locator("#member-raids-since-label")).toHaveText(/^(?:since \d{4}-\d{2}-\d{2}$|\(no join date\))$/);
   });
 
   test("overview insight panels render", async () => {
@@ -365,6 +368,41 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await page.click("#palette-open");
     await expect(page.locator("#palette")).toBeVisible();
     await page.keyboard.press("Escape");
+  });
+
+  test("browser back/forward navigate natively between views and drill-downs", async () => {
+    await goTo("standings");
+    const name = (await page.locator("#standings-table tbody tr:first-child td:nth-child(2)").textContent()).trim();
+    await page.click("#standings-table tbody tr:first-child .member-link");
+    await expect(page.locator("#member.view.active")).toBeVisible();
+
+    // Native browser back returns to the previous view (no in-app button involved).
+    await page.goBack();
+    await expect(page.locator("#standings.view.active")).toBeVisible();
+
+    // Forward re-enters the drill-down with its state intact.
+    await page.goForward();
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await expect(page.locator("#member-name")).toHaveText(name);
+  });
+
+  test("deep link restores member detail after a full reload", async () => {
+    await goTo("standings");
+    const name = (await page.locator("#standings-table tbody tr:first-child td:nth-child(2)").textContent()).trim();
+
+    // Navigate to the deep URL, then fully reload: init() must parse the hash and open that member.
+    await page.evaluate((n) => { location.hash = "#/member/" + encodeURIComponent(n); }, name);
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await page.reload({ waitUntil: "load" });
+    // init() renders every view once the loads resolve; standings rows are the completion signal.
+    await expect(page.locator("#standings-table tbody tr")).not.toHaveCount(0);
+    await expect(page).toHaveURL(new RegExp("#/member/" + encodeURIComponent(name) + "$"));
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await expect(page.locator("#member-name")).toHaveText(name);
+
+    // ← Back with an in-app history entry returns to the previous view.
+    await page.click("#member-back");
+    await expect(page.locator("#standings.view.active")).toBeVisible();
   });
 });
 // ---------------------------------------------------------------------------
