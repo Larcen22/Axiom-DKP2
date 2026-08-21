@@ -316,6 +316,56 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(firstLink).toBeVisible();
     expect(await firstLink.getAttribute("href")).toMatch(/^https:\/\/www\.pqdi\.cc\/item\/\d+$/);
   });
+
+  test("raid activity heatmap covers the past year", async () => {
+    await goTo("overview");
+    // Exactly 364 day-cells (7 × 52); hidden padding cells align columns to Sundays.
+    await expect(page.locator("#raid-heatmap .hm-cell:not(.hm-empty)")).toHaveCount(364);
+    // Both datasets have raids inside the window, so at least one cell is lit.
+    await expect(
+      page.locator("#raid-heatmap .hm-l1, #raid-heatmap .hm-l2, #raid-heatmap .hm-l3")
+    ).not.toHaveCount(0);
+    await expect(page.locator("#heatmap-status")).toHaveText(/active days in the past year/);
+  });
+
+  test("command palette opens, searches, and navigates", async () => {
+    await goTo("overview");
+    // Ctrl+K opens with focus on the input; no query shows view quick-jumps.
+    await page.keyboard.press("Control+k");
+    const input = page.locator("#palette-input");
+    await expect(page.locator("#palette")).toBeVisible();
+    await expect(input).toBeFocused();
+    await expect(page.locator("#palette-results .pal-row", { hasText: "Loot History" })).toHaveCount(1);
+
+    // Search a member (name taken from the standings table — dataset-agnostic).
+    const memberName = (await page.locator("#standings-table tbody tr:first-child td:nth-child(2)").textContent()).trim();
+    await input.fill(memberName);
+    await expect(page.locator("#palette-results .pal-row", { hasText: memberName }).first()).toBeVisible();
+
+    // Enter on the selected row opens the profile; back returns to the origin view.
+    await page.keyboard.press("Enter");
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await expect(page.locator("#member-name")).toHaveText(memberName);
+    await expect(page.locator("#palette")).toBeHidden();
+    await page.click("#member-back");
+    await expect(page.locator("#overview.view.active")).toBeVisible();
+
+    // View quick-jump navigates and activates the matching nav item.
+    await page.keyboard.press("Control+k");
+    await page.locator("#palette-results .pal-row", { hasText: "Raid History" }).click();
+    await expect(page.locator("#raids.view.active")).toBeVisible();
+
+    // Escape closes without navigating; the topbar button reopens.
+    await page.keyboard.press("Control+k");
+    await expect(page.locator("#palette")).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.locator("#palette")).toBeHidden();
+    await expect(page.locator("#raids.view.active")).toBeVisible();
+
+    await page.click("#palette-open");
+    await expect(page.locator("#palette")).toBeVisible();
+    await page.keyboard.press("Escape");
+  });
 });
 // ---------------------------------------------------------------------------
 // Mobile bottom nav regression: the bar must stay pinned to the viewport's
@@ -348,6 +398,43 @@ test("mobile bottom nav stays pinned while scrolling", async ({ browser }) => {
   await page.evaluate(() => window.scrollTo(0, 1500));
   await new Promise((r) => setTimeout(r, 250));
   expect(await check(), "bar pinned mid-page after cards expanded").toEqual({ pinned: true, hitNav: true });
+
+  await ctx.close();
+});
+
+// ---------------------------------------------------------------------------
+// Offline PWA: the service worker (sw.js) precaches the app shell and serves
+// data files + the PapaParse CDN script stale-while-revalidate. The first load
+// registers/claims the worker; the second online load populates every cache
+// entry (the first load's subresources fire before the worker controls the
+// page). From then on, a fully offline reload must still boot the app.
+// ---------------------------------------------------------------------------
+test("service worker enables an offline reload", async ({ browser }) => {
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  const rowsReady = () => expect(page.locator("#standings-table tbody tr")).not.toHaveCount(0, { timeout: 20000 });
+
+  // Load 1 (online): app boots; SW registers on window load.
+  await page.goto("/index.html");
+  await rowsReady();
+  await expect.poll(async () => {
+    return page.evaluate(async () => {
+      const reg = await navigator.serviceWorker.getRegistration();
+      return !!reg && !!reg.active;
+    });
+  }, { timeout: 15000 }).toBeTruthy();
+
+  // Load 2 (online): worker controls the page, so every subresource request
+  // (data JSON/CSV + cross-origin PapaParse) is intercepted and cached.
+  await page.reload({ waitUntil: "load" });
+  await rowsReady();
+
+  // Offline reload: navigation falls back to the cached shell; data comes from cache.
+  await ctx.setOffline(true);
+  await page.reload({ waitUntil: "load" });
+  await rowsReady();
+  const dkp = (await page.locator("#stat-total-dkp").textContent()).trim();
+  expect(dkp, "total DKP should render from cached data offline").toMatch(/^(?:[\d,]+|–)$/);
 
   await ctx.close();
 });

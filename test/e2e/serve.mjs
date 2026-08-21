@@ -19,7 +19,7 @@ const dataDir = hasRealData ? ROOT : SAMPLE;
 
 /* Build the served directory. */
 const www = fs.mkdtempSync(path.join(os.tmpdir(), "axiom-dkp2-e2e-"));
-for (const f of ["index.html", "style.css", "items.json", "manifest.webmanifest", "icon-192.png", "icon-512.png"]) {
+for (const f of ["index.html", "style.css", "items.json", "manifest.webmanifest", "sw.js", "icon-192.png", "icon-512.png"]) {
   fs.copyFileSync(path.join(ROOT, f), path.join(www, f));
 }
 fs.cpSync(path.join(ROOT, "css"), path.join(www, "css"), { recursive: true });

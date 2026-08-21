@@ -25,7 +25,10 @@
   <nav class="topbar">
     <div class="topbar-inner">
       <h1 class="brand"><img class="brand-icon" src="icon-192.png" alt="" width="30" height="30"> Axiom <span class="accent">DKP Metrics</span></h1>
-      <span class="topbar-meta">Axiom · read-only · local data</span>
+      <div class="topbar-meta">
+        <button id="palette-open" type="button" aria-label="Search (Ctrl+K)">🔍<kbd class="kbd-hint">Ctrl K</kbd></button>
+        <span class="meta-text">Axiom · read-only · local data</span>
+      </div>
     </div>
   </nav>
 
@@ -94,6 +97,17 @@
               <span><i class="swatch swatch-spent"></i>DKP spent</span>
             </div>
             <div id="activity-chart" class="activity-chart"></div>
+          </div>
+
+          <div class="panel overview-wide">
+            <h3>Raid Activity · past year</h3>
+            <div id="heatmap-status" class="panel-status">Loading…</div>
+            <div class="heatmap-wrap"><div id="raid-heatmap" class="heatmap"></div></div>
+            <div class="chart-legend heatmap-legend">
+              Less
+              <i class="hm-cell hm-l0"></i><i class="hm-cell hm-l1"></i><i class="hm-cell hm-l2"></i><i class="hm-cell hm-l3"></i>
+              More
+            </div>
           </div>
 
           <div class="panel">
@@ -382,6 +396,16 @@
       </section>
 
     </main>
+  </div>
+
+  <!-- ================= COMMAND PALETTE (Ctrl+K / "/" / topbar button) ================= -->
+  <div id="palette" class="palette-overlay" hidden>
+    <div class="palette" role="dialog" aria-modal="true" aria-label="Search">
+      <input type="search" id="palette-input"
+             placeholder="Jump to member, character, item, or raid…"
+             autocomplete="off" spellcheck="false" />
+      <div id="palette-results"></div>
+    </div>
   </div>
 
   <footer class="site-footer">

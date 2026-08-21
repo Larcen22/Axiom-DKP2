@@ -21,6 +21,21 @@
     const el = $(`#${id}`);
     if (el) el.textContent = value;
   };
+  // Count-up for stat cards: eases 0 → value over ~650ms. Respects prefers-reduced-motion
+  // (and renders instantly when the value is null/"–").
+  const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function animateCount(el, value) {
+    if (!el) return;
+    if (value == null || !Number.isFinite(value)) { el.textContent = "–"; return; }
+    if (REDUCED_MOTION) { el.textContent = value.toLocaleString(); return; }
+    const dur = 650, t0 = performance.now();
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      el.textContent = Math.round(value * (1 - Math.pow(1 - p, 3))).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
   const esc = Data.escapeHtml;
   // Quarmy character lookup: opens a name search on quarmy.com (non-www host only —
   // www.quarmy.com returns 503). Opens in a new tab.
@@ -104,14 +119,10 @@
       0
     );
 
-    setStat("stat-total-dkp", totalDkpAvailable.toLocaleString());
-    setStat("stat-items-awarded", itemsLastWeek.toLocaleString());
-    setStat("stat-avg-spent-week", avgSpentWeek != null
-      ? Math.round(avgSpentWeek).toLocaleString()
-      : "–");
-    setStat("stat-avg-raid-size", avgRaidSize != null
-      ? Math.round(avgRaidSize).toLocaleString()
-      : "–");
+    animateCount($("#stat-total-dkp"), totalDkpAvailable);
+    animateCount($("#stat-items-awarded"), itemsLastWeek);
+    animateCount($("#stat-avg-spent-week"), avgSpentWeek != null ? Math.round(avgSpentWeek) : null);
+    animateCount($("#stat-avg-raid-size"), avgRaidSize != null ? Math.round(avgRaidSize) : null);
 
     // Insight panels: activity chart, recent raids, top spenders, biggest spends, class mix, joiners, raider trend
     renderOverviewPanels(users, loot, items, raids, roster);
@@ -151,6 +162,38 @@
         `<div class="activity-bar bar-spent${s > 0 ? "" : " zero"}" style="height:${s > 0 ? Math.max(8, (s / maxSpent) * 100) : 3}%"></div></div>`;
     }).join("");
     $("#activity-status").textContent = `${windowTotal.toLocaleString()} raids · ${spentTotal.toLocaleString()} DKP spent in the past ${ACTIVITY_WEEKS} weeks`;
+
+    // --- Raid activity heatmap: one cell per day for the past 52 weeks (GitHub-style).
+    // The grid is date-driven (always 364 cells); data only colors them.
+    const HEATMAP_DAYS = 7 * 52;
+    const raidsByDay = new Map();
+    let windowRaids = 0;
+    for (const r of raids) {
+      if (!r.date) continue;
+      raidsByDay.set(r.date, (raidsByDay.get(r.date) || 0) + 1);
+    }
+    const isoOf = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const hmEnd = new Date(now);
+    const hmStart = new Date(hmEnd);
+    hmStart.setDate(hmStart.getDate() - (HEATMAP_DAYS - 1));
+    // Pad the first column so it starts on a Sunday (today lands bottom-right).
+    const pad = (hmStart.getDay() + 6) % 7;
+    let cells = Array.from({ length: pad }, () => `<i class="hm-cell hm-empty"></i>`).join("");
+    let activeDays = 0, peakN = 0, peakDate = "";
+    for (let d = new Date(hmStart); d <= hmEnd; d.setDate(d.getDate() + 1)) {
+      const iso = isoOf(d);
+      const n = raidsByDay.get(iso) || 0;
+      if (n > 0) {
+        activeDays++;
+        windowRaids += n;
+        if (n > peakN) { peakN = n; peakDate = iso; }
+      }
+      cells += `<i class="hm-cell hm-l${Math.min(n, 3)}" title="${iso}: ${n} raid${n === 1 ? "" : "s"}"></i>`;
+    }
+    $("#raid-heatmap").innerHTML = cells;
+    $("#heatmap-status").textContent = peakN
+      ? `${windowRaids.toLocaleString()} raids on ${activeDays.toLocaleString()} active days in the past year · busiest: ${peakN} raid${peakN === 1 ? "" : "s"} on ${peakDate}`
+      : "No raids recorded in the past year.";
 
     // --- Recent raids (newest first)
     // `|| ""` guards undated raids (same defensive convention as renderRaidsPage).
@@ -852,6 +895,160 @@
   }
 
 
+  /* ---------------- command palette (Ctrl+K / "/" / topbar button) ---------------- */
+  let paletteIndex = null; // { members, chars, items, raids } — built once from db
+  let paletteFlat = [];    // flat list of currently rendered rows (keyboard nav)
+  let paletteSel = 0;
+
+  const PALETTE_VIEWS = [
+    { kind: "view", value: "overview", label: "Overview" },
+    { kind: "view", value: "standings", label: "Raider Standings" },
+    { kind: "view", value: "loot", label: "Loot History" },
+    { kind: "view", value: "roster", label: "Roster" },
+    { kind: "view", value: "raids", label: "Raid History" },
+  ];
+
+  function buildPaletteIndex() {
+    const members = db.users.map((u) => ({ kind: "member", value: u.username, label: u.username, sub: "Member" }));
+    const chars = db.roster.map((r) => ({ kind: "char", value: r.member, label: r.character, sub: `${r.cls} · ${r.member}` }));
+    // Items that actually appear in loot (original casing), deduped case-insensitively.
+    const seen = new Set();
+    const items = [];
+    for (const l of db.loot) {
+      if (!l.item) continue;
+      const k = l.item.toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      items.push({ kind: "item", value: k, label: l.item, sub: "Item → pqdi.cc" });
+    }
+    const raids = db.raids.map((r) => ({ kind: "raid", value: r.id, label: r.name || r.id, sub: `Raid · ${r.date || "undated"}` }));
+    paletteIndex = { members, chars, items, raids };
+  }
+
+  function scoreMatch(q, text) {
+    const idx = text.toLowerCase().indexOf(q);
+    if (idx === -1) return null;
+    return (idx === 0 ? 200 : 100) - Math.min(idx, 40); // earlier match wins
+  }
+
+  function paletteSearch(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return [{ title: "Views", rows: PALETTE_VIEWS }];
+    const groups = [];
+    const searchGroup = (title, list, cap) => {
+      const hits = [];
+      for (const row of list) {
+        const s = scoreMatch(q, row.label);
+        if (s != null) hits.push({ ...row, _score: s });
+      }
+      hits.sort((a, b) => b._score - a._score || a.label.localeCompare(b.label));
+      if (hits.length) groups.push({ title, rows: hits.slice(0, cap) });
+    };
+    searchGroup("Members", paletteIndex.members, 4);
+    searchGroup("Characters", paletteIndex.chars, 4);
+    searchGroup("Raids", paletteIndex.raids, 4);
+    searchGroup("Items", paletteIndex.items, 4);
+    return groups;
+  }
+
+  function renderPalette(q) {
+    const box = $("#palette-results");
+    const groups = paletteSearch(q);
+    paletteFlat = [];
+    if (!groups.length) {
+      box.innerHTML = `<div class="pal-empty">No matches for “${esc(q.trim())}”</div>`;
+      return;
+    }
+    box.innerHTML = groups.map((g) => `
+      <div class="pal-group">
+        <div class="pal-title">${esc(g.title)}</div>
+        ${g.rows.map((r) => {
+          const i = paletteFlat.length;
+          paletteFlat.push(r);
+          return `<button type="button" class="pal-row${i === paletteSel ? " selected" : ""}" data-i="${i}">
+            <span class="pal-label">${esc(r.label)}</span>
+            ${r.sub ? `<span class="pal-sub">${esc(r.sub)}</span>` : ""}
+          </button>`;
+        }).join("")}
+      </div>`).join("");
+    if (paletteSel >= paletteFlat.length) paletteSel = Math.max(0, paletteFlat.length - 1);
+  }
+
+  function movePaletteSel(delta) {
+    if (!paletteFlat.length) return;
+    paletteSel = (paletteSel + delta + paletteFlat.length) % paletteFlat.length;
+    document.querySelectorAll("#palette-results .pal-row").forEach((el, i) => el.classList.toggle("selected", i === paletteSel));
+    const selEl = document.querySelector("#palette-results .pal-row.selected");
+    if (selEl) selEl.scrollIntoView({ block: "nearest" });
+  }
+
+  function activatePaletteRow(row) {
+    closePalette();
+    // Return to the view we were in when the palette was opened, so ← Back works.
+    const origin = document.querySelector(".view.active")?.id || "overview";
+    if (row.kind === "member" || row.kind === "char") openMember(row.value, origin);
+    else if (row.kind === "raid") openRaid(row.value, origin);
+    else if (row.kind === "view") {
+      showView(row.value);
+      document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
+      document.querySelector(`.nav-link[data-target="${row.value}"]`)?.classList.add("active");
+    } else if (row.kind === "item") {
+      const id = db.items.byName.get(row.value);
+      if (id) window.open(`https://www.pqdi.cc/item/${id}`, "_blank", "noopener");
+    }
+  }
+
+  function openPalette() {
+    if (!db || !paletteIndex) return; // data not loaded yet
+    $("#palette").hidden = false;
+    const input = $("#palette-input");
+    input.value = "";
+    paletteSel = 0;
+    renderPalette("");
+    requestAnimationFrame(() => input.focus());
+  }
+
+  function closePalette() {
+    $("#palette").hidden = true;
+  }
+
+  function setupPalette() {
+    buildPaletteIndex();
+    $("#palette-open").addEventListener("click", () => ($("#palette").hidden ? openPalette() : closePalette()));
+    $("#palette-input").addEventListener("input", (e) => { paletteSel = 0; renderPalette(e.target.value); });
+    $("#palette-results").addEventListener("click", (e) => {
+      const btn = e.target.closest(".pal-row");
+      if (!btn) return;
+      activatePaletteRow(paletteFlat[Number(btn.dataset.i)]);
+    });
+    // Backdrop click closes.
+    $("#palette").addEventListener("mousedown", (e) => { if (e.target === $("#palette")) closePalette(); });
+
+    document.addEventListener("keydown", (e) => {
+      const isOpen = !$("#palette").hidden;
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        if (isOpen) closePalette(); else openPalette();
+        return;
+      }
+      if (!isOpen) {
+        // "/" opens the palette unless we're typing in a field.
+        const tag = (document.activeElement || {}).tagName || "";
+        if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(tag)) { e.preventDefault(); openPalette(); }
+        return;
+      }
+      if (e.key === "Escape") { e.preventDefault(); closePalette(); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); movePaletteSel(1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); movePaletteSel(-1); }
+      else if (e.key === "Enter" && document.activeElement === $("#palette-input")) {
+        e.preventDefault();
+        const row = paletteFlat[paletteSel];
+        if (row) activatePaletteRow(row);
+      }
+    });
+  }
+
+
   /* ---------------- init ---------------- */
   async function init() {
     setupNav();
@@ -1002,6 +1199,16 @@
         document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
         document.querySelector(`.nav-link[data-target="${raidReturnView}"]`)?.classList.add("active");
       });
+
+      // Command palette (needs db, so wired after it is set).
+      setupPalette();
+
+      // Offline support: register the service worker (never blocks the app).
+      // Registered directly rather than on window "load" — that event fires
+      // before our async data init finishes, so a load listener would never run.
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").catch(() => {});
+      }
 
       document.body.classList.remove("app-loading");
     } catch (err) {

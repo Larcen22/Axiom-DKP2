@@ -2,7 +2,7 @@
 
 A read-only, fully client-side web dashboard for **EverQuest raid DKP** (Dragon Kill Points) accounting for the guild **Axiom**.
 
-It loads local JSON/CSV data exports via `fetch` and renders overview stats, raider standings, loot history, a roster (with per-member drill-down), and raid history. No server, no build step, no framework — plain HTML/CSS/JS. Item names link out to the community database [pqdi.cc](https://www.pqdi.cc).
+It loads local JSON/CSV data exports via `fetch` and renders overview stats, raider standings, loot history, a roster (with per-member drill-down), and raid history. No server, no build step, no framework — plain HTML/CSS/JS. Item names link out to the community database [pqdi.cc](https://www.pqdi.cc). A command palette (**Ctrl+K** or **/**) jumps to any member, character, item, or raid; a service worker makes the app usable offline (last-known-good data).
 
 ## Running
 
@@ -19,7 +19,7 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 
 | View | What it shows |
 |---|---|
-| **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids |
+| **Overview** | Guild-wide stat cards plus insight panels: weekly activity chart (raids + DKP spent, 12 weeks), raid-activity heatmap (past year, one cell per day), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids |
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown and 30D/60D/90D/Lifetime raid attendance as `NN% (attended/total)`; all data columns sortable (raid windows by %), searchable by raider name (paginated) |
 | **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
@@ -34,7 +34,8 @@ index.html           App shell: top bar, sidebar nav, view sections
 style.css            Import manifest (variables → base → layout → components → views)
 css/                 Modular stylesheets: variables/, base/, layout/, components/, views/
 js/data.js           Data layer (global `Data`): fetch, validate, normalize, index
-js/app.js            Presentation layer: navigation, rendering, pagination, search
+js/app.js            Presentation layer: navigation, rendering, pagination, search, command palette
+sw.js                Service worker: offline support (app-shell precache + stale-while-revalidate)
 items.json           Item database (id + name), used for pqdi.cc links
 loot.json            Loot awards: one entry per item awarded
 raids.json           Raid log (date, DKP value, attendees)
@@ -48,6 +49,7 @@ transactions.json    Pre-processed: account-level DKP adjustments already baked 
 - **Data flow:** `js/data.js` fetches the local data files, validates shapes, normalizes field names, builds lookup indexes, resolves missing loot dates via raid log. `js/app.js` renders everything on `DOMContentLoaded`.
 - **DKP model:** DKP is earned per raid attendance (`raid_dkp_value`) and spent on awarded loot (`item_dkp_value`). Active/available DKP = earned − spent (+ adjustments). Item↔loot joins are by name string, not id (which is why a `byName` map exists in `Data`).
 - **External dependency:** [PapaParse](https://www.papaparse.com/) via CDN (runtime CSV parsing only).
+- **Offline PWA:** `sw.js` precaches the app shell and serves data files + the PapaParse script stale-while-revalidate, so a reload with no network still boots from cached data. Home-screen installable via `manifest.webmanifest` + PNG icons.
 - **Dev dependencies** (tests only, never loaded by the app): `vitest`, `papaparse` (CSV parity in unit tests), `@playwright/test`.
 - **Security:** all user data rendered into the DOM is HTML-escaped.
 
@@ -65,7 +67,7 @@ npm run test:e2e     # Playwright smoke suite against a local static server
 |---|---|
 | `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
 | `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
-| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, item links point at pqdi.cc and character links point at Quarmy, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
+| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, item links point at pqdi.cc and character links point at Quarmy, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, the command palette opens/searches/navigates, the heatmap renders 364 day-cells, an offline reload boots from the service-worker cache, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
 
 CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
@@ -77,10 +79,11 @@ CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 | File | Size | Purpose |
 |---|---|---|
-| `index.html` | ~390 lines | App shell, top bar, nav, view sections, footer |
-| `style.css` + `css/` | ~700 lines total | Dark theme: variables, base, layout, components (cards/tables/pagination/loading/inputs), views |
+| `index.html` | ~415 lines | App shell, top bar, nav, view sections, command palette overlay, footer |
+| `style.css` + `css/` | ~730 lines total | Dark theme: variables, base, layout, components (cards/tables/pagination/loading/inputs), views (+ motion, heatmap, palette) |
 | `js/data.js` | ~274 lines | Global `Data` object: fetch / validate / normalize |
-| `js/app.js` | ~1018 lines | Navigation, view rendering, pagination, search, overview insight panels |
+| `js/app.js` | ~1225 lines | Navigation, view rendering, pagination, search, overview insight panels, command palette |
+| `sw.js` | ~75 lines | Service worker: offline support |
 | `items.json` | ~1.6 MB | Item database (id + name), pqdi.cc links |
 | `loot.json` | ~2.1 MB | Loot awards (player, item, DKP spent) |
 | `raids.json` | ~8.2 MB | Raid log (date, DKP value, attendees) |
