@@ -93,6 +93,8 @@ Three layers — see README for details:
 
 Run: `npm test` and `npm run test:e2e`. CI (`.github/workflows/ci.yml`) runs both on push/PR.
 
+**After re-exporting data files, always run `npm test` before using the dashboard** — the integrity tests validate new exports against the invariants above (types, ISO dates, cross-file joins) and are the early-warning system for export-format drift.
+
 ## Commit workflow
 
 The **user** commits and pushes — the agent does NOT commit or push (owner decision, 2026-08-20: "stop committing and trying to sync, I will do those"). The agent's job ends at: changes applied + `npm test` AND `npm run test:e2e` fully green (plus a syntax check where relevant), then report what changed so the user can commit. Guild data files stay gitignored and must never be staged.
