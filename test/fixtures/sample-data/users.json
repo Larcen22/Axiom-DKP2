@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "Alice",
+      "username_id": "u1-alice",
+      "rank": "Officer",
+      "available_dkp": 105,
+      "dkp_earned": 130,
+      "dkp_spent": 25,
+      "dkp_adjustments": 0,
+      "characters": [ { "name": "CharA", "class": "Beastlord", "role": "main", "level": 56, "race": "Vah Shir" } ],
+      "ApplicationDate": "2025-01-10T00:00:00",
+      "MembershipDate": "2024-11-01T00:00:00"
+    },
+    {
+      "username": "Bob",
+      "username_id": "u2-bob",
+      "rank": "",
+      "available_dkp": 90,
+      "dkp_earned": 120,
+      "dkp_spent": 30,
+      "dkp_adjustments": 0,
+      "characters": [ { "name": "CharB", "class": "Necromancer", "role": "main", "level": 48, "race": "Tutha" } ],
+      "ApplicationDate": "2025-03-22T00:00:00",
+      "MembershipDate": "2025-02-15T00:00:00"
+    },
+    {
+      "username": "Carol",
+      "username_id": "u3-carol",
+      "rank": "",
+      "available_dkp": 65,
+      "dkp_earned": 80,
+      "dkp_spent": 15,
+      "dkp_adjustments": 0,
+      "characters": [ { "name": "CharC", "class": "Shaman", "role": "main", "level": 60, "race": "Drukk" } ],
+      "ApplicationDate": "2026-08-18T00:00:00",
+      "MembershipDate": "2026-08-01T00:00:00"
+    }
+  ]
+}

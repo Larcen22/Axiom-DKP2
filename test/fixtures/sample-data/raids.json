@@ -1,0 +1,76 @@
+{
+  "raids": [
+    {
+      "raid_id": "r1",
+      "raid_name": "Sample Raid One",
+      "date": "2026-08-15T19:30:00Z",
+      "raid_dkp_value": 50,
+      "attendees": [
+        { "username_id": "u1-alice", "character_name": "CharA" },
+        { "username_id": "u2-bob", "character_name": "CharB" }
+      ]
+    },
+    {
+      "raid_id": "r2",
+      "raid_name": "Sample Raid Two",
+      "date": "2026-08-10T19:30:00Z",
+      "raid_dkp_value": 40,
+      "attendees": [
+        { "username_id": "u1-alice", "character_name": "CharA" },
+        { "username_id": "u3-carol", "character_name": "CharC" }
+      ]
+    },
+    {
+      "raid_id": "r3",
+      "raid_name": "Sample Raid Three",
+      "date": "2026-07-20T19:30:00Z",
+      "raid_dkp_value": 30,
+      "attendees": [ { "username_id": "u2-bob", "character_name": "CharB" } ]
+    },
+    {
+      "raid_id": "r4",
+      "raid_name": "Sample Raid Four",
+      "date": "2026-07-15T19:30:00Z",
+      "raid_dkp_value": 20,
+      "attendees": [
+        { "username_id": "u1-alice", "character_name": "CharA" },
+        { "username_id": "u2-bob", "character_name": "CharB" }
+      ]
+    },
+    {
+      "raid_id": "r5",
+      "raid_name": "Sample Raid Five",
+      "date": "2026-07-01T19:30:00Z",
+      "raid_dkp_value": 20,
+      "attendees": [ { "username_id": "u3-carol", "character_name": "CharC" } ]
+    },
+    {
+      "raid_id": "r6",
+      "raid_name": "Sample Raid Six",
+      "date": "2026-06-15T19:30:00Z",
+      "raid_dkp_value": 10,
+      "attendees": [
+        { "username_id": "u1-alice", "character_name": "CharA" },
+        { "username_id": "u2-bob", "character_name": "CharB" },
+        { "username_id": "u3-carol", "character_name": "CharC" }
+      ]
+    },
+    {
+      "raid_id": "r7",
+      "raid_name": "Sample Raid Seven",
+      "date": "2026-06-01T19:30:00Z",
+      "raid_dkp_value": 10,
+      "attendees": [ { "username_id": "u2-bob", "character_name": "CharB" } ]
+    },
+    {
+      "raid_id": "r8",
+      "raid_name": "Sample Raid Eight",
+      "date": "2026-05-15T19:30:00Z",
+      "raid_dkp_value": 10,
+      "attendees": [
+        { "username_id": "u1-alice", "character_name": "CharA" },
+        { "username_id": "u3-carol", "character_name": "CharC" }
+      ]
+    }
+  ]
+}

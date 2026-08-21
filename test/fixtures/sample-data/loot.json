@@ -1,0 +1,31 @@
+{
+  "loot": [
+    {
+      "item": "Cloth Cap",
+      "character_id": "c1-chara",
+      "character_name": "CharA",
+      "username_id": "u1-alice",
+      "raid_id": "r1",
+      "item_dkp_value": 25,
+      "date": null
+    },
+    {
+      "item": "Cloth Veil",
+      "character_id": "c2-charb",
+      "character_name": "CharB",
+      "username_id": "u2-bob",
+      "raid_id": "r2",
+      "item_dkp_value": 30,
+      "date": "2026-08-10T13:45:22.987654+00:00"
+    },
+    {
+      "item": "Cloth Choker",
+      "character_id": "c3-charc",
+      "character_name": "CharC",
+      "username_id": "u3-carol",
+      "raid_id": "r2",
+      "item_dkp_value": 15,
+      "date": null
+    }
+  ]
+}

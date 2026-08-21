@@ -3,8 +3,10 @@
 node_modules/
 test-results/
 playwright-report/
-users.json
-transactions.json
-roster-export.csv
-loot.json
-raids.json
+# Guild data exports — anchored to repo root so the synthetic test fixtures in
+# test/fixtures/sample-data/ (same filenames) can be committed for CI.
+/users.json
+/transactions.json
+/roster-export.csv
+/loot.json
+/raids.json
