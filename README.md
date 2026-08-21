@@ -23,7 +23,7 @@ Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:800
 | **Raider Standings** | All accounts sorted by active DKP, with earned/spent breakdown and 30D/60D/90D/Lifetime raid attendance as `NN% (attended/total)`; all data columns sortable (raid windows by %), searchable by raider name (paginated) |
 | **Loot** | Full loot history with raid names, newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
-| **Member** | Drill-down (from Roster or Overview panels): account DKP, rank, characters, raid attendance %, paginated member-scoped loot history |
+| **Member** | Drill-down (member links in Standings, Roster, Overview panels, and Raid Detail): account DKP, rank, characters, raid attendance %, paginated member-scoped loot history |
 | **Raid** | Drill-down (click any raid name in Recent Raids or Raid History): attendees grouped by member with their characters, items awarded and total DKP spent for that exact raid (joined on `raid_id`), paginated loot table with owner drill-downs |
 | **Raids** | Full raid log with date, DKP value, and attendee list; raid names link to the Raid detail view (paginated) |
 
@@ -65,7 +65,7 @@ npm run test:e2e     # Playwright smoke suite against a local static server
 |---|---|
 | `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
 | `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
-| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, item links point at pqdi.cc, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
+| `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, item links point at pqdi.cc and character links point at Quarmy, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
 
 CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
@@ -77,10 +77,10 @@ CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 | File | Size | Purpose |
 |---|---|---|
-| `index.html` | ~326 lines | App shell, top bar, nav, view sections, footer |
+| `index.html` | ~390 lines | App shell, top bar, nav, view sections, footer |
 | `style.css` + `css/` | ~700 lines total | Dark theme: variables, base, layout, components (cards/tables/pagination/loading/inputs), views |
-| `js/data.js` | ~247 lines | Global `Data` object: fetch / validate / normalize |
-| `js/app.js` | ~805 lines | Navigation, view rendering, pagination, search, overview insight panels |
+| `js/data.js` | ~274 lines | Global `Data` object: fetch / validate / normalize |
+| `js/app.js` | ~1018 lines | Navigation, view rendering, pagination, search, overview insight panels |
 | `items.json` | ~1.6 MB | Item database (id + name), pqdi.cc links |
 | `loot.json` | ~2.1 MB | Loot awards (player, item, DKP spent) |
 | `raids.json` | ~8.2 MB | Raid log (date, DKP value, attendees) |

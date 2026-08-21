@@ -153,13 +153,14 @@
     $("#activity-status").textContent = `${windowTotal.toLocaleString()} raids · ${spentTotal.toLocaleString()} DKP spent in the past ${ACTIVITY_WEEKS} weeks`;
 
     // --- Recent raids (newest first)
-    const recentRaids = [...raids].sort((a, b) => b.date.localeCompare(a.date)).slice(0, RECENT_RAIDS_SHOWN);
+    // `|| ""` guards undated raids (same defensive convention as renderRaidsPage).
+    const recentRaids = [...raids].sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, RECENT_RAIDS_SHOWN);
     // Items awarded per raid, joined on the exact raid id (raid names repeat over time).
     const lootByRaidId = new Map();
     for (const l of loot) if (l.raidId) lootByRaidId.set(l.raidId, (lootByRaidId.get(l.raidId) || 0) + 1);
     $("#recent-raids-table tbody").innerHTML = recentRaids.map((r) => `
       <tr>
-        <td>${esc(r.date)}</td>
+        <td>${esc(r.date || "")}</td>
         <td><a href="#raid" class="raid-link" data-id="${esc(r.id)}" data-return="overview">${esc(r.name || r.id)}</a></td>
         <td class="num">${r.attendees.length}</td>
         <td class="num">${lootByRaidId.get(r.id) || 0}</td>

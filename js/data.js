@@ -36,7 +36,7 @@ const Data = (() => {
    * @returns {Promise<{
    *   byId:       Map<number, string>,       // id -> NAME
    *   byName:     Map<string, number>,       // NAME (lowercase) -> id  (for pqdi.cc links; largest id when ambiguous)
-   *   ambiguous:  Set<string>,               // lowercase names with >1 id (still linked — to the smallest id)
+   *   ambiguous:  Set<string>,               // lowercase names with >1 id (still linked — to the largest id)
    *   rows:       Array<{ id: number, NAME: string }>
    * }>}
    */
@@ -110,7 +110,9 @@ const Data = (() => {
     const data = await fetchRaids();
     const map = new Map();
     for (const raid of data.raids) {
-      if (raid.raid_id) map.set(raid.raid_id, {
+      // Join keys are normalized to strings at the boundary so cross-file Map/Set
+      // joins can't silently break on string/number type drift between exports.
+      if (raid.raid_id) map.set(String(raid.raid_id), {
         date: isoDate(raid.date),
         name: raid.raid_name || "",
       });
@@ -131,15 +133,15 @@ const Data = (() => {
     if (!Array.isArray(data.loot)) throw new Error("loot.json: expected { loot: [...] }");
 
     return data.loot.map((l) => {
-      const raid = raidInfo.get(l.raid_id) || null;
+      const raid = l.raid_id ? raidInfo.get(String(l.raid_id)) || null : null;
       return {
         // Prefer the loot's own date; fall back to the raid's date. Both normalized to YYYY-MM-DD.
         date: isoDate(l.date || (raid && raid.date)),
         player: l.character_name,
-        user: l.username_id || null, // owner username_id (for member-level grouping)
+        user: l.username_id ? String(l.username_id) : null, // owner username_id (for member-level grouping)
         item: l.item,
         raid: (raid && raid.name) || null,
-        raidId: l.raid_id || null, // exact join key to raids.json (names repeat over time)
+        raidId: l.raid_id ? String(l.raid_id) : null, // exact join key to raids.json (names repeat over time)
         dkpSpent: Number(l.item_dkp_value) || 0,
       };
     });
@@ -161,17 +163,22 @@ const Data = (() => {
 
   /**
    * Load the full raid log.
-   * @returns {Promise<Array<{ date: string|null, name: string, dkpValue: number, attendees: string[] }>>}
+   * @returns {Promise<Array<{ id: string|null, date: string|null, name: string,
+   *   dkpValue: number, attendees: string[], attendeeUserIds: string[] }>>}
    */
   async function loadRaids() {
     const data = await fetchRaids();
     return data.raids.map((r) => ({
-      id: r.raid_id || null,
+      id: r.raid_id ? String(r.raid_id) : null, // normalized to string for stable cross-file joins
       date: isoDate(r.date),
       name: r.raid_name || "",
       dkpValue: Number(r.raid_dkp_value) || 0,
-      attendees: (r.attendees || []).map((a) => a.character_name).filter(Boolean),
-      attendeeUserIds: (r.attendees || []).map((a) => a.username_id).filter(Boolean),
+      // Attendee entries are { username_id, character_name } objects; legacy exports may
+      // carry plain strings — accept both so old data can't be silently dropped.
+      attendees: (r.attendees || []).map((a) => (typeof a === "string" ? a : a && a.character_name)).filter(Boolean),
+      attendeeUserIds: (r.attendees || [])
+        .map((a) => (a && typeof a === "object" && a.username_id ? String(a.username_id) : null))
+        .filter(Boolean),
     }));
   }
 
@@ -186,7 +193,7 @@ const Data = (() => {
     if (!Array.isArray(data.users)) throw new Error("users.json: expected { users: [...] }");
     return data.users.map((u) => ({
       username: u.username,
-      usernameId: u.username_id,
+      usernameId: u.username_id ? String(u.username_id) : null,
       activeDkp: Number(u.available_dkp) || 0,
       earned: Number(u.dkp_earned) || 0,
       spent: Number(u.dkp_spent) || 0,
