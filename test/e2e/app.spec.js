@@ -359,6 +359,14 @@ test.describe.serial("Axiom DKP dashboard", () => {
       await expect(profileChar).toHaveAttribute("target", "_blank");
     }
 
+    // Raid history mirrors the loot table: status always resolves; rows exist iff raids were attended.
+    const rs = (await page.locator("#member-raids-status").textContent()) || "";
+    expect(rs).not.toContain("Loading");
+    expect(rs).toMatch(/^(?:\d+ raids attended|No raid attendance)/);
+    if (await page.locator("#member-raids-table").isVisible()) {
+      expect(await page.locator("#member-raids-table tbody tr").count()).toBeGreaterThan(0);
+    }
+
     // Member loot shares the standard pagination: pager visible only when >10 awards.
     const m = /page 1 of (\d+)/.exec((await page.locator("#member-loot-status").textContent()) || "");
     if (m && Number(m[1]) > 1) {

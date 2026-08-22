@@ -809,6 +809,8 @@
       $("#member-characters").innerHTML = `<span class="panel-status error">No member or roster character named \u201c${esc(name)}\u201d was found in the data.</span>`;
       memberLootSorted = [];
       renderMemberLootPage(1);
+      memberRaidsSorted = [];
+      renderMemberRaidsPage(1);
       showView("member");
       return;
     }
@@ -843,11 +845,12 @@
       ["lifetime", joinedOn || ""], // no join date -> window stays empty, stat shows "–"
     ];
     let raidsAttended = 0;
+    const attendedRaids = []; // full history for the Raid History table
     const winTotal = Object.fromEntries(windows.map(([k]) => [k, 0]));
     const winAttended = Object.fromEntries(windows.map(([k]) => [k, 0]));
     for (const r of db.raids) {
       const present = isPresent(r); // computed once per raid (used below + for the lifetime count)
-      if (present) raidsAttended++;
+      if (present) { raidsAttended++; attendedRaids.push(r); }
       if (!r.date) continue; // undated raids can't be placed in a window
       for (const [key, cutoff] of windows) {
         if (cutoff && r.date >= cutoff) {
@@ -881,6 +884,15 @@
           `<span class="member-char">${quarmyLink(c.character)} · ${esc(c.cls)} (${c.level}) · ${esc(c.mainAlt || "—")}</span>`
         ).join("")
       : "<span class=\"panel-status\">No roster characters found.</span>";
+
+    // Raid History: newest first, undated raids last (same ordering as the loot table).
+    memberRaidsSorted = attendedRaids.slice().sort((a, b) => {
+      if (a.date && b.date) return b.date.localeCompare(a.date);
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return 0;
+    });
+    renderMemberRaidsPage(1);
 
     memberLootSorted = db.loot.filter((l) => charNames.has(String(l.player).toLowerCase()));
     memberLootSorted.sort((a, b) => {
@@ -922,6 +934,36 @@
       : "No loot awards found.";
 
     renderPager("member-loot-pager", memberLootPage, totalPages);
+  }
+
+  const MEMBER_RAIDS_PAGE_SIZE = 10;
+  let memberRaidsSorted = [];
+  let memberRaidsPage = 1;
+
+  function renderMemberRaidsPage(page) {
+    const totalPages = Math.max(1, Math.ceil(memberRaidsSorted.length / MEMBER_RAIDS_PAGE_SIZE));
+    memberRaidsPage = Math.min(Math.max(1, page), totalPages);
+    const start = (memberRaidsPage - 1) * MEMBER_RAIDS_PAGE_SIZE;
+    const rows = memberRaidsSorted.slice(start, start + MEMBER_RAIDS_PAGE_SIZE);
+
+    $("#member-raids-table tbody").innerHTML = rows.map((r) => `
+      <tr>
+        <td>${r.date ? esc(r.date) : "—"}</td>
+        <td>${r.id && r.name
+          ? `<a href="#/raid/${encodeURIComponent(r.id)}" class="raid-link">${esc(r.name)}</a>`
+          : (r.name ? esc(r.name) : "—")}</td>
+        <td class="num">${r.dkpValue.toLocaleString()}</td>
+      </tr>`).join("");
+
+    $("#member-raids-table").hidden = rows.length === 0;
+    $("#member-raids-status").textContent = memberRaidsSorted.length
+      ? `${memberRaidsSorted.length.toLocaleString()} raids attended · newest first · ` +
+        (rows.length
+          ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${memberRaidsPage} of ${totalPages.toLocaleString()})`
+          : "no raids")
+      : "No raid attendance found.";
+
+    renderPager("member-raids-pager", memberRaidsPage, totalPages);
   }
 
   /* ---------------- raid detail ---------------- */
@@ -1328,6 +1370,11 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderMemberLootPage(Number(btn.dataset.page));
+      });
+      $("#member-raids-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderMemberRaidsPage(Number(btn.dataset.page));
       });
       $("#raid-loot-pager").addEventListener("click", (e) => {
         const btn = e.target.closest(".pager-btn");
