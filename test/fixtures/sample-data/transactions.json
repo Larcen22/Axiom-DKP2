@@ -53,6 +53,60 @@
       "transaction_amount": 15,
       "reason": "recruiting a new member",
       "date": "2026-03-10T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-007",
+      "username_id": "u3-carol",
+      "username": "Carol",
+      "type": "Guild Bank",
+      "transaction_amount": 25,
+      "reason": "Guild bank distribution",
+      "date": "2026-08-15T20:00:00Z"
+    },
+    {
+      "transaction_id": "tx-008",
+      "username_id": "u1-alice",
+      "username": "Alice",
+      "type": "Guild Bank",
+      "transaction_amount": 30,
+      "reason": "Guild bank distribution",
+      "date": "2026-08-15T20:00:00Z"
+    },
+    {
+      "transaction_id": "tx-009",
+      "username_id": "u2-bob",
+      "username": "Bob",
+      "type": "Guild Bank",
+      "transaction_amount": 20,
+      "reason": "Guild bank distribution",
+      "date": "2026-08-15T20:00:00Z"
+    },
+    {
+      "transaction_id": "tx-010",
+      "username_id": "u3-carol",
+      "username": "Carol",
+      "type": "Guild Bank",
+      "transaction_amount": 15,
+      "reason": "Guild bank distribution (second character)",
+      "date": "2026-08-15T20:05:00Z"
+    },
+    {
+      "transaction_id": "tx-011",
+      "username_id": "u1-alice",
+      "username": "Alice",
+      "type": "Guild Bank",
+      "transaction_amount": 10,
+      "reason": "Guild bank distribution (second character)",
+      "date": "2026-08-15T20:05:00Z"
+    },
+    {
+      "transaction_id": "tx-012",
+      "username_id": "u2-bob",
+      "username": "Bob",
+      "type": "Guild Bank",
+      "transaction_amount": 12,
+      "reason": "Guild bank distribution (second character)",
+      "date": "2026-08-15T20:05:00Z"
     }
   ]
 }

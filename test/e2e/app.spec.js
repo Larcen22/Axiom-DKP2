@@ -212,14 +212,21 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#bank-flow")).toContainText("earned");
   });
 
-  test("recent rewards panel shows up to five rows with plain dates", async () => {
+  test("recent rewards panel shows the latest rewards with plain dates", async () => {
     const st = (await page.locator("#recent-transactions-status").textContent()) || "";
     expect(st).not.toContain("Loading");
     expect(st).toMatch(/^(?:Last \d+ of [\d,]+ rewards|No rewards recorded)/);
     if (await page.locator("#recent-transactions-table").isVisible()) {
+      const m = /^Last (\d+) of/.exec(st);
+      expect(m, "status should report the shown count").not.toBeNull();
       const rows = await page.locator("#recent-transactions-table tbody tr").count();
-      expect(rows).toBeGreaterThan(0);
-      expect(rows).toBeLessThanOrEqual(5);
+      expect(rows).toBe(Number(m[1])); // rendered rows match the status line
+      if (rows > 5) {
+        // Day expansion: extra rows only appear when a single day has more than five rewards,
+        // so every displayed row must share that one date.
+        const dates = await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents();
+        expect(new Set(dates.map((d) => d.trim())).size).toBe(1);
+      }
       // Full ISO timestamps in the export must render as plain YYYY-MM-DD.
       for (const t of await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents()) {
         expect(t.trim()).toMatch(/^\d{4}-\d{2}-\d{2}$/);

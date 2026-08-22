@@ -326,14 +326,24 @@
       ? `Last ${recentRaids.length} of ${raids.length.toLocaleString()} raids`
       : "No raids recorded.";
 
-    // --- Recent transactions (newest first, undated last). Optional file — may be empty.
+    // --- Recent rewards (newest first, undated last). Optional file — may be empty.
     const RECENT_TX_SHOWN = 5;
-    const recentTx = [...transactions].sort((a, b) => {
+    const txSorted = [...transactions].sort((a, b) => {
       if (a.date && b.date) return b.date.localeCompare(a.date);
       if (a.date) return -1;
       if (b.date) return 1;
       return 0;
-    }).slice(0, RECENT_TX_SHOWN);
+    });
+    // Latest N — but never cut a day in half: any date inside the top-N that has more than
+    // N rewards overall shows all of its rows (payout days arrive as bursts).
+    const txDayCounts = new Map();
+    for (const t of transactions) txDayCounts.set(t.date, (txDayCounts.get(t.date) || 0) + 1);
+    const keepDates = new Set(txSorted.slice(0, RECENT_TX_SHOWN).map((t) => t.date));
+    const recentTx = [];
+    for (const t of txSorted) {
+      if (!keepDates.has(t.date)) break; // sorted desc — past the top-N dates we're done
+      if ((txDayCounts.get(t.date) || 0) > RECENT_TX_SHOWN || recentTx.length < RECENT_TX_SHOWN) recentTx.push(t);
+    }
     $("#recent-transactions-table tbody").innerHTML = recentTx.map((t) => `
       <tr>
         <td>${t.date ? esc(t.date) : "—"}</td>
