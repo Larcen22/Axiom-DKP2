@@ -207,6 +207,8 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await goTo("overview");
     const status = page.locator("#bank-status");
     await expect(status).not.toHaveText(/Loading/);
+    // "Last raid N days ago" prefix (both datasets carry dated raids).
+    await expect(status).toHaveText(/^Last raid (today|yesterday|\d+ days ago) · /);
     await expect(page.locator("#bank-total")).toHaveText(/^[\d,]+$/);
     await expect(page.locator("#bank-burn")).toHaveText(/^(?:[\d,]+|–)$/);
     await expect(page.locator("#bank-flow")).toContainText("earned");
@@ -267,6 +269,8 @@ test.describe.serial("Axiom DKP dashboard", () => {
     }
     // The 30-day join count (formerly the Applicants stat card) lives in this status line.
     await expect(page.locator("#recent-joiners-status")).toHaveText(/joined in the past 30 days/);
+    // Guild-wide avg 30d attendance headline (both datasets have active members).
+    await expect(page.locator("#most-active-status")).toHaveText(/Avg 30d attendance \d+% · /);
   });
 
   test("loot search filters by player name", async () => {

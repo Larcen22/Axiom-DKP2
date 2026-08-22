@@ -206,9 +206,19 @@
     const burnPerRaid = raids90 ? spend90 / raids90 : null;
     animateCount($("#bank-total"), bankTotal);
     $("#bank-burn").textContent = burnPerRaid != null ? Math.round(burnPerRaid).toLocaleString() : "–";
+    // Days since the last dated raid (relative to today — a stale export simply reads larger;
+    // the footer's "Data through" line tells officers how fresh the export is).
+    const lastRaidDate = raids.reduce((m, r) => (r.date && r.date > m ? r.date : m), "");
+    let lastRaidPrefix = "";
+    if (lastRaidDate) {
+      const days = Math.floor((new Date() - new Date(lastRaidDate + "T00:00:00")) / 86400000);
+      lastRaidPrefix = `Last raid ${days <= 0 ? "today" : days === 1 ? "yesterday" : `${days} days ago`} · `;
+    }
     $("#bank-status").textContent = raids90
-      ? `${raids90} raid${raids90 === 1 ? "" : "s"} · ${spend90.toLocaleString()} DKP spent in the past 90 days`
-      : "No raids recorded in the past 90 days.";
+      ? `${lastRaidPrefix}${raids90} raid${raids90 === 1 ? "" : "s"} · ${spend90.toLocaleString()} DKP spent in the past 90 days`
+      : lastRaidDate
+        ? `${lastRaidPrefix}No raids recorded in the past 90 days.`
+        : "No raids recorded.";
     const earnedAll = users.reduce((s, u) => s + u.earned, 0);
     const spentAll = users.reduce((s, u) => s + u.spent, 0);
     const netAll = earnedAll - spentAll;
@@ -398,8 +408,54 @@
       </li>`;
     }).join("");
     const coreCount = [...attendance.values()].filter((n) => n >= CORE_RAIDS_MIN).length;
+    // Guild-wide avg 30d attendance — same semantics as Standings' 30D column: per-member
+    // attended/total over the window clamped to join date, presence = username_id OR character name.
+    let avgAttPct = null;
+    if (attendance.size) {
+      const joinedByMember = new Map();
+      for (const row of roster) {
+        for (const d of [row.applied, row.memberSince]) {
+          if (!d) continue;
+          const prev = joinedByMember.get(row.member);
+          if (!prev || d < prev) joinedByMember.set(row.member, d);
+        }
+      }
+      const uidOfUser = new Map(users.map((u) => [u.username, u.usernameId]));
+      const charNameToUid = new Map();
+      for (const row of roster) {
+        const uid = uidOfUser.get(row.member);
+        if (uid && !charNameToUid.has(row.character.toLowerCase())) charNameToUid.set(row.character.toLowerCase(), uid);
+      }
+      const attCounts = new Map(); // usernameId -> raids attended in the 30d window
+      for (const r of raids) {
+        if (!r.date || r.date < cutoff30Str) continue;
+        const credited = new Set(r.attendeeUserIds);
+        for (const name of r.attendees) {
+          const uid = charNameToUid.get(name.toLowerCase());
+          if (uid) credited.add(uid);
+        }
+        for (const uid of credited) attCounts.set(uid, (attCounts.get(uid) || 0) + 1);
+      }
+      // Sorted raid dates -> O(log n) "total raids since X" lookups.
+      const raidDatesAll = raids.map((r) => r.date).filter(Boolean).sort();
+      const totalSince = (start) => {
+        let lo = 0, hi = raidDatesAll.length;
+        while (lo < hi) { const mid = (lo + hi) >> 1; if (raidDatesAll[mid] < start) lo = mid + 1; else hi = mid; }
+        return raidDatesAll.length - lo;
+      };
+      let attSum = 0, attN = 0;
+      for (const u of users) {
+        const jo = joinedByMember.get(u.username) || "";
+        const total = totalSince(jo > cutoff30Str ? jo : cutoff30Str);
+        if (!total) continue; // no raid opportunities in their clamped window
+        attSum += (attCounts.get(u.usernameId) || 0) / total;
+        attN++;
+      }
+      avgAttPct = attN ? Math.round((attSum / attN) * 100) : null;
+    }
+    const attPrefix = avgAttPct != null ? `Avg 30d attendance ${avgAttPct}% · ` : "";
     $("#most-active-status").textContent = attendance.size
-      ? `${coreCount.toLocaleString()} core raiders (${CORE_RAIDS_MIN}+ raids) of ${attendance.size.toLocaleString()} active members`
+      ? `${attPrefix}${coreCount.toLocaleString()} core raiders (${CORE_RAIDS_MIN}+ raids) of ${attendance.size.toLocaleString()} active members`
       : "No raids in the past 30 days.";
 
     // --- Biggest single spends, past 30 days
