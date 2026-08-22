@@ -27,13 +27,13 @@ Arshis,Moltenstare,Warrior,60,Iksar,main,member,91,0,35,2026-07-16 18:57:11,2026
 Artery,Artery,Cleric,60,Dark Elf,main,applicant,65,0,1,2026-08-10 10:58:31,
 Artery,Denel,Paladin,60,Gnome,main,applicant,65,0,1,2026-08-10 10:58:31,
 Artex,Artex,Necromancer,21,Iksar,main,member,0,0,0,2025-12-12 16:11:25,2026-04-24 01:34:25
-Asharak,Struggles,Ranger,53,Halfling,alternate,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Thecheat,Bard,60,Vah Shir,main,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Asharak,Necromancer,60,Gnome,alternate,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Quof,Druid,14,Halfling,alternate,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Cheat,Enchanter,60,Human,alternate,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Tildaria,Wizard,60,Dark Elf,main,officer,180,1531,1428,2024-10-25 23:12:11,
-Asharak,Gotthatbag,Warrior,1,Halfling,alternate,officer,180,1531,1428,2024-10-25 23:12:11,
+Asharak,Struggles,Ranger,53,Halfling,alternate,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Thecheat,Bard,60,Vah Shir,main,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Asharak,Necromancer,60,Gnome,alternate,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Quof,Druid,14,Halfling,alternate,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Cheat,Enchanter,60,Human,alternate,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Tildaria,Wizard,60,Dark Elf,main,officer,179,1531,1429,2024-10-25 23:12:11,
+Asharak,Gotthatbag,Warrior,1,Halfling,alternate,officer,179,1531,1429,2024-10-25 23:12:11,
 Ashdon,Zulnak,Monk,42,Iksar,alternate,inactive,10,11,1,2025-05-13 01:19:10,
 Ashdon,Ashdon,Druid,52,Halfling,main,inactive,10,11,1,2025-05-13 01:19:10,
 Avient,Avient,Rogue,60,Dwarf,main,member,49,102,53,2025-02-17 02:31:35,2025-10-02 03:13:53
@@ -365,8 +365,8 @@ Kiznasty,Garrglon,Bard,40,Human,alternate,member,8,287,294,2026-02-04 01:21:02,2
 Kiznasty,Kiznasty,Monk,60,Iksar,main,member,8,287,294,2026-02-04 01:21:02,2026-02-09 01:37:27
 Klanks,Klanks,Magician,60,Gnome,main,member,39,41,2,2026-04-30 20:31:27,
 Kojimok,Kojimok,Beastlord,56,Vah Shir,main,member,0,0,0,2026-04-12 19:44:26,
-Korrin,Korrin,Ranger,60,Wood Elf,main,member,21,41,124,2026-07-07 23:36:48,2026-07-28 12:00:28
-Korrin,Wezloc,Wizard,60,Gnome,alternate,member,21,41,124,2026-07-07 23:36:48,2026-07-28 12:00:28
+Korrin,Korrin,Ranger,60,Wood Elf,main,member,19,41,126,2026-07-07 23:36:48,2026-07-28 12:00:28
+Korrin,Wezloc,Wizard,60,Gnome,alternate,member,19,41,126,2026-07-07 23:36:48,2026-07-28 12:00:28
 Kotu,Magestic,Magician,60,Gnome,alternate,member,211,248,37,2024-10-25 22:53:23,2024-10-28 21:22:44
 Kotu,Kotu,Wizard,60,Dark Elf,main,member,211,248,37,2024-10-25 22:53:23,2024-10-28 21:22:44
 Kouzelna,Kouzelna,Wizard,55,High Elf,main,former,0,29,2,,
@@ -449,15 +449,15 @@ Maori,Maori,Necromancer,57,Dark Elf,alternate,former,0,53,30,,
 Mardigras,Mardigras,Necromancer,60,Iksar,main,applicant,33,42,9,2026-01-21 23:09:24,
 Mcfleshman,Mcfleshman,Shaman,56,Barbarian,main,member,8,20,12,2025-04-10 02:33:39,2025-04-24 23:22:06
 Meekz,Meekz,Ranger,60,Dark Elf,main,member,406,649,284,2024-10-25 22:57:52,2024-10-28 21:23:32
-Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydekeen,Warrior,60,Ogre,main,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Treack,Druid,46,Wood Elf,alternate,member,21,579,602,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydekeen,Warrior,60,Ogre,main,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Treack,Druid,46,Wood Elf,alternate,member,20,579,603,2025-02-19 04:56:40,2025-04-03 07:15:36
 Messimer,Pewster,Ranger,60,Halfling,main,member,68,361,293,2024-12-22 03:21:09,
 Messimer,Messimer,Enchanter,60,High Elf,main,member,68,361,293,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,102,1502,1457,2024-10-26 00:50:50,

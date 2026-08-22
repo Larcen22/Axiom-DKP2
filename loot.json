@@ -59383,6 +59383,30 @@
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Supple Onyx Chains",
+      "character_id": "9ff2c692-fecc-40c8-b741-ed429bd76f7a",
+      "character_name": "Korrin",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Belt of Mystical Protection",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Mindpuncture",
+      "character_id": "4ad09c36-ff98-4905-8f44-a5f27f668b16",
+      "character_name": "Fydakin",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 1
     }
   ]
 }
