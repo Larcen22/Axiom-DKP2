@@ -173,6 +173,26 @@
     animateCount($("#stat-avg-spent-week"), avgSpentWeek != null ? Math.round(avgSpentWeek) : null);
     animateCount($("#stat-avg-raid-size"), avgRaidSize != null ? Math.round(avgRaidSize) : null);
 
+    // --- Guild Bank: total available DKP (all members) + 90-day burn per raid.
+    const cutoff90 = new Date();
+    cutoff90.setDate(cutoff90.getDate() - 90);
+    const c90Str = `${cutoff90.getFullYear()}-${String(cutoff90.getMonth() + 1).padStart(2, "0")}-${String(cutoff90.getDate()).padStart(2, "0")}`;
+    let spend90 = 0;
+    for (const l of loot) if (l.date && l.date >= c90Str) spend90 += l.dkpSpent;
+    let raids90 = 0;
+    for (const r of raids) if (r.date && r.date >= c90Str) raids90++;
+    const bankTotal = users.reduce((s, u) => s + u.activeDkp, 0);
+    const burnPerRaid = raids90 ? spend90 / raids90 : null;
+    animateCount($("#bank-total"), bankTotal);
+    $("#bank-burn").textContent = burnPerRaid != null ? Math.round(burnPerRaid).toLocaleString() : "–";
+    $("#bank-status").textContent = raids90
+      ? `${raids90} raid${raids90 === 1 ? "" : "s"} · ${spend90.toLocaleString()} DKP spent in the past 90 days`
+      : "No raids recorded in the past 90 days.";
+    const earnedAll = users.reduce((s, u) => s + u.earned, 0);
+    const spentAll = users.reduce((s, u) => s + u.spent, 0);
+    const netAll = earnedAll - spentAll;
+    $("#bank-flow").innerHTML = `All-time: earned ${earnedAll.toLocaleString()} · spent ${spentAll.toLocaleString()} · <span class="${netAll >= 0 ? "dkp-positive" : "net-negative"}">net ${netAll > 0 ? "+" : ""}${netAll.toLocaleString()}</span>`;
+
     // Insight panels: activity chart, recent raids, top spenders, biggest spends, class mix, joiners, raider trend
     renderOverviewPanels(users, loot, items, raids, roster);
   }

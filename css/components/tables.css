@@ -35,3 +35,4 @@ th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 .dkp-positive { color: var(--color-success); font-weight: 600; }
 .dkp-zero     { color: var(--color-text-muted); }
+.net-negative { color: var(--color-error); font-weight: 600; }

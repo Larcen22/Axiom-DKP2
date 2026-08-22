@@ -70,26 +70,39 @@
       <section id="overview" class="view active">
         <h2>Overview</h2>
 
-        <div class="stat-grid">
-          <div class="stat-card">
-            <div class="stat-value" id="stat-total-dkp">–</div>
-            <div class="stat-label">Active DKP · past 30d</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-items-awarded">–</div>
-            <div class="stat-label">Items Awarded · past week</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-avg-spent-week">–</div>
-            <div class="stat-label">Avg DKP Spent · past week</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="stat-avg-raid-size">–</div>
-            <div class="stat-label">Avg Raid Size · past 30d</div>
-          </div>
-        </div>
-
         <div class="overview-grid">
+          <div class="panel overview-wide guild-bank">
+            <h3>Guild Bank</h3>
+            <div class="stat-grid bank-stats">
+              <div class="stat-card">
+                <div class="stat-value" id="stat-total-dkp">–</div>
+                <div class="stat-label">Active DKP · past 30d</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="stat-items-awarded">–</div>
+                <div class="stat-label">Items Awarded · past week</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="stat-avg-spent-week">–</div>
+                <div class="stat-label">Avg DKP Spent · past week</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="stat-avg-raid-size">–</div>
+                <div class="stat-label">Avg Raid Size · past 30d</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="bank-total">–</div>
+                <div class="stat-label">Available DKP · all members</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="bank-burn">–</div>
+                <div class="stat-label">DKP spent per raid · 90d</div>
+              </div>
+            </div>
+            <div id="bank-status" class="panel-status">Loading…</div>
+            <div id="bank-flow" class="bank-flow"></div>
+          </div>
+
           <div class="panel overview-wide">
             <h3>Guild Activity</h3>
             <div id="activity-status" class="panel-status">Loading…</div>

@@ -17,6 +17,22 @@
   align-items: start;
 }
 .overview-wide { grid-column: 1 / -1; }
+/* Grid items default to min-width:auto, so a fixed-width child (the heatmap's
+   max-content width) would stretch the track past the viewport on phones.
+   Let panels shrink and let their own scroll containers handle overflow. */
+.overview-grid > .panel { min-width: 0; }
+
+/* Guild Bank panel: six uniform stat cards in one auto-fit grid (shared
+   .stat-card markup). The narrower track minimum fits all six on one row at
+   desktop width; min() caps each track's minimum at the container width so the
+   grid can't stretch the panel past the viewport on phones. */
+.bank-stats { grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); }
+.bank-flow {
+  margin-top: var(--space-sm);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
 
 /* Activity chart: one group per week, height = value that week */
 .chart-legend {

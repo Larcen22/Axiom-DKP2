@@ -131,7 +131,7 @@ test.describe.serial("Axiom DKP dashboard", () => {
     const col = (n) => page.locator(`#standings-table tbody td:nth-child(${n})`);
     const nums = async (n) => (await col(n).allTextContents()).map((t) => Number(t.replace(/,/g, "")));
 
-    // Earned: first click sorts biggest-first with a ↓ indicator.
+    // Earned (column 4): first click sorts biggest-first with a ↓ indicator.
     await page.click('#standings-table th[data-sort="earned"]');
     const earnedDesc = await nums(4);
     expect(earnedDesc.length).toBeGreaterThan(0);
@@ -185,6 +185,17 @@ test.describe.serial("Axiom DKP dashboard", () => {
       await expect(status).toContainText("No members seen on raids in the past 30 days");
       await expect(page.locator(".class-dkp-card")).toHaveCount(0);
     }
+  });
+
+  test("overview shows guild bank stats", async () => {
+    // Guild Bank panel: total is always numeric (users carry DKP); burn is
+    // either a value or "–" when the dataset has no recent raids.
+    await goTo("overview");
+    const status = page.locator("#bank-status");
+    await expect(status).not.toHaveText(/Loading/);
+    await expect(page.locator("#bank-total")).toHaveText(/^[\d,]+$/);
+    await expect(page.locator("#bank-burn")).toHaveText(/^(?:[\d,]+|–)$/);
+    await expect(page.locator("#bank-flow")).toContainText("earned");
   });
 
   test("all displayed dates are plain YYYY-MM-DD", async () => {
@@ -510,6 +521,10 @@ test("mobile bottom nav stays pinned while scrolling", async ({ browser }) => {
   const page = await ctx.newPage();
   await page.goto("/index.html");
   await page.waitForFunction(() => document.querySelectorAll("#standings-table tbody tr").length > 0);
+
+  // No horizontal page overflow on phones (fixed-width children must scroll inside their panels).
+  const vp = page.viewportSize();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth), "no horizontal overflow").toBeLessThanOrEqual(vp.width);
 
   const check = () =>
     page.evaluate(() => {
