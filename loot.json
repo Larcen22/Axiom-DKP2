@@ -59456,6 +59456,33 @@
       "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
       "item_dkp_value": 1,
       "date": "2026-08-22T19:43:44.693151+00:00"
+    },
+    {
+      "item": "Kedge Backbone",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-08-22T19:44:15.497618+00:00"
+    },
+    {
+      "item": "Undead Dragongut Strings",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-08-22T19:44:35.203525+00:00"
+    },
+    {
+      "item": "Amygdalan Tendril",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-08-22T19:45:05.654361+00:00"
     }
   ]
 }
