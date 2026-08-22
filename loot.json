@@ -59407,6 +59407,46 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Blood Veil of the Shissar",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Ssraeshzaen Blood Cord",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "White Ornate Chain Bridle",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "item_dkp_value": 47
+    },
+    {
+      "item": "Koadic's Robe of Heightened Focus",
+      "character_id": "74c0ac37-6ffd-41ec-8a0e-61604d1b857f",
+      "character_name": "Tildaria",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "item_dkp_value": 50
+    },
+    {
+      "item": "Shield of Mental Fortitude",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "item_dkp_value": 6
     }
   ]
 }
