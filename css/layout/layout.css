@@ -78,6 +78,8 @@
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
+/* Data-freshness line sits above the muted credit; slightly stronger so it reads first. */
+.site-footer #data-asof { color: var(--color-text); }
 
 /* ================= LAYOUT SHELL ================= */
 .layout {

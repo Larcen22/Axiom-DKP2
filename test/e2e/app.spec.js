@@ -248,7 +248,7 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#loot-status")).not.toContainText(/matching/);
   });
 
-  test("topbar shows data-as-of date from newest raid", async () => {
+  test("footer shows data-as-of date from newest raid", async () => {
     // Newest raid date in the export (normalized YYYY-MM-DD) — holds for real and sample data alike.
     await expect(page.locator("#data-asof")).toHaveText(/^Data through \d{4}-\d{2}-\d{2}$/);
   });
