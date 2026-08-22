@@ -23,11 +23,11 @@ The guild exports (`loot.json`, `raids.json`, `users.json`, `roster-export.csv`)
 
 | View | What it shows |
 |---|---|
-| **Overview** | A full-width Guild Bank panel — one uniform stat row (active DKP · 30d, items awarded · week, avg spend · week, avg raid size · 30d, total available DKP, spend per raid · 90d) with an all-time earned/spent/net footer — followed by insight panels: weekly activity chart (raids + DKP spent, 12 weeks), raid-activity heatmap (past year, one cell per day), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids, recent transactions (newest 5 from the optional `transactions.json`) |
+| **Overview** | A full-width Guild Bank panel — one uniform stat row (active DKP · 30d, items awarded · week, avg spend · week, avg raid size · 30d, total available DKP, spend per raid · 90d) with an all-time earned/spent/net footer — followed by insight panels: weekly activity chart (raids + DKP spent, 12 weeks), raid-activity heatmap (past year, one cell per day), most active members (30d) with core-raider count, top spenders (30d), biggest spends (30d), active characters by class incl. mains/alts split (30d), recent joiners, raider trend, recent raids, recent rewards (newest 5 from the optional `transactions.json`) |
 | **Raider Standings** | All accounts sorted by active DKP, with an earned/spent breakdown and 30D/60D/90D/Lifetime raid attendance as `NN% (attended/total)`; all data columns sortable (raid windows by %), searchable by raider name (paginated); top of page shows a DKP-by-class breakdown — top 5 main characters per class among members active in the past 30 days |
 | **Loot** | Full loot history with raid names (deep-linking into Raid detail), newest first, searchable by player / item / raid (paginated) |
 | **Roster** | Per-character roster with search, rank/main-alt/class filters, sortable columns (paginated) |
-| **Member** | Drill-down (member links in Standings, Roster, Overview panels, and Raid Detail): account DKP, rank, characters, raid attendance %, paginated per-member raid history (raid names deep-link into Raid detail), loot history, and transaction history of the account's DKP adjustments |
+| **Member** | Drill-down (member links in Standings, Roster, Overview panels, and Raid Detail): account DKP, rank, characters, raid attendance %, paginated per-member raid history (raid names deep-link into Raid detail), loot history, and reward history of the account's DKP adjustments |
 | **Raid** | Drill-down (click any raid name in Recent Raids or Raid History): attendees grouped by member with their characters, items awarded and total DKP spent for that exact raid (joined on `raid_id`), paginated loot table with owner drill-downs |
 | **Raids** | Full raid log with date, DKP value, and attendee list; raid names link to the Raid detail view (paginated) |
 
@@ -77,7 +77,7 @@ CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 ## Known gaps / limitations
 
-- `transactions.json` is **optional**: when absent (e.g. the hosted GitHub Pages site), the Recent Transactions panel and per-member Transaction History show empty states — the file never breaks the app. Balances in `users.json` already include these adjustments.
+- `transactions.json` is **optional**: when absent (e.g. the hosted GitHub Pages site), the Recent Rewards panel and per-member Reward History show empty states — the file never breaks the app. Balances in `users.json` already include these adjustments.
 
 ## File sizes (approximate)
 

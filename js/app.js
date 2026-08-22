@@ -306,8 +306,8 @@
       </tr>`).join("");
     $("#recent-transactions-table").hidden = recentTx.length === 0;
     $("#recent-transactions-status").textContent = transactions.length
-      ? `Last ${recentTx.length} of ${transactions.length.toLocaleString()} transactions · newest first`
-      : "No transactions recorded.";
+      ? `Last ${recentTx.length} of ${transactions.length.toLocaleString()} rewards · newest first`
+      : "No rewards recorded.";
 
     // --- Top spenders, past 30 days (loot entries carry raid-resolved dates from data.js)
     const cutoff30 = new Date(now);
@@ -1028,11 +1028,11 @@
 
     $("#member-tx-table").hidden = rows.length === 0;
     $("#member-tx-status").textContent = memberTxSorted.length
-      ? `${memberTxSorted.length.toLocaleString()} transactions · newest first · ` +
+      ? `${memberTxSorted.length.toLocaleString()} rewards · newest first · ` +
         (rows.length
           ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${memberTxPage} of ${totalPages.toLocaleString()})`
-          : "no transactions")
-      : "No transactions found.";
+          : "no rewards")
+      : "No rewards found.";
 
     renderPager("member-tx-pager", memberTxPage, totalPages);
   }

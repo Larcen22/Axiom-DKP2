@@ -198,10 +198,10 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#bank-flow")).toContainText("earned");
   });
 
-  test("recent transactions panel shows up to five rows with plain dates", async () => {
+  test("recent rewards panel shows up to five rows with plain dates", async () => {
     const st = (await page.locator("#recent-transactions-status").textContent()) || "";
     expect(st).not.toContain("Loading");
-    expect(st).toMatch(/^(?:Last \d+ of [\d,]+ transactions|No transactions recorded)/);
+    expect(st).toMatch(/^(?:Last \d+ of [\d,]+ rewards|No rewards recorded)/);
     if (await page.locator("#recent-transactions-table").isVisible()) {
       const rows = await page.locator("#recent-transactions-table tbody tr").count();
       expect(rows).toBeGreaterThan(0);
@@ -382,10 +382,10 @@ test.describe.serial("Axiom DKP dashboard", () => {
       expect(await page.locator("#member-raids-table tbody tr").count()).toBeGreaterThan(0);
     }
 
-    // Transaction history mirrors the other tables: status always resolves; rows exist iff transactions found.
+    // Reward history mirrors the other tables: status always resolves; rows exist iff rewards found.
     const ts = (await page.locator("#member-tx-status").textContent()) || "";
     expect(ts).not.toContain("Loading");
-    expect(ts).toMatch(/^(?:\d+ transactions|No transactions)/);
+    expect(ts).toMatch(/^(?:\d+ rewards|No rewards)/);
     if (await page.locator("#member-tx-table").isVisible()) {
       expect(await page.locator("#member-tx-table tbody tr").count()).toBeGreaterThan(0);
     }
