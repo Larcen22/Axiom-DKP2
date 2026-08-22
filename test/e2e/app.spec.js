@@ -161,6 +161,32 @@ test.describe.serial("Axiom DKP dashboard", () => {
     for (let i = 1; i < dkp.length; i++) expect(dkp[i - 1]).toBeGreaterThanOrEqual(dkp[i]);
   });
 
+  test("standings shows top-5 DKP per class for active members", async () => {
+    await goTo("standings");
+    const status = page.locator("#class-dkp-status");
+    await expect(status).not.toHaveText(/Loading/);
+
+    // Dataset/time-agnostic: either classes render, or the explicit empty state.
+    if (/(characters|members)/i.test(await status.textContent())) {
+      const cards = page.locator(".class-dkp-card");
+      expect(await cards.count()).toBeGreaterThanOrEqual(1);
+      for (const card of await cards.all()) {
+        // Class header names a class and its total character count.
+        expect((await card.locator(".class-dkp-head span:first-child").textContent()).trim()).not.toBe("");
+        const rows = card.locator(".class-dkp-list li");
+        const n = await rows.count();
+        expect(n).toBeGreaterThanOrEqual(1);
+        expect(n).toBeLessThanOrEqual(5); // top 5 only
+        for (const t of await rows.allTextContents()) {
+          expect(t.trim()).toMatch(/\d/); // every row carries a DKP amount
+        }
+      }
+    } else {
+      await expect(status).toContainText("No members seen on raids in the past 30 days");
+      await expect(page.locator(".class-dkp-card")).toHaveCount(0);
+    }
+  });
+
   test("all displayed dates are plain YYYY-MM-DD", async () => {
     const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 

@@ -491,8 +491,44 @@
         attLife: fmt(c[3], totals[3]), pLife: pctOf(c[3], totals[3]),
       };
     });
+    renderClassDkp(users, roster, counts);
     applyStandingsSort();
     renderStandingsPage(1);
+  }
+
+  // Top-5-per-class leaderboard for active members (≥1 attended raid in the clamped 30-day window,
+  // same semantics as the table's 30D column). Main characters only (Main/Alt === "main");
+  // DKP = account available_dkp.
+  function renderClassDkp(users, roster, counts) {
+    const active = new Set();
+    for (const u of users) if ((counts.get(u.usernameId) || [])[0] > 0) active.add(u.username);
+    const dkpByMember = new Map(users.map((u) => [u.username, u.activeDkp]));
+    const byClass = new Map(); // cls -> [{ character, dkp }]
+    for (const row of roster) {
+      if (!row.cls || !active.has(row.member)) continue;
+      if (String(row.mainAlt || "").toLowerCase() !== "main") continue; // mains only
+      const list = byClass.get(row.cls) || [];
+      list.push({ character: row.character, dkp: dkpByMember.get(row.member) ?? 0 });
+      byClass.set(row.cls, list);
+    }
+    const classes = [...byClass.entries()]
+      .map(([cls, chars]) => {
+        chars.sort((a, b) => (b.dkp - a.dkp) || a.character.localeCompare(b.character));
+        return [cls, chars.slice(0, 5), chars.length];
+      })
+      .sort((a, b) => a[0].localeCompare(b[0])); // alphabetical by class
+
+    const totalChars = [...byClass.values()].reduce((s, c) => s + c.length, 0);
+    $("#class-dkp-status").textContent = classes.length
+      ? `Top 5 per class · ${totalChars.toLocaleString()} characters from ${active.size.toLocaleString()} active members (raids in past 30 days)`
+      : "No members seen on raids in the past 30 days.";
+    $("#class-dkp-grid").innerHTML = classes.map(([cls, top, total]) => `
+      <div class="class-dkp-card">
+        <div class="class-dkp-head"><span>${esc(cls)}</span><span class="class-dkp-count">${total} char${total === 1 ? "" : "s"}</span></div>
+        <ol class="class-dkp-list">
+          ${top.map((c) => `<li title="${esc(c.character)}"><span class="cdk-char">${esc(c.character)}</span><span class="cdk-val">${c.dkp.toLocaleString()}</span></li>`).join("")}
+        </ol>
+      </div>`).join("");
   }
 
   function applyStandingsSort() {
