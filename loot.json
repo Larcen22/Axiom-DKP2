@@ -59335,6 +59335,54 @@
       "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
       "raid_id": "be1bb580-c7de-47f8-b6f6-bf0450638584",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Shield of Holy Vigor",
+      "character_id": "18bf01c7-7722-4533-a91f-8813c0504f9e",
+      "character_name": "Bailler",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "be1bb580-c7de-47f8-b6f6-bf0450638584",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tendonslicer",
+      "character_id": "38825e99-94d7-4bc7-be52-41b0b7ed94d8",
+      "character_name": "Ethiria",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "be1bb580-c7de-47f8-b6f6-bf0450638584",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Hoop of Emptiness",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "be1bb580-c7de-47f8-b6f6-bf0450638584",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Hategiver",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shield of the Creator",
+      "character_id": "4ad09c36-ff98-4905-8f44-a5f27f668b16",
+      "character_name": "Fydakin",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Hammer of the Ironfrost",
+      "character_id": "084e9bc8-a1e8-43bc-bbc5-c5275318967e",
+      "character_name": "Uppies",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "item_dkp_value": 1
     }
   ]
 }
