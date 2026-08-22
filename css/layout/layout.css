@@ -1,3 +1,24 @@
+/* ================= AMBIENT BACKGROUND =================
+   Soft drifting glow behind all content (gold + steel blue, matching the
+   chart palette). Purely decorative: fixed, non-interactive, z-index -1 so it
+   sits above the page background color but under every element. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 38% at 18% 12%, rgba(224, 164, 53, 0.07), transparent 70%),
+    radial-gradient(45% 42% at 85% 78%, rgba(79, 163, 224, 0.06), transparent 70%),
+    radial-gradient(30% 30% at 72% 18%, rgba(122, 92, 224, 0.05), transparent 70%);
+  animation: ambient-drift 48s ease-in-out infinite alternate;
+}
+@keyframes ambient-drift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to   { transform: translate3d(1.5%, 1.5%, 0) scale(1.04); }
+}
+
 /* ================= TOP BAR ================= */
 .topbar {
   position: sticky;
@@ -31,6 +52,14 @@
   object-fit: cover;
 }
 .accent { color: var(--color-accent); }
+.brand-text {
+  /* Gold gradient wordmark; the nested .accent inherits the clip via transparent text. */
+  background: linear-gradient(100deg, #f6d98b 0%, var(--color-accent) 45%, #a8721c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand-text .accent { color: transparent; }
 .topbar-meta {
   position: absolute;
   right: 1.25rem;
@@ -124,11 +153,24 @@
   transition: background 0.15s, color 0.15s;
 }
 .nav-link:hover { background: var(--color-bg-hover); color: var(--color-text); }
+.nav-link {
+  position: relative; /* anchor for the active gradient bar */
+}
 .nav-link.active {
   background: var(--color-accent-soft);
   border-color: rgba(224, 164, 53, 0.35);
   color: var(--color-accent);
   font-weight: 600;
+}
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 22%;
+  bottom: 22%;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #f6d98b, var(--color-accent) 55%, rgba(224, 164, 53, 0.2));
 }
 .sidebar-footer {
   margin-top: auto;

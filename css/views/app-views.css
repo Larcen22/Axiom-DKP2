@@ -377,14 +377,45 @@
   to { opacity: 1; transform: none; }
 }
 
-.stat-card { transition: border-color 0.15s ease, transform 0.15s ease; }
-.stat-card:hover { border-color: rgba(224, 164, 53, 0.4); transform: translateY(-1px); }
+/* Panels cascade in one after another (delay set per-panel via --i in app.js).
+   `backwards` fill keeps each panel hidden until its turn. */
+.view.active > .panel,
+.view.active .overview-grid > .panel {
+  animation: panel-in 320ms ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+.stat-card { transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+.stat-card:hover {
+  border-color: rgba(224, 164, 53, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -10px rgba(224, 164, 53, 0.45); /* soft gold glow */
+}
+
+/* Sparklines in stat cards (decorative trend context; the number is the value). */
+.spark { margin-top: 0.4rem; height: 26px; }
+.spark:empty { display: none; } /* no data → don't reserve the gap */
+.spark svg { display: block; width: 100%; height: 100%; }
+.spark-line {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: spark-draw 700ms ease-out forwards;
+}
+@keyframes spark-draw { to { stroke-dashoffset: 0; } }
 
 .pager-btn { transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease; }
 
 @media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
   .view.active { animation: none; }
+  .view.active > .panel,
+  .view.active .overview-grid > .panel { animation: none; }
   .stat-card, .pager-btn { transition: none; }
+  .spark-line { animation: none; stroke-dashoffset: 0; }
 }
 
 /* ================================================================

@@ -24,7 +24,7 @@
   <!-- ================= TOP NAV ================= -->
   <nav class="topbar">
     <div class="topbar-inner">
-      <h1 class="brand"><img class="brand-icon" src="icon-192.png" alt="" width="30" height="30"> Axiom <span class="accent">DKP Metrics</span></h1>
+      <h1 class="brand"><img class="brand-icon" src="icon-192.png" alt="" width="30" height="30"><span class="brand-text">Axiom <span class="accent">DKP Metrics</span></span></h1>
       <div class="topbar-meta">
         <button id="palette-open" type="button" aria-label="Search (Ctrl+K)">🔍<kbd class="kbd-hint">Ctrl K</kbd></button>
         <span class="meta-text">Axiom · read-only · local data</span>
@@ -84,10 +84,12 @@
               <div class="stat-card">
                 <div class="stat-value" id="stat-avg-spent-week">–</div>
                 <div class="stat-label">Avg DKP Spent · past week</div>
+                <div class="spark" id="spark-spent"></div>
               </div>
               <div class="stat-card">
                 <div class="stat-value" id="stat-avg-raid-size">–</div>
                 <div class="stat-label">Avg Raid Size · past 30d</div>
+                <div class="spark" id="spark-size"></div>
               </div>
               <div class="stat-card">
                 <div class="stat-value" id="bank-total">–</div>

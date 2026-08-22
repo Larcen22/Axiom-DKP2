@@ -38,6 +38,23 @@
   }
   const esc = Data.escapeHtml;
 
+  // Tiny inline SVG trend line for stat cards (decorative — the number is the value).
+  // Returns "" when there is nothing to draw so the container collapses away.
+  function sparkline(values, color) {
+    if (!values.length || Math.max(...values) === 0) return "";
+    const max = Math.max(...values);
+    const W = 100, H = 26, pad = 2;
+    const pts = values.map((v, i) => {
+      const x = values.length === 1 ? W / 2 : (i / (values.length - 1)) * (W - 2 * pad) + pad;
+      const y = H - pad - (v / max) * (H - 2 * pad);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+    const areaPts = `${pad},${H} ${pts} ${W - pad},${H}`;
+    return `<svg class="spark-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
+      `<polygon points="${areaPts}" fill="${color}" opacity="0.12"></polygon>` +
+      `<polyline class="spark-line" points="${pts}" fill="none" stroke="${color}" stroke-width="1.5" pathLength="100" vector-effect="non-scaling-stroke"></polyline></svg>`;
+  }
+
   // Signed DKP for adjustment transactions: "+15" / "-4", colored by sign.
   const fmtSignedDkp = (n) => `${n > 0 ? "+" : ""}${n.toLocaleString()}`;
   const signedDkpClass = (n) => `num ${n > 0 ? "dkp-positive" : n < 0 ? "net-negative" : ""}`.trim();
@@ -198,22 +215,33 @@
     $("#bank-flow").innerHTML = `All-time: earned ${earnedAll.toLocaleString()} · spent ${spentAll.toLocaleString()} · <span class="${netAll >= 0 ? "dkp-positive" : "net-negative"}">net ${netAll > 0 ? "+" : ""}${netAll.toLocaleString()}</span>`;
 
     // Insight panels: activity chart, recent raids, top spenders, biggest spends, class mix, joiners, raider trend
-    renderOverviewPanels(users, loot, items, raids, roster, transactions);
+    // Weekly buckets (oldest → newest) shared by the Guild Activity chart and the
+    // stat-card sparklines so both read from one source of truth.
+    const weekly = weeklyActivity(raids, loot);
+    // Sparklines: DKP spent per week (blue, matches bar-spent) and avg raid size per week (gold).
+    $("#spark-spent").innerHTML = sparkline(weekly.spentWeeks, "#4fa3e0");
+    const sizePerWeek = weekly.counts.map((c, i) => (c ? weekly.attendeesWeeks[i] / c : 0));
+    $("#spark-size").innerHTML = sparkline(sizePerWeek, "#e0a435");
+
+    renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly);
   }
 
-  function renderOverviewPanels(users, loot, items, raids, roster, transactions) {
+  // Weekly activity buckets, oldest → newest, over the last ACTIVITY_WEEKS weeks.
+  // Shared by the Guild Activity chart and the stat-card sparklines (one source of truth).
+  function weeklyActivity(raids, loot) {
     const now = new Date();
     const daysAgoOf = (dateStr) => Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
-
-    // --- Guild activity: raids + DKP spent per week over the last ACTIVITY_WEEKS weeks (7-day buckets from today)
     const counts = new Array(ACTIVITY_WEEKS).fill(0);
     const spentWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    const attendeesWeeks = new Array(ACTIVITY_WEEKS).fill(0);
     let windowTotal = 0, spentTotal = 0;
     for (const r of raids) {
       if (!r.date) continue;
       const d = daysAgoOf(r.date);
       if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
-      counts[ACTIVITY_WEEKS - 1 - Math.floor(d / 7)]++;
+      const w = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      counts[w]++;
+      attendeesWeeks[w] += r.attendees.length;
       windowTotal++;
     }
     for (const l of loot) {
@@ -223,6 +251,18 @@
       spentWeeks[ACTIVITY_WEEKS - 1 - Math.floor(d / 7)] += l.dkpSpent;
       spentTotal += l.dkpSpent;
     }
+    return { counts, spentWeeks, attendeesWeeks, windowTotal, spentTotal };
+  }
+
+  function renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly) {
+    const now = new Date();
+    const daysAgoOf = (dateStr) => Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
+
+    // --- Guild activity: raids + DKP spent per week over the last ACTIVITY_WEEKS weeks (7-day buckets from today)
+    const counts = weekly.counts;
+    const spentWeeks = weekly.spentWeeks;
+    const windowTotal = weekly.windowTotal;
+    const spentTotal = weekly.spentTotal;
     const maxCount = Math.max(...counts, 1);
     const maxSpent = Math.max(...spentWeeks, 1);
     $("#activity-chart").innerHTML = counts.map((c, i) => {
@@ -1353,6 +1393,12 @@
   /* ---------------- init ---------------- */
   async function init() {
     setupNav();
+
+    // Stagger index for the panel cascade animation (CSS: delay = --i * 45ms).
+    document.querySelectorAll(".view").forEach((v) => {
+      v.querySelectorAll(":scope > .panel, :scope > .overview-grid > .panel")
+        .forEach((p, i) => p.style.setProperty("--i", String(Math.min(i, 8))));
+    });
 
     // Hash routing + SW registration happen before data loads so the shell stays navigable
     // even when every fetch fails (e.g. the GitHub Pages site without guild exports).
