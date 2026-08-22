@@ -268630,6 +268630,46 @@
       "unclaimed": [],
       "channel_id": "1540212321681416282",
       "summary_message_id": "1540212328350359633"
+    },
+    {
+      "raid_name": "Ssra Emp on time",
+      "date": "2026-08-21",
+      "raid_id": "be1bb580-c7de-47f8-b6f6-bf0450638584",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1540513373874163733",
+      "summary_message_id": "1540513379179827239"
+    },
+    {
+      "raid_name": "Ssra Emp 1",
+      "date": "2026-08-21",
+      "raid_id": "e9174dad-2a60-4eea-8b93-a6561fbfd5c9",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1540513386301886586",
+      "summary_message_id": "1540513392291217448"
+    },
+    {
+      "raid_name": "Ssra Emp 2",
+      "date": "2026-08-21",
+      "raid_id": "f3b5fec8-eeb3-4dca-8bc6-b353262d1559",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1540513398218035220",
+      "summary_message_id": "1540513403674693753"
+    },
+    {
+      "raid_name": "Ssra Emp 3",
+      "date": "2026-08-21",
+      "raid_id": "c1d00b1b-7b87-443a-9c21-cb93325ceeb2",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1540513410029060118",
+      "summary_message_id": "1540513416412794941"
     }
   ]
 }
