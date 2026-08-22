@@ -2,7 +2,8 @@
  * Data integrity tests — cross-file invariants for the DKP exports.
  *
  * These run against the REAL items.json / loot.json / raids.json / users.json /
- * roster-export.csv at the repo root and catch bad exports before they break
+ * transactions.json (optional) / roster-export.csv at the repo root and catch
+ * bad exports before they break
  * the dashboard's joins (loot -> raids, characters -> users, item names -> pqdi ids).
  *
  * Thresholds were calibrated against a known-good export:
@@ -43,6 +44,10 @@ const rosterParsed = Papa.parse(rosterCsv, {
   transform: (v) => (v !== "" && Number.isFinite(Number(v)) ? Number(v) : v),
 });
 const roster = rosterParsed.data;
+
+/* transactions.json is optional for the app (hosted deployments may lack it) — validate when present. */
+const hasTransactions = fs.existsSync(path.join(DATA_DIR, "transactions.json"));
+const tx = hasTransactions ? readJson("transactions.json") : null;
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -131,6 +136,40 @@ describe("dates", () => {
     const today = new Date().toISOString().slice(0, 10);
     const bad = raids.raids.filter((r) => String(r.date).slice(0, 10) > today);
     expect(bad.map((r) => `${r.raid_id}:${r.date}`), "future-dated raids").toEqual([]);
+  });
+});
+
+/* ---------------- transactions.json (optional export) ---------------- */
+
+describe("transactions.json", () => {
+  const txs = tx ? tx.transactions : null;
+
+  it("has { transactions: [...] } with well-formed rows when present", () => {
+    if (!txs) return; // optional file — skipped when absent
+    expect(Array.isArray(txs)).toBe(true);
+    for (const t of txs) {
+      expect(typeof t.transaction_id, `row missing transaction_id: ${JSON.stringify(t)}`).toBe("string");
+      expect(Number.isFinite(Number(t.transaction_amount)), `non-numeric amount: ${JSON.stringify(t)}`).toBe(true);
+    }
+  });
+
+  it("transaction_ids are unique", () => {
+    if (!txs) return;
+    const ids = txs.map((t) => String(t.transaction_id));
+    expect(new Set(ids).size, "duplicate transaction_ids found").toBe(ids.length);
+  });
+
+  it("dates use ISO YYYY-MM-DD (or are empty)", () => {
+    if (!txs) return;
+    const bad = txs.filter((t) => t.date && !ISO_DATE.test(String(t.date).slice(0, 10)));
+    expect(bad.map((t) => `${t.transaction_id}:${t.date}`), "non-ISO transaction dates").toEqual([]);
+  });
+
+  it("reports username_ids not found in users.json (informational)", () => {
+    if (!txs) return;
+    const userIds = new Set(users.users.map((u) => String(u.username_id)));
+    const orphans = txs.filter((t) => !userIds.has(String(t.username_id)));
+    console.log(`  transactions with username_id not in users.json: ${orphans.length}`);
   });
 });
 

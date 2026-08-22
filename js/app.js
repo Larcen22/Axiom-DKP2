@@ -37,6 +37,10 @@
     requestAnimationFrame(step);
   }
   const esc = Data.escapeHtml;
+
+  // Signed DKP for adjustment transactions: "+15" / "-4", colored by sign.
+  const fmtSignedDkp = (n) => `${n > 0 ? "+" : ""}${n.toLocaleString()}`;
+  const signedDkpClass = (n) => `num ${n > 0 ? "dkp-positive" : n < 0 ? "net-negative" : ""}`.trim();
   // Quarmy character lookup: opens a name search on quarmy.com (non-www host only —
   // www.quarmy.com returns 503). Opens in a new tab.
   const quarmyLink = (name) => `<a class="char-link" href="https://quarmy.com/public?q=${encodeURIComponent(name)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a>`;
@@ -132,7 +136,7 @@
   const JOINERS_SHOWN = 5;
   const CORE_RAIDS_MIN = 8; // raids in 30d to count as a "core" raider
 
-  function renderOverview(users, loot, items, raids, roster) {
+  function renderOverview(users, loot, items, raids, roster, transactions) {
     // Stat cards
     // Items awarded in the past 7 days (dates are "YYYY-MM-DD", safe to compare as strings)
     const cutoff = new Date();
@@ -194,10 +198,10 @@
     $("#bank-flow").innerHTML = `All-time: earned ${earnedAll.toLocaleString()} · spent ${spentAll.toLocaleString()} · <span class="${netAll >= 0 ? "dkp-positive" : "net-negative"}">net ${netAll > 0 ? "+" : ""}${netAll.toLocaleString()}</span>`;
 
     // Insight panels: activity chart, recent raids, top spenders, biggest spends, class mix, joiners, raider trend
-    renderOverviewPanels(users, loot, items, raids, roster);
+    renderOverviewPanels(users, loot, items, raids, roster, transactions);
   }
 
-  function renderOverviewPanels(users, loot, items, raids, roster) {
+  function renderOverviewPanels(users, loot, items, raids, roster, transactions) {
     const now = new Date();
     const daysAgoOf = (dateStr) => Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
 
@@ -281,6 +285,29 @@
     $("#recent-raids-status").textContent = recentRaids.length
       ? `Last ${recentRaids.length} of ${raids.length.toLocaleString()} raids`
       : "No raids recorded.";
+
+    // --- Recent transactions (newest first, undated last). Optional file — may be empty.
+    const RECENT_TX_SHOWN = 5;
+    const recentTx = [...transactions].sort((a, b) => {
+      if (a.date && b.date) return b.date.localeCompare(a.date);
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return 0;
+    }).slice(0, RECENT_TX_SHOWN);
+    $("#recent-transactions-table tbody").innerHTML = recentTx.map((t) => `
+      <tr>
+        <td>${t.date ? esc(t.date) : "—"}</td>
+        <td>${t.username
+          ? `<a href="#/member/${encodeURIComponent(t.username)}" class="member-link">${esc(t.username)}</a>`
+          : "—"}</td>
+        <td>${esc(t.type)}</td>
+        <td>${esc(t.reason)}</td>
+        <td class="${signedDkpClass(t.amount)}">${fmtSignedDkp(t.amount)}</td>
+      </tr>`).join("");
+    $("#recent-transactions-table").hidden = recentTx.length === 0;
+    $("#recent-transactions-status").textContent = transactions.length
+      ? `Last ${recentTx.length} of ${transactions.length.toLocaleString()} transactions · newest first`
+      : "No transactions recorded.";
 
     // --- Top spenders, past 30 days (loot entries carry raid-resolved dates from data.js)
     const cutoff30 = new Date(now);
@@ -811,6 +838,8 @@
       renderMemberLootPage(1);
       memberRaidsSorted = [];
       renderMemberRaidsPage(1);
+      memberTxSorted = [];
+      renderMemberTxPage(1);
       showView("member");
       return;
     }
@@ -903,6 +932,19 @@
     });
     renderMemberLootPage(1);
 
+    // Transaction history: account-level adjustments. Match by username_id when the
+    // member is in users.json; fall back to case-insensitive name (roster-only members,
+    // or legacy rows without a username_id).
+    memberTxSorted = db.transactions.filter((t) =>
+      user && t.usernameId ? userIds.has(t.usernameId) : t.username.toLowerCase() === m
+    ).sort((a, b) => {
+      if (a.date && b.date) return b.date.localeCompare(a.date);
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return 0;
+    });
+    renderMemberTxPage(1);
+
     showView("member");
   }
 
@@ -964,6 +1006,35 @@
       : "No raid attendance found.";
 
     renderPager("member-raids-pager", memberRaidsPage, totalPages);
+  }
+
+  const MEMBER_TX_PAGE_SIZE = 10;
+  let memberTxSorted = [];
+  let memberTxPage = 1;
+
+  function renderMemberTxPage(page) {
+    const totalPages = Math.max(1, Math.ceil(memberTxSorted.length / MEMBER_TX_PAGE_SIZE));
+    memberTxPage = Math.min(Math.max(1, page), totalPages);
+    const start = (memberTxPage - 1) * MEMBER_TX_PAGE_SIZE;
+    const rows = memberTxSorted.slice(start, start + MEMBER_TX_PAGE_SIZE);
+
+    $("#member-tx-table tbody").innerHTML = rows.map((t) => `
+      <tr>
+        <td>${t.date ? esc(t.date) : "—"}</td>
+        <td>${esc(t.type)}</td>
+        <td>${esc(t.reason)}</td>
+        <td class="${signedDkpClass(t.amount)}">${fmtSignedDkp(t.amount)}</td>
+      </tr>`).join("");
+
+    $("#member-tx-table").hidden = rows.length === 0;
+    $("#member-tx-status").textContent = memberTxSorted.length
+      ? `${memberTxSorted.length.toLocaleString()} transactions · newest first · ` +
+        (rows.length
+          ? `showing ${start + 1}–${(start + rows.length).toLocaleString()} (page ${memberTxPage} of ${totalPages.toLocaleString()})`
+          : "no transactions")
+      : "No transactions found.";
+
+    renderPager("member-tx-pager", memberTxPage, totalPages);
   }
 
   /* ---------------- raid detail ---------------- */
@@ -1297,16 +1368,17 @@
     }
 
     try {
-      const [items, loot, users, raids, roster] = await Promise.all([
+      const [items, loot, users, raids, roster, transactions] = await Promise.all([
         Data.loadItems(),
         Data.loadLoot(),
         Data.loadUsers(),
         Data.loadRaids(),
         Data.loadRoster(),
+        Data.loadTransactions(), // optional file — resolves to [] when absent
       ]);
 
       setDataAsOf(raids);
-      renderOverview(users, loot, items, raids, roster);
+      renderOverview(users, loot, items, raids, roster, transactions);
       renderStandings(users, raids, roster);
 
       // Standings search (debounced)
@@ -1323,7 +1395,7 @@
       rosterActiveMembers = computeRosterActiveMembers(raids, roster, users);
       renderRoster(roster);
       renderRaids(raids);
-      db = { users, loot, items, roster, raids };
+      db = { users, loot, items, roster, raids, transactions };
 
       // Paginations (delegated — pager buttons are re-created each render)
       $("#raids-pager").addEventListener("click", (e) => {
@@ -1375,6 +1447,11 @@
         const btn = e.target.closest(".pager-btn");
         if (!btn || btn.disabled) return;
         renderMemberRaidsPage(Number(btn.dataset.page));
+      });
+      $("#member-tx-pager").addEventListener("click", (e) => {
+        const btn = e.target.closest(".pager-btn");
+        if (!btn || btn.disabled) return;
+        renderMemberTxPage(Number(btn.dataset.page));
       });
       $("#raid-loot-pager").addEventListener("click", (e) => {
         const btn = e.target.closest(".pager-btn");

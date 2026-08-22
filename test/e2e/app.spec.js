@@ -198,6 +198,21 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#bank-flow")).toContainText("earned");
   });
 
+  test("recent transactions panel shows up to five rows with plain dates", async () => {
+    const st = (await page.locator("#recent-transactions-status").textContent()) || "";
+    expect(st).not.toContain("Loading");
+    expect(st).toMatch(/^(?:Last \d+ of [\d,]+ transactions|No transactions recorded)/);
+    if (await page.locator("#recent-transactions-table").isVisible()) {
+      const rows = await page.locator("#recent-transactions-table tbody tr").count();
+      expect(rows).toBeGreaterThan(0);
+      expect(rows).toBeLessThanOrEqual(5);
+      // Full ISO timestamps in the export must render as plain YYYY-MM-DD.
+      for (const t of await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents()) {
+        expect(t.trim()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      }
+    }
+  });
+
   test("all displayed dates are plain YYYY-MM-DD", async () => {
     const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -365,6 +380,14 @@ test.describe.serial("Axiom DKP dashboard", () => {
     expect(rs).toMatch(/^(?:\d+ raids attended|No raid attendance)/);
     if (await page.locator("#member-raids-table").isVisible()) {
       expect(await page.locator("#member-raids-table tbody tr").count()).toBeGreaterThan(0);
+    }
+
+    // Transaction history mirrors the other tables: status always resolves; rows exist iff transactions found.
+    const ts = (await page.locator("#member-tx-status").textContent()) || "";
+    expect(ts).not.toContain("Loading");
+    expect(ts).toMatch(/^(?:\d+ transactions|No transactions)/);
+    if (await page.locator("#member-tx-table").isVisible()) {
+      expect(await page.locator("#member-tx-table tbody tr").count()).toBeGreaterThan(0);
     }
 
     // Member loot shares the standard pagination: pager visible only when >10 awards.

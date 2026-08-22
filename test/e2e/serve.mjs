@@ -25,6 +25,11 @@ for (const f of ["index.html", "style.css", "items.json", "manifest.webmanifest"
 fs.cpSync(path.join(ROOT, "css"), path.join(www, "css"), { recursive: true });
 fs.cpSync(path.join(ROOT, "js"), path.join(www, "js"), { recursive: true });
 for (const f of DATA_FILES) fs.copyFileSync(path.join(dataDir, f), path.join(www, f));
+// transactions.json is optional — copy it when present so both the populated and
+// empty-state code paths get exercised depending on the dataset.
+if (fs.existsSync(path.join(dataDir, "transactions.json"))) {
+  fs.copyFileSync(path.join(dataDir, "transactions.json"), path.join(www, "transactions.json"));
+}
 
 console.log(`[e2e] serving ${www} (data from ${path.relative(ROOT, dataDir) || "."})`);
 

@@ -6,6 +6,7 @@
  *   - loot.json         : loot awards     ({ loot: [{ item, character_name, item_dkp_value, date?, raid_id }] })
  *   - raids.json        : raid log        ({ raids: [{ raid_id, date, raid_name }] })
  *   - users.json        : raider accounts ({ users: [{ username, available_dkp, dkp_earned, dkp_spent }] })
+ *   - transactions.json : DKP adjustments ({ transactions: [...] }) — OPTIONAL file
  *   - roster-export.csv : roster metrics  (PapaParse)
  *
  * Loot dates: many loot entries have no `date`; resolve them via
@@ -226,6 +227,37 @@ const Data = (() => {
     }));
   }
 
+  /* ---------------- transactions.json (optional) ---------------- */
+
+  /**
+   * Load account-level DKP adjustment transactions (achievement bonuses,
+   * recruit bonuses, manual adjustments). The file is OPTIONAL: a missing or
+   * unreadable export resolves to [] so the rest of the app still works
+   * (e.g. hosted deployments without guild-internal data). Malformed exports
+   * are caught by the integrity tests locally.
+   * @returns {Promise<Array<{ id: string|null, usernameId: string|null,
+   *   username: string, type: string, amount: number, reason: string,
+   *   date: string|null }>>}
+   */
+  async function loadTransactions() {
+    try {
+      const data = await fetchJson("transactions.json");
+      if (!Array.isArray(data.transactions)) throw new Error("transactions.json: expected { transactions: [...] }");
+      return data.transactions.map((t) => ({
+        id: t.transaction_id ? String(t.transaction_id) : null,
+        usernameId: t.username_id ? String(t.username_id) : null,
+        username: t.username || "",
+        type: t.type || "",
+        amount: Number(t.transaction_amount) || 0,
+        reason: t.reason || "",
+        date: isoDate(t.date), // full ISO timestamps normalize to YYYY-MM-DD
+      }));
+    } catch (err) {
+      console.warn("transactions.json unavailable, continuing without it:", err.message);
+      return [];
+    }
+  }
+
   /* ---------------- generic CSV (PapaParse) ---------------- */
 
   /**
@@ -260,6 +292,7 @@ const Data = (() => {
     loadRaids,
     loadRaidInfo,
     loadUsers,
+    loadTransactions,
     loadRoster,
     loadCsv,
     itemLink,

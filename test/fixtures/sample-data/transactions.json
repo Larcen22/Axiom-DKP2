@@ -1,0 +1,58 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "tx-001",
+      "username_id": "u3-carol",
+      "username": "Carol",
+      "type": "BBC",
+      "transaction_amount": 8,
+      "reason": "BBC - filling in CH chain mid fight",
+      "date": "2026-08-15T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-002",
+      "username_id": "u1-alice",
+      "username": "Alice",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA-100",
+      "date": "2026-07-01T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-003",
+      "username_id": "u1-alice",
+      "username": "Alice",
+      "type": "Level55",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level 55",
+      "date": "2026-06-15T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-004",
+      "username_id": "u2-bob",
+      "username": "Bob",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR 90",
+      "date": "2026-05-15T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-005",
+      "username_id": "u2-bob",
+      "username": "Bob",
+      "type": "Adjustment",
+      "transaction_amount": -4,
+      "reason": "New Bot Duplicate Raid Adjustment",
+      "date": "2026-04-10T19:30:00Z"
+    },
+    {
+      "transaction_id": "tx-006",
+      "username_id": "u2-bob",
+      "username": "Bob",
+      "type": "Recruit Bonus",
+      "transaction_amount": 15,
+      "reason": "recruiting a new member",
+      "date": "2026-03-10T19:30:00Z"
+    }
+  ]
+}
