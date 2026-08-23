@@ -3173,6 +3173,14 @@
           "role": "alternate",
           "level": 48,
           "race": "High Elf"
+        },
+        {
+          "name": "Erewynn",
+          "class": "Ranger",
+          "race": "Wood Elf",
+          "level": 15,
+          "character_id": "f908efe7-5c9e-4606-aec8-54615f0dc7fe",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-11-12 20:20:28",
