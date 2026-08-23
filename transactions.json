@@ -17863,6 +17863,15 @@
       "transaction_amount": 1,
       "reason": "Stepping up and learning rogue pulls in VT",
       "date": "2026-08-21T22:03:15.931624+00:00"
+    },
+    {
+      "transaction_id": "c2436e93-5541-46e1-ad5c-6c9f8bc12ae8",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "username": "Poppernug",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "stepping up to kite 2 mobs in Emp room, 8/21",
+      "date": "2026-08-23T04:02:05.044184+00:00"
     }
   ]
 }
