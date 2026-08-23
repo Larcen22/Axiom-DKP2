@@ -71,14 +71,21 @@ test.describe.serial("Axiom DKP dashboard", () => {
     // Total DKP is a plain number (or 0), never an error string.
     await expect(page.locator("#stat-total-dkp")).toHaveText(/^(?:[\d,]+|–)$/);
 
-    // Sparklines render when their stat has a real value (both datasets have recent activity).
-    const spentVal = (await page.locator("#stat-avg-spent-week").textContent()).trim();
-    if (!spentVal.startsWith("–")) {
-      expect(await page.locator("#spark-spent svg.spark-svg").count(), "spend sparkline should render").toBe(1);
-    }
-    const sizeVal = (await page.locator("#stat-avg-raid-size").textContent()).trim();
-    if (!sizeVal.startsWith("–")) {
-      expect(await page.locator("#spark-size svg.spark-svg").count(), "raid-size sparkline should render").toBe(1);
+    // Every bank card carries a 12-week sparkline; it renders whenever the stat has
+    // real data (skipped for "–"/0 so stale fixture dates in future CI runs don't rot).
+    const sparkPairs = [
+      ["stat-total-dkp", "spark-active-dkp"],
+      ["stat-items-awarded", "spark-items"],
+      ["stat-avg-spent-week", "spark-spent"],
+      ["stat-avg-raid-size", "spark-size"],
+      ["bank-total", "spark-bank"],
+      ["bank-burn", "spark-burn"],
+    ];
+    for (const [statId, sparkId] of sparkPairs) {
+      const val = (await page.locator(`#${statId}`).textContent()).trim();
+      if (!val.startsWith("–") && val !== "0") {
+        expect(await page.locator(`#${sparkId} svg.spark-svg`).count(), `${sparkId} should render`).toBe(1);
+      }
     }
 
     // Panel cascade: init() assigns a stagger index to every overview panel.

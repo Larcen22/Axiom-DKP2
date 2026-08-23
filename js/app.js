@@ -252,10 +252,65 @@
     // Weekly buckets (oldest → newest) shared by the Guild Activity chart and the
     // stat-card sparklines so both read from one source of truth.
     const weekly = weeklyActivity(raids, loot);
-    // Sparklines: DKP spent per week (blue, matches bar-spent) and avg raid size per week (gold).
+    // Sparklines: every bank card carries a 12-week series (oldest → newest).
+    // Spent per week (blue, matches bar-spent) and avg raid size per week (gold)
+    // come straight from the shared weekly buckets; items per week and burn per
+    // raid are derived from them. The two "bank balance" cards have no history in
+    // the exports (users.json is a snapshot), so their lines are reconstructed:
+    // walk backwards from today's total, adding back spend and subtracting earnings
+    // for each later week (earnings = raid DKP × attendees). Manual adjustments
+    // aren't included — decorative trend only; the newest point equals the card value.
     $("#spark-spent").innerHTML = sparkline(weekly.spentWeeks, "#4fa3e0");
     const sizePerWeek = weekly.counts.map((c, i) => (c ? weekly.attendeesWeeks[i] / c : 0));
     $("#spark-size").innerHTML = sparkline(sizePerWeek, "#e0a435");
+    $("#spark-items").innerHTML = sparkline(weekly.itemsWeeks, "#4fa3e0");
+    const burnPerWeek = weekly.counts.map((c, i) => (c ? weekly.spentWeeks[i] / c : 0));
+    $("#spark-burn").innerHTML = sparkline(burnPerWeek, "#4fa3e0");
+
+    const weekIdxOf = (dateStr) => {
+      const d = Math.floor((Date.now() - new Date(dateStr + "T00:00:00")) / 86400000);
+      return d < 0 || d >= ACTIVITY_WEEKS * 7 ? -1 : ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+    };
+    // Suffix sums: after[i] = sum of the series from week i to the newest week.
+    const suffix = (arr) => {
+      const out = new Array(ACTIVITY_WEEKS).fill(0);
+      let acc = 0;
+      for (let i = ACTIVITY_WEEKS - 1; i >= 0; i--) { acc += arr[i]; out[i] = acc; }
+      return out;
+    };
+    const earnedWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    for (const r of raids) {
+      if (!r.date || !r.dkpValue || !r.attendeeUserIds) continue;
+      const w = weekIdxOf(r.date);
+      if (w < 0) continue;
+      earnedWeeks[w] += r.dkpValue * r.attendeeUserIds.length;
+    }
+    const spendAfter = suffix(weekly.spentWeeks);
+    const earnedAfter = suffix(earnedWeeks);
+    $("#spark-bank").innerHTML = sparkline(
+      Array.from({ length: ACTIVITY_WEEKS }, (_, i) => Math.max(0, bankTotal + spendAfter[i] - earnedAfter[i])), "#e0a435");
+
+    // Same walk scoped to the 30d-active set for the Active DKP card.
+    const activeSpendWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    for (const l of loot) {
+      if (!l.date || !activeUserIds.has(l.user)) continue;
+      const w = weekIdxOf(l.date);
+      if (w < 0) continue;
+      activeSpendWeeks[w] += l.dkpSpent;
+    }
+    const activeEarnedWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    for (const r of raids) {
+      if (!r.date || !r.dkpValue || !r.attendeeUserIds) continue;
+      const w = weekIdxOf(r.date);
+      if (w < 0) continue;
+      let n = 0;
+      for (const uid of r.attendeeUserIds) if (activeUserIds.has(uid)) n++;
+      activeEarnedWeeks[w] += r.dkpValue * n;
+    }
+    const actSpendAfter = suffix(activeSpendWeeks);
+    const actEarnedAfter = suffix(activeEarnedWeeks);
+    $("#spark-active-dkp").innerHTML = sparkline(
+      Array.from({ length: ACTIVITY_WEEKS }, (_, i) => Math.max(0, totalDkpAvailable + actSpendAfter[i] - actEarnedAfter[i])), "#e0a435");
 
     renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly);
 
@@ -271,6 +326,7 @@
     const counts = new Array(ACTIVITY_WEEKS).fill(0);
     const spentWeeks = new Array(ACTIVITY_WEEKS).fill(0);
     const attendeesWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    const itemsWeeks = new Array(ACTIVITY_WEEKS).fill(0);
     let windowTotal = 0, spentTotal = 0;
     for (const r of raids) {
       if (!r.date) continue;
@@ -285,10 +341,12 @@
       if (!l.date) continue; // undated awards can't be bucketed
       const d = daysAgoOf(l.date);
       if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
-      spentWeeks[ACTIVITY_WEEKS - 1 - Math.floor(d / 7)] += l.dkpSpent;
+      const w = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      spentWeeks[w] += l.dkpSpent;
+      itemsWeeks[w]++;
       spentTotal += l.dkpSpent;
     }
-    return { counts, spentWeeks, attendeesWeeks, windowTotal, spentTotal };
+    return { counts, spentWeeks, attendeesWeeks, itemsWeeks, windowTotal, spentTotal };
   }
 
   function renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly) {
