@@ -84,36 +84,36 @@
           <div class="panel overview-wide guild-bank">
             <h3>Guild Bank</h3>
             <div class="stat-grid bank-stats">
-              <div class="stat-card">
+              <a class="stat-card" href="#/trend/active-dkp" title="View 52-week trend">
                 <div class="stat-value" id="stat-total-dkp">–</div>
                 <div class="stat-label">Active DKP · past 30d</div>
                 <div class="spark" id="spark-active-dkp"></div>
-              </div>
-              <div class="stat-card">
+              </a>
+              <a class="stat-card" href="#/trend/items" title="View 52-week trend">
                 <div class="stat-value" id="stat-items-awarded">–</div>
                 <div class="stat-label">Items Awarded · past week</div>
                 <div class="spark" id="spark-items"></div>
-              </div>
-              <div class="stat-card">
+              </a>
+              <a class="stat-card" href="#/trend/spent" title="View 52-week trend">
                 <div class="stat-value" id="stat-avg-spent-week">–</div>
                 <div class="stat-label">Avg DKP Spent · past week</div>
                 <div class="spark" id="spark-spent"></div>
-              </div>
-              <div class="stat-card">
+              </a>
+              <a class="stat-card" href="#/trend/size" title="View 52-week trend">
                 <div class="stat-value" id="stat-avg-raid-size">–</div>
                 <div class="stat-label">Avg Raid Size · past 30d</div>
                 <div class="spark" id="spark-size"></div>
-              </div>
-              <div class="stat-card">
+              </a>
+              <a class="stat-card" href="#/trend/bank-total" title="View 52-week trend">
                 <div class="stat-value" id="bank-total">–</div>
                 <div class="stat-label">Available DKP · all members</div>
                 <div class="spark" id="spark-bank"></div>
-              </div>
-              <div class="stat-card">
+              </a>
+              <a class="stat-card" href="#/trend/burn" title="View 52-week trend">
                 <div class="stat-value" id="bank-burn">–</div>
                 <div class="stat-label">DKP spent per raid · 90d</div>
                 <div class="spark" id="spark-burn"></div>
-              </div>
+              </a>
             </div>
             <div id="bank-status" class="panel-status">Loading…</div>
             <div id="bank-flow" class="bank-flow"></div>
@@ -475,6 +475,17 @@
               <div id="raid-loot-pager" class="pager" hidden></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- ========== TREND DETAIL (guild bank card drill-down) ========== -->
+      <section id="trend" class="view">
+        <button id="trend-back" class="member-back" type="button">← Back</button>
+        <div class="panel">
+          <h3 id="trend-title">Trend</h3>
+          <div id="trend-status" class="panel-status"></div>
+          <div id="trend-chart" class="activity-chart trend-chart"></div>
+          <div class="stat-grid" id="trend-stats"></div>
         </div>
       </section>
 

@@ -97,6 +97,38 @@ test.describe.serial("Axiom DKP dashboard", () => {
     expect(bodyClass ?? "", "app-loading should be removed after init").not.toContain("app-loading");
   });
 
+  test("guild bank cards link to 52-week trend drill-downs", async () => {
+    await page.goto("/#/overview");
+    // One real click: Available DKP card → its trend view.
+    await page.click("#bank-total");
+    await expect(page).toHaveURL(/#\/trend\/bank-total$/);
+    await expect(page.locator("#trend-title")).toContainText("Available DKP");
+    expect(await page.locator("#trend-chart .activity-bar").count()).toBe(52);
+    expect(await page.locator("#trend-stats .stat-card").count()).toBe(4);
+
+    // Every other card's target renders too (deep links).
+    for (const [key, title] of [
+      ["active-dkp", "Active Members"],
+      ["items", "Items Awarded"],
+      ["spent", "DKP Spent per Week"],
+      ["size", "Average Raid Size"],
+      ["burn", "DKP Spent per Raid"],
+    ]) {
+      await page.evaluate((h) => { location.hash = h }, `#/trend/${key}`);
+      await expect(page.locator("#trend-title")).toContainText(title);
+      expect(await page.locator("#trend-chart .activity-bar").count()).toBe(52);
+      expect(await page.locator("#trend-stats .stat-card").count()).toBe(4);
+    }
+
+    // Back returns to the previous view.
+    await page.evaluate(() => { location.hash = "#/overview"; });
+    await expect(page).toHaveURL(/#\/overview$/);
+    await page.click("#bank-total");
+    await expect(page).toHaveURL(/#\/trend\/bank-total$/);
+    await page.click("#trend-back");
+    await expect(page).toHaveURL(/#\/overview$/);
+  });
+
   test("every nav view switches and renders content", async () => {
     const targets = await page.locator(".nav-link").evaluateAll((links) => links.map((l) => l.dataset.target));
     expect(targets).toEqual(expect.arrayContaining(["overview", "standings", "loot", "roster", "raids"]));

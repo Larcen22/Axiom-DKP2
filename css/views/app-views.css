@@ -28,6 +28,8 @@
    desktop width; min() caps each track's minimum at the container width so the
    grid can't stretch the panel past the viewport on phones. */
 .bank-stats { grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); }
+/* Bank cards are links to #/trend/<key> drill-downs — keep them looking like plain cards. */
+.bank-stats a.stat-card { text-decoration: none; color: inherit; cursor: pointer; }
 .bank-flow {
   margin-top: var(--space-sm);
   font-size: 0.78rem;
@@ -78,6 +80,12 @@
 .bar-spent { background: var(--color-accent-blue); }
 .bar-raiders { background: var(--color-success); }
 .activity-bar.zero { background: var(--color-bg-hover); opacity: 1; }
+
+/* Trend drill-down (#/trend/<key>): larger single-series chart, one bar per week. */
+.trend-chart { height: 150px; gap: 2px; }
+@media (max-width: 700px) {
+  .trend-chart { height: 110px; }
+}
 
 /* Ranked lists (top spenders, recent joiners) */
 .rank-list {

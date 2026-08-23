@@ -66,7 +66,7 @@
 
   /* ---------------- hash routing ---------------- */
   // The URL is the source of truth for the current view: #/<view> for nav views,
-  // #/member/<name> and #/raid/<id> for drill-downs (segments percent-encoded).
+  // #/member/<name>, #/raid/<id> and #/trend/<key> for drill-downs (percent-encoded).
   // Every navigation pushes a history entry, so browser back/forward (incl. mobile
   // hardware back) work natively, refresh keeps state, and deep links restore the
   // exact view on load.
@@ -78,6 +78,7 @@
     const [head, ...rest] = raw.split("/");
     if (head === "member") return { view: "member", name: decodeURIComponent(rest.join("/") || "") };
     if (head === "raid") return { view: "raid", id: rest.join("/") || "" };
+    if (head === "trend") return { view: "trend", key: rest.join("/") || "" };
     if (NAV_VIEWS.includes(head)) return { view: head };
     return { view: "overview" }; // unknown fragment -> default view
   }
@@ -85,6 +86,7 @@
   function routeToHash(route) {
     if (route.view === "member") return `#/member/${encodeURIComponent(route.name)}`;
     if (route.view === "raid") return `#/raid/${encodeURIComponent(route.id)}`;
+    if (route.view === "trend") return `#/trend/${encodeURIComponent(route.key)}`;
     return `#/${route.view}`;
   }
 
@@ -101,11 +103,13 @@
   // drill-downs clear the nav highlight (restored when back returns to a view).
   function renderRoute(route) {
     document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
-    if (route.view === "member" || route.view === "raid") {
+    if (route.view === "member" || route.view === "raid" || route.view === "trend") {
       // Drill-downs need loaded data; until then (or if loading failed, e.g. the hosted
       // site without guild exports) stay put — nav views below still work.
       if (!db) return;
-      if (route.view === "member") openMember(route.name); else openRaid(route.id);
+      if (route.view === "member") openMember(route.name);
+      else if (route.view === "raid") openRaid(route.id);
+      else openTrend(route.key);
       return;
     }
     document.querySelector(`.nav-link[data-target="${route.view}"]`)?.classList.add("active");
@@ -175,6 +179,159 @@
       for (const uid of r.attendeeUserIds) activeSet.add(uid);
     }
     $("#pulse-active").textContent = `${activeSet.size.toLocaleString()} / ${users.length.toLocaleString()}`;
+  }
+
+  /* ---------------- bank trend drill-downs (#/trend/<key>) ---------------- */
+  // Each Guild Bank stat card links here: a larger 52-week chart of the same series
+  // its sparkline shows, plus summary numbers. Balance cards reuse bankTrajectory()
+  // (snapshot reconstruction — decorative trend, not ledger truth).
+  const TREND_WEEKS = 52;
+
+  function trendWeekLabel(i) {
+    const d = new Date();
+    d.setDate(d.getDate() - (TREND_WEEKS - 1 - i) * 7);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  }
+
+  const TREND_VIEWS = {
+    "bank-total": {
+      title: "Guild Bank — Available DKP",
+      color: "#e0a435",
+      build({ weekly, bankTotal }) {
+        const series = bankTrajectory(bankTotal, weekly.spentWeeks, weekly.earnedWeeks);
+        return {
+          series,
+          fmt: (n) => Math.round(n).toLocaleString(),
+          stats: [
+            ["Current", bankTotal.toLocaleString()],
+            ["Peak · 52w", Math.round(Math.max(...series)).toLocaleString()],
+            ["Low · 52w", Math.round(Math.min(...series)).toLocaleString()],
+            ["Change · 52w", fmtSignedDkp(Math.round(series[TREND_WEEKS - 1] - series[0]))],
+          ],
+          status: "Reconstructed from weekly spend/earnings flows (raid DKP × attendees) — manual adjustments not included.",
+        };
+      },
+    },
+    "active-dkp": {
+      title: "Active Members' DKP",
+      color: "#e0a435",
+      build({ weekly, loot, raids, activeUserIds, totalDkpAvailable }) {
+        const f = activeFlowWeeks(loot, raids, activeUserIds, TREND_WEEKS);
+        const series = bankTrajectory(totalDkpAvailable, f.spend, f.earned);
+        return {
+          series,
+          fmt: (n) => Math.round(n).toLocaleString(),
+          stats: [
+            ["Current · 30d active", totalDkpAvailable.toLocaleString()],
+            ["Peak · 52w", Math.round(Math.max(...series)).toLocaleString()],
+            ["Low · 52w", Math.round(Math.min(...series)).toLocaleString()],
+            ["Change · 52w", fmtSignedDkp(Math.round(series[TREND_WEEKS - 1] - series[0]))],
+          ],
+          status: "Same reconstruction as the bank total, scoped to members seen on a raid in the past 30 days.",
+        };
+      },
+    },
+    items: {
+      title: "Items Awarded per Week",
+      color: "#4fa3e0",
+      build({ weekly }) {
+        const series = weekly.itemsWeeks;
+        const total = series.reduce((a, b) => a + b, 0);
+        return {
+          series,
+          fmt: (n) => String(n),
+          stats: [
+            ["Past week", String(series[TREND_WEEKS - 1])],
+            ["Total · 52w", total.toLocaleString()],
+            ["Avg per week", (total / TREND_WEEKS).toFixed(1)],
+            ["Peak week", Math.max(...series).toLocaleString()],
+          ],
+          status: "Loot awards per week, oldest → newest.",
+        };
+      },
+    },
+    spent: {
+      title: "DKP Spent per Week",
+      color: "#4fa3e0",
+      build({ weekly }) {
+        const series = weekly.spentWeeks;
+        return {
+          series,
+          fmt: (n) => Math.round(n).toLocaleString(),
+          stats: [
+            ["Past week", Math.round(series[TREND_WEEKS - 1]).toLocaleString()],
+            ["Total · 52w", weekly.spentTotal.toLocaleString()],
+            ["Avg per week", Math.round(weekly.spentTotal / TREND_WEEKS).toLocaleString()],
+            ["Peak week", Math.round(Math.max(...series)).toLocaleString()],
+          ],
+          status: "Total loot DKP per week — the card shows the past-week average per member.",
+        };
+      },
+    },
+    size: {
+      title: "Average Raid Size per Week",
+      color: "#e0a435",
+      build({ weekly }) {
+        const series = weekly.counts.map((c, i) => (c ? weekly.attendeesWeeks[i] / c : 0));
+        const active = series.filter((v) => v > 0);
+        return {
+          series,
+          fmt: (n) => n.toFixed(1),
+          stats: [
+            ["Past week", series[TREND_WEEKS - 1].toFixed(1)],
+            ["Peak week", Math.max(...series).toFixed(1)],
+            ["Avg · active weeks", active.length ? (active.reduce((a, b) => a + b, 0) / active.length).toFixed(1) : "–"],
+            ["Raids · 52w", weekly.windowTotal.toLocaleString()],
+          ],
+          status: "Attendees ÷ raids within each week — weeks without raids show 0.",
+        };
+      },
+    },
+    burn: {
+      title: "DKP Spent per Raid",
+      color: "#4fa3e0",
+      build({ weekly }) {
+        const series = weekly.counts.map((c, i) => (c ? weekly.spentWeeks[i] / c : 0));
+        const active = series.filter((v) => v > 0);
+        return {
+          series,
+          fmt: (n) => Math.round(n).toLocaleString(),
+          stats: [
+            ["Peak week", Math.round(Math.max(...series)).toLocaleString()],
+            ["Low · active weeks", active.length ? Math.round(Math.min(...active)).toLocaleString() : "–"],
+            ["Raids · 52w", weekly.windowTotal.toLocaleString()],
+            ["Spend · 52w", weekly.spentTotal.toLocaleString()],
+          ],
+          status: "Weekly spend ÷ raid count — the card shows the 90-day average.",
+        };
+      },
+    },
+  };
+
+  function openTrend(key) {
+    const cfg = TREND_VIEWS[key];
+    if (!cfg || !db) return; // unknown key or no data — parseHash already defaults to overview
+    const weekly = weeklyActivity(db.raids, db.loot, TREND_WEEKS);
+    // Same 30-day active set and totals as the Overview cards (string date compare).
+    const cutoff30 = new Date();
+    cutoff30.setDate(cutoff30.getDate() - 30);
+    const c30Str = `${cutoff30.getFullYear()}-${String(cutoff30.getMonth() + 1).padStart(2, "0")}-${String(cutoff30.getDate()).padStart(2, "0")}`;
+    const activeUserIds = new Set();
+    for (const r of db.raids) if (r.date && r.date >= c30Str) for (const uid of r.attendeeUserIds) activeUserIds.add(uid);
+    const bankTotal = db.users.reduce((s, u) => s + u.activeDkp, 0);
+    const totalDkpAvailable = db.users.reduce((s, u) => s + (activeUserIds.has(u.usernameId) ? u.activeDkp : 0), 0);
+
+    const { series, fmt, stats, status } = cfg.build({ weekly, loot: db.loot, raids: db.raids, activeUserIds, bankTotal, totalDkpAvailable });
+    $("#trend-title").textContent = cfg.title;
+    const max = Math.max(...series, 1);
+    $("#trend-chart").innerHTML = series.map((v, i) => {
+      if (!v) return `<div class="week-group"><div class="activity-bar zero" title="${trendWeekLabel(i)}: none"></div></div>`;
+      const h = Math.max(4, (v / max) * 100);
+      return `<div class="week-group"><div class="activity-bar" style="height:${h}%;background:${cfg.color}" title="${trendWeekLabel(i)}: ${fmt(v)}"></div></div>`;
+    }).join("");
+    $("#trend-status").textContent = status;
+    $("#trend-stats").innerHTML = stats.map(([l, v]) => `<div class="stat-card"><div class="stat-value">${v}</div><div class="stat-label">${l}</div></div>`).join("");
+    showView("trend");
   }
 
   function renderOverview(users, loot, items, raids, roster, transactions) {
@@ -256,61 +413,22 @@
     // Spent per week (blue, matches bar-spent) and avg raid size per week (gold)
     // come straight from the shared weekly buckets; items per week and burn per
     // raid are derived from them. The two "bank balance" cards have no history in
-    // the exports (users.json is a snapshot), so their lines are reconstructed:
-    // walk backwards from today's total, adding back spend and subtracting earnings
-    // for each later week (earnings = raid DKP × attendees). Manual adjustments
-    // aren't included — decorative trend only; the newest point equals the card value.
+    // the exports (users.json is a snapshot), so their lines use bankTrajectory()
+    // — decorative trend only, manual adjustments not included. Each card links to
+    // #/trend/<key> for the 52-week version of the same series (see openTrend).
     $("#spark-spent").innerHTML = sparkline(weekly.spentWeeks, "#4fa3e0");
     const sizePerWeek = weekly.counts.map((c, i) => (c ? weekly.attendeesWeeks[i] / c : 0));
     $("#spark-size").innerHTML = sparkline(sizePerWeek, "#e0a435");
     $("#spark-items").innerHTML = sparkline(weekly.itemsWeeks, "#4fa3e0");
     const burnPerWeek = weekly.counts.map((c, i) => (c ? weekly.spentWeeks[i] / c : 0));
     $("#spark-burn").innerHTML = sparkline(burnPerWeek, "#4fa3e0");
-
-    const weekIdxOf = (dateStr) => {
-      const d = Math.floor((Date.now() - new Date(dateStr + "T00:00:00")) / 86400000);
-      return d < 0 || d >= ACTIVITY_WEEKS * 7 ? -1 : ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
-    };
-    // Suffix sums: after[i] = sum of the series from week i to the newest week.
-    const suffix = (arr) => {
-      const out = new Array(ACTIVITY_WEEKS).fill(0);
-      let acc = 0;
-      for (let i = ACTIVITY_WEEKS - 1; i >= 0; i--) { acc += arr[i]; out[i] = acc; }
-      return out;
-    };
-    const earnedWeeks = new Array(ACTIVITY_WEEKS).fill(0);
-    for (const r of raids) {
-      if (!r.date || !r.dkpValue || !r.attendeeUserIds) continue;
-      const w = weekIdxOf(r.date);
-      if (w < 0) continue;
-      earnedWeeks[w] += r.dkpValue * r.attendeeUserIds.length;
-    }
-    const spendAfter = suffix(weekly.spentWeeks);
-    const earnedAfter = suffix(earnedWeeks);
     $("#spark-bank").innerHTML = sparkline(
-      Array.from({ length: ACTIVITY_WEEKS }, (_, i) => Math.max(0, bankTotal + spendAfter[i] - earnedAfter[i])), "#e0a435");
+      bankTrajectory(bankTotal, weekly.spentWeeks, weekly.earnedWeeks), "#e0a435");
 
     // Same walk scoped to the 30d-active set for the Active DKP card.
-    const activeSpendWeeks = new Array(ACTIVITY_WEEKS).fill(0);
-    for (const l of loot) {
-      if (!l.date || !activeUserIds.has(l.user)) continue;
-      const w = weekIdxOf(l.date);
-      if (w < 0) continue;
-      activeSpendWeeks[w] += l.dkpSpent;
-    }
-    const activeEarnedWeeks = new Array(ACTIVITY_WEEKS).fill(0);
-    for (const r of raids) {
-      if (!r.date || !r.dkpValue || !r.attendeeUserIds) continue;
-      const w = weekIdxOf(r.date);
-      if (w < 0) continue;
-      let n = 0;
-      for (const uid of r.attendeeUserIds) if (activeUserIds.has(uid)) n++;
-      activeEarnedWeeks[w] += r.dkpValue * n;
-    }
-    const actSpendAfter = suffix(activeSpendWeeks);
-    const actEarnedAfter = suffix(activeEarnedWeeks);
+    const activeFlows = activeFlowWeeks(loot, raids, activeUserIds, ACTIVITY_WEEKS);
     $("#spark-active-dkp").innerHTML = sparkline(
-      Array.from({ length: ACTIVITY_WEEKS }, (_, i) => Math.max(0, totalDkpAvailable + actSpendAfter[i] - actEarnedAfter[i])), "#e0a435");
+      bankTrajectory(totalDkpAvailable, activeFlows.spend, activeFlows.earned), "#e0a435");
 
     renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly);
 
@@ -320,33 +438,77 @@
 
   // Weekly activity buckets, oldest → newest, over the last ACTIVITY_WEEKS weeks.
   // Shared by the Guild Activity chart and the stat-card sparklines (one source of truth).
-  function weeklyActivity(raids, loot) {
+  function weeklyActivity(raids, loot, weeks = ACTIVITY_WEEKS) {
     const now = new Date();
     const daysAgoOf = (dateStr) => Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
-    const counts = new Array(ACTIVITY_WEEKS).fill(0);
-    const spentWeeks = new Array(ACTIVITY_WEEKS).fill(0);
-    const attendeesWeeks = new Array(ACTIVITY_WEEKS).fill(0);
-    const itemsWeeks = new Array(ACTIVITY_WEEKS).fill(0);
+    const counts = new Array(weeks).fill(0);
+    const spentWeeks = new Array(weeks).fill(0);
+    const attendeesWeeks = new Array(weeks).fill(0);
+    const itemsWeeks = new Array(weeks).fill(0);
+    const earnedWeeks = new Array(weeks).fill(0);
     let windowTotal = 0, spentTotal = 0;
     for (const r of raids) {
       if (!r.date) continue;
       const d = daysAgoOf(r.date);
-      if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
-      const w = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      if (d < 0 || d >= weeks * 7) continue;
+      const w = weeks - 1 - Math.floor(d / 7);
       counts[w]++;
       attendeesWeeks[w] += r.attendees.length;
+      earnedWeeks[w] += (r.dkpValue || 0) * (r.attendeeUserIds ? r.attendeeUserIds.length : 0);
       windowTotal++;
     }
     for (const l of loot) {
       if (!l.date) continue; // undated awards can't be bucketed
       const d = daysAgoOf(l.date);
-      if (d < 0 || d >= ACTIVITY_WEEKS * 7) continue;
-      const w = ACTIVITY_WEEKS - 1 - Math.floor(d / 7);
+      if (d < 0 || d >= weeks * 7) continue;
+      const w = weeks - 1 - Math.floor(d / 7);
       spentWeeks[w] += l.dkpSpent;
       itemsWeeks[w]++;
       spentTotal += l.dkpSpent;
     }
-    return { counts, spentWeeks, attendeesWeeks, itemsWeeks, windowTotal, spentTotal };
+    return { counts, spentWeeks, attendeesWeeks, itemsWeeks, earnedWeeks, windowTotal, spentTotal };
+  }
+
+  // Reconstructed balance trajectory (oldest → newest): walk backwards from today's
+  // total, adding back spend and subtracting earnings for each later week. Exports
+  // are snapshots with no historical balances; manual adjustments aren't included —
+  // decorative trend only. The newest point always equals the current total.
+  function bankTrajectory(current, spendWeeks, earnedWeeks) {
+    const n = spendWeeks.length;
+    let accSpend = 0, accEarned = 0;
+    const out = new Array(n);
+    for (let i = n - 1; i >= 0; i--) {
+      accSpend += spendWeeks[i];
+      accEarned += earnedWeeks[i];
+      out[i] = Math.max(0, current + accSpend - accEarned);
+    }
+    return out;
+  }
+
+  // Weekly spend/earnings flows scoped to a set of user ids (Active DKP card).
+  function activeFlowWeeks(loot, raids, userIds, weeks) {
+    const now = new Date();
+    const weekIdxOf = (dateStr) => {
+      const d = Math.floor((now - new Date(dateStr + "T00:00:00")) / 86400000);
+      return d < 0 || d >= weeks * 7 ? -1 : weeks - 1 - Math.floor(d / 7);
+    };
+    const spend = new Array(weeks).fill(0);
+    const earned = new Array(weeks).fill(0);
+    for (const l of loot) {
+      if (!l.date || !userIds.has(l.user)) continue;
+      const w = weekIdxOf(l.date);
+      if (w < 0) continue;
+      spend[w] += l.dkpSpent;
+    }
+    for (const r of raids) {
+      if (!r.date || !r.dkpValue || !r.attendeeUserIds) continue;
+      const w = weekIdxOf(r.date);
+      if (w < 0) continue;
+      let n = 0;
+      for (const uid of r.attendeeUserIds) if (userIds.has(uid)) n++;
+      earned[w] += r.dkpValue * n;
+    }
+    return { spend, earned };
   }
 
   function renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly) {
@@ -1720,6 +1882,7 @@
       // ← Back: native history (falls back to Overview when there's no entry).
       $("#member-back").addEventListener("click", goBack);
       $("#raid-back").addEventListener("click", goBack);
+      $("#trend-back").addEventListener("click", goBack);
 
       // Command palette (needs db, so wired after it is set).
       setupPalette();
