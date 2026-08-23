@@ -6,7 +6,7 @@
 
 ## Hard rules (owner decisions)
 - **Never commit or push.** The user handles all git operations. Your job ends at: changes applied + full suite green + a short report of what changed for the user to commit.
-- **Guild data is confidential and gitignored**: `loot.json`, `raids.json`, `users.json`, `roster-export.csv` must never be staged, committed, quoted with real values into docs/tests, or pasted anywhere public (this is a *public* repo). Only `items.json` is committed. Test fixtures use synthetic names only.
+- **Guild data files are committed on purpose**: `loot.json`, `raids.json`, `users.json`, `transactions.json`, `roster-export.csv` live at the repo root and get pushed — the hosted site serves real data (owner decision 2026-08-23). The one rule: **never push stale exports up** — an old local export must not overwrite fresher remote data. Test fixtures under `test/fixtures/sample-data/` use synthetic names only.
 - The **Item Search view was deliberately removed** — do not re-add it. `items.json` exists for pqdi.cc link resolution only.
 
 ## Data conventions

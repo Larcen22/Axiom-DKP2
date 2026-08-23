@@ -157,7 +157,11 @@ const Data = (() => {
    */
   function isoDate(v) {
     const s = v == null ? "" : String(v).trim();
-    return /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : null;
+    if (!/^\d{4}-\d{2}-\d{2}/.test(s)) return null;
+    // Calendar validation: the shape check alone would accept "2024-13-99".
+    // ISO-string parsing rejects out-of-range components (month 13, Feb 30, …).
+    const d = new Date(`${s.slice(0, 10)}T00:00:00Z`);
+    return isNaN(d.getTime()) ? null : s.slice(0, 10);
   }
 
   /* ---------------- raids.json ---------------- */
@@ -233,7 +237,7 @@ const Data = (() => {
    * Load account-level DKP adjustment transactions (achievement bonuses,
    * recruit bonuses, manual adjustments). The file is OPTIONAL: a missing or
    * unreadable export resolves to [] so the rest of the app still works
-   * (e.g. hosted deployments without guild-internal data). Malformed exports
+   * (e.g. when the file isn't in the repo). Malformed exports
    * are caught by the integrity tests locally.
    * @returns {Promise<Array<{ id: string|null, usernameId: string|null,
    *   username: string, type: string, amount: number, reason: string,

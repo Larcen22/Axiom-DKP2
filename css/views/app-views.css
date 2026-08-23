@@ -513,6 +513,7 @@
   width: max-content;
 }
 .hm-cell { width: 10px; height: 10px; border-radius: 2px; background: var(--color-bg-card); }
+.hm-l0 { background: var(--color-bg-card); } /* explicit empty level (legend swatch) */
 .hm-l1 { background: rgba(224, 164, 53, 0.35); }
 .hm-l2 { background: rgba(224, 164, 53, 0.65); }
 .hm-l3 { background: var(--color-accent); }

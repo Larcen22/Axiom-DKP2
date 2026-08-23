@@ -17,10 +17,6 @@
   }
 
   const $ = (sel) => document.querySelector(sel);
-  const setStat = (id, value) => {
-    const el = $(`#${id}`);
-    if (el) el.textContent = value;
-  };
   // Count-up for stat cards: eases 0 → value over ~650ms. Respects prefers-reduced-motion
   // (and renders instantly when the value is null/"–").
   const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -78,7 +74,11 @@
     const [head, ...rest] = raw.split("/");
     if (head === "member") return { view: "member", name: decodeURIComponent(rest.join("/") || "") };
     if (head === "raid") return { view: "raid", id: rest.join("/") || "" };
-    if (head === "trend") return { view: "trend", key: rest.join("/") || "" };
+    if (head === "trend") {
+      const key = rest.join("/");
+      // Unknown metric keys fall back to Overview — openTrend has no not-found state.
+      return TREND_VIEWS[key] ? { view: "trend", key } : { view: "overview" };
+    }
     if (NAV_VIEWS.includes(head)) return { view: head };
     return { view: "overview" }; // unknown fragment -> default view
   }
@@ -95,9 +95,11 @@
   function navigate(route, replace = false) {
     const hash = routeToHash(route);
     if (location.hash === hash) return;
-    inAppNav = true; // consumed by the next hashchange → forward push
-    if (replace) history.replaceState(null, "", hash);
-    else location.hash = hash;
+    if (replace) history.replaceState(null, "", hash); // no hashchange fires — don't set the direction flag
+    else {
+      inAppNav = true; // consumed by the next hashchange → forward push
+      location.hash = hash;
+    }
   }
 
   // Renders whatever the URL says. Nav views activate their section + nav item;
@@ -121,8 +123,8 @@
   function renderRoute(route) {
     document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
     if (route.view === "member" || route.view === "raid" || route.view === "trend") {
-      // Drill-downs need loaded data; until then (or if loading failed, e.g. the hosted
-      // site without guild exports) stay put — nav views below still work.
+      // Drill-downs need loaded data; until then (or if loading failed — an export
+      // missing from the repo) stay put — nav views below still work.
       if (!db) return;
       if (route.view === "member") { markNavDir("member", `member:${route.name}`); openMember(route.name); }
       else if (route.view === "raid") { markNavDir("raid", `raid:${route.id}`); openRaid(route.id); }
@@ -1749,10 +1751,15 @@
     });
 
     // Hash routing + SW registration happen before data loads so the shell stays navigable
-    // even when every fetch fails (e.g. the GitHub Pages site without guild exports).
+    // even when every fetch fails (e.g. an export missing from the repo).
     window.addEventListener("hashchange", () => { renderRoute(parseHash()); inAppNav = false; });
     // Deep-link anchors (<a href="#/…">) change the hash natively: mark them as forward pushes.
-    document.addEventListener("click", (e) => { if (e.target.closest('a[href^="#/"]')) inAppNav = true; });
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest('a[href^="#/"]');
+      // Same-hash clicks fire no hashchange — flagging them would leave the direction
+      // flag stale and mislabel the next native back as a forward push.
+      if (a && a.hash !== location.hash) inAppNav = true;
+    });
     if (!location.hash) history.replaceState(null, "", "#/overview"); // normalize for shareability
     renderRoute(parseHash()); // apply the deep link immediately (nav views need no data)
 

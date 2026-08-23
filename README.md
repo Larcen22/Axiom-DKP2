@@ -15,9 +15,9 @@ python3 -m http.server 8000
 
 Then open the printed URL (e.g. `http://localhost:3000` or `http://localhost:8000`).
 
-### Hosting without guild data
+### Hosting
 
-The guild exports (`loot.json`, `raids.json`, `users.json`, `roster-export.csv`) are gitignored, so a hosted deployment (e.g. GitHub Pages) only ever has the committed files. The app handles this gracefully: it renders its normal error statuses instead of crashing, and navigation / deep links / browser back still work — but no data is shown until the exports are present next to `index.html`.
+The guild exports (`loot.json`, `raids.json`, `users.json`, `transactions.json`, `roster-export.csv`) are committed alongside the app, so a hosted deployment (e.g. GitHub Pages) serves real guild data. If an export is ever missing or invalid, the app handles it gracefully: it renders its normal error statuses instead of crashing, and navigation / deep links / browser back still work.
 
 ## Views
 
@@ -71,14 +71,14 @@ npm run test:e2e     # Playwright smoke suite against a local static server
 | Layer | What it verifies |
 |---|---|
 | `test/unit/data.test.js` | Data-layer logic with mocked fetch/Papa: item indexing, loot date resolution (own date → raid log fallback), DKP coercion, HTML escaping / XSS safety in `itemLink`, roster CSV mapping, retry-on-failure. |
-| `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the gitignored exports are absent — e.g. in CI. |
+| `test/integrity/integrity.test.js` | Cross-file consistency of the **real exports** when present locally: required fields, unique IDs, ISO dates, no future raids, loot→raid/user joins, roster↔users username match, per-user spent-DKP exactness and earned-DKP drift bounds, item-name coverage (pqdi.cc linkability). Falls back to `test/fixtures/sample-data/` (a known-good synthetic dataset) when the real exports are absent. |
 | `test/e2e/app.spec.js` | Loads the real UI over HTTP: no console/page errors, all five nav views switch and render, search/sort/pagination work, member + raid drill-downs open and return to their origin view, hash routing (nav updates the URL, browser back/forward work natively, deep links survive a full reload), item links point at pqdi.cc and character links point at Quarmy, every displayed date is plain YYYY-MM-DD, home-screen manifest/icons are served with correct content types, the command palette opens/searches/navigates, the heatmap renders 364 day-cells, an offline reload boots from the service-worker cache, and the mobile bottom nav stays pinned under iPhone emulation. Serves real data locally, sample dataset in CI (`test/e2e/serve.mjs`). |
 
 CI (`.github/workflows/ci.yml`) runs both jobs on push/PR to `main`.
 
 ## Known gaps / limitations
 
-- `transactions.json` is **optional**: when absent (e.g. the hosted GitHub Pages site), the Recent Rewards panel and per-member Reward History show empty states — the file never breaks the app. Balances in `users.json` already include these adjustments.
+- `transactions.json` is **optional**: when absent, the Recent Rewards panel and per-member Reward History show empty states — the file never breaks the app. Balances in `users.json` already include these adjustments.
 
 ## File sizes (approximate)
 

@@ -19,9 +19,8 @@ import Papa from "papaparse";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
-// The data exports are gitignored guild-internal files. When present locally,
-// validate the REAL exports; otherwise fall back to a known-good sample dataset.
-// items.json is committed; the other four are gitignored guild-internal exports.
+// The data exports are committed to the repo (owner decision 2026-08-23). When
+// present, validate the REAL exports; otherwise fall back to a known-good sample dataset.
 const DATA_FILES = ["loot.json", "raids.json", "users.json", "roster-export.csv"];
 const hasRealData = DATA_FILES.every((f) => fs.existsSync(path.join(ROOT, f)));
 const DATA_DIR = hasRealData ? ROOT : path.join(ROOT, "test/fixtures/sample-data");

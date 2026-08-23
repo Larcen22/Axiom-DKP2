@@ -74,8 +74,12 @@ self.addEventListener("fetch", (e) => {
   if (req.mode === "navigate") {
     e.respondWith(
       fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE).then((c) => c.put("/index.html", copy));
+        // Only cache OK navigations — a 404 page for an unknown path must never
+        // overwrite the good cached index (it would poison offline fallbacks).
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put("/index.html", copy));
+        }
         return res;
       }).catch(() => caches.match("/index.html"))
     );
@@ -112,8 +116,10 @@ self.addEventListener("fetch", (e) => {
           }
           return res;
         })
-        .catch(() => cached);
-      return cached || network;
+        .catch(() => null);
+      // No cache + failed network: a proper error response instead of undefined
+      // (respondWith(undefined) would throw and surface as a generic net error).
+      return cached || network || Response.error();
     })
   );
 });
