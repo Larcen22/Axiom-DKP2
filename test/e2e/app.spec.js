@@ -234,6 +234,18 @@ test.describe.serial("Axiom DKP dashboard", () => {
           expect(t.trim()).toMatch(/\d/); // every row carries a DKP amount
         }
       }
+
+      // Metric toggle: Spent re-sorts every class list by spent DKP.
+      await page.click("#cdk-mode-spent");
+      await expect(status).toContainText("sorted by Spent DKP");
+      for (const card of await cards.all()) {
+        const vals = (await card.locator(".cdk-val").allTextContents()).map((t) => Number(t.replace(/[^\d]/g, "")));
+        expect(vals.length).toBeGreaterThanOrEqual(1);
+        for (let i = 1; i < vals.length; i++) expect(vals[i - 1]).toBeGreaterThanOrEqual(vals[i]);
+      }
+      // Back to the default metric.
+      await page.click("#cdk-mode-available");
+      await expect(status).toContainText("sorted by Available DKP");
     } else {
       await expect(status).toContainText("No members seen on raids in the past 30 days");
       await expect(page.locator(".class-dkp-card")).toHaveCount(0);

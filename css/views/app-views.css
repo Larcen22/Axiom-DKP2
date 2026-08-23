@@ -183,7 +183,34 @@
   #class-comp-list { grid-template-columns: 1fr; }
 }
 
-/* STANDINGS — DKP by class cards (auto-fill collapses to one column on narrow screens) */
+/* STANDINGS — DKP by class: metric toggle in the panel head + card grid
+   (auto-fill collapses to one column on narrow screens) */
+.cdk-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+.cdk-toggle {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg-card);
+}
+.cdk-toggle button {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.18rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.cdk-toggle button.active { background: var(--color-accent); color: #0d1015; }
 .class-dkp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));

@@ -221,7 +221,13 @@
       <section id="standings" class="view">
         <h2>Raider Standings</h2>
         <div class="panel">
-          <h3>DKP by Class · active 30d</h3>
+          <div class="cdk-head-row">
+            <h3>DKP by Class · active 30d</h3>
+            <div class="cdk-toggle" role="group" aria-label="Sort metric">
+              <button type="button" id="cdk-mode-available" class="active" title="Available DKP (account balance)">Available</button>
+              <button type="button" id="cdk-mode-spent" title="Spent DKP (all-time loot spend)">Spent</button>
+            </div>
+          </div>
           <div id="class-dkp-status" class="panel-status">Loading…</div>
           <div id="class-dkp-grid" class="class-dkp-grid"></div>
         </div>

@@ -900,36 +900,48 @@
   }
 
   // Top-5-per-class leaderboard for active members (≥1 attended raid in the clamped 30-day window,
-  // same semantics as the table's 30D column). Main characters only (Main/Alt === "main");
-  // DKP = account available_dkp.
+  // same semantics as the table's 30D column). Main characters only (Main/Alt === "main").
+  // Two metrics via the panel-head toggle: Available DKP (account balance) — default — and
+  // Spent DKP (all-time loot spend); switching re-sorts every class list by that metric.
+  let classDkpMode = "available";
+  let classDkpData = null; // { byClass: Map cls -> [{character, available, spent}], activeCount }
+
   function renderClassDkp(users, roster, counts) {
     const active = new Set();
     for (const u of users) if ((counts.get(u.usernameId) || [])[0] > 0) active.add(u.username);
-    const dkpByMember = new Map(users.map((u) => [u.username, u.activeDkp]));
-    const byClass = new Map(); // cls -> [{ character, dkp }]
+    const byMember = new Map(users.map((u) => [u.username, { available: u.activeDkp, spent: u.spent }]));
+    const byClass = new Map(); // cls -> [{ character, available, spent }]
     for (const row of roster) {
       if (!row.cls || !active.has(row.member)) continue;
       if (String(row.mainAlt || "").toLowerCase() !== "main") continue; // mains only
+      const v = byMember.get(row.member) ?? { available: 0, spent: 0 };
       const list = byClass.get(row.cls) || [];
-      list.push({ character: row.character, dkp: dkpByMember.get(row.member) ?? 0 });
+      list.push({ character: row.character, ...v });
       byClass.set(row.cls, list);
     }
+    classDkpData = { byClass, activeCount: active.size };
+    renderClassDkpGrid();
+  }
+
+  function renderClassDkpGrid() {
+    const { byClass, activeCount } = classDkpData || { byClass: new Map(), activeCount: 0 };
+    const key = classDkpMode === "spent" ? "spent" : "available";
     const classes = [...byClass.entries()]
       .map(([cls, chars]) => {
-        chars.sort((a, b) => (b.dkp - a.dkp) || a.character.localeCompare(b.character));
-        return [cls, chars.slice(0, 5), chars.length];
+        const sorted = [...chars].sort((a, b) => (b[key] - a[key]) || a.character.localeCompare(b.character));
+        return [cls, sorted.slice(0, 5), chars.length];
       })
       .sort((a, b) => a[0].localeCompare(b[0])); // alphabetical by class
 
     const totalChars = [...byClass.values()].reduce((s, c) => s + c.length, 0);
     $("#class-dkp-status").textContent = classes.length
-      ? `Top 5 per class · ${totalChars.toLocaleString()} characters from ${active.size.toLocaleString()} active members (raids in past 30 days)`
+      ? `Top 5 per class · ${totalChars.toLocaleString()} characters from ${activeCount.toLocaleString()} active members (raids in past 30 days) · sorted by ${key === "spent" ? "Spent" : "Available"} DKP`
       : "No members seen on raids in the past 30 days.";
     $("#class-dkp-grid").innerHTML = classes.map(([cls, top, total]) => `
       <div class="class-dkp-card">
         <div class="class-dkp-head"><span>${esc(cls)}</span><span class="class-dkp-count">${total} char${total === 1 ? "" : "s"}</span></div>
         <ol class="class-dkp-list">
-          ${top.map((c) => `<li title="${esc(c.character)}"><span class="cdk-char">${esc(c.character)}</span><span class="cdk-val">${c.dkp.toLocaleString()}</span></li>`).join("")}
+          ${top.map((c) => `<li title="${esc(c.character)}"><span class="cdk-char">${esc(c.character)}</span><span class="cdk-val">${c[key].toLocaleString()}</span></li>`).join("")}
         </ol>
       </div>`).join("");
   }
@@ -1755,6 +1767,17 @@
           renderStandingsPage(1);
         }, 200);
       });
+
+      // DKP by Class metric toggle (Available ↔ Spent) — re-sorts every class list.
+      for (const [mode, btn] of [["available", $("#cdk-mode-available")], ["spent", $("#cdk-mode-spent")]]) {
+        btn.addEventListener("click", () => {
+          if (classDkpMode === mode) return;
+          classDkpMode = mode;
+          $("#cdk-mode-available").classList.toggle("active", mode === "available");
+          $("#cdk-mode-spent").classList.toggle("active", mode === "spent");
+          renderClassDkpGrid();
+        });
+      }
       renderLoot(loot, items);
       rosterActiveMembers = computeRosterActiveMembers(raids, roster, users);
       renderRoster(roster);
