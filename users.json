@@ -3005,6 +3005,14 @@
           "role": "main",
           "level": 60,
           "race": "Iksar"
+        },
+        {
+          "name": "elementaal",
+          "class": "Magician",
+          "race": "Gnome",
+          "level": 8,
+          "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-02-18 01:48:05",
