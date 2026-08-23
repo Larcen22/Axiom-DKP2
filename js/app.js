@@ -1730,14 +1730,19 @@
   }
 
 
-  // Topbar "Data through YYYY-MM-DD": newest raid date in the export — tells officers
-  // at a glance how fresh the data is. Dates are normalized YYYY-MM-DD, so string max works.
+  // Footer "Data through YYYY-MM-DD · fresh|cached": newest raid date in the export
+  // plus the freshness state — sw.js tags cached responses, so officers always know
+  // whether they're looking at live data or the offline copy. Dates are normalized
+  // YYYY-MM-DD, so string max works.
   function setDataAsOf(raids) {
     const el = $("#data-asof");
     if (!el) return;
     let max = "";
     for (const r of raids || []) if (r.date && r.date > max) max = r.date;
-    el.textContent = max ? `Data through ${max}` : "";
+    const cached = Data.staleFiles.length > 0;
+    const suffix = cached ? " · cached (offline)" : " · fresh";
+    el.textContent = max ? `Data through ${max}${suffix}` : suffix.trim();
+    $("#stale-banner").hidden = !cached;
   }
 
   /* ---------------- init ---------------- */

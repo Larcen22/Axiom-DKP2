@@ -19,9 +19,16 @@
 const Data = (() => {
   "use strict";
 
+  // Freshness tracking: sw.js tags same-origin responses X-Data-Freshness —
+  // "fresh" when served from the network, "stale" when served from the offline
+  // cache. The app surfaces this (footer indicator + banner) so officers always
+  // know whether they're looking at live data or a cached copy.
+  const staleFiles = [];
+
   async function fetchJson(url) {
     const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) throw new Error(`Failed to fetch ${url} (HTTP ${res.status})`);
+    if (res.headers.get("X-Data-Freshness") === "stale") staleFiles.push(url);
     return res.json();
   }
 
@@ -291,6 +298,7 @@ const Data = (() => {
   }
 
   return {
+    staleFiles,
     loadItems,
     loadLoot,
     loadRaids,

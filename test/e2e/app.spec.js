@@ -346,9 +346,10 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#loot-status")).not.toContainText(/matching/);
   });
 
-  test("footer shows data-as-of date from newest raid", async () => {
-    // Newest raid date in the export (normalized YYYY-MM-DD) — holds for real and sample data alike.
-    await expect(page.locator("#data-asof")).toHaveText(/^Data through \d{4}-\d{2}-\d{2}$/);
+  test("footer shows data-as-of date + freshness state", async () => {
+    // Newest raid date in the export (normalized YYYY-MM-DD) plus the freshness
+    // suffix ("· fresh" online, "· cached (offline)" when served from the SW cache).
+    await expect(page.locator("#data-asof")).toHaveText(/^Data through \d{4}-\d{2}-\d{2} · (fresh|cached \(offline\))$/);
   });
 
   test("loot history raid names link to raid detail", async () => {
@@ -677,10 +678,14 @@ test("mobile bottom nav stays pinned while scrolling", async ({ browser }) => {
 
 // ---------------------------------------------------------------------------
 // Offline PWA: the service worker (sw.js) precaches the app shell and serves
-// data files + the PapaParse CDN script stale-while-revalidate. The first load
-// registers/claims the worker; the second online load populates every cache
-// entry (the first load's subresources fire before the worker controls the
-// page). From then on, a fully offline reload must still boot the app.
+// same-origin data files network-first with the cached copy as the offline
+// fallback. Every response is tagged X-Data-Freshness — the footer shows
+// "· fresh" / "· cached (offline)" and an amber banner appears while the data
+// came from cache, so officers always know which state they're viewing.
+// The first load registers/claims the worker; the second online load
+// populates every cache entry (the first load's subresources fire before the
+// worker controls the page). From then on, a fully offline reload must still
+// boot the app — and say so.
 // ---------------------------------------------------------------------------
 test("service worker enables an offline reload", async ({ browser }) => {
   const ctx = await browser.newContext();
@@ -710,6 +715,17 @@ test("service worker enables an offline reload", async ({ browser }) => {
   // navigation swap) mid-frame; retry until a settled value matches.
   await expect(page.locator("#stat-total-dkp"), "total DKP should render from cached data offline")
     .toHaveText(/^(?:[\d,]+|–)$/, { timeout: 15000 });
+
+  // Freshness state must be visible while offline: banner + footer say cached.
+  await expect(page.locator("#stale-banner"), "offline load shows the stale-data banner").toBeVisible();
+  await expect(page.locator("#data-asof")).toContainText("cached (offline)");
+
+  // Back online: network-first serves the current export — fresh, banner gone.
+  await ctx.setOffline(false);
+  await page.reload({ waitUntil: "load" });
+  await rowsReady();
+  await expect(page.locator("#stale-banner"), "online load hides the stale-data banner").toBeHidden();
+  await expect(page.locator("#data-asof")).toContainText("fresh");
 
   await ctx.close();
 });

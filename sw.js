@@ -9,9 +9,12 @@
  *    re-stores the fresh copy. A plain reload after deploy picks up new code —
  *    no hard refresh needed.
  *  - Navigations: network-first, cached index.html as the offline fallback.
- *  - Everything else (data JSON/CSV, static assets, and the cross-origin
- *    PapaParse CDN script — opaque responses are cacheable): stale-while-revalidate.
- *    Offline → last known good data; online → fresh copy in the background.
+ *  - Same-origin data files (JSON/CSV) + other static assets: NETWORK-FIRST,
+ *    cached copy as the offline fallback — an online load always gets the
+ *    current export, never a stale one. Every response is tagged
+ *    X-Data-Freshness: fresh|stale so the app can show officers which state
+ *    they're viewing (footer indicator + offline banner).
+ *  - Cross-origin scripts (PapaParse CDN; opaque responses): stale-while-revalidate.
  *
  * GitHub Pages notes:
  *  - Shell matching is by file name (last path segment), so it works whether the
@@ -66,6 +69,15 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Tag a response with its freshness so the app can display it. Headers are
+// rebuilt, dropping any tag baked in at store time — a copy served from cache
+// is stale NOW, whatever it was when cached.
+function tagResponse(res, tag) {
+  const h = new Headers(res.headers);
+  h.set("X-Data-Freshness", tag);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
+
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
@@ -105,7 +117,28 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // Static assets, data files, and CDN scripts: stale-while-revalidate.
+  // Same-origin static/data files: network-first so an online load always gets
+  // the current export (no stale window after a deploy); cached copy is the
+  // offline fallback. Responses are tagged fresh|stale for the UI.
+  if (url.origin === self.location.origin) {
+    e.respondWith(
+      fetch(req).then((res) => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put(req, copy)); // store untagged; re-tag on serve
+          return tagResponse(res, "fresh");
+        }
+        // Non-OK network response: prefer the last good cached copy (stale), else pass through.
+        return caches.match(req).then((cached) => (cached ? tagResponse(cached, "stale") : res));
+      }).catch(() =>
+        // Offline: serve the last known-good copy, tagged stale so the UI can say so.
+        caches.match(req).then((cached) => (cached ? tagResponse(cached, "stale") : Response.error()))
+      )
+    );
+    return;
+  }
+
+  // Cross-origin scripts (PapaParse CDN): stale-while-revalidate — opaque responses.
   e.respondWith(
     caches.match(req).then((cached) => {
       const network = fetch(req)

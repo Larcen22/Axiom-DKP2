@@ -133,6 +133,16 @@ body::before {
 /* Data-freshness line sits above the muted credit; slightly stronger so it reads first. */
 .site-footer #data-asof { color: var(--color-text); }
 
+/* Offline banner — shown when data files were served from the SW cache (stale tag). */
+.stale-banner {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(224, 164, 53, 0.5);
+  border-radius: 8px;
+  background: rgba(224, 164, 53, 0.12);
+  font-size: 0.85rem;
+}
+
 /* ================= LAYOUT SHELL ================= */
 .layout {
   flex: 1;
