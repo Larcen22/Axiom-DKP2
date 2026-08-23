@@ -6869,7 +6869,7 @@
           "class": "Ranger",
           "character_id": "097c3657-434e-42c9-82e1-bc074d687cf1",
           "role": "alternate",
-          "level": 37,
+          "level": 42,
           "race": "Halfling"
         },
         {
@@ -6877,7 +6877,7 @@
           "class": "Druid",
           "character_id": "23d6fb18-5eca-4e0d-9a71-4c8e741c5e8b",
           "role": "alternate",
-          "level": 42,
+          "level": 47,
           "race": "Halfling"
         },
         {
@@ -6901,7 +6901,7 @@
           "class": "Enchanter",
           "character_id": "94d8acc9-c10b-488b-a483-9f67b77fbd3b",
           "role": "alternate",
-          "level": 42,
+          "level": 44,
           "race": "Dark Elf"
         },
         {
