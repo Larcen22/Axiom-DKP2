@@ -606,6 +606,17 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#member-name")).toHaveText(name);
   });
 
+  test("view transitions slide in from the correct side", async () => {
+    await page.goto("/#/overview");
+    await expect(page.locator("#overview.view.active")).toBeVisible();
+    // In-app nav click = forward push (slides in from the right).
+    await page.click('.nav-link[data-target="standings"]');
+    await expect(page.locator("#standings")).toHaveAttribute("data-dir", "fwd");
+    // Native browser back = pop (slides in from the left).
+    await page.goBack();
+    await expect(page.locator("#overview")).toHaveAttribute("data-dir", "back");
+  });
+
   test("deep link restores member detail after a full reload", async () => {
     await goTo("standings");
     const name = (await page.locator("#standings-table tbody tr:first-child td:nth-child(2)").textContent()).trim();

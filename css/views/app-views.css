@@ -445,9 +445,16 @@
 /* ================================================================
    MOTION — view transitions + micro-interactions
    ================================================================ */
-.view.active { animation: view-in 200ms ease-out; }
-@keyframes view-in {
-  from { opacity: 0; transform: translateY(6px); }
+/* Directional entrance: forward pushes slide in from the right, back pops from
+   the left (data-dir set by app.js before .active is applied). */
+.view.active { animation: view-in-fwd 200ms ease-out; }
+.view.active[data-dir="back"] { animation-name: view-in-back; }
+@keyframes view-in-fwd {
+  from { opacity: 0; transform: translate3d(18px, 6px, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes view-in-back {
+  from { opacity: 0; transform: translate3d(-18px, 6px, 0); }
   to { opacity: 1; transform: none; }
 }
 

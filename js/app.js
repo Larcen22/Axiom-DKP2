@@ -95,24 +95,42 @@
   function navigate(route, replace = false) {
     const hash = routeToHash(route);
     if (location.hash === hash) return;
+    inAppNav = true; // consumed by the next hashchange → forward push
     if (replace) history.replaceState(null, "", hash);
     else location.hash = hash;
   }
 
   // Renders whatever the URL says. Nav views activate their section + nav item;
   // drill-downs clear the nav highlight (restored when back returns to a view).
+  // View transition direction: in-app navigations (nav links, palette) are forward
+  // pushes; native back/forward resolve against a small route stack so the entering
+  // view slides from the correct side. data-dir must be set before showView() applies .active.
+  let inAppNav = false;
+  const navStack = [];
+  function markNavDir(viewId, key) {
+    const el = document.getElementById(viewId);
+    if (!el) return;
+    const top = navStack[navStack.length - 1];
+    if (top === key) { el.removeAttribute("data-dir"); return; } // same view re-render: no push/pop
+    let dir = "fwd";
+    if (!inAppNav && navStack.length >= 2 && navStack[navStack.length - 2] === key) { navStack.pop(); dir = "back"; }
+    else { navStack.push(key); if (navStack.length > 30) navStack.shift(); }
+    el.dataset.dir = dir;
+  }
+
   function renderRoute(route) {
     document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
     if (route.view === "member" || route.view === "raid" || route.view === "trend") {
       // Drill-downs need loaded data; until then (or if loading failed, e.g. the hosted
       // site without guild exports) stay put — nav views below still work.
       if (!db) return;
-      if (route.view === "member") openMember(route.name);
-      else if (route.view === "raid") openRaid(route.id);
-      else openTrend(route.key);
+      if (route.view === "member") { markNavDir("member", `member:${route.name}`); openMember(route.name); }
+      else if (route.view === "raid") { markNavDir("raid", `raid:${route.id}`); openRaid(route.id); }
+      else { markNavDir("trend", `trend:${route.key}`); openTrend(route.key); }
       return;
     }
     document.querySelector(`.nav-link[data-target="${route.view}"]`)?.classList.add("active");
+    markNavDir(route.view, route.view);
     showView(route.view);
   }
 
@@ -1732,7 +1750,9 @@
 
     // Hash routing + SW registration happen before data loads so the shell stays navigable
     // even when every fetch fails (e.g. the GitHub Pages site without guild exports).
-    window.addEventListener("hashchange", () => renderRoute(parseHash()));
+    window.addEventListener("hashchange", () => { renderRoute(parseHash()); inAppNav = false; });
+    // Deep-link anchors (<a href="#/…">) change the hash natively: mark them as forward pushes.
+    document.addEventListener("click", (e) => { if (e.target.closest('a[href^="#/"]')) inAppNav = true; });
     if (!location.hash) history.replaceState(null, "", "#/overview"); // normalize for shareability
     renderRoute(parseHash()); // apply the deep link immediately (nav views need no data)
 
