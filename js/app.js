@@ -153,6 +153,33 @@
   const JOINERS_SHOWN = 5;
   const CORE_RAIDS_MIN = 8; // raids in 30d to count as a "core" raider
 
+  // --- Guild Pulse (sidebar): at-a-glance numbers visible on every view.
+  // Same semantics as the Overview panels it mirrors: last raid date;
+  // unique attendeeUserIds in a simple 30-day window vs total accounts
+  // (Most Active's "active members"); bank = sum of activeDkp, all users.
+  function renderGuildPulse(users, raids) {
+    const lastRaidDate = raids.reduce((m, r) => (r.date && r.date > m ? r.date : m), "");
+    let last = "—";
+    if (lastRaidDate) {
+      const days = Math.floor((new Date() - new Date(lastRaidDate + "T00:00:00")) / 86400000);
+      last = days <= 0 ? "today" : days === 1 ? "yesterday" : `${days} days ago`;
+    }
+    $("#pulse-last-raid").textContent = last;
+
+    const cutoff30 = new Date();
+    cutoff30.setDate(cutoff30.getDate() - 30);
+    const c30Str = `${cutoff30.getFullYear()}-${String(cutoff30.getMonth() + 1).padStart(2, "0")}-${String(cutoff30.getDate()).padStart(2, "0")}`;
+    const activeSet = new Set();
+    for (const r of raids) {
+      if (!r.date || r.date < c30Str) continue;
+      for (const uid of r.attendeeUserIds) activeSet.add(uid);
+    }
+    $("#pulse-active").textContent = `${activeSet.size.toLocaleString()} / ${users.length.toLocaleString()}`;
+
+    const bank = users.reduce((s, u) => s + u.activeDkp, 0);
+    $("#pulse-bank").textContent = `${bank.toLocaleString()} DKP`;
+  }
+
   function renderOverview(users, loot, items, raids, roster, transactions) {
     // Stat cards
     // Items awarded in the past 7 days (dates are "YYYY-MM-DD", safe to compare as strings)
@@ -234,6 +261,9 @@
     $("#spark-size").innerHTML = sparkline(sizePerWeek, "#e0a435");
 
     renderOverviewPanels(users, loot, items, raids, roster, transactions, weekly);
+
+    // Sidebar guild pulse mirrors these numbers on every view.
+    renderGuildPulse(users, raids);
   }
 
   // Weekly activity buckets, oldest → newest, over the last ACTIVITY_WEEKS weeks.
@@ -314,9 +344,12 @@
       cells += `<i class="hm-cell hm-l${Math.min(n, 3)}" title="${iso}: ${n} raid${n === 1 ? "" : "s"}"></i>`;
     }
     $("#raid-heatmap").innerHTML = cells;
-    $("#heatmap-status").textContent = peakN
-      ? `${windowRaids.toLocaleString()} raids on ${activeDays.toLocaleString()} active days in the past year · busiest: ${peakN} raid${peakN === 1 ? "" : "s"} on ${peakDate}`
-      : "No raids recorded in the past year.";
+    // Summary chips sit right-aligned in the panel head (was a status line below the title).
+    $("#heatmap-summary").innerHTML = peakN
+      ? `<span class="hm-chip">${windowRaids.toLocaleString()} raids</span>` +
+        `<span class="hm-chip">${activeDays.toLocaleString()} active days</span>` +
+        `<span class="hm-chip">busiest ${peakDate} · ${peakN}</span>`
+      : `<span class="hm-chip hm-muted">no raids in the past year</span>`;
 
     // --- Recent raids (newest first)
     // `|| ""` guards undated raids (same defensive convention as renderRaidsPage).
@@ -1069,7 +1102,9 @@
         <td>${l.date ? esc(l.date) : "—"}</td>
         <td>${esc(l.player)}</td>
         <td>${Data.itemLink(l.item, db.items.byName)}</td>
-        <td>${l.raid ? esc(l.raid) : "—"}</td>
+        <td>${l.raidId
+          ? `<a href="#/raid/${encodeURIComponent(l.raidId)}" class="raid-link" title="${esc(l.raid)}">${esc(l.raid)}</a>`
+          : (l.raid ? esc(l.raid) : "—")}</td>
         <td class="num">${l.dkpSpent.toLocaleString()}</td>
       </tr>`).join("");
 
@@ -1462,7 +1497,7 @@
 
     // Stagger index for the panel cascade animation (CSS: delay = --i * 45ms).
     document.querySelectorAll(".view").forEach((v) => {
-      v.querySelectorAll(":scope > .panel, :scope > .overview-grid > .panel")
+      v.querySelectorAll(":scope > .panel, :scope > .overview-grid > .panel, :scope .detail-grid .panel")
         .forEach((p, i) => p.style.setProperty("--i", String(Math.min(i, 8))));
     });
 

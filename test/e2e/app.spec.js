@@ -271,6 +271,14 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(page.locator("#recent-joiners-status")).toHaveText(/joined in the past 30 days/);
     // Guild-wide avg 30d attendance headline (both datasets have active members).
     await expect(page.locator("#most-active-status")).toHaveText(/Avg 30d attendance \d+% · /);
+
+    // Sidebar guild pulse: last-raid recency, active/total members, bank total.
+    await expect(page.locator("#pulse-last-raid")).toHaveText(/^(today|yesterday|\d+ days ago)$/);
+    await expect(page.locator("#pulse-active")).toHaveText(/^\d+(,\d{3})* \/ \d+(,\d{3})*$/);
+    await expect(page.locator("#pulse-bank")).toHaveText(/\d DKP$/);
+    // The pulse lives in the sidebar, so it persists across views.
+    await goTo("standings");
+    await expect(page.locator("#guild-pulse")).toBeVisible();
   });
 
   test("loot search filters by player name", async () => {
@@ -488,7 +496,9 @@ test.describe.serial("Axiom DKP dashboard", () => {
     await expect(
       page.locator("#raid-heatmap .hm-l1, #raid-heatmap .hm-l2, #raid-heatmap .hm-l3")
     ).not.toHaveCount(0);
-    await expect(page.locator("#heatmap-status")).toHaveText(/active days in the past year/);
+    // Summary chips (right of the title) carry the totals: raids / active days / busiest day.
+    await expect(page.locator("#heatmap-summary")).toHaveText(/active days/);
+    await expect(page.locator("#heatmap-summary .hm-chip")).not.toHaveCount(0);
   });
 
   test("command palette opens, searches, and navigates", async () => {

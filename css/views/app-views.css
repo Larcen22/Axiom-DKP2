@@ -14,7 +14,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
-  align-items: start;
+  /* stretch (default) keeps each pair row equal-height; the shorter panel's
+     background fills to match its sibling instead of leaving a ragged edge. */
 }
 .overview-wide { grid-column: 1 / -1; }
 /* Grid items default to min-width:auto, so a fixed-width child (the heatmap's
@@ -210,6 +211,43 @@
 .cdk-val { color: var(--color-text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* MEMBER DETAIL */
+
+/* Detail drill-downs (member + raid): profile column on the left, history
+   panels on the right. Below ~1050px it collapses to one column — DOM order
+   keeps the mobile reading order identical to the old single-column layout.
+   The profile track is width-capped so the history tables keep enough room
+   for all their columns; minmax(0, 1fr) lets wide tables scroll inside
+   .table-wrap instead of stretching the grid past the viewport. */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+.detail-side,
+.detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  min-width: 0;
+}
+@media (min-width: 1051px) {
+  .detail-grid { grid-template-columns: minmax(290px, 330px) minmax(0, 1fr); }
+  /* Four attendance cells are cramped in the capped profile column — 2×2 reads better. */
+  .detail-side .att-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Member loot table inside the detail grid: compact type + padding and a
+   capped Raid column (deep link — full raid name on hover via title) so all
+   five columns stay visible without in-panel scrolling. */
+#member-loot-table { font-size: 0.82rem; }
+#member-loot-table th,
+#member-loot-table td { padding-left: 0.5rem; padding-right: 0.5rem; }
+#member-loot-table td:nth-child(4) {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .member-back {
   display: inline-block;
   margin-bottom: var(--space-sm);
@@ -295,7 +333,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
 }
 
 @media (max-width: 640px) {
@@ -358,7 +395,8 @@
     font-size: 0.7rem;
   }
 
-  .sidebar-footer {
+  .sidebar-footer,
+  .side-pulse { /* pulse block is desktop-only, like the footer */
     display: none;
   }
 
@@ -380,7 +418,8 @@
 /* Panels cascade in one after another (delay set per-panel via --i in app.js).
    `backwards` fill keeps each panel hidden until its turn. */
 .view.active > .panel,
-.view.active .overview-grid > .panel {
+.view.active .overview-grid > .panel,
+.view.active .detail-grid .panel {
   animation: panel-in 320ms ease-out backwards;
   animation-delay: calc(var(--i, 0) * 45ms);
 }
@@ -436,6 +475,26 @@
 .hm-l3 { background: var(--color-accent); }
 .hm-empty { visibility: hidden; }
 .heatmap-legend { justify-content: flex-end; font-size: 0.72rem; color: var(--color-text-muted); gap: 3px; }
+/* Heatmap panel head: title left, summary chips right (wraps below the title on narrow screens). */
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+.hm-summary { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.hm-chip {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.hm-chip.hm-muted { opacity: 0.7; }
 
 /* ================================================================
    COMMAND PALETTE (Ctrl+K / "/" / topbar button)

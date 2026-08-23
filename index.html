@@ -24,9 +24,14 @@
   <!-- ================= TOP NAV ================= -->
   <nav class="topbar">
     <div class="topbar-inner">
+      <!-- Input-styled search pill (GitHub/Linear pattern): opens the command palette on click. -->
+      <button id="palette-open" type="button" aria-label="Search members, raids, or views (Ctrl+K)">
+        <span class="pal-icon" aria-hidden="true">🔍</span>
+        <span class="pal-placeholder">Search members, raids…</span>
+        <kbd class="kbd-hint">Ctrl K</kbd>
+      </button>
       <h1 class="brand"><img class="brand-icon" src="icon-192.png" alt="" width="30" height="30"><span class="brand-text">Axiom <span class="accent">DKP Metrics</span></span></h1>
       <div class="topbar-meta">
-        <button id="palette-open" type="button" aria-label="Search (Ctrl+K)">🔍<kbd class="kbd-hint">Ctrl K</kbd></button>
         <span class="meta-text">Axiom · read-only · local data</span>
       </div>
     </div>
@@ -53,6 +58,13 @@
         </button>
 
       </nav>
+      <!-- Guild Pulse: at-a-glance numbers visible on every view (desktop only). -->
+      <div class="side-pulse" id="guild-pulse">
+        <h3>Guild Pulse</h3>
+        <div class="pulse-row"><span class="pulse-label">Last raid</span><span class="pulse-val" id="pulse-last-raid">—</span></div>
+        <div class="pulse-row"><span class="pulse-label">Active · 30d</span><span class="pulse-val" id="pulse-active">—</span></div>
+        <div class="pulse-row"><span class="pulse-label">Guild bank</span><span class="pulse-val" id="pulse-bank">—</span></div>
+      </div>
       <div class="sidebar-footer">
         Item lookups via <a href="https://www.pqdi.cc" target="_blank" rel="noopener">pqdi.cc</a><br />
         Character search via <a href="https://quarmy.com" target="_blank" rel="noopener">Quarmy</a>
@@ -104,6 +116,18 @@
             <div id="bank-flow" class="bank-flow"></div>
           </div>
 
+          <div class="panel">
+            <h3>Most Active · past 30 days</h3>
+            <div id="most-active-status" class="panel-status">Loading…</div>
+            <ol id="most-active-list" class="rank-list"></ol>
+          </div>
+
+          <div class="panel">
+            <h3>Top Spenders · past 30 days</h3>
+            <div id="top-spenders-status" class="panel-status">Loading…</div>
+            <ol id="top-spenders-list" class="rank-list"></ol>
+          </div>
+
           <div class="panel overview-wide">
             <h3>Guild Activity</h3>
             <div id="activity-status" class="panel-status">Loading…</div>
@@ -115,26 +139,16 @@
           </div>
 
           <div class="panel overview-wide">
-            <h3>Raid Activity · past year</h3>
-            <div id="heatmap-status" class="panel-status">Loading…</div>
+            <div class="panel-head">
+              <h3>Raid Activity · past year</h3>
+              <div id="heatmap-summary" class="hm-summary"></div>
+            </div>
             <div class="heatmap-wrap"><div id="raid-heatmap" class="heatmap"></div></div>
             <div class="chart-legend heatmap-legend">
               Less
               <i class="hm-cell hm-l0"></i><i class="hm-cell hm-l1"></i><i class="hm-cell hm-l2"></i><i class="hm-cell hm-l3"></i>
               More
             </div>
-          </div>
-
-          <div class="panel">
-            <h3>Most Active · past 30 days</h3>
-            <div id="most-active-status" class="panel-status">Loading…</div>
-            <ol id="most-active-list" class="rank-list"></ol>
-          </div>
-
-          <div class="panel">
-            <h3>Top Spenders · past 30 days</h3>
-            <div id="top-spenders-status" class="panel-status">Loading…</div>
-            <ol id="top-spenders-list" class="rank-list"></ol>
           </div>
 
           <div class="panel">
@@ -295,157 +309,169 @@
       <!-- ========== MEMBER DETAIL ========== -->
       <section id="member" class="view">
         <button id="member-back" class="member-back" type="button">← Back</button>
-        <header class="member-header">
-          <h2 id="member-name">Member</h2>
-          <span id="member-rank" class="member-rank" hidden></span>
-        </header>
-        <div id="member-characters" class="member-characters"></div>
+        <div class="detail-grid">
+          <div class="detail-side">
+            <header class="member-header">
+              <h2 id="member-name">Member</h2>
+              <span id="member-rank" class="member-rank" hidden></span>
+            </header>
+            <div id="member-characters" class="member-characters"></div>
 
-        <div class="stat-grid member-dkp-grid">
-          <div class="stat-card">
-            <div class="stat-value" id="member-available">–</div>
-            <div class="stat-label">Available DKP</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="member-earned">–</div>
-            <div class="stat-label">DKP Earned</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="member-spent">–</div>
-            <div class="stat-label">DKP Spent</div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Raid Attendance</h3>
-          <div class="att-strip">
-            <div class="att-cell">
-              <span class="att-value" id="member-att-30">–</span>
-              <span class="att-label">Past 30 Days</span>
+            <div class="stat-grid member-dkp-grid">
+              <div class="stat-card">
+                <div class="stat-value" id="member-available">–</div>
+                <div class="stat-label">Available DKP</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="member-earned">–</div>
+                <div class="stat-label">DKP Earned</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="member-spent">–</div>
+                <div class="stat-label">DKP Spent</div>
+              </div>
             </div>
-            <div class="att-cell">
-              <span class="att-value" id="member-att-60">–</span>
-              <span class="att-label">Past 60 Days</span>
-            </div>
-            <div class="att-cell">
-              <span class="att-value" id="member-att-90">–</span>
-              <span class="att-label">Past 90 Days</span>
-            </div>
-            <div class="att-cell">
-              <span class="att-value" id="member-att-lifetime">–</span>
-              <span class="att-label" id="member-att-lifetime-label">Lifetime</span>
-            </div>
-          </div>
-          <div class="panel-status member-summary-line">
-            <strong id="member-raids-attended">–</strong>&nbsp;raids attended ·
-            <strong id="member-raids-since">–</strong>&nbsp;raids <span id="member-raids-since-label"></span>
-          </div>
-        </div>
 
-        <div class="panel">
-          <h3>Loot History</h3>
-          <div id="member-loot-status" class="panel-status">Loading…</div>
-          <div class="table-wrap">
-            <table id="member-loot-table" hidden>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Character</th>
-                  <th>Item</th>
-                  <th>Raid</th>
-                  <th class="num">DKP Spent</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+            <div class="panel">
+              <h3>Raid Attendance</h3>
+              <div class="att-strip">
+                <div class="att-cell">
+                  <span class="att-value" id="member-att-30">–</span>
+                  <span class="att-label">Past 30 Days</span>
+                </div>
+                <div class="att-cell">
+                  <span class="att-value" id="member-att-60">–</span>
+                  <span class="att-label">Past 60 Days</span>
+                </div>
+                <div class="att-cell">
+                  <span class="att-value" id="member-att-90">–</span>
+                  <span class="att-label">Past 90 Days</span>
+                </div>
+                <div class="att-cell">
+                  <span class="att-value" id="member-att-lifetime">–</span>
+                  <span class="att-label" id="member-att-lifetime-label">Lifetime</span>
+                </div>
+              </div>
+              <div class="panel-status member-summary-line">
+                <strong id="member-raids-attended">–</strong>&nbsp;raids attended ·
+                <strong id="member-raids-since">–</strong>&nbsp;raids <span id="member-raids-since-label"></span>
+              </div>
+            </div>
           </div>
-          <div id="member-loot-pager" class="pager" hidden></div>
-        </div>
 
-        <div class="panel">
-          <h3>Raid History</h3>
-          <div id="member-raids-status" class="panel-status">Loading…</div>
-          <div class="table-wrap">
-            <table id="member-raids-table" hidden>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Raid</th>
-                  <th class="num">DKP Earned</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div id="member-raids-pager" class="pager" hidden></div>
-        </div>
+          <div class="detail-main">
+            <div class="panel">
+              <h3>Loot History</h3>
+              <div id="member-loot-status" class="panel-status">Loading…</div>
+              <div class="table-wrap">
+                <table id="member-loot-table" hidden>
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Character</th>
+                      <th>Item</th>
+                      <th>Raid</th>
+                      <th class="num">DKP Spent</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="member-loot-pager" class="pager" hidden></div>
+            </div>
 
-        <div class="panel">
-          <h3>Reward History</h3>
-          <div id="member-tx-status" class="panel-status">Loading…</div>
-          <div class="table-wrap">
-            <table id="member-tx-table" hidden>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Type</th>
-                  <th>Reason</th>
-                  <th class="num">DKP</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+            <div class="panel">
+              <h3>Raid History</h3>
+              <div id="member-raids-status" class="panel-status">Loading…</div>
+              <div class="table-wrap">
+                <table id="member-raids-table" hidden>
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Raid</th>
+                      <th class="num">DKP Earned</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="member-raids-pager" class="pager" hidden></div>
+            </div>
+
+            <div class="panel">
+              <h3>Reward History</h3>
+              <div id="member-tx-status" class="panel-status">Loading…</div>
+              <div class="table-wrap">
+                <table id="member-tx-table" hidden>
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Type</th>
+                      <th>Reason</th>
+                      <th class="num">DKP</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="member-tx-pager" class="pager" hidden></div>
+            </div>
           </div>
-          <div id="member-tx-pager" class="pager" hidden></div>
         </div>
       </section>
 
       <!-- ========== RAID DETAIL ========== -->
       <section id="raid" class="view">
         <button id="raid-back" class="member-back" type="button">← Back</button>
-        <header class="member-header">
-          <h2 id="raid-name">Raid</h2>
-          <span id="raid-date" class="member-rank" hidden></span>
-        </header>
+        <div class="detail-grid">
+          <div class="detail-side">
+            <header class="member-header">
+              <h2 id="raid-name">Raid</h2>
+              <span id="raid-date" class="member-rank" hidden></span>
+            </header>
 
-        <div class="stat-grid member-dkp-grid">
-          <div class="stat-card">
-            <div class="stat-value" id="raid-attendees">–</div>
-            <div class="stat-label">Members Attended</div>
+            <div class="stat-grid member-dkp-grid">
+              <div class="stat-card">
+                <div class="stat-value" id="raid-attendees">–</div>
+                <div class="stat-label">Members Attended</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="raid-items">–</div>
+                <div class="stat-label">Items Awarded</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="raid-dkp-spent">–</div>
+                <div class="stat-label">DKP Spent</div>
+              </div>
+            </div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value" id="raid-items">–</div>
-            <div class="stat-label">Items Awarded</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value" id="raid-dkp-spent">–</div>
-            <div class="stat-label">DKP Spent</div>
-          </div>
-        </div>
 
-        <div class="panel">
-          <h3>Attendees</h3>
-          <div id="raid-attendees-status" class="panel-status">Loading…</div>
-          <ul id="raid-attendee-list" class="attendee-chips"></ul>
-        </div>
+          <div class="detail-main">
+            <div class="panel">
+              <h3>Attendees</h3>
+              <div id="raid-attendees-status" class="panel-status">Loading…</div>
+              <ul id="raid-attendee-list" class="attendee-chips"></ul>
+            </div>
 
-        <div class="panel">
-          <h3>Loot Awarded</h3>
-          <div id="raid-loot-status" class="panel-status">Loading…</div>
-          <div class="table-wrap">
-            <table id="raid-loot-table" hidden>
-              <thead>
-                <tr>
-                  <th>Character</th>
-                  <th>Item</th>
-                  <th>Owner</th>
-                  <th class="num">DKP Spent</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+            <div class="panel">
+              <h3>Loot Awarded</h3>
+              <div id="raid-loot-status" class="panel-status">Loading…</div>
+              <div class="table-wrap">
+                <table id="raid-loot-table" hidden>
+                  <thead>
+                    <tr>
+                      <th>Character</th>
+                      <th>Item</th>
+                      <th>Owner</th>
+                      <th class="num">DKP Spent</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div id="raid-loot-pager" class="pager" hidden></div>
+            </div>
           </div>
-          <div id="raid-loot-pager" class="pager" hidden></div>
         </div>
       </section>
 
