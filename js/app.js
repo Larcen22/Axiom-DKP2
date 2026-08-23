@@ -1730,10 +1730,11 @@
   }
 
 
-  // Footer "Data through YYYY-MM-DD · fresh|cached": newest raid date in the export
-  // plus the freshness state — sw.js tags cached responses, so officers always know
-  // whether they're looking at live data or the offline copy. Dates are normalized
-  // YYYY-MM-DD, so string max works.
+  // Footer "Data updated YYYY-MM-DD HH:MM · fresh|cached": the newest Last-Modified
+  // across all loaded data files — when the latest export was deployed (local time,
+  // plain format) — plus the freshness state; sw.js tags cached responses, so officers
+  // always know whether they're looking at live data or the offline copy. Falls back to
+  // "Data through <newest raid date>" when the server sends no Last-Modified header.
   function setDataAsOf(raids) {
     const el = $("#data-asof");
     if (!el) return;
@@ -1741,13 +1742,24 @@
     for (const r of raids || []) if (r.date && r.date > max) max = r.date;
     const cached = Data.staleFiles.length > 0;
     const suffix = cached ? " · cached (offline)" : " · fresh";
-    el.textContent = max ? `Data through ${max}${suffix}` : suffix.trim();
+    let head = "";
+    const up = Data.newestUploadDate();
+    if (up) {
+      const p = (n) => String(n).padStart(2, "0");
+      head = `Data updated ${up.getFullYear()}-${p(up.getMonth() + 1)}-${p(up.getDate())} ${p(up.getHours())}:${p(up.getMinutes())}`;
+    } else if (max) {
+      head = `Data through ${max}`;
+    }
+    el.textContent = head ? `${head}${suffix}` : suffix.trim();
     $("#stale-banner").hidden = !cached;
   }
 
   /* ---------------- init ---------------- */
   async function init() {
     setupNav();
+
+    // Footer credit year — dynamic so it never goes stale.
+    $("#footer-year").textContent = new Date().getFullYear();
 
     // Stagger index for the panel cascade animation (CSS: delay = --i * 45ms).
     document.querySelectorAll(".view").forEach((v) => {

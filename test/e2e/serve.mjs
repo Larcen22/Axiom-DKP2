@@ -53,7 +53,12 @@ const server = createServer((req, res) => {
       res.writeHead(404).end("not found");
       return;
     }
-    res.writeHead(200, { "content-type": TYPES[path.extname(file)] || "application/octet-stream" });
+    // Last-Modified mirrors GitHub Pages: the app reads it to show "Data updated <date time>".
+    const stat = fs.statSync(file);
+    res.writeHead(200, {
+      "content-type": TYPES[path.extname(file)] || "application/octet-stream",
+      "last-modified": stat.mtime.toUTCString(),
+    });
     fs.createReadStream(file).pipe(res);
   }
   serveFile(urlPath);

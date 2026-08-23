@@ -347,9 +347,13 @@ test.describe.serial("Axiom DKP dashboard", () => {
   });
 
   test("footer shows data-as-of date + freshness state", async () => {
-    // Newest raid date in the export (normalized YYYY-MM-DD) plus the freshness
-    // suffix ("· fresh" online, "· cached (offline)" when served from the SW cache).
-    await expect(page.locator("#data-asof")).toHaveText(/^Data through \d{4}-\d{2}-\d{2} · (fresh|cached \(offline\))$/);
+    // "Data updated YYYY-MM-DD HH:MM" — newest Last-Modified across the loaded data
+    // files (when the latest export was deployed; serve.mjs sends it like GitHub Pages)
+    // — or the "Data through <newest raid date>" fallback, plus the freshness suffix
+    // ("· fresh" online, "· cached (offline)" when served from the SW cache).
+    await expect(page.locator("#data-asof")).toHaveText(
+      /^(Data updated \d{4}-\d{2}-\d{2} \d{2}:\d{2}|Data through \d{4}-\d{2}-\d{2}) · (fresh|cached \(offline\))$/
+    );
   });
 
   test("loot history raid names link to raid detail", async () => {

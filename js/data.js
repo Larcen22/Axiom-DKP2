@@ -24,11 +24,19 @@ const Data = (() => {
   // cache. The app surfaces this (footer indicator + banner) so officers always
   // know whether they're looking at live data or a cached copy.
   const staleFiles = [];
+  // Most recent Last-Modified across all loaded data files — i.e. when the newest
+  // export was deployed (GitHub Pages sets it from the file's publish time).
+  let newestUpload = null;
 
   async function fetchJson(url) {
     const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) throw new Error(`Failed to fetch ${url} (HTTP ${res.status})`);
     if (res.headers.get("X-Data-Freshness") === "stale") staleFiles.push(url);
+    const lm = res.headers.get("Last-Modified");
+    if (lm) {
+      const d = new Date(lm);
+      if (!Number.isNaN(d.getTime()) && (!newestUpload || d > newestUpload)) newestUpload = d;
+    }
     return res.json();
   }
 
@@ -299,6 +307,7 @@ const Data = (() => {
 
   return {
     staleFiles,
+    newestUploadDate: () => newestUpload,
     loadItems,
     loadLoot,
     loadRaids,
