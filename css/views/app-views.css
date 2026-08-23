@@ -230,8 +230,9 @@
   justify-content: space-between;
   align-items: baseline;
   gap: var(--space-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent); /* class name stands out above the character list */
 }
 .class-dkp-count { color: var(--color-text-muted); font-size: 0.7rem; font-weight: 400; }
 .class-dkp-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.22rem; }
