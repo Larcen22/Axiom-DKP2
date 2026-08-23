@@ -272,10 +272,9 @@ test.describe.serial("Axiom DKP dashboard", () => {
     // Guild-wide avg 30d attendance headline (both datasets have active members).
     await expect(page.locator("#most-active-status")).toHaveText(/Avg 30d attendance \d+% · /);
 
-    // Sidebar guild pulse: last-raid recency, active/total members, bank total.
+    // Sidebar guild pulse: last-raid recency + active/total members.
     await expect(page.locator("#pulse-last-raid")).toHaveText(/^(today|yesterday|\d+ days ago)$/);
     await expect(page.locator("#pulse-active")).toHaveText(/^\d+(,\d{3})* \/ \d+(,\d{3})*$/);
-    await expect(page.locator("#pulse-bank")).toHaveText(/\d DKP$/);
     // The pulse lives in the sidebar, so it persists across views.
     await goTo("standings");
     await expect(page.locator("#guild-pulse")).toBeVisible();

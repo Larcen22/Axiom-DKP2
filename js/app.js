@@ -156,7 +156,7 @@
   // --- Guild Pulse (sidebar): at-a-glance numbers visible on every view.
   // Same semantics as the Overview panels it mirrors: last raid date;
   // unique attendeeUserIds in a simple 30-day window vs total accounts
-  // (Most Active's "active members"); bank = sum of activeDkp, all users.
+  // (Most Active's "active members").
   function renderGuildPulse(users, raids) {
     const lastRaidDate = raids.reduce((m, r) => (r.date && r.date > m ? r.date : m), "");
     let last = "—";
@@ -175,9 +175,6 @@
       for (const uid of r.attendeeUserIds) activeSet.add(uid);
     }
     $("#pulse-active").textContent = `${activeSet.size.toLocaleString()} / ${users.length.toLocaleString()}`;
-
-    const bank = users.reduce((s, u) => s + u.activeDkp, 0);
-    $("#pulse-bank").textContent = `${bank.toLocaleString()} DKP`;
   }
 
   function renderOverview(users, loot, items, raids, roster, transactions) {
