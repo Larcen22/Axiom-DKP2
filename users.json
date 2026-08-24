@@ -10865,6 +10865,14 @@
           "level": 60,
           "character_id": "80ed3d68-600d-4677-8be2-eb238b0d1502",
           "role": "alternate"
+        },
+        {
+          "name": "rilifain",
+          "class": "Druid",
+          "race": "Wood Elf",
+          "level": 60,
+          "character_id": "e219f5e4-572c-42e0-aeca-d876af6ee577",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 20:02:38",
