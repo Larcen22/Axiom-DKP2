@@ -2684,7 +2684,7 @@
           "name": "Vesago",
           "class": "Necromancer",
           "character_id": "11cf2afc-064f-4c3d-8231-ebaf0e4c9a38",
-          "role": "main",
+          "role": "alternate",
           "level": 60,
           "race": "Iksar"
         },
@@ -2748,8 +2748,8 @@
           "name": "Draaner",
           "class": "Monk",
           "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
-          "role": "alternate",
-          "level": 30,
+          "role": "main",
+          "level": 60,
           "race": "Iksar"
         }
       ],
