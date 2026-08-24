@@ -84,9 +84,10 @@ const Data = (() => {
 
   /**
    * Build an anchor for a loot item name using the items.json id:
-   *   <a href="https://www.pqdi.cc/item/1001">Cloth Cap</a>
+   *   <a class="item-link" href="https://www.pqdi.cc/item/1001" data-pqdi-id="1001">Cloth Cap</a>
    * Falls back to plain text only when the name isn't in the database.
    * Ambiguous names (multiple ids) link to the largest id — see loadItems().
+   * `data-pqdi-id` drives app.js's hover tooltip (pqdi.cc /get-item-tooltip/<id>).
    * @param {string} itemName
    * @param {Map<string, number>} byName - from loadItems()
    * @returns {string} safe HTML (name must already be trusted/local data)
@@ -94,7 +95,7 @@ const Data = (() => {
   function itemLink(itemName, byName) {
     const id = byName.get(String(itemName).toLowerCase());
     if (id == null) return escapeHtml(itemName);
-    return `<a href="https://www.pqdi.cc/item/${id}" target="_blank" rel="noopener">${escapeHtml(itemName)}</a>`;
+    return `<a class="item-link" href="https://www.pqdi.cc/item/${id}" target="_blank" rel="noopener" data-pqdi-id="${id}">${escapeHtml(itemName)}</a>`;
   }
 
   function escapeHtml(str) {

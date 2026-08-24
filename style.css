@@ -16,6 +16,8 @@
 @import 'css/components/inputs.css';
 @import 'css/components/tables.css';
 @import 'css/components/pagination.css';
+@import 'css/components/item-tooltip.css';
+@import 'css/components/member-tip.css';
 
 /* Views & Responsive Adjustments */
 @import 'css/views/app-views.css';

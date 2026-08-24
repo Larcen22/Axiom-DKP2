@@ -169,7 +169,7 @@ describe("itemLink", () => {
     const Data = loadData();
     const { byName } = await Data.loadItems();
     expect(Data.itemLink("Cloth Cap", byName)).toBe(
-      '<a href="https://www.pqdi.cc/item/1" target="_blank" rel="noopener">Cloth Cap</a>'
+      '<a class="item-link" href="https://www.pqdi.cc/item/1" target="_blank" rel="noopener" data-pqdi-id="1">Cloth Cap</a>'
     );
   });
 

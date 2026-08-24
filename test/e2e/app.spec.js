@@ -543,6 +543,93 @@ test.describe.serial("Axiom DKP dashboard", () => {
     expect(await firstLink.getAttribute("href")).toMatch(/^https:\/\/www\.pqdi\.cc\/item\/\d+$/);
   });
 
+  test("hovering an item link shows the pqdi.cc tooltip", async ({ browser }) => {
+    // Mock pqdi's own tooltip endpoint — e2e must not depend on their live site.
+    // Runs in a dedicated context with service workers blocked: Playwright route
+    // interception does NOT see requests routed through an active SW (verified:
+    // page.route never fires while navigator.serviceWorker.controller is set, and
+    // Chromium keeps the old worker controlling even after unregister() until
+    // reload). With no SW, fetches go straight to the network layer where the
+    // mock intercepts them deterministically.
+    const ctx = await browser.newContext({ serviceWorkers: "block" });
+    const p2 = await ctx.newPage();
+    await p2.route(/get-item-tooltip/, (route) => route.fulfill({
+      status: 200,
+      contentType: "text/html; charset=utf-8",
+      body: `<div style="width:450px;"><h4>Test Item</h4><table><tr><td><b>AC:</b></td><td>10</td></tr></table><a href="/spell/9">Spell</a><img src="/static/icons/item_644.png" width="14" height="14"/></div>`,
+    }));
+
+    await p2.goto("/");
+    await p2.click('.nav-link[data-target="loot"]');
+    const link = p2.locator("#loot-table .item-link").first();
+    await expect(link).toBeVisible();
+    await link.hover();
+
+    const tip = p2.locator("#item-tooltip");
+    await expect(tip).toBeVisible();
+    await expect(tip).toContainText("Test Item");
+    // Third-party HTML must be URL-rewritten to absolute pqdi.cc before injection.
+    await expect(tip.locator("img")).toHaveAttribute("src", "https://www.pqdi.cc/static/icons/item_644.png");
+    await expect(tip.locator("a")).toHaveAttribute("href", "https://www.pqdi.cc/spell/9");
+
+    // Moving away hides it again.
+    await p2.mouse.move(10, 300);
+    await expect(tip).toBeHidden();
+
+    await ctx.close();
+  });
+
+  test("hovering a member link shows the profile summary card", async () => {
+    // Purely local data (no fetch) — works on the shared page with the SW active.
+    await goTo("standings");
+    const link = page.locator("#standings-table tbody tr .member-link").first();
+    const name = (await link.textContent()).trim();
+    await link.hover();
+
+    const tip = page.locator("#member-tip");
+    // The view's entrance animations can nudge layout under the cursor right after hover
+    // (scroll anchoring); if that moved the link off the pointer, one re-hover restores it.
+    try { await expect(tip, { timeout: 1000 }).toBeVisible(); } catch { await link.hover(); }
+    await expect(tip).toBeVisible();
+    await expect(tip.locator(".mt-name")).toHaveText(name);
+    // DKP line: three numbers with available/earned/spent labels.
+    await expect(tip.locator(".mt-dkp")).toHaveText(/[\d,]+ available · [\d,]+ earned · [\d,]+ spent/);
+    // Attendance window strip is present (30/60/90/lifetime).
+    await expect(tip.locator(".mt-windows span").first()).toContainText("30d");
+
+    // Moving away hides it again (top-left corner is the brand <h1> — no links).
+    const avail = /([\d,]+) available/.exec(await tip.locator(".mt-dkp").textContent())[1];
+    await page.mouse.move(5, 5);
+    await expect(tip).toBeHidden();
+
+    // The card must show the same numbers as Member Detail itself.
+    await link.click();
+    await expect(page.locator("#member.view.active")).toBeVisible();
+    await expect(page.locator("#member-available")).toHaveText(avail);
+  });
+
+  test("hovering a character link shows the character summary card", async () => {
+    // The roster table's first column is a quarmy .char-link on every row, so this
+    // works for any dataset (real data locally, sample fixture in CI).
+    await goTo("roster");
+    const link = page.locator("#roster-table tbody tr .char-link").first();
+    const charName = (await link.textContent()).trim();
+    await link.hover();
+
+    const tip = page.locator("#member-tip");
+    // Same re-hover fallback as the member test — see there.
+    try { await expect(tip, { timeout: 1000 }).toBeVisible(); } catch { await link.hover(); }
+    await expect(tip).toBeVisible();
+    await expect(tip.locator(".mt-name")).toHaveText(charName);
+    // Per-character loot line + back-link to the owning member.
+    await expect(tip.locator(".mt-loot")).toContainText("items won");
+    await expect(tip.locator(".mt-member .member-link")).toBeVisible();
+
+    // Moving away hides it again (top-left corner is the brand <h1> — no links).
+    await page.mouse.move(5, 5);
+    await expect(tip).toBeHidden();
+  });
+
   test("raid activity heatmap covers the past year", async () => {
     await goTo("overview");
     // Exactly 364 day-cells (7 × 52); hidden padding cells align columns to Sundays.

@@ -1,0 +1,76 @@
+/* ================================================================
+   Member / character hover card (#member-tip)
+   Populated by app.js from local data only (no fetch): the same DKP,
+   attendance and join-date numbers as Member Detail. pointer-events: none —
+   display only; the link itself navigates to #/member/<name> or quarmy.com.
+   Same fixed-positioning model as .item-tooltip.
+   ================================================================ */
+
+.member-tip {
+  position: fixed;
+  z-index: 1100; /* above content and the mobile bottom nav (1000) */
+  max-width: min(420px, calc(100vw - 16px));
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  padding: 10px 14px;
+  pointer-events: none; /* pure display — never traps the cursor */
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.member-tip .mt-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.member-tip .mt-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+/* Rank badge — same visual language as #member-rank in Member Detail. */
+.member-tip .mt-rank {
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.member-tip .mt-sub {
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+}
+
+.member-tip .mt-dkp b,
+.member-tip .mt-windows b {
+  font-weight: 600;
+  color: var(--color-accent-blue);
+}
+
+.member-tip .mt-chars {
+  margin-top: 4px;
+}
+
+/* Attendance windows — compact inline strip. */
+.member-tip .mt-windows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border);
+}
+
+.member-tip .mt-member a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+}

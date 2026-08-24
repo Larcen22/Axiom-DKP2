@@ -1231,33 +1231,14 @@
     window.scrollTo({ top: 0 });
   }
 
-  function openMember(name) {
-    if (!db) return;
+  /** Shared stats for a member by name — single source of truth for the DKP / attendance /
+   *  join-date semantics, used by both Member Detail (openMember) and the hover card.
+   *  Returns null-ish empties (user=null, chars=[]) when the name is in neither file. */
+  function memberStats(name) {
     const m = name.toLowerCase();
     const user = db.users.find((u) => u.username.toLowerCase() === m) || null;
     const chars = db.roster.filter((r) => r.member.toLowerCase() === m);
     const charNames = new Set(chars.map((c) => c.character.toLowerCase()));
-
-    // Unknown deep link (e.g. a stale shared URL): show an explicit not-found state
-    // instead of zeros that would look like real data.
-    if (!user && chars.length === 0) {
-      $("#member-name").textContent = name;
-      $("#member-rank").hidden = true;
-      for (const id of ["member-available", "member-earned", "member-spent"]) $(`#${id}`).textContent = "\u2013";
-      for (const id of ["member-att-30", "member-att-60", "member-att-90", "member-att-lifetime"]) $(`#${id}`).textContent = "\u2013";
-      $("#member-raids-attended").textContent = "\u2013";
-      $("#member-raids-since").textContent = "\u2013";
-      $("#member-raids-since-label").textContent = "";
-      $("#member-characters").innerHTML = `<span class="panel-status error">No member or roster character named \u201c${esc(name)}\u201d was found in the data.</span>`;
-      memberLootSorted = [];
-      renderMemberLootPage(1);
-      memberRaidsSorted = [];
-      renderMemberRaidsPage(1);
-      memberTxSorted = [];
-      renderMemberTxPage(1);
-      showView("member");
-      return;
-    }
 
     // Prefer the account-level DKP from users.json; fall back to roster sums.
     const available = user ? user.activeDkp : chars.reduce((s, c) => s + c.availableDkp, 0);
@@ -1303,12 +1284,46 @@
         }
       }
     }
-    const raidsSinceJoin = joinedOn ? winTotal.lifetime : null;
-    const pct = (a, t) => (t ? `${Math.round((a / t) * 100)}%` : "–");
+
+    // Roster Rank: hide the default ("member"), surface officer / guild leader / inactive / applicant / former.
+    const rank = chars.map((c) => c.rank).find(Boolean) || "";
+
+    return { user, chars, charNames, userIds, available, earned, spent, raidsAttended, attendedRaids,
+      winTotal, winAttended, joinedOn, raidsSinceJoin: joinedOn ? winTotal.lifetime : null, rank };
+  }
+
+  const fmtPct = (a, t) => (t ? `${Math.round((a / t) * 100)}%` : "\u2013");
+
+  function openMember(name) {
+    if (!db) return;
+    const s = memberStats(name);
+    const { user, chars, charNames, userIds, available, earned, spent, raidsAttended,
+      attendedRaids, winTotal, winAttended, joinedOn, raidsSinceJoin, rank } = s;
+    const m = name.toLowerCase(); // legacy tx fallback match (rows without username_id)
+
+    // Unknown deep link (e.g. a stale shared URL): show an explicit not-found state
+    // instead of zeros that would look like real data.
+    if (!user && chars.length === 0) {
+      $("#member-name").textContent = name;
+      $("#member-rank").hidden = true;
+      for (const id of ["member-available", "member-earned", "member-spent"]) $(`#${id}`).textContent = "\u2013";
+      for (const id of ["member-att-30", "member-att-60", "member-att-90", "member-att-lifetime"]) $(`#${id}`).textContent = "\u2013";
+      $("#member-raids-attended").textContent = "\u2013";
+      $("#member-raids-since").textContent = "\u2013";
+      $("#member-raids-since-label").textContent = "";
+      $("#member-characters").innerHTML = `<span class="panel-status error">No member or roster character named \u201c${esc(name)}\u201d was found in the data.</span>`;
+      memberLootSorted = [];
+      renderMemberLootPage(1);
+      memberRaidsSorted = [];
+      renderMemberRaidsPage(1);
+      memberTxSorted = [];
+      renderMemberTxPage(1);
+      showView("member");
+      return;
+    }
 
     $("#member-name").textContent = name;
     // Roster Rank: hide the default ("member"), surface officer / guild leader / inactive / applicant / former.
-    const rank = chars.map((c) => c.rank).find(Boolean) || "";
     $("#member-rank").hidden = !rank || rank.toLowerCase() === "member";
     $("#member-rank").textContent = rank;
     $("#member-available").textContent = available.toLocaleString();
@@ -1317,10 +1332,10 @@
     $("#member-raids-attended").textContent = raidsAttended.toLocaleString();
     $("#member-raids-since").textContent = raidsSinceJoin != null ? raidsSinceJoin.toLocaleString() : "–";
     $("#member-raids-since-label").textContent = joinedOn ? `since ${joinedOn}` : "(no join date)";
-    $("#member-att-30").textContent = pct(winAttended["30"], winTotal["30"]);
-    $("#member-att-60").textContent = pct(winAttended["60"], winTotal["60"]);
-    $("#member-att-90").textContent = pct(winAttended["90"], winTotal["90"]);
-    $("#member-att-lifetime").textContent = pct(winAttended.lifetime, winTotal.lifetime);
+    $("#member-att-30").textContent = fmtPct(winAttended["30"], winTotal["30"]);
+    $("#member-att-60").textContent = fmtPct(winAttended["60"], winTotal["60"]);
+    $("#member-att-90").textContent = fmtPct(winAttended["90"], winTotal["90"]);
+    $("#member-att-lifetime").textContent = fmtPct(winAttended.lifetime, winTotal.lifetime);
     $("#member-att-lifetime-label").textContent = joinedOn ? `Lifetime (since ${joinedOn})` : "Lifetime";
 
     $("#member-characters").innerHTML = chars.length
@@ -1756,6 +1771,233 @@
     });
   }
 
+  /* ---------------- pqdi.cc item tooltip (hover) ---------------- */
+  // Item links carry data-pqdi-id (Data.itemLink). On hover we fetch pqdi.cc's own
+  // pre-rendered tooltip HTML — /get-item-tooltip/<id>, the same endpoint their site
+  // uses, which is CORS-open (it echoes our Origin back) — sanitize it, absolutize its
+  // relative URLs, and show it in #item-tooltip. Cached per id so repeat hovers are
+  // instant; sw.js also stale-while-revalidates cross-origin GETs, so the cache
+  // survives reloads. Desktop only (hover:hover + pointer:fine) — mobile keeps the
+  // plain new-tab link. Offline / unknown id → fetch fails → no tooltip.
+  const PQDI_BASE = "https://www.pqdi.cc";
+  const tipCache = new Map(); // pqdi id -> sanitized HTML string
+  let tipEl = null;
+  let tipActiveLink = null;
+  let tipSeq = 0; // bumped on every hide — invalidates in-flight fetches
+
+  /** Strip anything executable from third-party tooltip HTML and absolutize its URLs. */
+  function sanitizePqdiHtml(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const drop = new Set(["script", "style", "iframe", "object", "embed", "link", "meta",
+      "form", "input", "button", "select", "textarea"]);
+    for (const el of [...doc.body.querySelectorAll("*")]) {
+      if (drop.has(el.tagName.toLowerCase())) { el.remove(); continue; }
+      for (const attr of [...el.attributes]) {
+        const n = attr.name.toLowerCase();
+        if (n.startsWith("on")) el.removeAttribute(attr.name);
+        else if ((n === "href" || n === "src") && /^\s*javascript:/i.test(attr.value)) el.removeAttribute(attr.name);
+      }
+    }
+    // Relative URLs → absolute pqdi.cc (icon sprites, currency icons, /spell/ links).
+    doc.querySelectorAll("img[src]").forEach((im) => { im.src = new URL(im.getAttribute("src"), PQDI_BASE).href; });
+    doc.querySelectorAll("a[href]").forEach((a) => {
+      a.href = new URL(a.getAttribute("href"), PQDI_BASE).href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    });
+    // Inline style sprites: url(/static/iconss/…) → absolute.
+    doc.querySelectorAll("[style]").forEach((el) =>
+      el.setAttribute("style", el.getAttribute("style").split("url(/").join(`url(${PQDI_BASE}/`)));
+    return doc.body.innerHTML;
+  }
+
+  /** Position a fixed hover panel next to its anchor link (flip left when it would overflow). */
+  function positionHoverTip(panel, link) {
+    const r = link.getBoundingClientRect();
+    const tw = panel.offsetWidth, th = panel.offsetHeight;
+    let x = r.right + 8; // right of the link…
+    if (x + tw > window.innerWidth - 8) x = Math.max(8, r.left - tw - 8); // …flip left when it would overflow
+    const y = Math.min(Math.max(8, r.top), Math.max(8, window.innerHeight - th - 8));
+    panel.style.left = `${x}px`;
+    panel.style.top = `${y}px`;
+  }
+
+  /** Scroll behavior for a hover panel: follow its anchor as it moves; hide only when the anchor leaves the viewport. */
+  const makeScrollFollow = (getState) => () => {
+    const { link, panel, hide } = getState();
+    if (!link || !panel || panel.hidden) return;
+    const r = link.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > window.innerHeight) hide(); // anchor scrolled out of view
+    else positionHoverTip(panel, link); // follow the anchor — a fixed panel would otherwise drift off it
+  };
+
+  async function showItemTip(link) {
+    const id = link.dataset.pqdiId;
+    if (!/^\d+$/.test(id || "")) return;
+    const seq = ++tipSeq;
+    tipActiveLink = link;
+    tipEl.hidden = false;
+    tipEl.innerHTML = '<div class="item-tip-loading">Loading…</div>';
+    positionHoverTip(tipEl, link);
+    let html = tipCache.get(id);
+    if (!html) {
+      try {
+        const res = await fetch(`${PQDI_BASE}/get-item-tooltip/${id}`, { cache: "no-cache" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        html = sanitizePqdiHtml(await res.text());
+        tipCache.set(id, html);
+      } catch (err) {
+        if (seq === tipSeq && tipActiveLink === link) hideItemTip(); // unknown id / offline → no tooltip
+        return;
+      }
+    }
+    if (seq !== tipSeq || tipActiveLink !== link) return; // user moved on while fetching
+    tipEl.innerHTML = html;
+    positionHoverTip(tipEl, link); // reposition with the final size
+  }
+
+  function hideItemTip() {
+    tipSeq++; // invalidate any in-flight fetch
+    tipActiveLink = null;
+    if (tipEl) { tipEl.hidden = true; tipEl.innerHTML = ""; }
+  }
+
+  function setupItemTooltips() {
+    tipEl = $("#item-tooltip");
+    if (!tipEl || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return; // desktop only
+    document.addEventListener("mouseover", (e) => {
+      const link = e.target.closest ? e.target.closest("[data-pqdi-id]") : null;
+      if (!link || link === tipActiveLink) return;
+      hideItemTip();
+      hideMemberTip(); // at most one hover panel on screen
+      showItemTip(link);
+    });
+    document.addEventListener("mouseout", (e) => {
+      if (!tipActiveLink) return;
+      const stays = e.relatedTarget && tipActiveLink.contains(e.relatedTarget);
+      if (!stays) hideItemTip(); // entering another item link re-shows via its mouseover
+    });
+    // Keyboard parity: Tab to a link shows the tooltip, blur hides it.
+    document.addEventListener("focusin", (e) => {
+      const link = e.target.closest ? e.target.closest("[data-pqdi-id]") : null;
+      if (!link || link === tipActiveLink) return;
+      hideItemTip();
+      hideMemberTip(); // at most one hover panel on screen
+      showItemTip(link);
+    });
+    document.addEventListener("focusout", (e) => {
+      if (!tipActiveLink) return;
+      const next = e.relatedTarget && e.relatedTarget.closest ? e.relatedTarget.closest("[data-pqdi-id]") : null;
+      if (next !== tipActiveLink) hideItemTip(); // focus moved elsewhere (another item link re-shows via its focusin)
+    });
+    window.addEventListener("scroll", makeScrollFollow(() => ({ link: tipActiveLink, panel: tipEl, hide: hideItemTip })), true);
+    window.addEventListener("resize", hideItemTip);
+    window.addEventListener("hashchange", hideItemTip); // view switches re-render rows under the cursor
+  }
+
+  /* ---------------- member / character hover card (hover) ---------------- */
+  // Hovering a .member-link or .char-link shows a compact profile summary built from
+  // local data only — no fetch: DKP, characters and attendance windows are the same
+  // numbers as Member Detail, via the shared memberStats(). Character cards add that
+  // character's loot totals. Desktop only (like the item tooltip); names not in the
+  // data get no card. pointer-events: none on the panel — it never traps the cursor.
+  let memberTipEl = null;
+  let memberTipActiveLink = null;
+
+  /** Name from a .member-link href (#/member/<encoded>) — every render site uses this shape. */
+  const memberNameFromLink = (link) => {
+    const href = link.getAttribute("href") || "";
+    return href.startsWith("#/member/") ? decodeURIComponent(href.slice("#/member/".length)) : null;
+  };
+
+  function renderMemberCard(name) {
+    const s = memberStats(name);
+    if (!s.user && s.chars.length === 0) return null; // not in data → no card (matches item tooltip)
+    const rankBadge = s.rank && s.rank.toLowerCase() !== "member"
+      ? `<span class="mt-rank">${esc(s.rank)}</span>` : "";
+    const charsLine = s.chars.length
+      ? s.chars.map((c) => `${esc(c.character)} (${esc(c.cls)} ${c.level}, ${esc(c.mainAlt || "—")})`).join(" · ")
+      : "No roster characters found.";
+    return `
+      <div class="mt-head"><span class="mt-name">${esc(name)}</span>${rankBadge}</div>
+      <div class="mt-dkp"><b>${s.available.toLocaleString()}</b> available · <b>${s.earned.toLocaleString()}</b> earned · <b>${s.spent.toLocaleString()}</b> spent</div>
+      <div class="mt-chars">${charsLine}</div>
+      <div class="mt-att">Attended ${s.raidsAttended.toLocaleString()} raids${s.joinedOn ? ` since ${esc(s.joinedOn)}` : ""}</div>
+      <div class="mt-windows">
+        <span title="Last 30 days (clamped to join date)">30d <b>${fmtPct(s.winAttended["30"], s.winTotal["30"])}</b></span>
+        <span title="Last 60 days (clamped to join date)">60d <b>${fmtPct(s.winAttended["60"], s.winTotal["60"])}</b></span>
+        <span title="Last 90 days (clamped to join date)">90d <b>${fmtPct(s.winAttended["90"], s.winTotal["90"])}</b></span>
+        <span title="Lifetime since join">lifetime <b>${fmtPct(s.winAttended.lifetime, s.winTotal.lifetime)}</b></span>
+      </div>`;
+  }
+
+  function renderCharCard(charName) {
+    const m = String(charName).toLowerCase();
+    const row = db.roster.find((r) => r.character.toLowerCase() === m);
+    if (!row) return null; // not in roster → no card
+    const lootRows = db.loot.filter((l) => String(l.player).toLowerCase() === m);
+    const dkpOnLoot = lootRows.reduce((sum, l) => sum + (Number(l.dkpSpent) || 0), 0);
+    const rankBadge = row.rank && row.rank.toLowerCase() !== "member"
+      ? `<span class="mt-rank">${esc(row.rank)}</span>` : "";
+    return `
+      <div class="mt-head"><span class="mt-name">${esc(charName)}</span>${rankBadge}</div>
+      <div class="mt-sub">${esc(row.cls)} · ${row.level} · ${esc(row.race)} · ${esc(row.mainAlt || "—")}</div>
+      <div class="mt-dkp"><b>${(Number(row.availableDkp) || 0).toLocaleString()}</b> available · <b>${(Number(row.earnedDkp) || 0).toLocaleString()}</b> earned · <b>${(Number(row.spentDkp) || 0).toLocaleString()}</b> spent</div>
+      <div class="mt-loot">${lootRows.length.toLocaleString()} items won · ${dkpOnLoot.toLocaleString()} DKP on loot</div>
+      <div class="mt-member">Member: <a href="#/member/${encodeURIComponent(row.member)}" class="member-link">${esc(row.member)}</a></div>`;
+  }
+
+  function showMemberTip(link) {
+    if (!db || !memberTipEl) return;
+    const isChar = link.classList.contains("char-link");
+    const name = isChar ? (link.textContent || "").trim() : memberNameFromLink(link);
+    if (!name) return;
+    hideItemTip(); // at most one hover panel on screen
+    const html = isChar ? renderCharCard(name) : renderMemberCard(name);
+    if (html == null) return; // unknown name → no card
+    memberTipActiveLink = link;
+    memberTipEl.innerHTML = html;
+    memberTipEl.hidden = false;
+    positionHoverTip(memberTipEl, link);
+  }
+
+  function hideMemberTip() {
+    memberTipActiveLink = null;
+    if (memberTipEl) { memberTipEl.hidden = true; memberTipEl.innerHTML = ""; }
+  }
+
+  function setupMemberTips() {
+    memberTipEl = $("#member-tip");
+    if (!memberTipEl || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return; // desktop only
+    const SEL = ".member-link, .char-link";
+    document.addEventListener("mouseover", (e) => {
+      const link = e.target.closest ? e.target.closest(SEL) : null;
+      if (!link || link === memberTipActiveLink) return;
+      hideMemberTip();
+      showMemberTip(link);
+    });
+    document.addEventListener("mouseout", (e) => {
+      if (!memberTipActiveLink) return;
+      const stays = e.relatedTarget && memberTipActiveLink.contains(e.relatedTarget);
+      if (!stays) hideMemberTip(); // entering another link re-shows via its mouseover
+    });
+    // Keyboard parity: Tab to a link shows the card, blur hides it.
+    document.addEventListener("focusin", (e) => {
+      const link = e.target.closest ? e.target.closest(SEL) : null;
+      if (!link || link === memberTipActiveLink) return;
+      hideMemberTip();
+      showMemberTip(link);
+    });
+    document.addEventListener("focusout", (e) => {
+      if (!memberTipActiveLink) return;
+      const next = e.relatedTarget && e.relatedTarget.closest ? e.relatedTarget.closest(SEL) : null;
+      if (next !== memberTipActiveLink) hideMemberTip(); // focus moved elsewhere (another link re-shows via its focusin)
+    });
+    window.addEventListener("scroll", makeScrollFollow(() => ({ link: memberTipActiveLink, panel: memberTipEl, hide: hideMemberTip })), true);
+    window.addEventListener("resize", hideMemberTip);
+    window.addEventListener("hashchange", hideMemberTip); // view switches re-render rows under the cursor
+  }
+
 
   // Footer "Data updated YYYY-MM-DD HH:MM · fresh|cached": the newest Last-Modified
   // across all loaded data files — when the latest export was deployed (local time,
@@ -1980,6 +2222,11 @@
 
       // Command palette (needs db, so wired after it is set).
       setupPalette();
+
+      // Hover tooltips/cards — pure delegation, no per-row wiring (item links carry
+      // data-pqdi-id; member/char cards read the href / link text).
+      setupItemTooltips();
+      setupMemberTips();
 
       // Re-apply the initial route now that data exists — a deep link into a drill-down
       // can't be rendered until db is set (renderRoute no-ops those early).

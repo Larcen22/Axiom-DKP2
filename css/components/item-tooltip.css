@@ -1,0 +1,65 @@
+/* ================================================================
+   pqdi.cc item hover tooltip (#item-tooltip)
+   Populated by app.js from pqdi.cc's own /get-item-tooltip/<id> HTML
+   (sanitized + URL-rewritten before injection). pointer-events: none —
+   display only; the link itself opens pqdi.cc in a new tab.
+   ================================================================ */
+
+.item-tooltip {
+  position: fixed;
+  z-index: 1100; /* above content and the mobile bottom nav (1000) */
+  max-width: min(480px, calc(100vw - 16px));
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  padding: 10px 14px;
+  pointer-events: none; /* pure display — never traps the cursor */
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+/* pqdi's root div hard-codes width:450px inline — let it fit our panel instead. */
+.item-tooltip > div:first-child {
+  width: auto !important;
+  max-width: 100%;
+}
+
+.item-tooltip h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+}
+
+.item-tooltip table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.item-tooltip td,
+.item-tooltip th {
+  padding: 1px 8px 1px 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+.item-tooltip b {
+  font-weight: 600;
+}
+
+/* Icon sprite (inline background-image + position from pqdi markup). */
+.item-tooltip .item-icon {
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.item-tooltip a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+}
+
+.item-tip-loading {
+  padding: 4px 2px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
