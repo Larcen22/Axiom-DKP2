@@ -10765,6 +10765,14 @@
           "level": 60,
           "character_id": "16ef4502-e0cc-4eef-a2dc-00c40c3ed543",
           "role": "main"
+        },
+        {
+          "name": "Kryn",
+          "class": "Bard",
+          "race": "Half-Elf",
+          "level": 60,
+          "character_id": "1995895f-4526-4549-872c-84d448fcf602",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 10:58:31",
