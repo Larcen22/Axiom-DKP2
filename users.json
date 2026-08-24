@@ -10849,6 +10849,22 @@
           "level": 60,
           "character_id": "e556d203-917d-465d-9c6a-2763fc2e90b9",
           "role": "main"
+        },
+        {
+          "name": "quetzall",
+          "class": "Shaman",
+          "race": "Iksar",
+          "level": 60,
+          "character_id": "b2ceeb96-0c03-46af-bf8e-4a39cffa7cb5",
+          "role": "alternate"
+        },
+        {
+          "name": "moria",
+          "class": "Cleric",
+          "race": "Dwarf",
+          "level": 60,
+          "character_id": "80ed3d68-600d-4677-8be2-eb238b0d1502",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 20:02:38",
