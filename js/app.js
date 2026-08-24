@@ -33,6 +33,7 @@
     requestAnimationFrame(step);
   }
   const esc = Data.escapeHtml;
+  const isoDate = Data.isoDate;
 
   // Tiny inline SVG trend line for stat cards (decorative — the number is the value).
   // Returns "" when there is nothing to draw so the container collapses away.
@@ -727,6 +728,32 @@
     $("#most-active-status").textContent = attendance.size
       ? `${attPrefix}${coreCount.toLocaleString()} core raiders (${CORE_RAIDS_MIN}+ raids) of ${attendance.size.toLocaleString()} active members`
       : "No raids in the past 30 days.";
+
+    // --- Declining attendance (60d → 30d) & returning raiders — pure helpers in js/metrics.js
+    const todayStr = isoDate(new Date());
+    const attMembers = Metrics.attendanceByMember(raids, roster, users);
+    const declining = Metrics.findDecliningMembers(attMembers, { asOf: todayStr });
+    $("#declining-status").textContent = declining.length
+      ? `${declining.length} member${declining.length === 1 ? "" : "s"} went quiet (4+ raids in days 60–31, ≤1 since)`
+      : "No sharp attendance drops in the past 60 days.";
+    $("#declining-list").innerHTML = declining.map((m, i) => `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <a href="#/member/${encodeURIComponent(m.member)}" class="member-link rank-name">${esc(m.member)}</a>
+        <span class="rank-val">${m.prior} → ${m.recent}</span>
+      </li>`).join("");
+
+    const returning = Metrics.findReturningMembers(attMembers, { asOf: todayStr });
+    $("#returning-status").textContent = returning.length
+      ? `${returning.length} member${returning.length === 1 ? "" : "s"} back after a gap of 45+ days`
+      : "No returns from long absences in the past 30 days.";
+    $("#returning-list").innerHTML = returning.map((m, i) => `
+      <li>
+        <span class="rank-num">${i + 1}</span>
+        <a href="#/member/${encodeURIComponent(m.member)}" class="member-link rank-name">${esc(m.member)}</a>
+        <span class="rank-sub">back ${isoDate(m.returnDate)}</span>
+        <span class="rank-val">${m.gapDays}d away</span>
+      </li>`).join("");
 
     // --- Biggest single spends, past 30 days
     const biggest = loot.filter((l) => l.date && l.date >= cutoff30Str)
