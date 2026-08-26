@@ -59547,6 +59547,30 @@
       "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
       "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
       "item_dkp_value": 23
+    },
+    {
+      "item": "Shadowed Storm Sphere",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadowed Torment",
+      "character_id": "4ad09c36-ff98-4905-8f44-a5f27f668b16",
+      "character_name": "Fydakin",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Leggings of Serenity",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 3
     }
   ]
 }
