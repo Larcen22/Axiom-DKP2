@@ -2975,6 +2975,14 @@
           "role": "main",
           "level": 60,
           "race": "Gnome"
+        },
+        {
+          "name": "Anoirif",
+          "class": "Paladin",
+          "race": "High Elf",
+          "level": 48,
+          "character_id": "71f6ee29-9bee-411c-80fd-c82fe4d222c2",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-10-13 17:35:28",
