@@ -59611,6 +59611,54 @@
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Depths",
+      "character_id": "088760b2-a25a-477c-bcc2-5ca81b990af6",
+      "character_name": "Nyxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Windspeeder",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Band of Disrupted Auras",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Circle of Smoke",
+      "character_id": "084e9bc8-a1e8-43bc-bbc5-c5275318967e",
+      "character_name": "Uppies",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "a5e59c1c-85ff-44d8-ab19-8fd3eb6f72cd",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Breastplate of the Void",
+      "character_id": "4ad09c36-ff98-4905-8f44-a5f27f668b16",
+      "character_name": "Fydakin",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "a5e59c1c-85ff-44d8-ab19-8fd3eb6f72cd",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Vyzh`dra's Render of Souls",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "a5e59c1c-85ff-44d8-ab19-8fd3eb6f72cd",
+      "item_dkp_value": 4
     }
   ]
 }
