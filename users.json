@@ -10897,6 +10897,34 @@
       ],
       "ApplicationDate": "2026-08-17 16:37:34",
       "MembershipDate": ""
+    },
+    {
+      "username": "Main",
+      "username_discord": "258508484453203968",
+      "username_id": "182ed6c3-8fc7-4038-90bb-b1570641b0e0",
+      "rank": "applicant",
+      "available_dkp": 1,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Main",
+          "class": "Rogue",
+          "race": "Human",
+          "level": 1,
+          "character_id": "20eccc14-9a9e-4c4e-b393-645d3fd62c48",
+          "role": "alternate"
+        },
+        {
+          "name": "Fullmetal",
+          "class": "Rogue",
+          "race": "Dark Elf",
+          "level": 60,
+          "character_id": "3a901fbf-2eae-47c3-bbed-b5a7c44e58a4",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-08-25 19:47:52",
+      "MembershipDate": ""
     }
   ]
 }

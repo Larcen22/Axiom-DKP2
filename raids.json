@@ -269575,11 +269575,13 @@
         {
           "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
           "character_name": "Balthemal"
+        },
+        {
+          "username_id": "182ed6c3-8fc7-4038-90bb-b1570641b0e0",
+          "character_name": "Fullmetal"
         }
       ],
-      "unclaimed": [
-        "Fullmetal"
-      ],
+      "unclaimed": [],
       "channel_id": "1541963876784939069",
       "summary_message_id": "1541963882883579905"
     },
