@@ -465,8 +465,8 @@ Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,20,579,609,2025-02-19 04
 Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,20,579,609,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,20,579,609,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,Treack,Druid,46,Wood Elf,alternate,member,20,579,609,2025-02-19 04:56:40,2025-04-03 07:15:36
-Messimer,Pewster,Ranger,60,Halfling,main,member,56,361,309,2024-12-22 03:21:09,
-Messimer,Messimer,Enchanter,60,High Elf,main,member,56,361,309,2024-12-22 03:21:09,
+Messimer,Pewster,Ranger,60,Halfling,main,member,55,361,310,2024-12-22 03:21:09,
+Messimer,Messimer,Enchanter,60,High Elf,main,member,55,361,310,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,108,1502,1457,2024-10-26 00:50:50,
 Microizra,Microizra,Cleric,60,Halfling,main,officer,108,1502,1457,2024-10-26 00:50:50,
 Microizra,Dric,Beastlord,20,Troll,alternate,officer,108,1502,1457,2024-10-26 00:50:50,
@@ -550,6 +550,7 @@ Randomladders,Randomladders,Shadow Knight,60,Ogre,main,member,69,854,802,2025-03
 Rawket,Phubar,Ranger,54,Wood Elf,alternate,member,97,797,754,2025-10-30 03:44:12,2025-11-14 02:14:29
 Rawket,Hause,Shadow Knight,55,Gnome,alternate,member,97,797,754,2025-10-30 03:44:12,2025-11-14 02:14:29
 Rawket,Rawket,Wizard,60,High Elf,main,member,97,797,754,2025-10-30 03:44:12,2025-11-14 02:14:29
+Rawket,Battlebuddy,Cleric,10,Gnome,alternate,member,97,797,754,2025-10-30 03:44:12,2025-11-14 02:14:29
 Razk,Rathir,Shadow Knight,51,Iksar,alternate,member,32,96,64,2025-09-06 19:53:13,2025-10-02 03:33:23
 Razk,Razk,Necromancer,60,Iksar,main,member,32,96,64,2025-09-06 19:53:13,2025-10-02 03:33:23
 Redonkulous,Radeekulous,Wizard,51,Dark Elf,alternate,member,330,1184,897,2024-10-29 00:55:20,2024-11-18 22:22:51

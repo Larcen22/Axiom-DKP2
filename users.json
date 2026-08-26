@@ -4035,6 +4035,14 @@
           "role": "main",
           "level": 60,
           "race": "High Elf"
+        },
+        {
+          "name": "Battlebuddy",
+          "class": "Cleric",
+          "race": "Gnome",
+          "level": 10,
+          "character_id": "07dd110d-e70b-440f-9f81-8e42ecb8f0a5",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-10-30 03:44:12",
@@ -7457,9 +7465,9 @@
       "username_discord": "139935495001079808",
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "rank": "member",
-      "available_dkp": 56,
+      "available_dkp": 55,
       "dkp_earned": 361,
-      "dkp_spent": 309,
+      "dkp_spent": 310,
       "dkp_adjustments": 0,
       "characters": [
         {
