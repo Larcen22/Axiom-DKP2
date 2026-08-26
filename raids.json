@@ -269383,8 +269383,203 @@
       "date": "2026-08-25",
       "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
       "raid_dkp_value": 1,
-      "attendees": [],
-      "unclaimed": [],
+      "attendees": [
+        {
+          "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+          "character_name": "Nethi"
+        },
+        {
+          "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+          "character_name": "Cyrotonic"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Somersault"
+        },
+        {
+          "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+          "character_name": "Mofa"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Tigg"
+        },
+        {
+          "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+          "character_name": "Mixim"
+        },
+        {
+          "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+          "character_name": "Tuvv"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Adrab"
+        },
+        {
+          "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+          "character_name": "Numb"
+        },
+        {
+          "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+          "character_name": "Moltenstare"
+        },
+        {
+          "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+          "character_name": "Bigglesworth"
+        },
+        {
+          "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+          "character_name": "Rumguts"
+        },
+        {
+          "username_id": "1c3092b4-43da-47fa-ad59-f7e5c4b74e69",
+          "character_name": "Geenome"
+        },
+        {
+          "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+          "character_name": "Luminara"
+        },
+        {
+          "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+          "character_name": "Killman"
+        },
+        {
+          "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+          "character_name": "Wildwind"
+        },
+        {
+          "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+          "character_name": "Vagary"
+        },
+        {
+          "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+          "character_name": "Pewster"
+        },
+        {
+          "username_id": "fcd75ede-ee1a-40f7-813f-a2c009abb9de",
+          "character_name": "Gnofat"
+        },
+        {
+          "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+          "character_name": "Korrin"
+        },
+        {
+          "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+          "character_name": "Dismy"
+        },
+        {
+          "username_id": "a1ce0be8-c8a7-4982-aa51-4c972d41395e",
+          "character_name": "Pyresta"
+        },
+        {
+          "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+          "character_name": "Mipsy"
+        },
+        {
+          "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+          "character_name": "Fydakin"
+        },
+        {
+          "username_id": "c02d82a1-37da-4a6b-9923-96d5c816891c",
+          "character_name": "Tanth"
+        },
+        {
+          "username_id": "80126a99-8671-4682-8d8d-5bbe949d5cf1",
+          "character_name": "Chaunce"
+        },
+        {
+          "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+          "character_name": "Artery"
+        },
+        {
+          "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+          "character_name": "Ramphis"
+        },
+        {
+          "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+          "character_name": "Uppies"
+        },
+        {
+          "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+          "character_name": "Zerobia"
+        },
+        {
+          "username_id": "f77e2b93-8666-46fd-85c4-230971284542",
+          "character_name": "Feldin"
+        },
+        {
+          "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+          "character_name": "Redonkulous"
+        },
+        {
+          "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+          "character_name": "Malzer"
+        },
+        {
+          "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+          "character_name": "Microizra"
+        },
+        {
+          "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+          "character_name": "Gnomocidal"
+        },
+        {
+          "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+          "character_name": "Draaner"
+        },
+        {
+          "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+          "character_name": "Seabright"
+        },
+        {
+          "username_id": "5626495f-436a-437b-9853-24b473c89494",
+          "character_name": "Rawket"
+        },
+        {
+          "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+          "character_name": "Lynxy"
+        },
+        {
+          "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+          "character_name": "Feyah"
+        },
+        {
+          "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+          "character_name": "Maura"
+        },
+        {
+          "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+          "character_name": "Puarissa"
+        },
+        {
+          "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+          "character_name": "Litt"
+        },
+        {
+          "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+          "character_name": "Poppernug"
+        },
+        {
+          "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+          "character_name": "Darkthoughts"
+        },
+        {
+          "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+          "character_name": "Tildaria"
+        },
+        {
+          "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+          "character_name": "Momula"
+        },
+        {
+          "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+          "character_name": "Balthemal"
+        }
+      ],
+      "unclaimed": [
+        "Fullmetal"
+      ],
       "channel_id": "1541963876784939069",
       "summary_message_id": "1541963882883579905"
     },
