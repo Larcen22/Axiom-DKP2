@@ -59515,6 +59515,38 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
       "item_dkp_value": 12
+    },
+    {
+      "item": "Black Ornate Chain Bridle",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Heavy Yttrium Chestplate",
+      "character_id": "c52cdb1c-e475-442c-983a-2ca19d6f6381",
+      "character_name": "Redonkulous",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 22
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "420c08c2-029f-4ae3-8a53-ec3ca34efd05",
+      "character_name": "Bigglesworth",
+      "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Starred Yttrium Ring",
+      "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
+      "character_name": "Adrab",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
+      "item_dkp_value": 23
     }
   ]
 }
