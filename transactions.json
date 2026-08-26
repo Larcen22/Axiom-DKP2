@@ -17872,6 +17872,42 @@
       "transaction_amount": 1,
       "reason": "stepping up to kite 2 mobs in Emp room, 8/21",
       "date": "2026-08-23T04:02:05.044184+00:00"
+    },
+    {
+      "transaction_id": "641cb95d-eba3-40be-bb7b-1e4f6be0b6fb",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "username": "Vesago",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-08-26T00:07:40.034627+00:00"
+    },
+    {
+      "transaction_id": "eddb16c6-3666-4275-9989-ea01d4ff5b2e",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "username": "Vesago",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-08-26T00:07:40.034627+00:00"
+    },
+    {
+      "transaction_id": "6b62930c-6ca8-475d-b98f-c0aa740c3dc0",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "username": "Eziekial",
+      "type": "BBC",
+      "transaction_amount": 3,
+      "reason": "VT kiting, 3 hrs - 8/20",
+      "date": "2026-08-26T00:11:02.191682+00:00"
+    },
+    {
+      "transaction_id": "30d7420a-cc9e-4b6f-a25c-a4976a5824da",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "username": "Zedlord",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT kite assistance - 8/20",
+      "date": "2026-08-26T00:12:23.250665+00:00"
     }
   ]
 }
