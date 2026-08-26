@@ -59483,6 +59483,38 @@
       "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
       "item_dkp_value": 1,
       "date": "2026-08-22T19:45:05.654361+00:00"
+    },
+    {
+      "item": "Feeliux's Cord of Velocity",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Gharn's Rock of Smashing",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Yakatizma's Shield of Crafting",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Sal`Varae's Robe of Darkness",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "2e9abcd0-5951-4283-b5d1-8ad2bf28022b",
+      "item_dkp_value": 12
     }
   ]
 }
