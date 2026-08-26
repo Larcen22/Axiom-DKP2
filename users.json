@@ -2672,7 +2672,7 @@
     },
     {
       "username": "Vesago",
-      "username_discord": "1143551554213908681",
+      "username_discord": "1426356797794685038",
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "rank": "member",
       "available_dkp": 57,
@@ -10907,21 +10907,13 @@
       "MembershipDate": ""
     },
     {
-      "username": "Main",
+      "username": "Fullmetal",
       "username_discord": "258508484453203968",
       "username_id": "182ed6c3-8fc7-4038-90bb-b1570641b0e0",
       "rank": "applicant",
       "available_dkp": 3,
       "dkp_spent": 1,
       "characters": [
-        {
-          "name": "Main",
-          "class": "Rogue",
-          "race": "Human",
-          "level": 1,
-          "character_id": "20eccc14-9a9e-4c4e-b393-645d3fd62c48",
-          "role": "alternate"
-        },
         {
           "name": "Fullmetal",
           "class": "Rogue",
