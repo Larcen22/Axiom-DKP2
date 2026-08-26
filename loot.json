@@ -59571,6 +59571,46 @@
       "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
       "raid_id": "0ebbbad9-f3f5-4664-90fe-2080d5d38250",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Brilliant Metal Bauble",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tor Vignus",
+      "character_id": "3a901fbf-2eae-47c3-bbed-b5a7c44e58a4",
+      "character_name": "Fullmetal",
+      "username_id": "182ed6c3-8fc7-4038-90bb-b1570641b0e0",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Depths",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shard from Unfathomable Depths",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of Living Ore",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
+      "item_dkp_value": 1
     }
   ]
 }
