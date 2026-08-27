@@ -1087,6 +1087,22 @@
           "level": 14,
           "character_id": "df019a02-517b-43e7-92a8-7925ea0645ce",
           "role": "alternate"
+        },
+        {
+          "name": "Keessii",
+          "class": "Cleric",
+          "race": "Halfling",
+          "level": 1,
+          "character_id": "931148f3-659c-4a54-ae7f-c6d21c8cef92",
+          "role": "alternate"
+        },
+        {
+          "name": "Stormheaven",
+          "class": "Druid",
+          "race": "Wood Elf",
+          "level": 53,
+          "character_id": "749243ba-ef0e-421c-bedc-b35e9a1b1cd5",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-07-16 18:57:11",
