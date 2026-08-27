@@ -1079,6 +1079,14 @@
           "level": 60,
           "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
           "role": "main"
+        },
+        {
+          "name": "Tarlain",
+          "class": "Shaman",
+          "race": "Barbarian",
+          "level": 14,
+          "character_id": "df019a02-517b-43e7-92a8-7925ea0645ce",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-07-16 18:57:11",
