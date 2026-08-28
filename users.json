@@ -2441,6 +2441,14 @@
           "role": "alternate",
           "level": 21,
           "race": "Iksar"
+        },
+        {
+          "name": "main",
+          "class": "Cleric",
+          "race": "Dwarf",
+          "level": 1,
+          "character_id": "59535cc6-efef-4827-ad40-e727afd51b16",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-23 00:29:33",
