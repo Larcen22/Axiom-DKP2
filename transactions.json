@@ -17908,6 +17908,42 @@
       "transaction_amount": 1,
       "reason": "VT kite assistance - 8/20",
       "date": "2026-08-26T00:12:23.250665+00:00"
+    },
+    {
+      "transaction_id": "271b3c04-1ff1-4542-a333-4fd37ab51d51",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "Level46",
+      "transaction_amount": 1,
+      "reason": "Achievement: Level46",
+      "date": "2026-08-28T00:34:40.542838+00:00"
+    },
+    {
+      "transaction_id": "d385e7b2-57f6-4f4a-b22b-1138b908bf0a",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "Level50",
+      "transaction_amount": 3,
+      "reason": "Achievement: Level50",
+      "date": "2026-08-28T00:34:40.542838+00:00"
+    },
+    {
+      "transaction_id": "357af6eb-3d53-4b63-a9b5-c5305615f15a",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "Level55",
+      "transaction_amount": 6,
+      "reason": "Achievement: Level55",
+      "date": "2026-08-28T00:34:40.542838+00:00"
+    },
+    {
+      "transaction_id": "2eeb9da6-12ef-4c2a-8f69-5ca05b4f1dd1",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "Level60",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level60",
+      "date": "2026-08-28T00:34:40.542838+00:00"
     }
   ]
 }
