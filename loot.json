@@ -59763,6 +59763,78 @@
       "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
       "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Sandals of Contemplation",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 16
+    },
+    {
+      "item": "Earring of Vigor",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Fervid Gloves of the Warder",
+      "character_id": "9ff2c692-fecc-40c8-b741-ed429bd76f7a",
+      "character_name": "Korrin",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Eye of Darkness",
+      "character_id": "6346bb3c-cbf7-4c91-a572-9c5a93c74242",
+      "character_name": "Moroder",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Umbracite Hoop",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Staff of Assault",
+      "character_id": "70313083-c6ba-4813-a79b-f0c5ac8ff7ff",
+      "character_name": "Malzer",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Pendant of Malosini",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Silver Skin Gauntlets",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Amulet of Xuzl",
+      "character_id": "a9e5c271-f281-4474-9ded-1691dc12f245",
+      "character_name": "Synapster",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
     }
   ]
 }
