@@ -59667,6 +59667,102 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "raid_id": "cbeb125f-2ff3-4702-aca3-8993ee4b2df5",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Howling Orb",
+      "character_id": "cc849767-33a3-471f-a4b0-e727df73c6fc",
+      "character_name": "Rawket",
+      "username_id": "5626495f-436a-437b-9853-24b473c89494",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Boots of Kylthorn",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Pearls of the Frozen Wind",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Leggings of the Fiery Star",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Boots of Silent Dreams",
+      "character_id": "420c08c2-029f-4ae3-8a53-ec3ca34efd05",
+      "character_name": "Bigglesworth",
+      "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Ring of Rage",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Gorget of Superiority",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Boots of Silent Dreams",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Bracer of the Silent Star",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Living Symbol",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Cord of Midnight",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cap of the Silent Star",
+      "character_id": "297a5da1-45d3-4868-ab68-e9508cb9e4f8",
+      "character_name": "Mipsy",
+      "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
     }
   ]
 }

@@ -749,9 +749,9 @@
       "username_discord": "640517980622553118",
       "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
       "rank": "member",
-      "available_dkp": 29,
+      "available_dkp": 26,
       "dkp_earned": 0,
-      "dkp_spent": 29,
+      "dkp_spent": 32,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -1425,9 +1425,9 @@
       "username_discord": "215262807686512640",
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "rank": "member",
-      "available_dkp": 21,
+      "available_dkp": 18,
       "dkp_earned": 579,
-      "dkp_spent": 609,
+      "dkp_spent": 612,
       "dkp_adjustments": 6,
       "characters": [
         {
@@ -1611,9 +1611,9 @@
       "username_discord": "1008595262308110417",
       "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
       "rank": "officer",
-      "available_dkp": 109,
+      "available_dkp": 101,
       "dkp_earned": 1502,
-      "dkp_spent": 1457,
+      "dkp_spent": 1465,
       "dkp_adjustments": 2,
       "characters": [
         {
@@ -1711,9 +1711,9 @@
       "username_discord": "689261765565087779",
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "rank": "member",
-      "available_dkp": 6,
+      "available_dkp": 2,
       "dkp_earned": 246,
-      "dkp_spent": 266,
+      "dkp_spent": 270,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -1757,9 +1757,9 @@
       "username_discord": "264171032208867348",
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "rank": "member",
-      "available_dkp": 326,
+      "available_dkp": 325,
       "dkp_earned": 998,
-      "dkp_spent": 718,
+      "dkp_spent": 719,
       "dkp_adjustments": 2,
       "characters": [
         {
@@ -1871,9 +1871,9 @@
       "username_discord": "151695822155808770",
       "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
       "rank": "applicant",
-      "available_dkp": 76,
+      "available_dkp": 72,
       "dkp_earned": 58,
-      "dkp_spent": 42,
+      "dkp_spent": 46,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -2115,9 +2115,9 @@
       "username_discord": "163231270178914304",
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "rank": "member",
-      "available_dkp": 34,
+      "available_dkp": 30,
       "dkp_earned": 1661,
-      "dkp_spent": 1684,
+      "dkp_spent": 1688,
       "dkp_adjustments": 13,
       "characters": [
         {
@@ -2215,9 +2215,9 @@
       "username_discord": "715727085154599003",
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "rank": "member",
-      "available_dkp": 82,
+      "available_dkp": 76,
       "dkp_earned": 228,
-      "dkp_spent": 210,
+      "dkp_spent": 216,
       "dkp_adjustments": 1,
       "characters": [
         {
@@ -3837,9 +3837,9 @@
       "username_discord": "269079536983998464",
       "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
       "rank": "member",
-      "available_dkp": 90,
+      "available_dkp": 84,
       "dkp_earned": 1083,
-      "dkp_spent": 1059,
+      "dkp_spent": 1065,
       "dkp_adjustments": 24,
       "characters": [
         {
@@ -3969,9 +3969,9 @@
       "username_discord": "299759998991597569",
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "rank": "officer",
-      "available_dkp": 136,
+      "available_dkp": 133,
       "dkp_earned": 1531,
-      "dkp_spent": 1479,
+      "dkp_spent": 1482,
       "dkp_adjustments": 34,
       "characters": [
         {
@@ -4039,9 +4039,9 @@
       "username_discord": "243247923565953025",
       "username_id": "5626495f-436a-437b-9853-24b473c89494",
       "rank": "member",
-      "available_dkp": 98,
+      "available_dkp": 96,
       "dkp_earned": 797,
-      "dkp_spent": 754,
+      "dkp_spent": 756,
       "dkp_adjustments": 3,
       "characters": [
         {
@@ -10851,8 +10851,8 @@
       "username_discord": "211500975058321408",
       "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
       "rank": "applicant",
-      "available_dkp": 70,
-      "dkp_spent": 0,
+      "available_dkp": 69,
+      "dkp_spent": 1,
       "characters": [
         {
           "name": "Mipsy",
