@@ -59835,6 +59835,54 @@
       "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
       "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Rune of Judgement",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "61363371-0d3a-44f9-87e4-a2e2574155ce",
+      "character_name": "Killman",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Scepter of Calekor",
+      "character_id": "98dab7ec-8620-4842-b40e-6d0f07c25097",
+      "character_name": "Marekis",
+      "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+      "raid_id": "ffe14a09-de97-4eba-bc12-37eee468bdeb",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Dark Mace of Thought",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Book of Contemplation",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 3
     }
   ]
 }
