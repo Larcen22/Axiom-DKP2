@@ -59883,6 +59883,78 @@
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Bow of Flames",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadow Pearl Earring",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Cord of Insight",
+      "character_id": "d87c5a60-4e61-4e60-87ea-5aaf9e6f66ae",
+      "character_name": "Thunderquill",
+      "username_id": "187827da-db09-4b57-9622-457697a77c2e",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Armguard of Purity",
+      "character_id": "84954563-3102-4f10-822b-3bb82e3105d0",
+      "character_name": "Feldin",
+      "username_id": "f77e2b93-8666-46fd-85c4-230971284542",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Dagger of Thought",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cerulean Sleeves",
+      "character_id": "6346bb3c-cbf7-4c91-a572-9c5a93c74242",
+      "character_name": "Moroder",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Denon's Drums of Declivity",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloak of Frozen Flames",
+      "character_id": "a9e5c271-f281-4474-9ded-1691dc12f245",
+      "character_name": "Synapster",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Cloak of Glowing Embers",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
+      "item_dkp_value": 12
     }
   ]
 }
