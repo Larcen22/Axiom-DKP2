@@ -10957,6 +10957,26 @@
       ],
       "ApplicationDate": "2026-08-25 19:47:52",
       "MembershipDate": ""
+    },
+    {
+      "username": "Daggoth",
+      "username_discord": "105878208934608896",
+      "username_id": "437956bd-0bf3-4926-bdb1-f5197755266c",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Daggoth",
+          "class": "Beastlord",
+          "race": "Barbarian",
+          "level": 60,
+          "character_id": "c70f7746-f78d-42c0-b411-9a52ecb904e9",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-08-28 13:49:06",
+      "MembershipDate": ""
     }
   ]
 }
