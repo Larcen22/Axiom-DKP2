@@ -59955,6 +59955,54 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "12779cf6-6f03-4b2a-8d5f-80f8daa08872",
       "item_dkp_value": 12
+    },
+    {
+      "item": "Mask of Dark Thoughts",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Shield of Energy",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Crown of Ambivalence",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Mark of Shadows",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 13
+    },
+    {
+      "item": "Wand of Tranquility",
+      "character_id": "e05024bd-c2e7-4ce8-ab38-b145af7d511e",
+      "character_name": "Mephestus",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
+      "item_dkp_value": 5
     }
   ]
 }
