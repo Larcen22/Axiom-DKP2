@@ -60003,6 +60003,38 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "8310eb2f-e3f1-4a43-a9a3-7c5f6f1d866b",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Crimson Runed Mask",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "160676e4-7d56-463e-b8d2-2200b54e17fa",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Leggings of Secrets",
+      "character_id": "e8d8ea6c-fe37-47c9-b428-830ad7246e01",
+      "character_name": "Rotsouls",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "160676e4-7d56-463e-b8d2-2200b54e17fa",
+      "item_dkp_value": 18
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "160676e4-7d56-463e-b8d2-2200b54e17fa",
+      "item_dkp_value": 65
+    },
+    {
+      "item": "Leggings of Judgement",
+      "character_id": "4b21a7ba-d976-4443-b048-bf0773939793",
+      "character_name": "Balthemal",
+      "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+      "raid_id": "160676e4-7d56-463e-b8d2-2200b54e17fa",
+      "item_dkp_value": 35
     }
   ]
 }
