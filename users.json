@@ -2449,6 +2449,22 @@
           "level": 1,
           "character_id": "59535cc6-efef-4827-ad40-e727afd51b16",
           "role": "alternate"
+        },
+        {
+          "name": "alt",
+          "class": "Cleric",
+          "race": "Dwarf",
+          "level": 1,
+          "character_id": "7461a1ab-6a6a-425e-adea-df904ea89563",
+          "role": "alternate"
+        },
+        {
+          "name": "alternate",
+          "class": "Cleric",
+          "race": "Dwarf",
+          "level": 1,
+          "character_id": "5cbea535-0794-424e-b5de-0f1deeedd72d",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-23 00:29:33",
@@ -3977,7 +3993,7 @@
       "username_discord": "299759998991597569",
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "rank": "officer",
-      "available_dkp": 131,
+      "available_dkp": 132,
       "dkp_earned": 1531,
       "dkp_spent": 1486,
       "dkp_adjustments": 34,
