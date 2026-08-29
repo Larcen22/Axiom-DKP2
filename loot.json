@@ -60147,6 +60147,30 @@
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
       "item_dkp_value": 13
+    },
+    {
+      "item": "Burning Scepter of Elements",
+      "character_id": "24507192-75df-4d45-a285-56f5322f6783",
+      "character_name": "Aihal",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Hoop of Emptiness",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Hoop of Emptiness",
+      "character_id": "4d1884ab-5271-4dfa-99f0-e5625d7754aa",
+      "character_name": "Filya",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 2
     }
   ]
 }
