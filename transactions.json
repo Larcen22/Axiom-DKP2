@@ -17962,6 +17962,33 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-08-29T00:03:38.136030+00:00"
+    },
+    {
+      "transaction_id": "49a3c17d-c47f-4e1f-a6a4-a88fc5c130d6",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "username": "Eziekial",
+      "type": "BBC",
+      "transaction_amount": 3,
+      "reason": "VT kiting, 3hrs - 8/27",
+      "date": "2026-08-29T00:22:23.196050+00:00"
+    },
+    {
+      "transaction_id": "7acd5df3-1649-4403-a580-4da0bbc4ff39",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "username": "Nethi",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT kite assistance - 8/27",
+      "date": "2026-08-29T00:23:04.244940+00:00"
+    },
+    {
+      "transaction_id": "f5d8ce32-86df-4034-8dc6-aa0ec0453244",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "username": "Zedlord",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT kite assistance - 8/27",
+      "date": "2026-08-29T00:23:27.956928+00:00"
     }
   ]
 }

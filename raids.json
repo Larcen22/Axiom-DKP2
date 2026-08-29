@@ -271096,6 +271096,46 @@
       "unclaimed": [],
       "channel_id": "1542694361827909705",
       "summary_message_id": "1542694367628632147"
+    },
+    {
+      "raid_name": "Ssra on time",
+      "date": "2026-08-28",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1543049053397454919",
+      "summary_message_id": "1543049059303030835"
+    },
+    {
+      "raid_name": "Ssra 1",
+      "date": "2026-08-28",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1543049065703542846",
+      "summary_message_id": "1543049071982280815"
+    },
+    {
+      "raid_name": "Ssra 2",
+      "date": "2026-08-28",
+      "raid_id": "fe0bb699-0b92-41dc-9415-0a76d66b3a47",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1543049078609420318",
+      "summary_message_id": "1543049084934561885"
+    },
+    {
+      "raid_name": "Ssra 3",
+      "date": "2026-08-28",
+      "raid_id": "be04a518-ea42-4a48-8ec0-77955b4ea0b4",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1543049091716481076",
+      "summary_message_id": "1543049097886437469"
     }
   ]
 }
