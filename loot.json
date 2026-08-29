@@ -60035,6 +60035,22 @@
       "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
       "raid_id": "160676e4-7d56-463e-b8d2-2200b54e17fa",
       "item_dkp_value": 35
+    },
+    {
+      "item": "Scale Mesh Vambraces",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Khashek's Katar",
+      "character_id": "4ed1f1a3-392c-49a2-adaf-21cc49d9c5c2",
+      "character_name": "Slynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
     }
   ]
 }
