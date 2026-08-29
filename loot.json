@@ -60051,6 +60051,62 @@
       "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
       "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Venomous Eyepatch",
+      "character_id": "6f82dbf6-4c69-481e-873b-8fa830844228",
+      "character_name": "Dragonstail",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Geomantic Focus",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Geomantic Focus",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Dark Shadows",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Black Runed Pants",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Bloodfrenzy",
+      "character_id": "ba68161b-afde-4419-9582-604b0a9e5a78",
+      "character_name": "Gnomocidal",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 26
+    },
+    {
+      "item": "Braided Strands of Corrupted Mana",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
     }
   ]
 }
