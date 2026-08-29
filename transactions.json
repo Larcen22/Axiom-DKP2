@@ -17944,6 +17944,24 @@
       "transaction_amount": 10,
       "reason": "Achievement: Level60",
       "date": "2026-08-28T00:34:40.542838+00:00"
+    },
+    {
+      "transaction_id": "45fde121-85c7-4b82-b640-2fabf9dd46eb",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "username": "Vesago",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-08-29T00:03:10.854238+00:00"
+    },
+    {
+      "transaction_id": "1562d793-dd26-4c63-83ef-b7812b21152d",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "username": "Wyndsmyr",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-08-29T00:03:38.136030+00:00"
     }
   ]
 }

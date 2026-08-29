@@ -650,9 +650,9 @@ Sliccsar,Sliccsar,Monk,60,Iksar,main,member,60,149,92,2024-12-29 01:07:59,2025-0
 Sliccsar,Bouchad,Enchanter,40,Dark Elf,alternate,member,60,149,92,2024-12-29 01:07:59,2025-01-02 18:58:16
 Slim,Slim,Enchanter,60,Dark Elf,main,applicant,11,11,0,2026-01-24 19:19:43,
 Slinkystrings,Slinkystrings,Bard,52,Half-Elf,main,applicant,0,0,0,2026-02-17 04:30:12,
-Slowurrole,Slowurrole,Shaman,60,Iksar,main,member,36,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
-Slowurrole,Killman,Shadow Knight,60,Iksar,main,member,36,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
-Slowurrole,elementaal,Magician,8,Gnome,alternate,member,36,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
+Slowurrole,Slowurrole,Shaman,60,Iksar,main,member,37,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
+Slowurrole,Killman,Shadow Knight,60,Iksar,main,member,37,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
+Slowurrole,elementaal,Magician,8,Gnome,alternate,member,37,357,385,2026-02-18 01:48:05,2026-02-19 04:21:08
 Sneaksup,Sneaksup,Rogue,60,Gnome,main,former,0,119,90,,
 Sneaksup,Izekiel,Magician,54,Gnome,alternate,former,0,119,90,,
 Snickkers,Biggeh,Shaman,27,Ogre,alternate,former,0,73,26,,2025-01-06 16:07:21
@@ -770,15 +770,15 @@ Vaylon,Meechum,Ranger,60,Wood Elf,alternate,member,82,290,252,2025-09-24 00:52:1
 Vaylon,Somos,Bard,60,Half-Elf,main,member,82,290,252,2025-09-24 00:52:17,2025-10-13 20:06:31
 Vaylon,Hadrian,Cleric,60,Human,alternate,member,82,290,252,2025-09-24 00:52:17,2025-10-13 20:06:31
 Vaylon,Vaylon,Magician,60,Gnome,main,member,82,290,252,2025-09-24 00:52:17,2025-10-13 20:06:31
-Vesago,Vesago,Necromancer,60,Iksar,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Zyrath,Shaman,60,Iksar,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Drakkael,Enchanter,60,Dark Elf,main,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Daenerys,Bard,51,Human,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Badfriend,Magician,51,Gnome,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Bestfriend,Warrior,15,Ogre,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Dialea,Druid,60,Wood Elf,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Peachie,Cleric,60,Dark Elf,alternate,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
-Vesago,Draaner,Monk,60,Iksar,main,member,5,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Vesago,Necromancer,60,Iksar,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Zyrath,Shaman,60,Iksar,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Drakkael,Enchanter,60,Dark Elf,main,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Daenerys,Bard,51,Human,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Badfriend,Magician,51,Gnome,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Bestfriend,Warrior,15,Ogre,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Dialea,Druid,60,Wood Elf,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Peachie,Cleric,60,Dark Elf,alternate,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
+Vesago,Draaner,Monk,60,Iksar,main,member,20,163,199,2024-10-25 23:57:33,2024-11-07 19:11:06
 Vetiz,Vealyn,Druid,50,Halfling,alternate,inactive,25,28,3,2024-12-09 18:52:45,
 Vetiz,Vurk,Beastlord,21,Iksar,alternate,inactive,25,28,3,2024-12-09 18:52:45,
 Vetiz,Vetiz,Necromancer,60,Iksar,main,inactive,25,28,3,2024-12-09 18:52:45,
@@ -807,7 +807,7 @@ Weasy,Mithrilon,Enchanter,46,High Elf,alternate,member,27,646,620,2024-10-25 23:
 Whoplays,Whoplays,Paladin,60,Human,main,member,56,61,5,2025-11-28 16:00:58,2025-12-20 01:51:26
 Wiserunner,Wiserunner,Shaman,60,Barbarian,main,member,117,178,61,2026-01-19 20:44:29,2026-02-09 01:38:22
 Wrenn,Wrenn,Shaman,60,Barbarian,main,member,114,126,12,2026-01-02 19:37:36,2026-01-05 21:29:02
-Wyndsmyr,Wyndsmyr,Cleric,60,Dark Elf,main,applicant,75,58,46,2026-07-09 21:01:15,
+Wyndsmyr,Wyndsmyr,Cleric,60,Dark Elf,main,applicant,90,58,46,2026-07-09 21:01:15,
 Xaktar,Xaktar,Beastlord,60,Iksar,main,applicant,0,0,0,2026-07-13 03:04:03,
 Xikikaz,Xikikaz,Beastlord,60,Iksar,main,member,1,208,235,2026-02-21 19:42:57,2026-03-06 01:43:27
 Xikikaz,Rablak,Wizard,7,High Elf,alternate,member,1,208,235,2026-02-21 19:42:57,2026-03-06 01:43:27
