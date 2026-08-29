@@ -60107,6 +60107,46 @@
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Ssraeshzaen Honor Guard Bracer",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Imperial Symbol of the Shissar",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "49275ad1-feb8-43ae-ac82-45a48d31f69b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Envenomed Moccasins",
+      "character_id": "ad5bfdf3-14bc-4745-9cd8-858a128aa44c",
+      "character_name": "Tuwva",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Velvet Slippers of Harmony",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Torque of the Wyrmlord",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
+      "item_dkp_value": 13
     }
   ]
 }
