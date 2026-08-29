@@ -60187,6 +60187,30 @@
       "username_id": "aa950297-325a-4763-addf-bef51734b701",
       "raid_id": "f9aa0ccf-2006-4e3c-8bf3-6fd3898d024a",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Wrath's Edge",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "fe0bb699-0b92-41dc-9415-0a76d66b3a47",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Sapphire Studded Mantle",
+      "character_id": "420c08c2-029f-4ae3-8a53-ec3ca34efd05",
+      "character_name": "Bigglesworth",
+      "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
+      "raid_id": "fe0bb699-0b92-41dc-9415-0a76d66b3a47",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Halo of Enlightening Barriers",
+      "character_id": "98dab7ec-8620-4842-b40e-6d0f07c25097",
+      "character_name": "Marekis",
+      "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+      "raid_id": "fe0bb699-0b92-41dc-9415-0a76d66b3a47",
+      "item_dkp_value": 2
     }
   ]
 }

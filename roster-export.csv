@@ -22,11 +22,11 @@ Arlen,Arlen,Ranger,54,Human,main,former,0,30,3,,
 Arnoldd,Arnoldd,Shaman,58,Ogre,main,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arnoldd,Redhawk,Druid,12,Halfling,alternate,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arrowleaf,Arrowleaf,Ranger,60,Wood Elf,main,member,18,21,3,2026-03-11 23:07:35,2026-04-05 05:04:56
-Arshis,Arshis,Beastlord,60,Iksar,main,member,102,0,37,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Moltenstare,Warrior,60,Iksar,main,member,102,0,37,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,102,0,37,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Keessii,Cleric,1,Halfling,alternate,member,102,0,37,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,102,0,37,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Arshis,Beastlord,60,Iksar,main,member,100,0,39,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Moltenstare,Warrior,60,Iksar,main,member,100,0,39,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,100,0,39,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Keessii,Cleric,1,Halfling,alternate,member,100,0,39,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,100,0,39,2026-07-16 18:57:11,2026-08-05 14:42:32
 Artery,Artery,Cleric,60,Dark Elf,main,applicant,75,0,1,2026-08-10 10:58:31,
 Artery,Denel,Paladin,60,Gnome,main,applicant,75,0,1,2026-08-10 10:58:31,
 Artery,Kryn,Bard,60,Half-Elf,alternate,applicant,75,0,1,2026-08-10 10:58:31,
@@ -93,8 +93,8 @@ Bigbak,Thiccdoom,Shadow Knight,39,Ogre,alternate,member,24,416,392,2025-09-30 04
 Bigbak,Balgarok,Beastlord,60,Dark Elf,main,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Marcellis,Paladin,30,Erudite,alternate,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Bigbak,Shaman,60,Dark Elf,main,member,24,416,392,2025-09-30 04:30:08,
-Bigglesworth,Bigglesworth,Necromancer,60,Iksar,main,member,32,0,32,2026-07-13 13:53:35,2026-08-03 12:14:31
-Bigglesworth,Drexen,Bard,13,Half-Elf,alternate,member,32,0,32,2026-07-13 13:53:35,2026-08-03 12:14:31
+Bigglesworth,Bigglesworth,Necromancer,60,Iksar,main,member,31,0,33,2026-07-13 13:53:35,2026-08-03 12:14:31
+Bigglesworth,Drexen,Bard,13,Half-Elf,alternate,member,31,0,33,2026-07-13 13:53:35,2026-08-03 12:14:31
 Bigworm,Bigworm,Beastlord,46,Troll,main,member,0,0,0,2026-04-16 13:10:15,2026-05-07 00:11:50
 Blewy,Blewy,Cleric,60,Dwarf,main,member,6,6,0,2026-03-14 00:38:40,2026-04-11 21:35:13
 Bliccsar,Bliccsar,Shaman,55,Iksar,main,member,59,68,9,2025-01-01 23:54:32,2025-01-02 18:57:54
@@ -132,8 +132,8 @@ Canixx,Canix,Necromancer,12,Iksar,alternate,applicant,0,0,0,2026-06-17 04:19:13,
 Canixx,Canixx,Monk,46,Iksar,main,applicant,0,0,0,2026-06-17 04:19:13,
 Carnal,Carnal,Necromancer,52,Dark Elf,main,applicant,0,0,0,2026-01-31 00:22:50,
 Casaka,Casaka,Necromancer,60,Iksar,main,member,8,124,116,2026-01-07 17:39:16,
-Chasaris,Chasaris,Beastlord,60,Iksar,main,member,68,201,193,2026-03-21 18:53:28,2026-05-07 00:13:21
-Chasaris,Marekis,Necromancer,60,Iksar,main,member,68,201,193,2026-03-21 18:53:28,2026-05-07 00:13:21
+Chasaris,Chasaris,Beastlord,60,Iksar,main,member,66,201,195,2026-03-21 18:53:28,2026-05-07 00:13:21
+Chasaris,Marekis,Necromancer,60,Iksar,main,member,66,201,195,2026-03-21 18:53:28,2026-05-07 00:13:21
 Chaunce,Chaunce,Ranger,60,Halfling,main,applicant,99,0,0,2026-08-10 20:02:38,
 Chaunce,quetzall,Shaman,60,Iksar,alternate,applicant,99,0,0,2026-08-10 20:02:38,
 Chaunce,moria,Cleric,60,Dwarf,alternate,applicant,99,0,0,2026-08-10 20:02:38,
