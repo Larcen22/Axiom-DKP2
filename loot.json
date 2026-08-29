@@ -60211,6 +60211,30 @@
       "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
       "raid_id": "fe0bb699-0b92-41dc-9415-0a76d66b3a47",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Shadowsong Cloak",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "be04a518-ea42-4a48-8ec0-77955b4ea0b4",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Crys`Va Mask",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "be04a518-ea42-4a48-8ec0-77955b4ea0b4",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Mantle of Fortitude",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "be04a518-ea42-4a48-8ec0-77955b4ea0b4",
+      "item_dkp_value": 3
     }
   ]
 }
