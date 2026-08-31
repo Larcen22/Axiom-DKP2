@@ -27,9 +27,9 @@ Arshis,Moltenstare,Warrior,60,Iksar,main,member,98,0,42,2026-07-16 18:57:11,2026
 Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,98,0,42,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Keessii,Cleric,1,Halfling,alternate,member,98,0,42,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,98,0,42,2026-07-16 18:57:11,2026-08-05 14:42:32
-Artery,Artery,Cleric,60,Dark Elf,main,applicant,76,0,1,2026-08-10 10:58:31,
-Artery,Denel,Paladin,60,Gnome,main,applicant,76,0,1,2026-08-10 10:58:31,
-Artery,Kryn,Bard,60,Half-Elf,alternate,applicant,76,0,1,2026-08-10 10:58:31,
+Artery,Artery,Cleric,60,Dark Elf,main,member,76,0,1,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Denel,Paladin,60,Gnome,main,member,76,0,1,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Kryn,Bard,60,Half-Elf,alternate,member,76,0,1,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artex,Artex,Necromancer,21,Iksar,main,member,0,0,0,2025-12-12 16:11:25,2026-04-24 01:34:25
 Asharak,Struggles,Ranger,53,Halfling,alternate,officer,133,1531,1488,2024-10-25 23:12:11,
 Asharak,Thecheat,Bard,60,Vah Shir,main,officer,133,1531,1488,2024-10-25 23:12:11,
@@ -134,10 +134,10 @@ Carnal,Carnal,Necromancer,52,Dark Elf,main,applicant,0,0,0,2026-01-31 00:22:50,
 Casaka,Casaka,Necromancer,60,Iksar,main,member,8,124,116,2026-01-07 17:39:16,
 Chasaris,Chasaris,Beastlord,60,Iksar,main,member,67,201,195,2026-03-21 18:53:28,2026-05-07 00:13:21
 Chasaris,Marekis,Necromancer,60,Iksar,main,member,67,201,195,2026-03-21 18:53:28,2026-05-07 00:13:21
-Chaunce,Chaunce,Ranger,60,Halfling,main,applicant,100,0,0,2026-08-10 20:02:38,
-Chaunce,quetzall,Shaman,60,Iksar,alternate,applicant,100,0,0,2026-08-10 20:02:38,
-Chaunce,moria,Cleric,60,Dwarf,alternate,applicant,100,0,0,2026-08-10 20:02:38,
-Chaunce,rilifain,Druid,60,Wood Elf,alternate,applicant,100,0,0,2026-08-10 20:02:38,
+Chaunce,Chaunce,Ranger,60,Halfling,main,member,100,0,0,2026-08-10 20:02:38,2026-08-31 12:01:04
+Chaunce,quetzall,Shaman,60,Iksar,alternate,member,100,0,0,2026-08-10 20:02:38,2026-08-31 12:01:04
+Chaunce,moria,Cleric,60,Dwarf,alternate,member,100,0,0,2026-08-10 20:02:38,2026-08-31 12:01:04
+Chaunce,rilifain,Druid,60,Wood Elf,alternate,member,100,0,0,2026-08-10 20:02:38,2026-08-31 12:01:04
 Clereron,Clereron,Cleric,60,High Elf,main,member,13,102,89,2026-01-09 20:23:09,2026-02-01 04:00:53
 Cloudspark,Cloudspark,Magician,52,Gnome,main,former,0,34,9,,
 Condiar,Larkorak,Shaman,25,Vah Shir,alternate,member,26,387,377,2026-02-08 01:03:50,2026-03-01 01:15:51
@@ -410,8 +410,8 @@ Laleldar,Arklem,Shadow Knight,30,Iksar,alternate,member,5,144,139,2025-10-24 03:
 Laleldar,Artimes,Rogue,12,Dwarf,alternate,member,5,144,139,2025-10-24 03:27:47,2025-11-25 00:36:41
 Laleldar,Ugrismag,Wizard,60,High Elf,main,member,5,144,139,2025-10-24 03:27:47,2025-11-25 00:36:41
 Laleldar,Buckem,Warrior,11,Iksar,alternate,member,5,144,139,2025-10-24 03:27:47,2025-11-25 00:36:41
-Larzek,Larzek,Warrior,60,Ogre,main,applicant,98,0,0,2026-08-10 19:59:50,
-Larzek,Pyresta,Wizard,60,Dark Elf,alternate,applicant,98,0,0,2026-08-10 19:59:50,
+Larzek,Larzek,Warrior,60,Ogre,main,member,98,0,0,2026-08-10 19:59:50,2026-08-31 12:00:52
+Larzek,Pyresta,Wizard,60,Dark Elf,alternate,member,98,0,0,2026-08-10 19:59:50,2026-08-31 12:00:52
 Leafblight,Flerb,Druid,60,Halfling,alternate,member,53,246,201,2026-03-11 20:21:44,2026-04-05 05:04:34
 Leafblight,Leafblight,Enchanter,60,Dwarf,main,member,53,246,201,2026-03-11 20:21:44,2026-04-05 05:04:34
 Leafblight,Icastdaspells,Magician,60,Human,alternate,member,53,246,201,2026-03-11 20:21:44,2026-04-05 05:04:34
@@ -481,8 +481,8 @@ Microizra,Pinkpantheress,Druid,1,Wood Elf,alternate,officer,78,1502,1491,2024-10
 Microizra,Neki,Ranger,60,Wood Elf,main,officer,78,1502,1491,2024-10-26 00:50:50,
 Middleagedman,Tartugar,Beastlord,52,Ogre,alternate,applicant,31,35,4,2026-03-03 18:13:24,
 Middleagedman,Middleagedman,Magician,60,Gnome,main,applicant,31,35,4,2026-03-03 18:13:24,
-Mipsy,Mipsy,Magician,60,Gnome,main,applicant,76,0,1,2026-08-10 20:00:30,
-Mipsy,Roughnight,Cleric,60,Dwarf,alternate,applicant,76,0,1,2026-08-10 20:00:30,
+Mipsy,Mipsy,Magician,60,Gnome,main,member,76,0,1,2026-08-10 20:00:30,2026-08-31 12:00:57
+Mipsy,Roughnight,Cleric,60,Dwarf,alternate,member,76,0,1,2026-08-10 20:00:30,2026-08-31 12:00:57
 Missappropriate,Unrancita,Shadow Knight,45,Dark Elf,alternate,member,46,224,178,2025-09-17 00:26:07,2025-10-13 20:06:17
 Missappropriate,Missappropriate,Magician,60,Human,main,member,46,224,178,2025-09-17 00:26:07,2025-10-13 20:06:17
 Mixim,Noxxon,Necromancer,60,Iksar,main,member,136,631,567,2026-01-04 01:12:44,2026-01-24 03:25:36
