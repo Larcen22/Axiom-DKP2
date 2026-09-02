@@ -2373,9 +2373,9 @@
       "username_discord": "260196436057128960",
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "rank": "officer",
-      "available_dkp": 44,
+      "available_dkp": 45,
       "dkp_earned": 1589,
-      "dkp_spent": 1597,
+      "dkp_spent": 1596,
       "dkp_adjustments": 4,
       "characters": [
         {
@@ -2441,22 +2441,6 @@
           "role": "alternate",
           "level": 21,
           "race": "Iksar"
-        },
-        {
-          "name": "main",
-          "class": "Cleric",
-          "race": "Dwarf",
-          "level": 1,
-          "character_id": "59535cc6-efef-4827-ad40-e727afd51b16",
-          "role": "alternate"
-        },
-        {
-          "name": "alt",
-          "class": "Cleric",
-          "race": "Dwarf",
-          "level": 1,
-          "character_id": "7461a1ab-6a6a-425e-adea-df904ea89563",
-          "role": "alternate"
         },
         {
           "name": "alternate",
