@@ -60363,6 +60363,38 @@
       "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
       "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Earring of Resistance",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Khashek's Katar",
+      "character_id": "7461a1ab-6a6a-425e-adea-df904ea89563",
+      "character_name": "alt",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bone Golem Greaves",
+      "character_id": "1b2e0317-5d0a-4daa-af5b-41aa2546e854",
+      "character_name": "Lynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "9d6c0665-9146-4323-8911-e10e28469035",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Smouldershank",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "9d6c0665-9146-4323-8911-e10e28469035",
+      "item_dkp_value": 1
     }
   ]
 }
