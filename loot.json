@@ -60443,6 +60443,46 @@
       "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
       "raid_id": "9d6c0665-9146-4323-8911-e10e28469035",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Belt of Mystical Protection",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "cb3a64fc-6595-4317-a582-13e303514431",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shroud of Emerald Vines",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "cb3a64fc-6595-4317-a582-13e303514431",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bone of Bertoxxulous",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "cb3a64fc-6595-4317-a582-13e303514431",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Flowing Gossamer Cloak",
+      "character_id": "3d583b4b-54db-4679-a230-4d1b24b6f49f",
+      "character_name": "Zyrath",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "b4602b8c-adc6-48e1-947c-d6b6363b20f3",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Crys`Va Mask",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "b4602b8c-adc6-48e1-947c-d6b6363b20f3",
+      "item_dkp_value": 6
     }
   ]
 }
