@@ -271836,6 +271836,46 @@
       "unclaimed": [],
       "channel_id": "1543049091716481076",
       "summary_message_id": "1543049097886437469"
+    },
+    {
+      "raid_name": "Vulak Seru and more on time",
+      "date": "2026-09-01",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1544502835150983199",
+      "summary_message_id": "1544502842579230834"
+    },
+    {
+      "raid_name": "Vulak Seru and more 1",
+      "date": "2026-09-01",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1544502850141425774",
+      "summary_message_id": "1544502856688603237"
+    },
+    {
+      "raid_name": "Vulak Seru and more 2",
+      "date": "2026-09-01",
+      "raid_id": "9d6c0665-9146-4323-8911-e10e28469035",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1544502865370947636",
+      "summary_message_id": "1544502871947608149"
+    },
+    {
+      "raid_name": "Vulak Seru and more 3",
+      "date": "2026-09-01",
+      "raid_id": "cb3a64fc-6595-4317-a582-13e303514431",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1544502879572983820",
+      "summary_message_id": "1544502884949827715"
     }
   ]
 }
