@@ -60267,6 +60267,54 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
       "item_dkp_value": 9
+    },
+    {
+      "item": "Bloodied Berserker's Blade",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Yttrium Studded Mantle",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "ad5bfdf3-14bc-4745-9cd8-858a128aa44c",
+      "character_name": "Tuwva",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 13
+    },
+    {
+      "item": "Glowing Amber Band",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Horns of Chaos",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Veil of Hidden Thought",
+      "character_id": "4d955a1c-a26d-434f-8b7a-b21d70ae79b5",
+      "character_name": "Soulsipper",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "item_dkp_value": 1
     }
   ]
 }
