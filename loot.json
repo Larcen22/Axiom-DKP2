@@ -60235,6 +60235,38 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "be04a518-ea42-4a48-8ec0-77955b4ea0b4",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Brother Xave's Headband",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ssra's Bloodstone Eyepatch",
+      "character_id": "9ca18a68-d349-45ea-9661-f838589e0e1c",
+      "character_name": "Vagary",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Palladius' Axe of Slaughter",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Akkirus' Mask of Warfare",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "5f2740b9-bf7c-4fb8-9a5a-89910a0b0b50",
+      "item_dkp_value": 9
     }
   ]
 }
