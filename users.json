@@ -2363,6 +2363,14 @@
           "role": "main",
           "level": 60,
           "race": "Gnome"
+        },
+        {
+          "name": "commodus",
+          "class": "Paladin",
+          "race": "Erudite",
+          "level": 49,
+          "character_id": "584a9be8-6a05-4b1d-ba9c-93248970d666",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-09-24 00:52:17",
