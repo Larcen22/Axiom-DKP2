@@ -60483,6 +60483,14 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "b4602b8c-adc6-48e1-947c-d6b6363b20f3",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Khashek's Katar",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
+      "item_dkp_value": 1
     }
   ]
 }
