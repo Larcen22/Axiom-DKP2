@@ -60539,6 +60539,38 @@
       "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
       "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Steel Skin Armplates",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Gorget of Superiority",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Gorget of Superiority",
+      "character_id": "38825e99-94d7-4bc7-be52-41b0b7ed94d8",
+      "character_name": "Ethiria",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Steel Skin Armplates",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
     }
   ]
 }
