@@ -60795,6 +60795,62 @@
       "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
       "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Crown of Ambivalence",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 26
+    },
+    {
+      "item": "Umbracite Plate Leggings",
+      "character_id": "174c2a04-4a86-4280-b8b9-6816dd3e80b9",
+      "character_name": "Somos",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Thorny Chain Helm",
+      "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
+      "character_name": "Zedlord",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Crimson Runed Mask",
+      "character_id": "6d8c8607-c1e1-4e6d-b0a7-370108d02fa7",
+      "character_name": "Kappa",
+      "username_id": "e47ce494-533f-4ab8-9e3f-7911bc37d9d2",
+      "raid_id": "6f267663-28bb-4a1a-b1a2-20574421eb0e",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Silver Band of Secrets",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "6f267663-28bb-4a1a-b1a2-20574421eb0e",
+      "item_dkp_value": 22
+    },
+    {
+      "item": "Torch of Judgment",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "6f267663-28bb-4a1a-b1a2-20574421eb0e",
+      "item_dkp_value": 17
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "6f267663-28bb-4a1a-b1a2-20574421eb0e",
+      "item_dkp_value": 60
     }
   ]
 }
