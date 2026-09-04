@@ -17989,6 +17989,42 @@
       "transaction_amount": 1,
       "reason": "VT kite assistance - 8/27",
       "date": "2026-08-29T00:23:27.956928+00:00"
+    },
+    {
+      "transaction_id": "f16a130a-88db-4ccb-8e58-62ee23b881bd",
+      "username_id": "aa950297-325a-4763-addf-bef51734b701",
+      "username": "Rhettsu",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-09-04T00:16:08.256124+00:00"
+    },
+    {
+      "transaction_id": "a9262709-f044-4b33-a068-fa4036cd747e",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-09-04T00:17:23.500634+00:00"
+    },
+    {
+      "transaction_id": "9c60db7f-ce6c-4c05-b8e2-8633f71fc557",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-09-04T00:17:23.500634+00:00"
+    },
+    {
+      "transaction_id": "a7b754a9-2663-45d2-9bb4-e99afdc4927e",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-09-04T00:17:23.500634+00:00"
     }
   ]
 }
