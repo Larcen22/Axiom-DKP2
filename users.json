@@ -3153,6 +3153,14 @@
           "role": "main",
           "level": 60,
           "race": "Ogre"
+        },
+        {
+          "name": "Beeflord",
+          "class": "Beastlord",
+          "race": "Ogre",
+          "level": 58,
+          "character_id": "30b133d8-1379-4702-8cc1-d51535b7de28",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-06-11 16:37:12",
