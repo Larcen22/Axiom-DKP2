@@ -60651,6 +60651,62 @@
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Stein of Falling Tears",
+      "character_id": "a9e5c271-f281-4474-9ded-1691dc12f245",
+      "character_name": "Synapster",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Belt of Dark Thought",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Tiny Cap of Sight",
+      "character_id": "cc849767-33a3-471f-a4b0-e727df73c6fc",
+      "character_name": "Rawket",
+      "username_id": "5626495f-436a-437b-9853-24b473c89494",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Robe of Luring Shadows",
+      "character_id": "98dab7ec-8620-4842-b40e-6d0f07c25097",
+      "character_name": "Marekis",
+      "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Gloves of Warding",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Earring of Falling Stars",
+      "character_id": "fd429267-9a3a-41d4-9b91-4e29c4be69ce",
+      "character_name": "Nightshayde",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Gloves of Warding",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 2
     }
   ]
 }
