@@ -60491,6 +60491,54 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "raid_id": "a805c9ab-6994-40c3-b616-0b2e437000e1",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Shroud of Patience",
+      "character_id": "9ff2c692-fecc-40c8-b741-ed429bd76f7a",
+      "character_name": "Korrin",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Scythe of Shadows",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bracer of the Silent Star",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "a95b58f8-5ce8-41c5-b100-cb288ebf3a5b",
+      "character_name": "Xikikaz",
+      "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Living Symbol",
+      "character_id": "a9e5c271-f281-4474-9ded-1691dc12f245",
+      "character_name": "Synapster",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bracer of the Silent Star",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 4
     }
   ]
 }
