@@ -60739,6 +60739,62 @@
       "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
       "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Shadow Pearl Earring",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Pearls of the Frozen Wind",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cord of Insight",
+      "character_id": "e8d8ea6c-fe37-47c9-b428-830ad7246e01",
+      "character_name": "Rotsouls",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Shadow Pearl Earring",
+      "character_id": "182d9b4f-fd60-4da3-ad81-389a9111146d",
+      "character_name": "Scruffs",
+      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Mask of Piety",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Mask of Piety",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "dbbb2d1b-34e0-40d4-80b8-d570b5ba5bb5",
+      "item_dkp_value": 5
     }
   ]
 }
