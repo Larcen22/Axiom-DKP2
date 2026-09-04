@@ -60571,6 +60571,86 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Seething Mantle",
+      "character_id": "253817f9-9682-48be-84f3-ede2072b2b54",
+      "character_name": "Luminara",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Gauntlets of Dark Embers",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloudy Steel Mask",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Fervid Gloves of the Warder",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Necklace of Endless Concepts",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "fd347fd6-c801-4e97-aa17-fdb3a8b4c5c0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of Immobilization",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Pendant of Malosini",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Stein of Falling Tears",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "886a2e22-2f42-4d8b-9c9b-5ae1fad4ccf4",
+      "item_dkp_value": 1
     }
   ]
 }

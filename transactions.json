@@ -18025,6 +18025,33 @@
       "transaction_amount": 11,
       "reason": "Achievement: MR120",
       "date": "2026-09-04T00:17:23.500634+00:00"
+    },
+    {
+      "transaction_id": "265441d0-5675-4ca4-8ebe-2d3163560a52",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "username": "Mephestus",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-09-04T01:48:47.956210+00:00"
+    },
+    {
+      "transaction_id": "a21b0565-f74f-40a7-b74e-ae9194343e79",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "username": "Mephestus",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-09-04T01:48:47.956210+00:00"
+    },
+    {
+      "transaction_id": "f31842e5-bf02-4631-86ba-571b6751512b",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "username": "Mephestus",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-09-04T01:48:47.956210+00:00"
     }
   ]
 }
