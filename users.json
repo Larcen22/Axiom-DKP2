@@ -2989,7 +2989,7 @@
           "class": "Magician",
           "character_id": "24507192-75df-4d45-a285-56f5322f6783",
           "role": "alternate",
-          "level": 55,
+          "level": 56,
           "race": "Erudite"
         },
         {
@@ -3012,7 +3012,7 @@
           "name": "Anoirif",
           "class": "Paladin",
           "race": "High Elf",
-          "level": 48,
+          "level": 52,
           "character_id": "71f6ee29-9bee-411c-80fd-c82fe4d222c2",
           "role": "alternate"
         }
