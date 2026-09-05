@@ -60939,6 +60939,22 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Hoop of Emptiness",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "7a32c94a-1cfe-4afa-9e0a-a301e7fbbbce",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Platinum Mesh Guard",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "7a32c94a-1cfe-4afa-9e0a-a301e7fbbbce",
+      "item_dkp_value": 1
     }
   ]
 }
