@@ -3259,6 +3259,14 @@
           "role": "main",
           "level": 60,
           "race": "Gnome"
+        },
+        {
+          "name": "Puarella",
+          "class": "Cleric",
+          "race": "Gnome",
+          "level": 3,
+          "character_id": "6dee8232-bbda-47e8-a58d-c319fe38bdbc",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-11-30 06:07:10",
