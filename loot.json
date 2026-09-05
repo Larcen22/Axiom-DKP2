@@ -60899,6 +60899,46 @@
       "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
       "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Ssraeshzaen Honor Guard Bracer",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Blood Veil of the Shissar",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Azaliil's Ring of Analogies",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "White Ornate Chain Bridle",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Shield of Mental Fortitude",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "6adbe4d0-0f3e-4532-a4f6-495c59833042",
+      "item_dkp_value": 1
     }
   ]
 }
