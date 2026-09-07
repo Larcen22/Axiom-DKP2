@@ -1831,6 +1831,14 @@
           "level": 54,
           "character_id": "d774a627-950e-4396-9d99-0cc4493df7c9",
           "role": "alternate"
+        },
+        {
+          "name": "Rampheezy",
+          "class": "Necromancer",
+          "race": "Iksar",
+          "level": 53,
+          "character_id": "95f06969-eaf0-4a02-b19d-8b3ceb281587",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-06-06 20:40:15",
@@ -10957,6 +10965,22 @@
           "level": 60,
           "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
           "role": "main"
+        },
+        {
+          "name": "Relus",
+          "class": "Beastlord",
+          "race": "Vah Shir",
+          "level": 60,
+          "character_id": "3632c964-78aa-4468-a21e-170bce06cff9",
+          "role": "alternate"
+        },
+        {
+          "name": "Deluyi",
+          "class": "Druid",
+          "race": "Wood Elf",
+          "level": 60,
+          "character_id": "82becb66-16f4-4a78-8790-68468b7384d8",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-17 16:37:34",
