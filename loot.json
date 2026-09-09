@@ -61099,6 +61099,70 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of Living Ore",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ancient Burrower Hide Tunic",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Bile Drenched Flesh Robe",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shard from Unfathomable Depths",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tainted Scale Belt",
+      "character_id": "6c727a01-6bd6-41f4-a9bc-7285f4748811",
+      "character_name": "Ramphis",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Elphorn`s Cleaver",
+      "character_id": "d2abd2bc-5deb-4f1d-b472-390ee78c0cb8",
+      "character_name": "Cusswords",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Gleaming Serpent Tooth Choker",
+      "character_id": "664af812-b1bd-480b-9ccc-7a78b74af753",
+      "character_name": "Johnpaul",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Geomantic Focus",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "item_dkp_value": 1
     }
   ]
 }
