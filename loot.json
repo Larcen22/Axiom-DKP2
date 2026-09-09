@@ -61075,6 +61075,30 @@
       "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
       "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Veil of Hidden Thought",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Horns of Ferocity",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Sleeves of Elemental Auras",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
     }
   ]
 }
