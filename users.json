@@ -1849,7 +1849,7 @@
       "username_discord": "357949052836380673",
       "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
       "rank": "member",
-      "available_dkp": 138,
+      "available_dkp": 139,
       "dkp_earned": 667,
       "dkp_spent": 631,
       "dkp_adjustments": 7,
@@ -1891,6 +1891,14 @@
           "role": "main",
           "level": 60,
           "race": "Dark Elf"
+        },
+        {
+          "name": "Trizzel",
+          "class": "Shaman",
+          "race": "Troll",
+          "level": 56,
+          "character_id": "bd02f304-7032-42f1-9a08-1aa054dd2818",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-07-09 21:01:15",
@@ -1923,7 +1931,7 @@
       "username_discord": "426237970111135744",
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "rank": "officer",
-      "available_dkp": 59,
+      "available_dkp": 60,
       "dkp_earned": 1397,
       "dkp_spent": 1445,
       "dkp_adjustments": 30,
@@ -2963,7 +2971,7 @@
       "username_discord": "556286647961124885",
       "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
       "rank": "member",
-      "available_dkp": 53,
+      "available_dkp": 54,
       "dkp_earned": 703,
       "dkp_spent": 744,
       "dkp_adjustments": 26,
@@ -3869,7 +3877,7 @@
       "username_discord": "269079536983998464",
       "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
       "rank": "member",
-      "available_dkp": 60,
+      "available_dkp": 61,
       "dkp_earned": 1083,
       "dkp_spent": 1109,
       "dkp_adjustments": 24,
@@ -4377,7 +4385,7 @@
       "username_discord": "202590249665298432",
       "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
       "rank": "member",
-      "available_dkp": 82,
+      "available_dkp": 85,
       "dkp_earned": 1143,
       "dkp_spent": 1208,
       "dkp_adjustments": 49,
@@ -10799,7 +10807,7 @@
       "username_discord": "1503020326097911818",
       "username_id": "aa950297-325a-4763-addf-bef51734b701",
       "rank": "member",
-      "available_dkp": 23,
+      "available_dkp": 33,
       "dkp_spent": 84,
       "characters": [
         {

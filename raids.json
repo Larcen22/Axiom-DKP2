@@ -274314,6 +274314,46 @@
       "unclaimed": [],
       "channel_id": "1545588942630297691",
       "summary_message_id": "1545588948410179595"
+    },
+    {
+      "raid_name": "Vulak Seru AR Deep on time",
+      "date": "2026-09-08",
+      "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1547036643259588669",
+      "summary_message_id": "1547036649488388248"
+    },
+    {
+      "raid_name": "Vulak Seru AR Deep 1",
+      "date": "2026-09-08",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1547036656383557673",
+      "summary_message_id": "1547036662238945385"
+    },
+    {
+      "raid_name": "Vulak Seru AR Deep 2",
+      "date": "2026-09-08",
+      "raid_id": "6221ad38-8346-4334-882e-c6dce1a88572",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1547036669914517506",
+      "summary_message_id": "1547036680257544268"
+    },
+    {
+      "raid_name": "Vulak Seru AR Deep 3",
+      "date": "2026-09-08",
+      "raid_id": "4b0ec389-83c4-470d-8521-36a733d6fef7",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1547036694245675012",
+      "summary_message_id": "1547036700402909245"
     }
   ]
 }
