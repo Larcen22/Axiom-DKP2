@@ -61019,6 +61019,62 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Yttrium Wrapped Leggings",
+      "character_id": "09a5828b-8a4d-4304-ac08-04853ea3a0da",
+      "character_name": "Sever",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Glowing Amber Band",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Yttrium Wrapped Leggings",
+      "character_id": "4d1884ab-5271-4dfa-99f0-e5625d7754aa",
+      "character_name": "Filya",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadowsong Cloak",
+      "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
+      "character_name": "Adrab",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Mantle of Fortitude",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Mantle of Fortitude",
+      "character_id": "70313083-c6ba-4813-a79b-f0c5ac8ff7ff",
+      "character_name": "Malzer",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "68fab02e-b3f7-481c-886b-f3f62906c0ca",
+      "item_dkp_value": 1
     }
   ]
 }
