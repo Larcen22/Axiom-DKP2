@@ -2545,9 +2545,9 @@
       "username_discord": "678817297913085952",
       "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
       "rank": "member",
-      "available_dkp": 141,
+      "available_dkp": 116,
       "dkp_earned": 1256,
-      "dkp_spent": 1202,
+      "dkp_spent": 1227,
       "dkp_adjustments": 2,
       "characters": [
         {
@@ -2723,9 +2723,9 @@
       "username_discord": "1426356797794685038",
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "rank": "member",
-      "available_dkp": 27,
+      "available_dkp": 22,
       "dkp_earned": 163,
-      "dkp_spent": 213,
+      "dkp_spent": 218,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -3041,9 +3041,9 @@
       "username_discord": "1471577913714544793",
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "rank": "member",
-      "available_dkp": 55,
+      "available_dkp": 54,
       "dkp_earned": 357,
-      "dkp_spent": 388,
+      "dkp_spent": 389,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -4114,6 +4114,14 @@
           "race": "Gnome",
           "level": 10,
           "character_id": "07dd110d-e70b-440f-9f81-8e42ecb8f0a5",
+          "role": "alternate"
+        },
+        {
+          "name": "Fatchance",
+          "class": "Warrior",
+          "race": "Troll",
+          "level": 36,
+          "character_id": "2311fb0c-ac36-4382-abc9-a95506642604",
           "role": "alternate"
         }
       ],
