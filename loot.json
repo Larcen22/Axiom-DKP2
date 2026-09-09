@@ -60987,6 +60987,38 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "26cfc52f-68b3-48e4-9116-4b4f3a032f7f",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Solist's Earring of Insight",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Yakatizma's Shield of Crafting",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Maclaer's Boots of Silence",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Jaelen's Katana",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "2d94f9e4-b4e7-4db2-83de-41916fab8bde",
+      "item_dkp_value": 1
     }
   ]
 }
