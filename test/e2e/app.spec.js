@@ -10,6 +10,19 @@
  * load, so re-navigating per test would be wasteful.
  */
 const { test, expect, devices } = require("@playwright/test");
+const fs = require("fs");
+const path = require("path");
+
+/** Transactions from the same dataset serve.mjs picks (real exports when committed, else sample fixtures), day-normalized and sorted newest-first — mirrors data.js + app.js so the "Recent Rewards" expansion logic can be checked against the on-disk export. Both datasets are fully dated today; if an undated one ever ships, this helper returns `null` rows only for it (panel renders "—"). */
+function servedTxSorted() {
+  const root = path.resolve(__dirname, "../..");
+  const useReal = ["loot.json", "raids.json", "users.json", "roster-export.csv"].every((f) => fs.existsSync(path.join(root, f)));
+  const file = path.join(useReal ? root : path.join(root, "test/fixtures/sample-data"), "transactions.json");
+  if (!fs.existsSync(file)) return null; // dataset without rewards — the panel shows its empty state instead
+  const wrap = JSON.parse(fs.readFileSync(file, "utf8"));
+  const tx = (Array.isArray(wrap) ? wrap : wrap.transactions || []).map((t) => ({ ...t, date: t.date ? String(t.date).slice(0, 10) : null }));
+  return tx.sort((a, b) => { if (a.date && b.date) return b.date.localeCompare(a.date); if (a.date) return -1; if (b.date) return 1; return 0; });
+}
 
 test.describe.serial("Axiom DKP dashboard", () => {
   let page;
@@ -274,16 +287,23 @@ test.describe.serial("Axiom DKP dashboard", () => {
       expect(m, "status should report the shown count").not.toBeNull();
       const rows = await page.locator("#recent-transactions-table tbody tr").count();
       expect(rows).toBe(Number(m[1])); // rendered rows match the status line
+      const dates = (await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents()).map((d) => d.trim());
       if (rows > 5) {
-        // Day expansion: extra rows only appear when a single day has more than five rewards,
-        // so every displayed row must share that one date.
-        const dates = await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents();
-        expect(new Set(dates.map((d) => d.trim())).size).toBe(1);
+        // Day expansion — a burst day (>5 rewards in one day) inside the newest-5 window shows ALL its rows, pushing past the cap and possibly mixing with newer partial days. Guaranteed: shown dates never leave that window or go further back, and no burst day is cut mid-day.
+        const txSorted = servedTxSorted(); // same dataset serve.mjs picked — check expansion logic against the on-disk export
+        expect(txSorted).not.toBeNull();
+        const keepDates = new Set(txSorted.slice(0, 5).map((t) => t.date));
+        expect([...new Set(dates)].sort()).toEqual([...keepDates].sort()); // exact window — nothing beyond it in history, nothing from the window missing
+        const dayCount = new Map();
+        for (const t of txSorted) if (t.date) dayCount.set(t.date, (dayCount.get(t.date) || 0) + 1);
+        const shownCount = {};
+        for (const d of dates) shownCount[d] = (shownCount[d] || 0) + 1;
+        for (const [d, n] of Object.entries(shownCount)) {
+          if ((dayCount.get(d) || 0) > 5) expect(n).toBe(dayCount.get(d)); // burst days are never cut in half
+        }
       }
       // Full ISO timestamps in the export must render as plain YYYY-MM-DD.
-      for (const t of await page.locator("#recent-transactions-table tbody td:nth-child(1)").allTextContents()) {
-        expect(t.trim()).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      }
+      for (const t of dates) expect(t).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }
   });
 
