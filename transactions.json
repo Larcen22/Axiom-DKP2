@@ -18106,6 +18106,42 @@
       "transaction_amount": 10,
       "reason": "Achievement: AA50",
       "date": "2026-09-09T00:13:53.217086+00:00"
+    },
+    {
+      "transaction_id": "66ede50e-4c39-49d2-b03a-0dadffc13688",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "Level46",
+      "transaction_amount": 1,
+      "reason": "Achievement: Level46",
+      "date": "2026-09-10T06:53:46.298083+00:00"
+    },
+    {
+      "transaction_id": "a5492b60-03e7-4cdf-a529-801a1186a259",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "Level50",
+      "transaction_amount": 3,
+      "reason": "Achievement: Level50",
+      "date": "2026-09-10T06:53:46.298083+00:00"
+    },
+    {
+      "transaction_id": "70bc5f25-7ce4-4211-8507-2f77eeed5112",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "Level55",
+      "transaction_amount": 6,
+      "reason": "Achievement: Level55",
+      "date": "2026-09-10T06:53:46.298083+00:00"
+    },
+    {
+      "transaction_id": "d1d3a599-ad1d-4fea-9898-923e8e01394f",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "Level60",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level60",
+      "date": "2026-09-10T06:53:46.298083+00:00"
     }
   ]
 }
