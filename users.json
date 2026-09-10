@@ -2877,6 +2877,14 @@
           "level": 12,
           "character_id": "62c68fe0-eb59-4273-b778-2e02c8426156",
           "role": "alternate"
+        },
+        {
+          "name": "Aside",
+          "class": "Cleric",
+          "race": "Dark Elf",
+          "level": 16,
+          "character_id": "eacbedde-6a8d-408a-8cf3-5612f2bfbaa8",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-11-23 21:40:39",
