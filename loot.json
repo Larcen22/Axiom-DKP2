@@ -61291,6 +61291,70 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Sandals of Contemplation",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Darkened Claw Amulet",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Thorny Chain Sleeves",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Destruction",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Amulet of Xuzl",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Stein of Falling Tears",
+      "character_id": "2bd8374b-fe4e-42de-9d80-8667527d76ba",
+      "character_name": "Howsermd",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 1
     }
   ]
 }
