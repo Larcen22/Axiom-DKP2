@@ -61195,6 +61195,102 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Shroud of Patience",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shield of Spiked Energy",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Boots of Kylthorn",
+      "character_id": "6346bb3c-cbf7-4c91-a572-9c5a93c74242",
+      "character_name": "Moroder",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Shroud of Patience",
+      "character_id": "d71f2fb7-728e-48d2-8cdc-f860c43dd103",
+      "character_name": "Gnofat",
+      "username_id": "fcd75ede-ee1a-40f7-813f-a2c009abb9de",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Boots of Silent Dreams",
+      "character_id": "297a5da1-45d3-4868-ab68-e9508cb9e4f8",
+      "character_name": "Mipsy",
+      "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "396c15fa-de8a-4555-94bc-cb8ac4f7294a",
+      "character_name": "Bigdumb",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Cap of the Silent Star",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shroud of Patience",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Living Symbol",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 2
     }
   ]
 }

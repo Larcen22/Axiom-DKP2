@@ -1059,9 +1059,9 @@
       "username_discord": "453256896791445514",
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "rank": "member",
-      "available_dkp": 42,
+      "available_dkp": 41,
       "dkp_earned": 0,
-      "dkp_spent": 116,
+      "dkp_spent": 117,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -1425,9 +1425,9 @@
       "username_discord": "215262807686512640",
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "rank": "member",
-      "available_dkp": 37,
+      "available_dkp": 32,
       "dkp_earned": 579,
-      "dkp_spent": 634,
+      "dkp_spent": 639,
       "dkp_adjustments": 6,
       "characters": [
         {
@@ -1573,9 +1573,9 @@
       "username_discord": "251577623245750273",
       "username_id": "fcd75ede-ee1a-40f7-813f-a2c009abb9de",
       "rank": "member",
-      "available_dkp": 118,
+      "available_dkp": 117,
       "dkp_earned": 429,
-      "dkp_spent": 374,
+      "dkp_spent": 375,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -2055,9 +2055,9 @@
       "username_discord": "108730067458265088",
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "rank": "member",
-      "available_dkp": 53,
+      "available_dkp": 47,
       "dkp_earned": 201,
-      "dkp_spent": 204,
+      "dkp_spent": 210,
       "dkp_adjustments": 4,
       "characters": [
         {
@@ -2231,9 +2231,9 @@
       "username_discord": "715727085154599003",
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "rank": "member",
-      "available_dkp": 81,
+      "available_dkp": 80,
       "dkp_earned": 228,
-      "dkp_spent": 236,
+      "dkp_spent": 237,
       "dkp_adjustments": 1,
       "characters": [
         {
@@ -2261,9 +2261,9 @@
       "username_discord": "551937731530457090",
       "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
       "rank": "member",
-      "available_dkp": 89,
+      "available_dkp": 84,
       "dkp_earned": 198,
-      "dkp_spent": 178,
+      "dkp_spent": 183,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -2723,9 +2723,9 @@
       "username_discord": "1426356797794685038",
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "rank": "member",
-      "available_dkp": 23,
+      "available_dkp": 22,
       "dkp_earned": 163,
-      "dkp_spent": 218,
+      "dkp_spent": 219,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -3483,9 +3483,9 @@
       "username_discord": "351487869505765392",
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "rank": "member",
-      "available_dkp": 54,
+      "available_dkp": 53,
       "dkp_earned": 1204,
-      "dkp_spent": 1213,
+      "dkp_spent": 1214,
       "dkp_adjustments": 8,
       "characters": [
         {
@@ -4017,9 +4017,9 @@
       "username_discord": "299759998991597569",
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "rank": "officer",
-      "available_dkp": 136,
+      "available_dkp": 135,
       "dkp_earned": 1531,
-      "dkp_spent": 1488,
+      "dkp_spent": 1489,
       "dkp_adjustments": 34,
       "characters": [
         {
@@ -10907,8 +10907,8 @@
       "username_discord": "211500975058321408",
       "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
       "rank": "member",
-      "available_dkp": 93,
-      "dkp_spent": 1,
+      "available_dkp": 82,
+      "dkp_spent": 12,
       "characters": [
         {
           "name": "Mipsy",
