@@ -2341,6 +2341,14 @@
           "level": 60,
           "character_id": "c546e02a-8969-41f6-8166-4ad507b71c58",
           "role": "alternate"
+        },
+        {
+          "name": "Soshort",
+          "class": "Enchanter",
+          "race": "Gnome",
+          "level": 24,
+          "character_id": "03f7f117-4101-4a14-88a2-fecb7394d148",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-07-07 23:36:48",
