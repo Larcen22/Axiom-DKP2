@@ -61475,6 +61475,54 @@
       "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
       "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Crown of Energy",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Crown of Ambivalence",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 27
+    },
+    {
+      "item": "Crown of Energy",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Mask of Piety",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Spiked Chain Leggings",
+      "character_id": "aafb1409-fdae-4a41-8dd6-17e367045b49",
+      "character_name": "Rootwind",
+      "username_id": "2518eea4-c0e8-41e4-a308-168ba22a38de",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 16
+    },
+    {
+      "item": "Mask of Piety",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 9
     }
   ]
 }
