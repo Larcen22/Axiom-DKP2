@@ -61187,6 +61187,14 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "raid_id": "4b0ec389-83c4-470d-8521-36a733d6fef7",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Crimson Headband",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 6
     }
   ]
 }
