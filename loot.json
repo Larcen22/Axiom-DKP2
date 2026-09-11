@@ -61523,6 +61523,38 @@
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
       "item_dkp_value": 9
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 65
+    },
+    {
+      "item": "Wristband of Judgement",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Earring of Eradication",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 35
+    },
+    {
+      "item": "Mask of Secrets",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
+      "item_dkp_value": 25
     }
   ]
 }
