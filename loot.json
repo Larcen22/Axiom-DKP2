@@ -61355,6 +61355,54 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Great Cloak of Shadows",
+      "character_id": "1b2e0317-5d0a-4daa-af5b-41aa2546e854",
+      "character_name": "Lynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Bow of Shadows",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Horn of Shadows",
+      "character_id": "6346bb3c-cbf7-4c91-a572-9c5a93c74242",
+      "character_name": "Moroder",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bracelet of the Shadow Hive",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Belt of Dark Thought",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "ccb89683-e520-4538-ab77-f9670a4aebd7",
+      "item_dkp_value": 7
     }
   ]
 }
