@@ -61635,6 +61635,38 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "4a8c91f3-8253-4cb7-ad7a-3e088697ddd0",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Pristine Jade Idol",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "4a8c91f3-8253-4cb7-ad7a-3e088697ddd0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Adamantite Wristguard",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Headband of Many Visions",
+      "character_id": "68dc3cd1-1b2d-489d-ae4d-ff4c2ed3f96d",
+      "character_name": "Naavi",
+      "username_id": "8f7bd371-cb00-4552-a57c-c1c5f592f703",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cudgel of Cowardly Death",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 1
     }
   ]
 }
