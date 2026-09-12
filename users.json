@@ -4683,6 +4683,14 @@
           "level": 1,
           "character_id": "94f43bd3-b91c-486e-8356-5d9552f23915",
           "role": "alternate"
+        },
+        {
+          "name": "Zarick",
+          "class": "Bard",
+          "race": "Wood Elf",
+          "level": 1,
+          "character_id": "aa1b748d-945c-4294-a146-8cfb406b478e",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-25 22:50:28",
