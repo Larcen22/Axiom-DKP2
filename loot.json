@@ -61563,6 +61563,22 @@
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Guise of the Hunter",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "4a8c91f3-8253-4cb7-ad7a-3e088697ddd0",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Corrupted Skull Earring",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "4a8c91f3-8253-4cb7-ad7a-3e088697ddd0",
+      "item_dkp_value": 2
     }
   ]
 }
