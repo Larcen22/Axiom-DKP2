@@ -18142,6 +18142,33 @@
       "transaction_amount": 10,
       "reason": "Achievement: Level60",
       "date": "2026-09-10T06:53:46.298083+00:00"
+    },
+    {
+      "transaction_id": "5285449c-b651-45bb-9974-9b0a6451f2e6",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-09-12T00:16:20.352226+00:00"
+    },
+    {
+      "transaction_id": "22c80c75-00a0-4c24-98f5-9b12b3e2ba63",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-09-12T00:16:20.352226+00:00"
+    },
+    {
+      "transaction_id": "704dd303-6840-4145-8c58-6f698392af5d",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "username": "Starfyre",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-09-12T00:16:20.352226+00:00"
     }
   ]
 }
