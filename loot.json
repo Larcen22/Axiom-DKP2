@@ -61555,6 +61555,14 @@
       "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
       "raid_id": "71fb01de-78a4-4774-8851-29c2c4649c53",
       "item_dkp_value": 25
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "182e553e-f3c5-478c-87f1-50bf61c1329c",
+      "item_dkp_value": 5
     }
   ]
 }
