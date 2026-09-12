@@ -61731,6 +61731,30 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "912852df-ed81-45c0-ac25-d46618c813c5",
       "item_dkp_value": 13
+    },
+    {
+      "item": "Leggings of Serenity",
+      "character_id": "30017d91-8759-4b0c-90c5-3c2b03d24e66",
+      "character_name": "Tuskin",
+      "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
+      "raid_id": "ea66be9c-48d3-4932-b41b-59b648c45fab",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadowed Torment",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "ea66be9c-48d3-4932-b41b-59b648c45fab",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Flowing Gossamer Cloak",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "ea66be9c-48d3-4932-b41b-59b648c45fab",
+      "item_dkp_value": 2
     }
   ]
 }
