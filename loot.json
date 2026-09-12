@@ -61667,6 +61667,30 @@
       "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
       "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Norge`tal",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Shroud of Emerald Vines",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Belt of Mystical Protection",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "85061220-79fb-48db-8c87-ccbe6b7cc831",
+      "item_dkp_value": 3
     }
   ]
 }
