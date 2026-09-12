@@ -4675,6 +4675,14 @@
           "role": "alternate",
           "level": 52,
           "race": "Erudite"
+        },
+        {
+          "name": "Virel",
+          "class": "Necromancer",
+          "race": "Iksar",
+          "level": 1,
+          "character_id": "94f43bd3-b91c-486e-8356-5d9552f23915",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-25 22:50:28",
