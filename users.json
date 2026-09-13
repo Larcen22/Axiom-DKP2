@@ -4973,6 +4973,14 @@
           "role": "alternate",
           "level": 8,
           "race": "High Elf"
+        },
+        {
+          "name": "Gnaavi",
+          "class": "Wizard",
+          "race": "Gnome",
+          "level": 1,
+          "character_id": "86220270-40c7-4118-9c3c-2b9d997cbf33",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-01-15 01:17:23",
