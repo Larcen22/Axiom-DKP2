@@ -11105,6 +11105,14 @@
           "level": 60,
           "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
           "role": "main"
+        },
+        {
+          "name": "Mizuhime",
+          "class": "Wizard",
+          "race": "High Elf",
+          "level": 40,
+          "character_id": "278d5e58-4434-4fc3-bcc0-37d5a12cee98",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-09-09 05:42:00",
