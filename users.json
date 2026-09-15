@@ -4093,6 +4093,14 @@
           "role": "alternate",
           "level": 1,
           "race": "Halfling"
+        },
+        {
+          "name": "Flippy",
+          "class": "Monk",
+          "race": "Iksar",
+          "level": 46,
+          "character_id": "b37adf9c-f900-4e85-9686-f9150b254302",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-25 23:12:11",
