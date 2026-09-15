@@ -10917,6 +10917,14 @@
           "level": 60,
           "character_id": "1995895f-4526-4549-872c-84d448fcf602",
           "role": "alternate"
+        },
+        {
+          "name": "Enyk",
+          "class": "Monk",
+          "race": "Iksar",
+          "level": 55,
+          "character_id": "b4c23d36-fd19-4189-a819-39fab8eedb8c",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 10:58:31",
