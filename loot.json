@@ -61755,6 +61755,15 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "raid_id": "ea66be9c-48d3-4932-b41b-59b648c45fab",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Staff of Elemental Mastery: Earth",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-09-15T03:42:16.190762+00:00"
     }
   ]
 }
