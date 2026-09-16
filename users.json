@@ -3621,6 +3621,22 @@
           "role": "main",
           "level": 60,
           "race": "Troll"
+        },
+        {
+          "name": "Economy",
+          "class": "Monk",
+          "race": "Iksar",
+          "level": 40,
+          "character_id": "1b714159-d9a3-46c8-8e96-6f6a936a7a3f",
+          "role": "alternate"
+        },
+        {
+          "name": "Fortunae",
+          "class": "Bard",
+          "race": "Wood Elf",
+          "level": 51,
+          "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-12-12 21:09:04",
