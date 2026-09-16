@@ -61820,6 +61820,54 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Belt of the Destroyer",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Melodic Charm",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Dagarns Tail",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Sky Watcher's Monocle",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Amulet of the Storm",
+      "character_id": "aa397d4c-2b7a-4454-a972-12f0857df70f",
+      "character_name": "Somersault",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Verlekarnorm's Horn of Disaster",
+      "character_id": "174c2a04-4a86-4280-b8b9-6816dd3e80b9",
+      "character_name": "Somos",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 4
     }
   ]
 }
