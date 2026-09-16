@@ -61764,6 +61764,62 @@
       "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
       "item_dkp_value": 1,
       "date": "2026-09-15T03:42:16.190762+00:00"
+    },
+    {
+      "item": "Onyx Chain Sleeves",
+      "character_id": "1b2e0317-5d0a-4daa-af5b-41aa2546e854",
+      "character_name": "Lynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Claw of Lightning",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ancient Wyvern Hide Tunic",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Hand of the Master",
+      "character_id": "95f06969-eaf0-4a02-b19d-8b3ceb281587",
+      "character_name": "Rampheezy",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Amulet of the Dreadgazer",
+      "character_id": "2fbcf1f5-888c-44c2-9a95-02e8be3ad8a7",
+      "character_name": "Hadrian",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Bow of the Silver Fang",
+      "character_id": "25f7c28b-460b-44d7-abe7-50f2f777e274",
+      "character_name": "Struggles",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shield of Thorns",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "item_dkp_value": 1
     }
   ]
 }
