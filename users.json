@@ -206,7 +206,7 @@
       "username_id": "94c6ccf0-5fff-429d-9029-b212e97eebe3",
       "rank": "member",
       "available_dkp": 27,
-      "dkp_earned": 19,
+      "dkp_earned": 46,
       "dkp_spent": 19,
       "dkp_adjustments": 0,
       "characters": [
@@ -272,7 +272,7 @@
       "username_id": "8e91c9b5-7e78-4ee3-9da4-37afe5148398",
       "rank": "member",
       "available_dkp": 58,
-      "dkp_earned": 5,
+      "dkp_earned": 58,
       "dkp_spent": 0,
       "dkp_adjustments": 53,
       "characters": [
@@ -750,7 +750,7 @@
       "username_id": "5d4bfa0c-22cd-4d98-b941-4f8e1c2fcde5",
       "rank": "member",
       "available_dkp": 32,
-      "dkp_earned": 0,
+      "dkp_earned": 65,
       "dkp_spent": 33,
       "dkp_adjustments": 0,
       "characters": [
@@ -1060,7 +1060,7 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "rank": "member",
       "available_dkp": 54,
-      "dkp_earned": 0,
+      "dkp_earned": 173,
       "dkp_spent": 119,
       "dkp_adjustments": 0,
       "characters": [
@@ -1426,7 +1426,7 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "rank": "member",
       "available_dkp": 30,
-      "dkp_earned": 579,
+      "dkp_earned": 680,
       "dkp_spent": 650,
       "dkp_adjustments": 6,
       "characters": [
@@ -1520,7 +1520,7 @@
       "username_id": "5478297b-aad6-450b-a252-965d124b6091",
       "rank": "member",
       "available_dkp": 26,
-      "dkp_earned": 387,
+      "dkp_earned": 403,
       "dkp_spent": 377,
       "dkp_adjustments": 10,
       "characters": [
@@ -1582,7 +1582,7 @@
       "username_id": "fcd75ede-ee1a-40f7-813f-a2c009abb9de",
       "rank": "member",
       "available_dkp": 132,
-      "dkp_earned": 429,
+      "dkp_earned": 507,
       "dkp_spent": 375,
       "dkp_adjustments": 0,
       "characters": [
@@ -1620,7 +1620,7 @@
       "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
       "rank": "officer",
       "available_dkp": 74,
-      "dkp_earned": 1502,
+      "dkp_earned": 1598,
       "dkp_spent": 1524,
       "dkp_adjustments": 2,
       "characters": [
@@ -1674,7 +1674,7 @@
       "username_id": "b6c957d5-10cf-4924-8d72-db53c2a65712",
       "rank": "member",
       "available_dkp": 153,
-      "dkp_earned": 199,
+      "dkp_earned": 236,
       "dkp_spent": 83,
       "dkp_adjustments": 0,
       "characters": [
@@ -1720,7 +1720,7 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "rank": "member",
       "available_dkp": 8,
-      "dkp_earned": 246,
+      "dkp_earned": 285,
       "dkp_spent": 277,
       "dkp_adjustments": 0,
       "characters": [
@@ -1766,7 +1766,7 @@
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "rank": "member",
       "available_dkp": 340,
-      "dkp_earned": 998,
+      "dkp_earned": 1067,
       "dkp_spent": 727,
       "dkp_adjustments": 2,
       "characters": [
@@ -1820,7 +1820,7 @@
       "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
       "rank": "applicant",
       "available_dkp": 42,
-      "dkp_earned": 58,
+      "dkp_earned": 137,
       "dkp_spent": 95,
       "dkp_adjustments": 0,
       "characters": [
@@ -1858,7 +1858,7 @@
       "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
       "rank": "member",
       "available_dkp": 142,
-      "dkp_earned": 667,
+      "dkp_earned": 791,
       "dkp_spent": 649,
       "dkp_adjustments": 7,
       "characters": [
@@ -1888,7 +1888,7 @@
       "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
       "rank": "applicant",
       "available_dkp": 57,
-      "dkp_earned": 58,
+      "dkp_earned": 149,
       "dkp_spent": 92,
       "dkp_adjustments": 0,
       "characters": [
@@ -1918,7 +1918,7 @@
       "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
       "rank": "member",
       "available_dkp": 12,
-      "dkp_earned": 15,
+      "dkp_earned": 102,
       "dkp_spent": 90,
       "dkp_adjustments": 0,
       "characters": [
@@ -1940,7 +1940,7 @@
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "rank": "officer",
       "available_dkp": 70,
-      "dkp_earned": 1397,
+      "dkp_earned": 1515,
       "dkp_spent": 1445,
       "dkp_adjustments": 30,
       "characters": [
@@ -2018,7 +2018,7 @@
       "username_id": "9976f51f-ec18-45ee-ba05-b9bfa7a2dbe6",
       "rank": "member",
       "available_dkp": 53,
-      "dkp_earned": 246,
+      "dkp_earned": 254,
       "dkp_spent": 201,
       "dkp_adjustments": 0,
       "characters": [
@@ -2064,7 +2064,7 @@
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "rank": "member",
       "available_dkp": 59,
-      "dkp_earned": 201,
+      "dkp_earned": 271,
       "dkp_spent": 212,
       "dkp_adjustments": 4,
       "characters": [
@@ -2110,7 +2110,7 @@
       "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
       "rank": "member",
       "available_dkp": 18,
-      "dkp_earned": 116,
+      "dkp_earned": 214,
       "dkp_spent": 196,
       "dkp_adjustments": 0,
       "characters": [
@@ -2140,7 +2140,7 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "rank": "member",
       "available_dkp": 15,
-      "dkp_earned": 1661,
+      "dkp_earned": 1749,
       "dkp_spent": 1734,
       "dkp_adjustments": 13,
       "characters": [
@@ -2210,7 +2210,7 @@
       "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
       "rank": "member",
       "available_dkp": 122,
-      "dkp_earned": 648,
+      "dkp_earned": 711,
       "dkp_spent": 589,
       "dkp_adjustments": 0,
       "characters": [
@@ -2240,7 +2240,7 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "rank": "member",
       "available_dkp": 63,
-      "dkp_earned": 228,
+      "dkp_earned": 332,
       "dkp_spent": 269,
       "dkp_adjustments": 1,
       "characters": [
@@ -2270,7 +2270,7 @@
       "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
       "rank": "member",
       "available_dkp": 88,
-      "dkp_earned": 198,
+      "dkp_earned": 274,
       "dkp_spent": 186,
       "dkp_adjustments": 0,
       "characters": [
@@ -2300,7 +2300,7 @@
       "username_id": "846c9039-c64a-44f2-b10e-1f159af0fee4",
       "rank": "member",
       "available_dkp": 406,
-      "dkp_earned": 649,
+      "dkp_earned": 690,
       "dkp_spent": 284,
       "dkp_adjustments": 16,
       "characters": [
@@ -2322,7 +2322,7 @@
       "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
       "rank": "member",
       "available_dkp": 61,
-      "dkp_earned": 41,
+      "dkp_earned": 192,
       "dkp_spent": 131,
       "dkp_adjustments": 0,
       "characters": [
@@ -2360,7 +2360,7 @@
       "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
       "rank": "member",
       "available_dkp": 51,
-      "dkp_earned": 290,
+      "dkp_earned": 358,
       "dkp_spent": 307,
       "dkp_adjustments": 0,
       "characters": [
@@ -2414,7 +2414,7 @@
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "rank": "officer",
       "available_dkp": 58,
-      "dkp_earned": 1589,
+      "dkp_earned": 1657,
       "dkp_spent": 1599,
       "dkp_adjustments": 4,
       "characters": [
@@ -2492,7 +2492,7 @@
       "username_id": "623abad9-a6e6-489a-ae62-9f0be24c58f0",
       "rank": "member",
       "available_dkp": 14,
-      "dkp_earned": 291,
+      "dkp_earned": 298,
       "dkp_spent": 284,
       "dkp_adjustments": 0,
       "characters": [
@@ -2562,7 +2562,7 @@
       "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
       "rank": "member",
       "available_dkp": 129,
-      "dkp_earned": 1256,
+      "dkp_earned": 1358,
       "dkp_spent": 1229,
       "dkp_adjustments": 2,
       "characters": [
@@ -2664,7 +2664,7 @@
       "username_id": "f77e2b93-8666-46fd-85c4-230971284542",
       "rank": "member",
       "available_dkp": 470,
-      "dkp_earned": 1612,
+      "dkp_earned": 1750,
       "dkp_spent": 1280,
       "dkp_adjustments": 34,
       "characters": [
@@ -2694,7 +2694,7 @@
       "username_id": "db7dc159-0c48-4aeb-b58a-da7c79518311",
       "rank": "member",
       "available_dkp": 4,
-      "dkp_earned": 125,
+      "dkp_earned": 167,
       "dkp_spent": 163,
       "dkp_adjustments": 30,
       "characters": [
@@ -2740,7 +2740,7 @@
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "rank": "member",
       "available_dkp": 25,
-      "dkp_earned": 163,
+      "dkp_earned": 256,
       "dkp_spent": 231,
       "dkp_adjustments": 0,
       "characters": [
@@ -2826,7 +2826,7 @@
       "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
       "rank": "member",
       "available_dkp": 111,
-      "dkp_earned": 1159,
+      "dkp_earned": 1277,
       "dkp_spent": 1166,
       "dkp_adjustments": 30,
       "characters": [
@@ -2912,7 +2912,7 @@
       "username_id": "b9d25b9f-1aee-44e9-97f7-75cdf8757b94",
       "rank": "member",
       "available_dkp": 92,
-      "dkp_earned": 1645,
+      "dkp_earned": 1684,
       "dkp_spent": 1592,
       "dkp_adjustments": 43,
       "characters": [
@@ -2974,7 +2974,7 @@
       "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
       "rank": "member",
       "available_dkp": 35,
-      "dkp_earned": 85,
+      "dkp_earned": 214,
       "dkp_spent": 179,
       "dkp_adjustments": 0,
       "characters": [
@@ -2996,7 +2996,7 @@
       "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
       "rank": "member",
       "available_dkp": 58,
-      "dkp_earned": 703,
+      "dkp_earned": 819,
       "dkp_spent": 761,
       "dkp_adjustments": 26,
       "characters": [
@@ -3066,7 +3066,7 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "rank": "member",
       "available_dkp": 67,
-      "dkp_earned": 357,
+      "dkp_earned": 459,
       "dkp_spent": 392,
       "dkp_adjustments": 0,
       "characters": [
@@ -3104,7 +3104,7 @@
       "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
       "rank": "member",
       "available_dkp": 339,
-      "dkp_earned": 1184,
+      "dkp_earned": 1236,
       "dkp_spent": 897,
       "dkp_adjustments": 16,
       "characters": [
@@ -3158,7 +3158,7 @@
       "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
       "rank": "member",
       "available_dkp": 106,
-      "dkp_earned": 132,
+      "dkp_earned": 227,
       "dkp_spent": 121,
       "dkp_adjustments": 0,
       "characters": [
@@ -3212,7 +3212,7 @@
       "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
       "rank": "member",
       "available_dkp": 5,
-      "dkp_earned": 208,
+      "dkp_earned": 246,
       "dkp_spent": 241,
       "dkp_adjustments": 0,
       "characters": [
@@ -3242,7 +3242,7 @@
       "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
       "rank": "member",
       "available_dkp": 24,
-      "dkp_earned": 583,
+      "dkp_earned": 660,
       "dkp_spent": 636,
       "dkp_adjustments": 40,
       "characters": [
@@ -3288,7 +3288,7 @@
       "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
       "rank": "member",
       "available_dkp": 83,
-      "dkp_earned": 605,
+      "dkp_earned": 715,
       "dkp_spent": 632,
       "dkp_adjustments": 4,
       "characters": [
@@ -3318,7 +3318,7 @@
       "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
       "rank": "member",
       "available_dkp": 583,
-      "dkp_earned": 1035,
+      "dkp_earned": 1155,
       "dkp_spent": 572,
       "dkp_adjustments": 15,
       "characters": [
@@ -3364,7 +3364,7 @@
       "username_id": "2de63d38-784d-4287-bb07-8564659becf4",
       "rank": "member",
       "available_dkp": 11,
-      "dkp_earned": 198,
+      "dkp_earned": 224,
       "dkp_spent": 213,
       "dkp_adjustments": 1,
       "characters": [
@@ -3386,7 +3386,7 @@
       "username_id": "a7a24038-3e15-4108-a5a3-64e08267b3be",
       "rank": "member",
       "available_dkp": 21,
-      "dkp_earned": 118,
+      "dkp_earned": 171,
       "dkp_spent": 150,
       "dkp_adjustments": 0,
       "characters": [
@@ -3408,7 +3408,7 @@
       "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
       "rank": "officer",
       "available_dkp": 242,
-      "dkp_earned": 1537,
+      "dkp_earned": 1627,
       "dkp_spent": 1385,
       "dkp_adjustments": 2,
       "characters": [
@@ -3470,7 +3470,7 @@
       "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
       "rank": "member",
       "available_dkp": 78,
-      "dkp_earned": 201,
+      "dkp_earned": 277,
       "dkp_spent": 199,
       "dkp_adjustments": 0,
       "characters": [
@@ -3500,7 +3500,7 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "rank": "member",
       "available_dkp": 62,
-      "dkp_earned": 1204,
+      "dkp_earned": 1280,
       "dkp_spent": 1218,
       "dkp_adjustments": 8,
       "characters": [
@@ -3610,7 +3610,7 @@
       "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
       "rank": "member",
       "available_dkp": 37,
-      "dkp_earned": 659,
+      "dkp_earned": 757,
       "dkp_spent": 720,
       "dkp_adjustments": 1,
       "characters": [
@@ -3648,7 +3648,7 @@
       "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
       "rank": "member",
       "available_dkp": 169,
-      "dkp_earned": 631,
+      "dkp_earned": 736,
       "dkp_spent": 567,
       "dkp_adjustments": 2,
       "characters": [
@@ -3710,7 +3710,7 @@
       "username_id": "d50788cc-0f1d-4539-9c20-a273d60b61c8",
       "rank": "member",
       "available_dkp": 213,
-      "dkp_earned": 818,
+      "dkp_earned": 848,
       "dkp_spent": 635,
       "dkp_adjustments": 7,
       "characters": [
@@ -3740,7 +3740,7 @@
       "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
       "rank": "officer",
       "available_dkp": 11,
-      "dkp_earned": 561,
+      "dkp_earned": 581,
       "dkp_spent": 570,
       "dkp_adjustments": 15,
       "characters": [
@@ -3810,7 +3810,7 @@
       "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
       "rank": "member",
       "available_dkp": 167,
-      "dkp_earned": 1424,
+      "dkp_earned": 1528,
       "dkp_spent": 1361,
       "dkp_adjustments": 2,
       "characters": [
@@ -3896,7 +3896,7 @@
       "username_id": "1c60b4c4-a836-4afe-923e-d75a47b3a30e",
       "rank": "member",
       "available_dkp": 59,
-      "dkp_earned": 76,
+      "dkp_earned": 141,
       "dkp_spent": 82,
       "dkp_adjustments": 0,
       "characters": [
@@ -3918,7 +3918,7 @@
       "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
       "rank": "member",
       "available_dkp": 83,
-      "dkp_earned": 1083,
+      "dkp_earned": 1193,
       "dkp_spent": 1110,
       "dkp_adjustments": 24,
       "characters": [
@@ -3980,7 +3980,7 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "rank": "member",
       "available_dkp": 56,
-      "dkp_earned": 793,
+      "dkp_earned": 833,
       "dkp_spent": 777,
       "dkp_adjustments": 4,
       "characters": [
@@ -4050,7 +4050,7 @@
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "rank": "officer",
       "available_dkp": 145,
-      "dkp_earned": 1531,
+      "dkp_earned": 1637,
       "dkp_spent": 1492,
       "dkp_adjustments": 34,
       "characters": [
@@ -4128,7 +4128,7 @@
       "username_id": "5626495f-436a-437b-9853-24b473c89494",
       "rank": "member",
       "available_dkp": 120,
-      "dkp_earned": 797,
+      "dkp_earned": 885,
       "dkp_spent": 765,
       "dkp_adjustments": 3,
       "characters": [
@@ -4182,7 +4182,7 @@
       "username_id": "c4afde5a-f796-477c-9547-94477773bd65",
       "rank": "member",
       "available_dkp": 56,
-      "dkp_earned": 67,
+      "dkp_earned": 68,
       "dkp_spent": 12,
       "dkp_adjustments": 1,
       "characters": [
@@ -4204,7 +4204,7 @@
       "username_id": "259dd87f-8d0f-4e4d-bb9a-9673b5e7a174",
       "rank": "member",
       "available_dkp": 12,
-      "dkp_earned": 86,
+      "dkp_earned": 131,
       "dkp_spent": 119,
       "dkp_adjustments": 40,
       "characters": [
@@ -4336,7 +4336,7 @@
       "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
       "rank": "member",
       "available_dkp": 67,
-      "dkp_earned": 195,
+      "dkp_earned": 205,
       "dkp_spent": 138,
       "dkp_adjustments": 0,
       "characters": [
@@ -4382,7 +4382,7 @@
       "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
       "rank": "member",
       "available_dkp": 18,
-      "dkp_earned": 712,
+      "dkp_earned": 760,
       "dkp_spent": 742,
       "dkp_adjustments": 4,
       "characters": [
@@ -4412,7 +4412,7 @@
       "username_id": "2b7d4c65-2458-46da-aab3-0dfdb934fcdc",
       "rank": "member",
       "available_dkp": 37,
-      "dkp_earned": 328,
+      "dkp_earned": 428,
       "dkp_spent": 391,
       "dkp_adjustments": 16,
       "characters": [
@@ -4442,7 +4442,7 @@
       "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
       "rank": "member",
       "available_dkp": 104,
-      "dkp_earned": 1143,
+      "dkp_earned": 1313,
       "dkp_spent": 1209,
       "dkp_adjustments": 49,
       "characters": [
@@ -4488,7 +4488,7 @@
       "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
       "rank": "member",
       "available_dkp": 37,
-      "dkp_earned": 687,
+      "dkp_earned": 721,
       "dkp_spent": 684,
       "dkp_adjustments": 2,
       "characters": [
@@ -4542,7 +4542,7 @@
       "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
       "rank": "member",
       "available_dkp": 127,
-      "dkp_earned": 719,
+      "dkp_earned": 824,
       "dkp_spent": 697,
       "dkp_adjustments": 25,
       "characters": [
@@ -4564,7 +4564,7 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "rank": "officer",
       "available_dkp": 119,
-      "dkp_earned": 1718,
+      "dkp_earned": 1808,
       "dkp_spent": 1689,
       "dkp_adjustments": 0,
       "characters": [
@@ -4602,7 +4602,7 @@
       "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
       "rank": "member",
       "available_dkp": 250,
-      "dkp_earned": 758,
+      "dkp_earned": 815,
       "dkp_spent": 565,
       "dkp_adjustments": 9,
       "characters": [
@@ -4656,7 +4656,7 @@
       "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
       "rank": "member",
       "available_dkp": 26,
-      "dkp_earned": 763,
+      "dkp_earned": 822,
       "dkp_spent": 796,
       "dkp_adjustments": 18,
       "characters": [
@@ -4748,7 +4748,7 @@
       "username_id": "9992478c-0f06-4fa6-9dd2-f427a351bec0",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 10,
+      "dkp_earned": 3,
       "dkp_spent": 3,
       "dkp_adjustments": 0,
       "characters": [
@@ -4770,7 +4770,7 @@
       "username_id": "079a3a8a-2860-488c-951f-0351946057c9",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 53,
+      "dkp_earned": 30,
       "dkp_spent": 30,
       "dkp_adjustments": 0,
       "characters": [
@@ -4800,7 +4800,7 @@
       "username_id": "c02d82a1-37da-4a6b-9923-96d5c816891c",
       "rank": "member",
       "available_dkp": 161,
-      "dkp_earned": 692,
+      "dkp_earned": 792,
       "dkp_spent": 631,
       "dkp_adjustments": 27,
       "characters": [
@@ -4878,7 +4878,7 @@
       "username_id": "72baca08-03f9-46e9-86c6-ebcb1b7d57b4",
       "rank": "member",
       "available_dkp": 16,
-      "dkp_earned": 409,
+      "dkp_earned": 429,
       "dkp_spent": 413,
       "dkp_adjustments": 19,
       "characters": [
@@ -4924,7 +4924,7 @@
       "username_id": "b308a630-f327-4d69-aed5-a6d1c2a68cc4",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 966,
+      "dkp_earned": 951,
       "dkp_spent": 951,
       "dkp_adjustments": 0,
       "characters": [
@@ -4978,7 +4978,7 @@
       "username_id": "8f7bd371-cb00-4552-a57c-c1c5f592f703",
       "rank": "member",
       "available_dkp": 10,
-      "dkp_earned": 528,
+      "dkp_earned": 534,
       "dkp_spent": 524,
       "dkp_adjustments": 2,
       "characters": [
@@ -5094,7 +5094,7 @@
       "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
       "rank": "member",
       "available_dkp": 233,
-      "dkp_earned": 397,
+      "dkp_earned": 497,
       "dkp_spent": 264,
       "dkp_adjustments": 3,
       "characters": [
@@ -5148,7 +5148,7 @@
       "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
       "rank": "officer",
       "available_dkp": 225,
-      "dkp_earned": 1667,
+      "dkp_earned": 1763,
       "dkp_spent": 1538,
       "dkp_adjustments": 6,
       "characters": [
@@ -5194,7 +5194,7 @@
       "username_id": "1a6be5d4-234f-48a3-9e61-86ab24be7db5",
       "rank": "member",
       "available_dkp": 22,
-      "dkp_earned": 516,
+      "dkp_earned": 530,
       "dkp_spent": 508,
       "dkp_adjustments": 6,
       "characters": [
@@ -5248,7 +5248,7 @@
       "username_id": "e47ce494-533f-4ab8-9e3f-7911bc37d9d2",
       "rank": "member",
       "available_dkp": 90,
-      "dkp_earned": 1722,
+      "dkp_earned": 1756,
       "dkp_spent": 1666,
       "dkp_adjustments": 12,
       "characters": [
@@ -5324,7 +5324,7 @@
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "rank": "member",
       "available_dkp": 116,
-      "dkp_earned": 396,
+      "dkp_earned": 405,
       "dkp_spent": 289,
       "dkp_adjustments": 2,
       "characters": [
@@ -5452,7 +5452,7 @@
       "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
       "rank": "member",
       "available_dkp": 89,
-      "dkp_earned": 183,
+      "dkp_earned": 268,
       "dkp_spent": 179,
       "dkp_adjustments": 55,
       "characters": [
@@ -5514,7 +5514,7 @@
       "username_id": "4e665bfe-35ca-4f26-9732-cde4ca2f3133",
       "rank": "member",
       "available_dkp": 69,
-      "dkp_earned": 854,
+      "dkp_earned": 871,
       "dkp_spent": 802,
       "dkp_adjustments": 17,
       "characters": [
@@ -5544,7 +5544,7 @@
       "username_id": "891a84ad-dcb3-401d-93c9-714b2c5d63ed",
       "rank": "member",
       "available_dkp": 97,
-      "dkp_earned": 350,
+      "dkp_earned": 358,
       "dkp_spent": 261,
       "dkp_adjustments": 0,
       "characters": [
@@ -5634,7 +5634,7 @@
       "username_id": "444857a3-8681-4bf0-abac-0a43cdb435c4",
       "rank": "member",
       "available_dkp": 40,
-      "dkp_earned": 474,
+      "dkp_earned": 478,
       "dkp_spent": 438,
       "dkp_adjustments": 4,
       "characters": [
@@ -5688,7 +5688,7 @@
       "username_id": "4c95e917-e1b5-46bb-8835-3abfc990a978",
       "rank": "member",
       "available_dkp": 71,
-      "dkp_earned": 672,
+      "dkp_earned": 737,
       "dkp_spent": 666,
       "dkp_adjustments": 65,
       "characters": [
@@ -5726,7 +5726,7 @@
       "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
       "rank": "member",
       "available_dkp": 18,
-      "dkp_earned": 1006,
+      "dkp_earned": 1065,
       "dkp_spent": 1047,
       "dkp_adjustments": 12,
       "characters": [
@@ -5952,7 +5952,7 @@
       "username_id": "5e885967-359b-4538-bd95-c0e7565fee62",
       "rank": "member",
       "available_dkp": 8,
-      "dkp_earned": 287,
+      "dkp_earned": 302,
       "dkp_spent": 294,
       "dkp_adjustments": 15,
       "characters": [
@@ -6028,7 +6028,7 @@
       "username_id": "7dd22364-6fe7-4df5-8081-3cdc3276107f",
       "rank": "member",
       "available_dkp": 33,
-      "dkp_earned": 236,
+      "dkp_earned": 244,
       "dkp_spent": 211,
       "dkp_adjustments": 8,
       "characters": [
@@ -6074,7 +6074,7 @@
       "username_id": "3f32442d-1e9d-4467-9194-82362a564b77",
       "rank": "member",
       "available_dkp": 231,
-      "dkp_earned": 603,
+      "dkp_earned": 605,
       "dkp_spent": 374,
       "dkp_adjustments": 2,
       "characters": [
@@ -6152,7 +6152,7 @@
       "username_id": "2518eea4-c0e8-41e4-a308-168ba22a38de",
       "rank": "member",
       "available_dkp": 38,
-      "dkp_earned": 130,
+      "dkp_earned": 135,
       "dkp_spent": 97,
       "dkp_adjustments": 0,
       "characters": [
@@ -6218,7 +6218,7 @@
       "username_id": "385447b0-d29e-44d6-9079-504e5179226f",
       "rank": "member",
       "available_dkp": 118,
-      "dkp_earned": 596,
+      "dkp_earned": 621,
       "dkp_spent": 503,
       "dkp_adjustments": 2,
       "characters": [
@@ -6408,7 +6408,7 @@
       "username_id": "87bb65fd-2d15-442a-99d8-4321f0e15cda",
       "rank": "member",
       "available_dkp": 185,
-      "dkp_earned": 443,
+      "dkp_earned": 446,
       "dkp_spent": 261,
       "dkp_adjustments": 3,
       "characters": [
@@ -6484,7 +6484,7 @@
       "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
       "rank": "officer",
       "available_dkp": 77,
-      "dkp_earned": 1433,
+      "dkp_earned": 1435,
       "dkp_spent": 1358,
       "dkp_adjustments": 10,
       "characters": [
@@ -6694,7 +6694,7 @@
       "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
       "rank": "officer",
       "available_dkp": 43,
-      "dkp_earned": 905,
+      "dkp_earned": 1039,
       "dkp_spent": 996,
       "dkp_adjustments": 120,
       "characters": [
@@ -6760,7 +6760,7 @@
       "username_id": "1c3092b4-43da-47fa-ad59-f7e5c4b74e69",
       "rank": "member",
       "available_dkp": 44,
-      "dkp_earned": 27,
+      "dkp_earned": 50,
       "dkp_spent": 6,
       "dkp_adjustments": 0,
       "characters": [
@@ -6834,7 +6834,7 @@
       "username_id": "f2d877f2-66e4-43c6-ac6b-41ab93fc100b",
       "rank": "member",
       "available_dkp": 51,
-      "dkp_earned": 250,
+      "dkp_earned": 252,
       "dkp_spent": 201,
       "dkp_adjustments": 2,
       "characters": [
@@ -6960,7 +6960,7 @@
       "username_id": "f30d4e7a-ee5f-4756-9575-bc0c4db67679",
       "rank": "member",
       "available_dkp": 27,
-      "dkp_earned": 646,
+      "dkp_earned": 647,
       "dkp_spent": 620,
       "dkp_adjustments": 1,
       "characters": [
@@ -7020,7 +7020,7 @@
       "username_id": "187827da-db09-4b57-9622-457697a77c2e",
       "rank": "member",
       "available_dkp": 33,
-      "dkp_earned": 504,
+      "dkp_earned": 510,
       "dkp_spent": 477,
       "dkp_adjustments": 0,
       "characters": [
@@ -7160,7 +7160,7 @@
       "username_id": "21769e82-22d2-4f67-b9ab-dc9c08aa830d",
       "rank": "member",
       "available_dkp": 78,
-      "dkp_earned": 226,
+      "dkp_earned": 243,
       "dkp_spent": 165,
       "dkp_adjustments": 17,
       "characters": [
@@ -7222,7 +7222,7 @@
       "username_id": "96c8b4f4-5864-44e6-95c8-fd7735f27b2f",
       "rank": "member",
       "available_dkp": 361,
-      "dkp_earned": 454,
+      "dkp_earned": 489,
       "dkp_spent": 128,
       "dkp_adjustments": 35,
       "characters": [
@@ -7296,7 +7296,7 @@
       "username_id": "1ac97e0a-7960-46a1-8107-5735e203f702",
       "rank": "member",
       "available_dkp": 88,
-      "dkp_earned": 159,
+      "dkp_earned": 161,
       "dkp_spent": 73,
       "dkp_adjustments": 2,
       "characters": [
@@ -7326,7 +7326,7 @@
       "username_id": "661b8b0e-9063-4011-a945-09a47f55c738",
       "rank": "member",
       "available_dkp": 162,
-      "dkp_earned": 349,
+      "dkp_earned": 352,
       "dkp_spent": 190,
       "dkp_adjustments": 7,
       "characters": [
@@ -7618,7 +7618,7 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "rank": "member",
       "available_dkp": 67,
-      "dkp_earned": 361,
+      "dkp_earned": 397,
       "dkp_spent": 330,
       "dkp_adjustments": 0,
       "characters": [
@@ -7868,7 +7868,7 @@
       "username_id": "79271e8f-9aa9-4045-af6c-38c101d8db77",
       "rank": "member",
       "available_dkp": 251,
-      "dkp_earned": 555,
+      "dkp_earned": 557,
       "dkp_spent": 306,
       "dkp_adjustments": 2,
       "characters": [
@@ -8056,7 +8056,7 @@
       "username_id": "d38de419-805f-4207-9e7a-dd9e231496a9",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 89,
+      "dkp_earned": 1,
       "dkp_spent": 1,
       "dkp_adjustments": 0,
       "characters": [
@@ -8448,7 +8448,7 @@
       "username_id": "2d8cb8c1-cb4d-4f42-bf83-9a73669c53c3",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 28,
+      "dkp_earned": 4,
       "dkp_spent": 4,
       "dkp_adjustments": 0,
       "characters": [
@@ -8470,7 +8470,7 @@
       "username_id": "ae103047-e072-45d2-b7af-01708bc5ff2f",
       "rank": "member",
       "available_dkp": 298,
-      "dkp_earned": 874,
+      "dkp_earned": 876,
       "dkp_spent": 578,
       "dkp_adjustments": 2,
       "characters": [
@@ -8948,7 +8948,7 @@
       "username_id": "b9477f15-df0d-49b6-a223-eec42f6770ef",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 29,
+      "dkp_earned": 2,
       "dkp_spent": 2,
       "dkp_adjustments": 0,
       "characters": [
@@ -9060,7 +9060,7 @@
       "username_id": "e345e732-f0be-4a2d-a297-e6a848d40090",
       "rank": "former",
       "available_dkp": 156,
-      "dkp_earned": 255,
+      "dkp_earned": 256,
       "dkp_spent": 100,
       "dkp_adjustments": 1,
       "characters": [
@@ -9136,7 +9136,7 @@
       "username_id": "2b22099c-3043-45ea-9d25-5fb48db35f70",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 152,
+      "dkp_earned": 119,
       "dkp_spent": 119,
       "dkp_adjustments": 0,
       "characters": [
@@ -9166,7 +9166,7 @@
       "username_id": "509035cc-67d7-44b6-b375-53f678d0a595",
       "rank": "member",
       "available_dkp": 174,
-      "dkp_earned": 921,
+      "dkp_earned": 952,
       "dkp_spent": 778,
       "dkp_adjustments": 31,
       "characters": [
@@ -9358,7 +9358,7 @@
       "username_id": "73c6c2ca-6023-4893-a9e0-87d5f8eb3ba2",
       "rank": "inactive",
       "available_dkp": 203,
-      "dkp_earned": 574,
+      "dkp_earned": 575,
       "dkp_spent": 372,
       "dkp_adjustments": 1,
       "characters": [
@@ -9524,7 +9524,7 @@
       "username_id": "0ae632f1-1a31-41c4-b1f2-1a40fc79b864",
       "rank": "member",
       "available_dkp": 172,
-      "dkp_earned": 641,
+      "dkp_earned": 742,
       "dkp_spent": 570,
       "dkp_adjustments": 101,
       "characters": [
@@ -9632,7 +9632,7 @@
       "username_id": "9587d3b8-5b8c-4616-aa76-c700ff7ec525",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 2,
+      "dkp_earned": 1,
       "dkp_spent": 1,
       "dkp_adjustments": 0,
       "characters": [
@@ -9776,7 +9776,7 @@
       "username_id": "e3a27311-c0d5-4516-896e-05976ecb96a3",
       "rank": "inactive",
       "available_dkp": 78,
-      "dkp_earned": 177,
+      "dkp_earned": 178,
       "dkp_spent": 100,
       "dkp_adjustments": 1,
       "characters": [
@@ -9882,7 +9882,7 @@
       "username_id": "4de54ef0-ca29-4bfd-afb4-abd15634dcaa",
       "rank": "member",
       "available_dkp": 60,
-      "dkp_earned": 149,
+      "dkp_earned": 152,
       "dkp_spent": 92,
       "dkp_adjustments": 3,
       "characters": [
@@ -10072,7 +10072,7 @@
       "username_id": "c034f398-a548-4bca-9aff-3fb1a8f0f315",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 119,
+      "dkp_earned": 90,
       "dkp_spent": 90,
       "dkp_adjustments": 0,
       "characters": [
@@ -10132,7 +10132,7 @@
       "username_id": "839f7ae4-00be-447d-b5f6-900ab8ee023b",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 22,
+      "dkp_earned": 1,
       "dkp_spent": 1,
       "dkp_adjustments": 0,
       "characters": [
@@ -10154,7 +10154,7 @@
       "username_id": "678fbe41-8ae0-45a6-8ee3-3d3fccd92487",
       "rank": "member",
       "available_dkp": 45,
-      "dkp_earned": 54,
+      "dkp_earned": 55,
       "dkp_spent": 10,
       "dkp_adjustments": 1,
       "characters": [
@@ -10258,7 +10258,7 @@
       "username_id": "c83bafe4-c61e-4769-b700-a9ccee3ea471",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 73,
+      "dkp_earned": 26,
       "dkp_spent": 26,
       "dkp_adjustments": 0,
       "characters": [
@@ -10288,7 +10288,7 @@
       "username_id": "bfecef15-b5b7-42b0-9f60-2dab010f49b4",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 113,
+      "dkp_earned": 9,
       "dkp_spent": 9,
       "dkp_adjustments": 0,
       "characters": [
@@ -10318,7 +10318,7 @@
       "username_id": "3a0f6db7-09ce-44ed-98bf-f6ed80e51f0f",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 144,
+      "dkp_earned": 59,
       "dkp_spent": 59,
       "dkp_adjustments": 0,
       "characters": [
@@ -10340,7 +10340,7 @@
       "username_id": "f70f7ce1-85a0-4f3c-9637-73c1e9568a7b",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 86,
+      "dkp_earned": 11,
       "dkp_spent": 11,
       "dkp_adjustments": 0,
       "characters": [
@@ -10362,7 +10362,7 @@
       "username_id": "ac99f766-719f-4a2b-8a01-e7f039b2b8ea",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 93,
+      "dkp_earned": 38,
       "dkp_spent": 38,
       "dkp_adjustments": 0,
       "characters": [
@@ -10422,7 +10422,7 @@
       "username_id": "6b0e3edd-61b0-48b1-b8ea-84866ce37512",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 3,
+      "dkp_earned": 1,
       "dkp_spent": 1,
       "dkp_adjustments": 0,
       "characters": [
@@ -10444,7 +10444,7 @@
       "username_id": "6b4b5bcd-6dc4-43d0-945f-7341d962e057",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 35,
+      "dkp_earned": 7,
       "dkp_spent": 7,
       "dkp_adjustments": 0,
       "characters": [
@@ -10466,7 +10466,7 @@
       "username_id": "b550aed1-29e1-42b6-bdad-23313acffb2e",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 30,
+      "dkp_earned": 3,
       "dkp_spent": 3,
       "dkp_adjustments": 0,
       "characters": [
@@ -10488,7 +10488,7 @@
       "username_id": "38dc29cf-89c6-4dfe-a37c-7ce859422aca",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 48,
+      "dkp_earned": 8,
       "dkp_spent": 8,
       "dkp_adjustments": 0,
       "characters": [
@@ -10510,7 +10510,7 @@
       "username_id": "28b0774a-e2f5-4646-be59-1383d6d15a14",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 211,
+      "dkp_earned": 47,
       "dkp_spent": 47,
       "dkp_adjustments": 0,
       "characters": [
@@ -10584,7 +10584,7 @@
       "username_id": "a8a14249-b2e2-4d26-8928-93423a124e70",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 17,
+      "dkp_earned": 8,
       "dkp_spent": 8,
       "dkp_adjustments": 0,
       "characters": [
@@ -10652,7 +10652,7 @@
       "username_id": "90ad2556-0f1b-4e02-871e-4046404ced15",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 9,
+      "dkp_earned": 3,
       "dkp_spent": 3,
       "dkp_adjustments": 0,
       "characters": [
@@ -10674,7 +10674,7 @@
       "username_id": "b42d9838-fe36-45a1-ab98-d590f156aa9c",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 44,
+      "dkp_earned": 6,
       "dkp_spent": 6,
       "dkp_adjustments": 0,
       "characters": [
@@ -10696,7 +10696,7 @@
       "username_id": "b715bccb-befe-45d7-91a1-1a282c86c277",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 34,
+      "dkp_earned": 9,
       "dkp_spent": 9,
       "dkp_adjustments": 0,
       "characters": [
@@ -10718,7 +10718,7 @@
       "username_id": "9ef1056e-3752-494c-99cd-1c1dca27c23a",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 132,
+      "dkp_earned": 120,
       "dkp_spent": 120,
       "dkp_adjustments": 0,
       "characters": [
@@ -10844,7 +10844,7 @@
       "username_id": "b7e06baa-bd83-4913-a960-7ae998f42cbe",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 31,
+      "dkp_earned": 4,
       "dkp_spent": 4,
       "dkp_adjustments": 0,
       "characters": [
@@ -10866,7 +10866,7 @@
       "username_id": "21283754-d53a-401f-9189-a2e0ccaf1140",
       "rank": "former",
       "available_dkp": 0,
-      "dkp_earned": 32,
+      "dkp_earned": 24,
       "dkp_spent": 24,
       "dkp_adjustments": 0,
       "characters": [
@@ -10900,7 +10900,8 @@
         }
       ],
       "ApplicationDate": "2026-07-19 19:44:45",
-      "MembershipDate": "2026-08-09 12:03:47"
+      "MembershipDate": "2026-08-09 12:03:47",
+      "dkp_earned": 117
     },
     {
       "username": "Artery",
@@ -10944,7 +10945,8 @@
         }
       ],
       "ApplicationDate": "2026-08-10 10:58:31",
-      "MembershipDate": "2026-08-31 12:00:44"
+      "MembershipDate": "2026-08-31 12:00:44",
+      "dkp_earned": 104
     },
     {
       "username": "Larzek",
@@ -10972,7 +10974,8 @@
         }
       ],
       "ApplicationDate": "2026-08-10 19:59:50",
-      "MembershipDate": "2026-08-31 12:00:52"
+      "MembershipDate": "2026-08-31 12:00:52",
+      "dkp_earned": 109
     },
     {
       "username": "Mipsy",
@@ -11000,7 +11003,8 @@
         }
       ],
       "ApplicationDate": "2026-08-10 20:00:30",
-      "MembershipDate": "2026-08-31 12:00:57"
+      "MembershipDate": "2026-08-31 12:00:57",
+      "dkp_earned": 109
     },
     {
       "username": "Chaunce",
@@ -11044,7 +11048,8 @@
         }
       ],
       "ApplicationDate": "2026-08-10 20:02:38",
-      "MembershipDate": "2026-08-31 12:01:04"
+      "MembershipDate": "2026-08-31 12:01:04",
+      "dkp_earned": 121
     },
     {
       "username": "Mofa",
@@ -11080,7 +11085,8 @@
         }
       ],
       "ApplicationDate": "2026-08-17 16:37:34",
-      "MembershipDate": "2026-09-07 12:01:58"
+      "MembershipDate": "2026-09-07 12:01:58",
+      "dkp_earned": 82
     },
     {
       "username": "Fullmetal",
@@ -11100,7 +11106,8 @@
         }
       ],
       "ApplicationDate": "2026-08-25 19:47:52",
-      "MembershipDate": ""
+      "MembershipDate": "",
+      "dkp_earned": 4
     },
     {
       "username": "Daggoth",
@@ -11120,7 +11127,8 @@
         }
       ],
       "ApplicationDate": "2026-08-28 13:49:06",
-      "MembershipDate": ""
+      "MembershipDate": "",
+      "dkp_earned": 0
     },
     {
       "username": "Starfyre",
@@ -11148,7 +11156,8 @@
         }
       ],
       "ApplicationDate": "2026-09-09 05:42:00",
-      "MembershipDate": "2026-09-11 16:05:52"
+      "MembershipDate": "2026-09-11 16:05:52",
+      "dkp_earned": 54
     }
   ]
 }
