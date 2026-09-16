@@ -61868,6 +61868,62 @@
       "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
       "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Onyx Gauntlets",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Vyemm's Fang",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Trident of the Deep Sea",
+      "character_id": "38825e99-94d7-4bc7-be52-41b0b7ed94d8",
+      "character_name": "Ethiria",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Net of the Deep Sea",
+      "character_id": "cc849767-33a3-471f-a4b0-e727df73c6fc",
+      "character_name": "Rawket",
+      "username_id": "5626495f-436a-437b-9853-24b473c89494",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Helm of the Deep Sea",
+      "character_id": "aa397d4c-2b7a-4454-a972-12f0857df70f",
+      "character_name": "Somersault",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Mithril Gauntlets",
+      "character_id": "cc849767-33a3-471f-a4b0-e727df73c6fc",
+      "character_name": "Rawket",
+      "username_id": "5626495f-436a-437b-9853-24b473c89494",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Mithril Helm",
+      "character_id": "16ef4502-e0cc-4eef-a2dc-00c40c3ed543",
+      "character_name": "Denel",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 3
     }
   ]
 }

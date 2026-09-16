@@ -1619,9 +1619,9 @@
       "username_discord": "1008595262308110417",
       "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
       "rank": "officer",
-      "available_dkp": 72,
+      "available_dkp": 70,
       "dkp_earned": 1502,
-      "dkp_spent": 1522,
+      "dkp_spent": 1524,
       "dkp_adjustments": 2,
       "characters": [
         {
@@ -1857,9 +1857,9 @@
       "username_discord": "357949052836380673",
       "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
       "rank": "member",
-      "available_dkp": 139,
+      "available_dkp": 138,
       "dkp_earned": 667,
-      "dkp_spent": 648,
+      "dkp_spent": 649,
       "dkp_adjustments": 7,
       "characters": [
         {
@@ -2139,9 +2139,9 @@
       "username_discord": "163231270178914304",
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "rank": "member",
-      "available_dkp": 14,
+      "available_dkp": 12,
       "dkp_earned": 1661,
-      "dkp_spent": 1731,
+      "dkp_spent": 1733,
       "dkp_adjustments": 13,
       "characters": [
         {
@@ -3499,9 +3499,9 @@
       "username_discord": "351487869505765392",
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "rank": "member",
-      "available_dkp": 59,
+      "available_dkp": 58,
       "dkp_earned": 1204,
-      "dkp_spent": 1217,
+      "dkp_spent": 1218,
       "dkp_adjustments": 8,
       "characters": [
         {
@@ -4127,9 +4127,9 @@
       "username_discord": "243247923565953025",
       "username_id": "5626495f-436a-437b-9853-24b473c89494",
       "rank": "member",
-      "available_dkp": 126,
+      "available_dkp": 118,
       "dkp_earned": 797,
-      "dkp_spent": 757,
+      "dkp_spent": 765,
       "dkp_adjustments": 3,
       "characters": [
         {
@@ -10907,8 +10907,8 @@
       "username_discord": "210518735599960065",
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "rank": "member",
-      "available_dkp": 35,
-      "dkp_spent": 65,
+      "available_dkp": 32,
+      "dkp_spent": 68,
       "characters": [
         {
           "name": "Artery",
