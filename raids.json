@@ -276630,6 +276630,54 @@
       "unclaimed": [],
       "channel_id": "1548126916949573742",
       "summary_message_id": "1548126922268086385"
+    },
+    {
+      "raid_name": "ToV - Double DKP",
+      "date": "2026-09-15",
+      "raid_id": "7601935e-2520-467b-b6ca-ee750812dfb1",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": []
+    },
+    {
+      "raid_name": "ToV - Double DKP on time",
+      "date": "2026-09-15",
+      "raid_id": "e9a11d53-2eb8-4779-a492-0597d31a7bec",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1549573352065339512",
+      "summary_message_id": "1549573360277790873"
+    },
+    {
+      "raid_name": "ToV - Double DKP 1",
+      "date": "2026-09-15",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1549573367445856339",
+      "summary_message_id": "1549573373540175994"
+    },
+    {
+      "raid_name": "ToV - Double DKP 2",
+      "date": "2026-09-15",
+      "raid_id": "f35669b8-0b51-4e13-964d-eb35af03b9e0",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1549573380670357554",
+      "summary_message_id": "1549573386701635706"
+    },
+    {
+      "raid_name": "ToV - Double DKP 3",
+      "date": "2026-09-15",
+      "raid_id": "2513f336-6d04-4a1e-90a5-7f8de129d831",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1549573394838593609",
+      "summary_message_id": "1549573401767579650"
     }
   ]
 }
