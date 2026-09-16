@@ -61924,6 +61924,70 @@
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Great Spear of Dawn",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Wurmscale Fistwraps",
+      "character_id": "8a55eb97-965f-42b7-aa09-abe29da8f1ee",
+      "character_name": "Sloppyflops",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tvenkens Slippers of Silence",
+      "character_id": "37c2a436-b38c-41b9-8771-df3cfeb4acaa",
+      "character_name": "Cringe",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Silver Chains",
+      "character_id": "95f06969-eaf0-4a02-b19d-8b3ceb281587",
+      "character_name": "Rampheezy",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Facesmasher",
+      "character_id": "a9f0dce7-7956-43f0-b299-e28cc86f2a84",
+      "character_name": "Stevejabs",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Silver Chains",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Mask of Terror",
+      "character_id": "37c2a436-b38c-41b9-8771-df3cfeb4acaa",
+      "character_name": "Cringe",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Nevederias Right Eye",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
+      "item_dkp_value": 1
     }
   ]
 }
