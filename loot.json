@@ -61988,6 +61988,38 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "2a78c985-7b7c-4e94-b588-b4533506ac8c",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Crystasia's Crystal Ring",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "f35669b8-0b51-4e13-964d-eb35af03b9e0",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Camii's Bracer of Vigor",
+      "character_id": "a9f0dce7-7956-43f0-b299-e28cc86f2a84",
+      "character_name": "Stevejabs",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "f35669b8-0b51-4e13-964d-eb35af03b9e0",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Viik's Pauldrons of Pain",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "f35669b8-0b51-4e13-964d-eb35af03b9e0",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Vyrinn's Earring of Insanity",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "f35669b8-0b51-4e13-964d-eb35af03b9e0",
+      "item_dkp_value": 10
     }
   ]
 }
