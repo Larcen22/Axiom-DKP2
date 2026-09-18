@@ -277438,6 +277438,46 @@
       "unclaimed": [],
       "channel_id": "1549573394838593609",
       "summary_message_id": "1549573401767579650"
+    },
+    {
+      "raid_name": "Seru AR Deep Ssra on time",
+      "date": "2026-09-17",
+      "raid_id": "88b5bc87-5df7-49f4-b370-029060e560be",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550295157323202560",
+      "summary_message_id": "1550295163581108326"
+    },
+    {
+      "raid_name": "Seru AR Deep Ssra 1",
+      "date": "2026-09-17",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550295172485742687",
+      "summary_message_id": "1550295179083382785"
+    },
+    {
+      "raid_name": "Seru AR Deep Ssra 2",
+      "date": "2026-09-17",
+      "raid_id": "1fc427d6-54c3-4a8d-b29d-7a1124fc78f5",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550295185487953960",
+      "summary_message_id": "1550295191485943933"
+    },
+    {
+      "raid_name": "Seru AR Deep Ssra 3",
+      "date": "2026-09-17",
+      "raid_id": "7872c7ab-d1ef-4b5e-b0f2-ceacb6b909bb",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550295198125391944",
+      "summary_message_id": "1550295204823699538"
     }
   ]
 }
