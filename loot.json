@@ -62212,6 +62212,54 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Shard of Hsagra's Talisman",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Breastplate of Eradication",
+      "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+      "character_name": "Fortunae",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloak of the Falling Stars",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shard of Hsagra's Talisman",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shard of Hsagra's Talisman",
+      "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+      "character_name": "Fortunae",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shard of Hsagra's Talisman",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "item_dkp_value": 1
     }
   ]
 }
