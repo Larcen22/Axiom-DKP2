@@ -62052,6 +62052,54 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "88b5bc87-5df7-49f4-b370-029060e560be",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Horns of Ferocity",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "88b5bc87-5df7-49f4-b370-029060e560be",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Helm of Grim Blessings",
+      "character_id": "244b3b42-82f0-465d-8cc3-ca84febde3fe",
+      "character_name": "Frodolas",
+      "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+      "raid_id": "88b5bc87-5df7-49f4-b370-029060e560be",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Helm of Grim Blessings",
+      "character_id": "4ed1f1a3-392c-49a2-adaf-21cc49d9c5c2",
+      "character_name": "Slynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "88b5bc87-5df7-49f4-b370-029060e560be",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ancient Burrower Flesh Cap",
+      "character_id": "ad5bfdf3-14bc-4745-9cd8-858a128aa44c",
+      "character_name": "Tuwva",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of Living Ore",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Depths",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
     }
   ]
 }
