@@ -277981,11 +277981,25 @@
         {
           "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
           "character_name": "Scruffs"
+        },
+        {
+          "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+          "character_name": "Draaner"
         }
       ],
       "unclaimed": [],
       "channel_id": "1550295198125391944",
       "summary_message_id": "1550295204823699538"
+    },
+    {
+      "raid_name": "Cheeky Kael",
+      "date": "2026-09-17",
+      "raid_id": "8fa2b27d-e948-4e05-b6d1-e99c3b2242bf",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550347011788640296",
+      "summary_message_id": "1550347018436608052"
     }
   ]
 }
