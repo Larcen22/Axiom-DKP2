@@ -62100,6 +62100,46 @@
       "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
       "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Venomous Eyepatch",
+      "character_id": "510aaf9d-5a60-40b6-917a-7515660b8e65",
+      "character_name": "Narnia",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Scorched Silver Pauldrons",
+      "character_id": "6f82dbf6-4c69-481e-873b-8fa830844228",
+      "character_name": "Dragonstail",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Goldenrod",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Opaline Charm",
+      "character_id": "7123a7fb-e72f-47b5-ae68-cdb6429a4f9e",
+      "character_name": "Fydekeen",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Circle of Smoke",
+      "character_id": "52e023ae-586e-4a66-9fdb-51904fdb8d8b",
+      "character_name": "Slowurrole",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
+      "item_dkp_value": 12
     }
   ]
 }
