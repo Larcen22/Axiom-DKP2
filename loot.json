@@ -62140,6 +62140,30 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "raid_id": "f409b63c-a79f-4ecd-af40-a42012be63e5",
       "item_dkp_value": 12
+    },
+    {
+      "item": "Shadowsong Cloak",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "1fc427d6-54c3-4a8d-b29d-7a1124fc78f5",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Akhevan Shadow Shears",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "1fc427d6-54c3-4a8d-b29d-7a1124fc78f5",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Shadowed Storm Sphere",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "1fc427d6-54c3-4a8d-b29d-7a1124fc78f5",
+      "item_dkp_value": 1
     }
   ]
 }
