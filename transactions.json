@@ -18205,6 +18205,15 @@
       "transaction_amount": 3,
       "reason": "VT kiting, 3hrs- 9/10",
       "date": "2026-09-16T00:36:58.027837+00:00"
+    },
+    {
+      "transaction_id": "a4b517f9-2097-46d1-958e-f41c9043a376",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "username": "Vesago",
+      "type": "Recruit Bonus",
+      "transaction_amount": 10,
+      "reason": "recruiting Starfyre, 60 SK",
+      "date": "2026-09-19T05:30:40.156021+00:00"
     }
   ]
 }
