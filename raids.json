@@ -278113,6 +278113,46 @@
       "unclaimed": [],
       "channel_id": "1550347011788640296",
       "summary_message_id": "1550347018436608052"
+    },
+    {
+      "raid_name": "VT on time",
+      "date": "2026-09-18",
+      "raid_id": "90633ce5-9d22-47c3-8a4c-673e01d8fa1d",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550657638260408330",
+      "summary_message_id": "1550657643763474549"
+    },
+    {
+      "raid_name": "VT 1",
+      "date": "2026-09-18",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550657652319723630",
+      "summary_message_id": "1550657658153865318"
+    },
+    {
+      "raid_name": "VT 2",
+      "date": "2026-09-18",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550657673282850936",
+      "summary_message_id": "1550657679767248908"
+    },
+    {
+      "raid_name": "VT 3",
+      "date": "2026-09-18",
+      "raid_id": "d49eac16-6e05-4ade-b20a-79252baed19a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1550657685534543994",
+      "summary_message_id": "1550657691171557451"
     }
   ]
 }
