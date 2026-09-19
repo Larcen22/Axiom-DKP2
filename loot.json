@@ -62556,6 +62556,38 @@
       "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
       "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "d49eac16-6e05-4ade-b20a-79252baed19a",
+      "item_dkp_value": 65
+    },
+    {
+      "item": "Gloves of the Crimson Sigil",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "d49eac16-6e05-4ade-b20a-79252baed19a",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Wristband of Secrets",
+      "character_id": "9f92115a-6ee1-45dc-906e-200992061de5",
+      "character_name": "Thiccsar",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "d49eac16-6e05-4ade-b20a-79252baed19a",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Torch of Judgment",
+      "character_id": "52e023ae-586e-4a66-9fdb-51904fdb8d8b",
+      "character_name": "Slowurrole",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "d49eac16-6e05-4ade-b20a-79252baed19a",
+      "item_dkp_value": 7
     }
   ]
 }
