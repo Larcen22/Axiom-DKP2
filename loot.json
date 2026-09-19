@@ -62412,6 +62412,54 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "90633ce5-9d22-47c3-8a4c-673e01d8fa1d",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "244b3b42-82f0-465d-8cc3-ca84febde3fe",
+      "character_name": "Frodolas",
+      "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tiny Cap of Sight",
+      "character_id": "244b3b42-82f0-465d-8cc3-ca84febde3fe",
+      "character_name": "Frodolas",
+      "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "96999f81-ad09-4dd0-9ab5-3b97b8ab2854",
+      "character_name": "Deus",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Horn of Shadows",
+      "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
+      "character_name": "Adrab",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Breastplate of Speed",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cord of Insight",
+      "character_id": "98dab7ec-8620-4842-b40e-6d0f07c25097",
+      "character_name": "Marekis",
+      "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
     }
   ]
 }
