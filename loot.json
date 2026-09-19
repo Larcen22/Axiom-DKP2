@@ -62524,6 +62524,38 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
       "item_dkp_value": 8
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "f66e3fdc-c068-4daa-89ee-d02a6e99d369",
+      "character_name": "Feyah",
+      "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Crown of Energy",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloak of the Black Wind",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Wand of Everlasting Water",
+      "character_id": "253817f9-9682-48be-84f3-ede2072b2b54",
+      "character_name": "Luminara",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 1
     }
   ]
 }
