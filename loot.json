@@ -62460,6 +62460,70 @@
       "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
       "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Girdle of Focus",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cloak of Glowing Embers",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Sanguine Eyepatch",
+      "character_id": "253817f9-9682-48be-84f3-ede2072b2b54",
+      "character_name": "Luminara",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Umbracite Swarm Orb",
+      "character_id": "3d583b4b-54db-4679-a230-4d1b24b6f49f",
+      "character_name": "Zyrath",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cerulean Sleeves",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "96fd1c43-e089-4daa-aeb6-745ac579c130",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "cdc9df55-9c08-4fa1-9c9f-5c11bc5185ef",
+      "item_dkp_value": 8
     }
   ]
 }
