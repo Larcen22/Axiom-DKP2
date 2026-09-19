@@ -3016,15 +3016,6 @@
       "date": "2025-08-15T23:37:03+00:00"
     },
     {
-      "transaction_id": "0Gzk4nxUiPkFyaJY5fuphxgrRZEhHOgc",
-      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
-      "username": "Tonik",
-      "type": "AA100",
-      "transaction_amount": 15,
-      "reason": "Achievement: AA-100",
-      "date": "2025-08-16T23:14:26+00:00"
-    },
-    {
       "transaction_id": "diA3rJ9rYwEeCp9ComJKpjD6fqZ7KTyd",
       "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
       "username": "Brunda",
@@ -4958,15 +4949,6 @@
       "transaction_amount": 3,
       "reason": "Achievement: Level 50",
       "date": "2025-01-02T08:44:28+00:00"
-    },
-    {
-      "transaction_id": "GyfHPUJpVWCqwtFWc5SBGEqZswgL9sLa",
-      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
-      "username": "Tonik",
-      "type": "AA50",
-      "transaction_amount": 10,
-      "reason": "Achievement: AA-50",
-      "date": "2025-08-16T23:14:13+00:00"
     },
     {
       "transaction_id": "gPdHkKWdjxG2WtgsYsWbxK1nazeQpuJ8",
@@ -18214,6 +18196,24 @@
       "transaction_amount": 10,
       "reason": "recruiting Starfyre, 60 SK",
       "date": "2026-09-19T05:30:40.156021+00:00"
+    },
+    {
+      "transaction_id": "7961fffe-eab9-4cf0-8cf5-ce9d1d9d68a5",
+      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+      "username": "Tonik",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-09-19T23:01:35.873514+00:00"
+    },
+    {
+      "transaction_id": "82a0bf98-8e47-495d-ba84-25b8dcd61603",
+      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+      "username": "Tonik",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-09-19T23:01:35.873514+00:00"
     }
   ]
 }
