@@ -18214,6 +18214,24 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-09-19T23:01:35.873514+00:00"
+    },
+    {
+      "transaction_id": "d2532be6-e344-4f05-9db2-9a713d4f2715",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "username": "Asharak",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "officer corruption",
+      "date": "2026-09-20T03:40:44.612111+00:00"
+    },
+    {
+      "transaction_id": "9cf97ae6-f070-42c3-8d78-4999b21bcd74",
+      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+      "username": "Tonik",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "officer corruption",
+      "date": "2026-09-20T03:40:44.612111+00:00"
     }
   ]
 }
