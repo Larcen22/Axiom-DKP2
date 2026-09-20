@@ -13249,15 +13249,6 @@
       "date": "2025-01-02T08:47:00+00:00"
     },
     {
-      "transaction_id": "YnFB7mRDNo940ff34O2zLm4tcQvvLE13",
-      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
-      "username": "Tonik",
-      "type": "MR120",
-      "transaction_amount": 11,
-      "reason": "Achievement: MR 120",
-      "date": "2025-01-02T08:47:00+00:00"
-    },
-    {
       "transaction_id": "X5H56Bf2zeOEZ9iJU0t2RcBYk4lGGdPn",
       "username_id": "28b0774a-e2f5-4646-be59-1383d6d15a14",
       "username": "Aeolus",
@@ -13333,15 +13324,6 @@
       "transaction_id": "MatREkSItFaqDCtWp12sWYxuMVqVBkd5",
       "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
       "username": "numb",
-      "type": "MR90",
-      "transaction_amount": 6,
-      "reason": "Achievement: MR 90",
-      "date": "2025-01-02T08:46:43+00:00"
-    },
-    {
-      "transaction_id": "iKiJ67XhMhcNP0hx2hXCvEg2CMfMmtlv",
-      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
-      "username": "Tonik",
       "type": "MR90",
       "transaction_amount": 6,
       "reason": "Achievement: MR 90",
@@ -18216,22 +18198,22 @@
       "date": "2026-09-19T23:01:35.873514+00:00"
     },
     {
-      "transaction_id": "d2532be6-e344-4f05-9db2-9a713d4f2715",
-      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
-      "username": "Asharak",
-      "type": "BBC",
-      "transaction_amount": 1,
-      "reason": "officer corruption",
-      "date": "2026-09-20T03:40:44.612111+00:00"
-    },
-    {
-      "transaction_id": "9cf97ae6-f070-42c3-8d78-4999b21bcd74",
+      "transaction_id": "022bb2be-35d3-4670-971a-bb675c2993f6",
       "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
       "username": "Tonik",
-      "type": "BBC",
-      "transaction_amount": 1,
-      "reason": "officer corruption",
-      "date": "2026-09-20T03:40:44.612111+00:00"
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-09-20T03:51:33.082359+00:00"
+    },
+    {
+      "transaction_id": "6e7bf525-8cb9-4460-b215-8339c512ef7b",
+      "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+      "username": "Tonik",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-09-20T03:51:33.082359+00:00"
     }
   ]
 }

@@ -279028,6 +279028,14 @@
       "raid_dkp_value": 1,
       "attendees": [],
       "unclaimed": []
+    },
+    {
+      "raid_name": "test2",
+      "date": "2026-09-19",
+      "raid_id": "fbe183c6-73f1-4877-8986-f621e69ca02b",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": []
     }
   ]
 }
