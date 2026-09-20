@@ -279020,6 +279020,14 @@
       "unclaimed": [],
       "channel_id": "1550742034913042452",
       "summary_message_id": "1550742040415965215"
+    },
+    {
+      "raid_name": "test",
+      "date": "2026-09-19",
+      "raid_id": "3ea6e824-3b80-4778-add0-3e80c050eefc",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": []
     }
   ]
 }
