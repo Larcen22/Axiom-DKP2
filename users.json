@@ -4039,6 +4039,14 @@
           "role": "main",
           "level": 60,
           "race": "Gnome"
+        },
+        {
+          "name": "Fushigi",
+          "class": "Monk",
+          "race": "Human",
+          "level": 49,
+          "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-09-09 20:08:02",
