@@ -18646,6 +18646,15 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-09-22T01:33:00.616652+00:00"
+    },
+    {
+      "transaction_id": "f454a201-ef3c-440d-b385-551d70b55120",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "username": "Rotsouls",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "picking up kite in AR - 9/17",
+      "date": "2026-09-22T06:27:20.625579+00:00"
     }
   ]
 }
