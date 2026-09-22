@@ -3287,8 +3287,8 @@
       "username_discord": "457751129384681494",
       "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
       "rank": "member",
-      "available_dkp": 88,
-      "dkp_earned": 725,
+      "available_dkp": 103,
+      "dkp_earned": 740,
       "dkp_spent": 637,
       "dkp_adjustments": 4,
       "characters": [
@@ -6689,7 +6689,7 @@
           "class": "Druid",
           "character_id": "3ec95bb2-7b83-4ca1-90ba-e2b492d18a4e",
           "role": "alternate",
-          "level": 14,
+          "level": 60,
           "race": "Wood Elf"
         }
       ],
@@ -11064,7 +11064,7 @@
       "username_discord": "682857397940912160",
       "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
       "rank": "member",
-      "available_dkp": 46,
+      "available_dkp": 76,
       "dkp_spent": 46,
       "characters": [
         {
@@ -11094,7 +11094,7 @@
       ],
       "ApplicationDate": "2026-08-17 16:37:34",
       "MembershipDate": "2026-09-07 12:01:58",
-      "dkp_earned": 92
+      "dkp_earned": 122
     },
     {
       "username": "Fullmetal",

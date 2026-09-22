@@ -18610,6 +18610,42 @@
       "transaction_amount": 1,
       "reason": "VT Pin Bonus",
       "date": "2026-09-20T14:34:31.102894+00:00"
+    },
+    {
+      "transaction_id": "46fc2e95-e9dd-43f0-acf4-eddf46c7ad73",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-09-22T01:32:48.027565+00:00"
+    },
+    {
+      "transaction_id": "bcfa328e-6372-4154-aaff-bf2a5074a9f9",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-09-22T01:32:48.027565+00:00"
+    },
+    {
+      "transaction_id": "7b559ff7-d1f3-49a8-b5a2-b6191d1488f5",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-09-22T01:32:48.027565+00:00"
+    },
+    {
+      "transaction_id": "d2b03b43-2379-4536-b32f-3e1cd5123456",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "username": "Puarissa",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-09-22T01:33:00.616652+00:00"
     }
   ]
 }
