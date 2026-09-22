@@ -18655,6 +18655,15 @@
       "transaction_amount": 1,
       "reason": "picking up kite in AR - 9/17",
       "date": "2026-09-22T06:27:20.625579+00:00"
+    },
+    {
+      "transaction_id": "ed03a076-8b14-4b51-95ef-f4995f9117de",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "username": "Keilly",
+      "type": "Adjustment",
+      "transaction_amount": 25,
+      "reason": "DKP correction - Guise of the Hunter",
+      "date": "2026-09-22T08:05:32.952841+00:00"
     }
   ]
 }
