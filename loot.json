@@ -62636,6 +62636,30 @@
       "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
       "raid_id": "0b513c83-30d4-4080-b486-59bc34237819",
       "item_dkp_value": 20
+    },
+    {
+      "item": "Leggings of Serenity",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "c2d2b2a3-4981-4fac-93b0-857d20a7bc9d",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Flowing Gossamer Cloak",
+      "character_id": "4d955a1c-a26d-434f-8b7a-b21d70ae79b5",
+      "character_name": "Soulsipper",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "c2d2b2a3-4981-4fac-93b0-857d20a7bc9d",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadowsong Cloak",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "c2d2b2a3-4981-4fac-93b0-857d20a7bc9d",
+      "item_dkp_value": 1
     }
   ]
 }
