@@ -2063,8 +2063,8 @@
       "username_discord": "108730067458265088",
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "rank": "member",
-      "available_dkp": 59,
-      "dkp_earned": 271,
+      "available_dkp": 89,
+      "dkp_earned": 301,
       "dkp_spent": 212,
       "dkp_adjustments": 4,
       "characters": [
@@ -2321,8 +2321,8 @@
       "username_discord": "201147906273574913",
       "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
       "rank": "member",
-      "available_dkp": 61,
-      "dkp_earned": 192,
+      "available_dkp": 86,
+      "dkp_earned": 217,
       "dkp_spent": 131,
       "dkp_adjustments": 0,
       "characters": [
@@ -4044,7 +4044,7 @@
           "name": "Fushigi",
           "class": "Monk",
           "race": "Human",
-          "level": 49,
+          "level": 55,
           "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
           "role": "alternate"
         }

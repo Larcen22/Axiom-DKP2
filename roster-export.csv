@@ -88,7 +88,7 @@ Beni,Tumbo,Paladin,60,Halfling,main,member,64,842,778,2025-09-09 20:08:02,2025-1
 Beni,Nieve,Beastlord,60,Barbarian,alternate,member,64,842,778,2025-09-09 20:08:02,2025-10-02 03:22:02
 Beni,Ploop,Shaman,55,Troll,alternate,member,64,842,778,2025-09-09 20:08:02,2025-10-02 03:22:02
 Beni,Beni,Wizard,60,Gnome,main,member,64,842,778,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Fushigi,Monk,49,Human,alternate,member,64,842,778,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Fushigi,Monk,55,Human,alternate,member,64,842,778,2025-09-09 20:08:02,2025-10-02 03:22:02
 Bigbak,Epyon,Necromancer,60,Dark Elf,alternate,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Ician,Bard,47,Half-Elf,alternate,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Rokem,Monk,43,Iksar,alternate,member,24,416,392,2025-09-30 04:30:08,
@@ -153,10 +153,10 @@ Corr,Iomaden,Rogue,14,Half-Elf,alternate,applicant,0,0,0,2026-04-22 06:23:13,
 Corr,Corr,Ranger,43,Halfling,main,applicant,0,0,0,2026-04-22 06:23:13,
 Craklyn,Craklyn,Monk,52,Iksar,main,officer,8,9,1,2024-11-01 18:20:10,
 Cronlin,CRONLIN,Monk,60,Iksar,main,member,2,2,0,2026-04-18 23:05:22,
-Cusswords,Difficult,Paladin,60,Halfling,alternate,member,59,271,212,2026-04-15 15:27:31,2026-05-07 00:11:32
-Cusswords,Cringe,Druid,60,Half-Elf,alternate,member,59,271,212,2026-04-15 15:27:31,2026-05-07 00:11:32
-Cusswords,Dismy,Beastlord,60,Dark Elf,main,member,59,271,212,2026-04-15 15:27:31,2026-05-07 00:11:32
-Cusswords,Cusswords,Ranger,60,Halfling,main,member,59,271,212,2026-04-15 15:27:31,2026-05-07 00:11:32
+Cusswords,Difficult,Paladin,60,Halfling,alternate,member,89,301,212,2026-04-15 15:27:31,2026-05-07 00:11:32
+Cusswords,Cringe,Druid,60,Half-Elf,alternate,member,89,301,212,2026-04-15 15:27:31,2026-05-07 00:11:32
+Cusswords,Dismy,Beastlord,60,Dark Elf,main,member,89,301,212,2026-04-15 15:27:31,2026-05-07 00:11:32
+Cusswords,Cusswords,Ranger,60,Halfling,main,member,89,301,212,2026-04-15 15:27:31,2026-05-07 00:11:32
 Cyboogie,Cyboogie,Monk,60,Iksar,main,member,59,141,82,2026-06-03 01:22:34,2026-06-22 17:00:32
 Cyrotonic,Cyrotonic,Shaman,60,Iksar,main,officer,58,1657,1599,2024-10-23 00:29:33,
 Cyrotonic,Dryker,Warrior,52,Dwarf,alternate,officer,58,1657,1599,2024-10-23 00:29:33,
@@ -379,9 +379,9 @@ Kiznasty,Garrglon,Bard,40,Human,alternate,member,8,302,294,2026-02-04 01:21:02,2
 Kiznasty,Kiznasty,Monk,60,Iksar,main,member,8,302,294,2026-02-04 01:21:02,2026-02-09 01:37:27
 Klanks,Klanks,Magician,60,Gnome,main,member,39,41,2,2026-04-30 20:31:27,
 Kojimok,Kojimok,Beastlord,56,Vah Shir,main,member,0,0,0,2026-04-12 19:44:26,
-Korrin,Korrin,Ranger,60,Wood Elf,main,member,61,192,131,2026-07-07 23:36:48,2026-07-28 12:00:28
-Korrin,Wezloc,Wizard,60,Gnome,alternate,member,61,192,131,2026-07-07 23:36:48,2026-07-28 12:00:28
-Korrin,Soshort,Enchanter,24,Gnome,alternate,member,61,192,131,2026-07-07 23:36:48,2026-07-28 12:00:28
+Korrin,Korrin,Ranger,60,Wood Elf,main,member,86,217,131,2026-07-07 23:36:48,2026-07-28 12:00:28
+Korrin,Wezloc,Wizard,60,Gnome,alternate,member,86,217,131,2026-07-07 23:36:48,2026-07-28 12:00:28
+Korrin,Soshort,Enchanter,24,Gnome,alternate,member,86,217,131,2026-07-07 23:36:48,2026-07-28 12:00:28
 Kotu,Magestic,Magician,60,Gnome,alternate,member,211,248,37,2024-10-25 22:53:23,2024-10-28 21:22:44
 Kotu,Kotu,Wizard,60,Dark Elf,main,member,211,248,37,2024-10-25 22:53:23,2024-10-28 21:22:44
 Kouzelna,Kouzelna,Wizard,55,High Elf,main,former,0,2,2,,

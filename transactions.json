@@ -18664,6 +18664,105 @@
       "transaction_amount": 25,
       "reason": "DKP correction - Guise of the Hunter",
       "date": "2026-09-22T08:05:32.952841+00:00"
+    },
+    {
+      "transaction_id": "1e73d15a-0e97-4054-b0c4-e733f3932d3f",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Recruit Bonus",
+      "transaction_amount": 5,
+      "reason": "Korrin",
+      "date": "2026-09-23T00:09:25.066628+00:00"
+    },
+    {
+      "transaction_id": "7e4d6ad9-2c4d-4804-bff3-ea450e3bcaff",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Recruit Bonus",
+      "transaction_amount": 5,
+      "reason": "Chaunce",
+      "date": "2026-09-23T00:10:51.257262+00:00"
+    },
+    {
+      "transaction_id": "2b493e70-746a-453f-96a3-e71c8f193aae",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "username": "Korrin",
+      "type": "Recruit Bonus",
+      "transaction_amount": 5,
+      "reason": "Chaunce",
+      "date": "2026-09-23T00:11:07.860629+00:00"
+    },
+    {
+      "transaction_id": "b9c42d77-1e5e-4197-a476-59474e6d00f2",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Recruit Bonus",
+      "transaction_amount": 15,
+      "reason": "Mipsy",
+      "date": "2026-09-23T00:11:39.954323+00:00"
+    },
+    {
+      "transaction_id": "e169fe63-77f4-45a5-a057-5ab777537785",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "username": "Korrin",
+      "type": "Recruit Bonus",
+      "transaction_amount": 15,
+      "reason": "Mipsy",
+      "date": "2026-09-23T00:12:09.396233+00:00"
+    },
+    {
+      "transaction_id": "89b87acd-8b88-4b4b-8a48-a3f212c2e78f",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Recruit Bonus",
+      "transaction_amount": 20,
+      "reason": "Artery",
+      "date": "2026-09-23T00:12:25.696943+00:00"
+    },
+    {
+      "transaction_id": "d0f20bdb-20bc-4b02-8d17-85e8eff9d8fa",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "username": "Korrin",
+      "type": "Recruit Bonus",
+      "transaction_amount": 20,
+      "reason": "Artery",
+      "date": "2026-09-23T00:12:43.757615+00:00"
+    },
+    {
+      "transaction_id": "92b0e72a-5944-4f04-9053-c79d32d1aa3e",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Recruit Bonus",
+      "transaction_amount": 10,
+      "reason": "Larzek",
+      "date": "2026-09-23T00:14:31.561444+00:00"
+    },
+    {
+      "transaction_id": "60cc97c6-7fb8-49bb-a954-02a89d3f2143",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "username": "Korrin",
+      "type": "Recruit Bonus",
+      "transaction_amount": 10,
+      "reason": "Larzek",
+      "date": "2026-09-23T00:14:59.733607+00:00"
+    },
+    {
+      "transaction_id": "47a4e513-3072-4bd8-8cf5-f723e49e4c95",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "username": "Cusswords",
+      "type": "Adjustment",
+      "transaction_amount": -25,
+      "reason": "recruitment bonus split between Cusswords and Korrin",
+      "date": "2026-09-23T00:18:35.897954+00:00"
+    },
+    {
+      "transaction_id": "ecae863f-9b17-49a5-a674-a8bebb517b99",
+      "username_id": "291efedb-f3ff-4edc-9283-8c5e3d5346ea",
+      "username": "Korrin",
+      "type": "Adjustment",
+      "transaction_amount": -25,
+      "reason": "recruitment bonus split between Korrin and Cusswords",
+      "date": "2026-09-23T00:20:57.840419+00:00"
     }
   ]
 }
