@@ -62604,6 +62604,14 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "fcc2558d-d8fa-43bc-b6fe-63bdd1a2b9fc",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Imperial Symbol of the Shissar",
+      "character_id": "e05024bd-c2e7-4ce8-ab38-b145af7d511e",
+      "character_name": "Mephestus",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "fcc2558d-d8fa-43bc-b6fe-63bdd1a2b9fc",
+      "item_dkp_value": 1
     }
   ]
 }
