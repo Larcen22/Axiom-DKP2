@@ -18763,6 +18763,33 @@
       "transaction_amount": -25,
       "reason": "recruitment bonus split between Korrin and Cusswords",
       "date": "2026-09-23T00:20:57.840419+00:00"
+    },
+    {
+      "transaction_id": "da6aaddd-4fd2-4308-a59b-7107a0ed8823",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "username": "Eziekial",
+      "type": "BBC",
+      "transaction_amount": 3,
+      "reason": "VT bard kite, 3 hours - 9/18",
+      "date": "2026-09-23T00:38:00.038174+00:00"
+    },
+    {
+      "transaction_id": "5d5ca856-7f09-438e-aa7b-9e37c224ebe4",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "username": "Nethi",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue assist - 9/18",
+      "date": "2026-09-23T00:38:31.380348+00:00"
+    },
+    {
+      "transaction_id": "efeda689-a34c-471f-8e91-c45e77abb087",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "username": "Lynxy",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue assist - 9/18",
+      "date": "2026-09-23T00:38:57.684282+00:00"
     }
   ]
 }
