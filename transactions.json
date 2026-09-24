@@ -18790,6 +18790,15 @@
       "transaction_amount": 1,
       "reason": "VT rogue assist - 9/18",
       "date": "2026-09-23T00:38:57.684282+00:00"
+    },
+    {
+      "transaction_id": "d3e15b0f-851e-454e-a13f-29ea097b38b5",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "username": "Momula",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-09-24T23:49:49.319468+00:00"
     }
   ]
 }
