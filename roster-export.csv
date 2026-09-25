@@ -22,11 +22,11 @@ Arlen,Arlen,Ranger,54,Human,main,former,0,3,3,,
 Arnoldd,Arnoldd,Shaman,58,Ogre,main,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arnoldd,Redhawk,Druid,12,Halfling,alternate,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arrowleaf,Arrowleaf,Ranger,60,Wood Elf,main,member,18,21,3,2026-03-11 23:07:35,2026-04-05 05:04:56
-Arshis,Arshis,Beastlord,60,Iksar,main,member,42,188,146,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Moltenstare,Warrior,60,Iksar,main,member,42,188,146,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,42,188,146,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Keessii,Cleric,1,Halfling,alternate,member,42,188,146,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,42,188,146,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Arshis,Beastlord,60,Iksar,main,member,41,188,147,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Moltenstare,Warrior,60,Iksar,main,member,41,188,147,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,41,188,147,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Keessii,Cleric,1,Halfling,alternate,member,41,188,147,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,41,188,147,2026-07-16 18:57:11,2026-08-05 14:42:32
 Artery,Artery,Cleric,60,Dark Elf,main,member,41,109,68,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artery,Denel,Paladin,60,Gnome,alternate,member,41,109,68,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artery,Kryn,Bard,60,Vah Shir,main,member,41,109,68,2026-08-10 10:58:31,2026-08-31 12:00:44
@@ -360,9 +360,9 @@ Keea,Keezz,Druid,55,Wood Elf,alternate,member,56,56,0,2026-01-05 17:03:21,2026-0
 Keea,Keea,Beastlord,60,Iksar,alternate,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
 Keea,Keeze,Monk,60,Dark Elf,main,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
 Keea,Keez,Shaman,60,Iksar,main,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
-Keilly,Keilly,Rogue,60,Halfling,main,officer,132,1848,1716,2024-10-23 18:22:44,
-Keilly,Zerobia,Wizard,60,Gnome,main,officer,132,1848,1716,2024-10-23 18:22:44,
-Keilly,Grumblor,Cleric,37,Dwarf,alternate,officer,132,1848,1716,2024-10-23 18:22:44,
+Keilly,Keilly,Rogue,60,Halfling,main,officer,130,1848,1718,2024-10-23 18:22:44,
+Keilly,Zerobia,Wizard,60,Gnome,main,officer,130,1848,1718,2024-10-23 18:22:44,
+Keilly,Grumblor,Cleric,37,Dwarf,alternate,officer,130,1848,1718,2024-10-23 18:22:44,
 Kelon,Kelom,Magician,53,Gnome,alternate,member,40,431,391,2025-02-08 14:36:21,2025-02-25 22:07:54
 Kelon,Kelon,Monk,60,Human,main,member,40,431,391,2025-02-08 14:36:21,2025-02-25 22:07:54
 Kelthes,Kelthes,Beastlord,56,Iksar,main,member,62,77,15,2025-01-16 05:23:54,
@@ -465,16 +465,16 @@ Maori,Maori,Necromancer,57,Dark Elf,alternate,former,0,30,30,,
 Mardigras,Mardigras,Necromancer,60,Iksar,main,applicant,33,42,9,2026-01-21 23:09:24,
 Mcfleshman,Mcfleshman,Shaman,56,Barbarian,main,member,8,20,12,2025-04-10 02:33:39,2025-04-24 23:22:06
 Meekz,Meekz,Ranger,60,Dark Elf,main,member,406,690,284,2024-10-25 22:57:52,2024-10-28 21:23:32
-Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydekeen,Warrior,60,Ogre,main,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Treack,Druid,46,Wood Elf,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,33,693,660,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydekeen,Warrior,60,Ogre,main,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Treack,Druid,46,Wood Elf,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,32,693,661,2025-02-19 04:56:40,2025-04-03 07:15:36
 Messimer,Pewster,Ranger,60,Halfling,main,member,70,404,334,2024-12-22 03:21:09,
 Messimer,Messimer,Enchanter,60,High Elf,main,member,70,404,334,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,83,1609,1526,2024-10-26 00:50:50,
@@ -523,8 +523,8 @@ Nath,Mangione,Bard,60,Half-Elf,alternate,member,22,530,508,2024-10-28 15:14:10,2
 Nath,Xindi,Beastlord,60,Iksar,main,member,22,530,508,2024-10-28 15:14:10,2024-11-18 22:21:30
 Nath,Yazzo,Enchanter,53,High Elf,alternate,member,22,530,508,2024-10-28 15:14:10,2024-11-18 22:21:30
 Necrocon,Necrocon,Necromancer,60,Dark Elf,main,member,109,129,20,2025-12-01 02:28:47,2025-12-20 01:51:52
-Nethi,Ethiria,Rogue,60,Halfling,main,member,129,807,678,2025-11-15 21:36:03,2025-11-25 00:36:08
-Nethi,Nethi,Druid,60,Halfling,main,member,129,807,678,2025-11-15 21:36:03,2025-11-25 00:36:08
+Nethi,Ethiria,Rogue,60,Halfling,main,member,127,807,680,2025-11-15 21:36:03,2025-11-25 00:36:08
+Nethi,Nethi,Druid,60,Halfling,main,member,127,807,680,2025-11-15 21:36:03,2025-11-25 00:36:08
 Nightwish,Knightwish,Shadow Knight,36,Dark Elf,alternate,member,40,478,438,2025-10-02 23:44:19,
 Nightwish,Nightwish,Bard,60,High Elf,main,member,40,478,438,2025-10-02 23:44:19,
 Nightwish,Aaraden,Paladin,43,Human,alternate,member,40,478,438,2025-10-02 23:44:19,
