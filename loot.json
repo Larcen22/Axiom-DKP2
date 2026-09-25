@@ -62748,6 +62748,46 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Brilliant Stone Ring",
+      "character_id": "4d955a1c-a26d-434f-8b7a-b21d70ae79b5",
+      "character_name": "Soulsipper",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of Living Ore",
+      "character_id": "1995895f-4526-4549-872c-84d448fcf602",
+      "character_name": "Kryn",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Ring of the Depths",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Memory",
+      "character_id": "cb50dbd6-5965-412c-ac02-38f6be212355",
+      "character_name": "Ambien",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Gleaming Serpent Tooth Choker",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 3
     }
   ]
 }
