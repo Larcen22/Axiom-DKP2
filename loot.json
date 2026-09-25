@@ -62692,6 +62692,38 @@
       "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
       "raid_id": "916628f8-45dd-4804-8fd4-f0e028722473",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Heavy Yttrium Chestplate",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 28
+    },
+    {
+      "item": "Yttrium Studded Leather Boots",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Yttrium Wrapped Sleeves",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 4
     }
   ]
 }
