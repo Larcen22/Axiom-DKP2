@@ -278269,7 +278269,6 @@
         }
       ],
       "unclaimed": [],
-      "channel_id": "1550657638260408330",
       "summary_message_id": "1550657643763474549"
     },
     {
@@ -278452,7 +278451,6 @@
         }
       ],
       "unclaimed": [],
-      "channel_id": "1550657652319723630",
       "summary_message_id": "1550657658153865318"
     },
     {
@@ -278639,7 +278637,6 @@
         }
       ],
       "unclaimed": [],
-      "channel_id": "1550657673282850936",
       "summary_message_id": "1550657679767248908"
     },
     {
@@ -278822,7 +278819,6 @@
         }
       ],
       "unclaimed": [],
-      "channel_id": "1550657685534543994",
       "summary_message_id": "1550657691171557451"
     },
     {
@@ -279488,6 +279484,46 @@
       "unclaimed": [],
       "channel_id": "1552106634371924028",
       "summary_message_id": "1552106642592768123"
+    },
+    {
+      "raid_name": "Vulak Seru Deep Ssra on time",
+      "date": "2026-09-24",
+      "raid_id": "916628f8-45dd-4804-8fd4-f0e028722473",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1552835679506006049",
+      "summary_message_id": "1552835685898129422"
+    },
+    {
+      "raid_name": "Vulak Seru Deep Ssra 1",
+      "date": "2026-09-24",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1552835694257381479",
+      "summary_message_id": "1552835701911846986"
+    },
+    {
+      "raid_name": "Vulak Seru Deep Ssra 2",
+      "date": "2026-09-24",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1552835710225223690",
+      "summary_message_id": "1552835718060048515"
+    },
+    {
+      "raid_name": "Vulak Seru Deep Ssra 3",
+      "date": "2026-09-24",
+      "raid_id": "6bae5d3b-0923-42f3-b18f-0e10d76ad248",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1552835726259916861",
+      "summary_message_id": "1552835734266978340"
     }
   ]
 }
