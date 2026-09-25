@@ -62724,6 +62724,30 @@
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Winterstorm",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Sleeves of Elemental Auras",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Sleeves of Elemental Auras",
+      "character_id": "4d955a1c-a26d-434f-8b7a-b21d70ae79b5",
+      "character_name": "Soulsipper",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "7691d57f-678e-4ab8-9d19-89b7da3c28bc",
+      "item_dkp_value": 1
     }
   ]
 }
