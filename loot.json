@@ -62788,6 +62788,30 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Cloak of Dark Shadows",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Mourning",
+      "character_id": "4ad09c36-ff98-4905-8f44-a5f27f668b16",
+      "character_name": "Fydakin",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bloodfrenzy",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
+      "item_dkp_value": 1
     }
   ]
 }
