@@ -63052,6 +63052,30 @@
       "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
       "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Umbracite Plate Leggings",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Wand of Everlasting Water",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Mark of Shadows",
+      "character_id": "1c427159-7e80-4eec-b3c4-6d6c377ebaca",
+      "character_name": "Keilly",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 4
     }
   ]
 }
