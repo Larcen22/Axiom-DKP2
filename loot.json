@@ -62916,6 +62916,30 @@
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "raid_id": "abcee08b-da95-4cfe-a1e7-9ed8cbb2be26",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Thorny Chain Sleeves",
+      "character_id": "d71f2fb7-728e-48d2-8cdc-f860c43dd103",
+      "character_name": "Gnofat",
+      "username_id": "fcd75ede-ee1a-40f7-813f-a2c009abb9de",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Grimoire of Enchantment",
+      "character_id": "7f65b9fe-eaff-4bca-82e9-efb21e831005",
+      "character_name": "Hadrhune",
+      "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Rune of Judgement",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 1
     }
   ]
 }
