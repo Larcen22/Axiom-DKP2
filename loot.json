@@ -63108,6 +63108,30 @@
       "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
       "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
       "item_dkp_value": 20
+    },
+    {
+      "item": "Mask of Piety",
+      "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
+      "character_name": "Adrab",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Mask of Dark Thoughts",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Shield of Energy",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 7
     }
   ]
 }
