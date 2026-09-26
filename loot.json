@@ -63076,6 +63076,38 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Leg Guard of Shadows",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Leggings of Judgement",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 18
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 60
+    },
+    {
+      "item": "Wristband of Secrets",
+      "character_id": "74c0ac37-6ffd-41ec-8a0e-61604d1b857f",
+      "character_name": "Tildaria",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "5aa3516f-a810-4f82-8a1e-d00ddbd2d18e",
+      "item_dkp_value": 20
     }
   ]
 }
