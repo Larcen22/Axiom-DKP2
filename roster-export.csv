@@ -27,10 +27,10 @@ Arshis,Moltenstare,Warrior,60,Iksar,main,member,39,193,154,2026-07-16 18:57:11,2
 Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,39,193,154,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Keessii,Cleric,1,Halfling,alternate,member,39,193,154,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,39,193,154,2026-07-16 18:57:11,2026-08-05 14:42:32
-Artery,Artery,Cleric,60,Dark Elf,main,member,43,114,71,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Denel,Paladin,60,Gnome,alternate,member,43,114,71,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Kryn,Bard,60,Vah Shir,main,member,43,114,71,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Enyk,Monk,55,Iksar,alternate,member,43,114,71,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Artery,Cleric,60,Dark Elf,main,member,41,114,73,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Denel,Paladin,60,Gnome,alternate,member,41,114,73,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Kryn,Bard,60,Vah Shir,main,member,41,114,73,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Enyk,Monk,55,Iksar,alternate,member,41,114,73,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artex,Artex,Necromancer,21,Iksar,main,member,0,0,0,2025-12-12 16:11:25,2026-04-24 01:34:25
 Asharak,Struggles,Ranger,53,Halfling,alternate,officer,154,1655,1501,2024-10-25 23:12:11,
 Asharak,Thecheat,Bard,60,Vah Shir,main,officer,154,1655,1501,2024-10-25 23:12:11,
@@ -192,13 +192,13 @@ Darkochanter,Darkochanter,Enchanter,60,High Elf,main,member,262,835,573,2025-11-
 Darkochanter,Darkowar,Warrior,60,Ogre,alternate,member,262,835,573,2025-11-02 23:20:30,2025-12-06 02:37:22
 Darkochanter,Darkocoth,Magician,1,Gnome,alternate,member,262,835,573,2025-11-02 23:20:30,2025-12-06 02:37:22
 Darkochanter,Darkonites,Bard,60,Half-Elf,main,member,262,835,573,2025-11-02 23:20:30,2025-12-06 02:37:22
-Darkthoughts,Darkthoughts,Rogue,60,Dark Elf,main,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Pervasive,Enchanter,46,Dark Elf,alternate,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Narnia,Beastlord,57,Vah Shir,alternate,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Dragonstail,Monk,55,Iksar,alternate,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Fastsole,Druid,60,Wood Elf,main,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Soulsipper,Necromancer,54,Iksar,alternate,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Curare,Cleric,60,Dark Elf,alternate,member,18,1769,1751,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Darkthoughts,Rogue,60,Dark Elf,main,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Pervasive,Enchanter,46,Dark Elf,alternate,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Narnia,Beastlord,57,Vah Shir,alternate,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Dragonstail,Monk,55,Iksar,alternate,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Fastsole,Druid,60,Wood Elf,main,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Soulsipper,Necromancer,54,Iksar,alternate,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Curare,Cleric,60,Dark Elf,alternate,member,15,1769,1754,2024-10-26 16:11:03,2024-10-28 21:17:03
 Darqwyng,Darqwyng,Cleric,56,Dwarf,main,applicant,0,0,0,2026-02-09 01:51:39,
 Dedzi,Dedzi,Shaman,55,Iksar,main,member,33,35,2,2025-10-14 00:20:39,
 Demas,Dalura,Wizard,44,Erudite,alternate,inactive,169,227,58,2024-10-26 19:18:41,
@@ -484,8 +484,8 @@ Microizra,Pinkpantheress,Druid,1,Wood Elf,alternate,officer,87,1613,1526,2024-10
 Microizra,Neki,Ranger,60,Wood Elf,main,officer,87,1613,1526,2024-10-26 00:50:50,
 Middleagedman,Tartugar,Beastlord,52,Ogre,alternate,applicant,31,35,4,2026-03-03 18:13:24,
 Middleagedman,Middleagedman,Magician,60,Gnome,main,applicant,31,35,4,2026-03-03 18:13:24,
-Mipsy,Mipsy,Magician,60,Gnome,main,member,107,119,12,2026-08-10 20:00:30,2026-08-31 12:00:57
-Mipsy,Roughnight,Cleric,60,Dwarf,alternate,member,107,119,12,2026-08-10 20:00:30,2026-08-31 12:00:57
+Mipsy,Mipsy,Magician,60,Gnome,main,member,96,119,23,2026-08-10 20:00:30,2026-08-31 12:00:57
+Mipsy,Roughnight,Cleric,60,Dwarf,alternate,member,96,119,23,2026-08-10 20:00:30,2026-08-31 12:00:57
 Missappropriate,Unrancita,Shadow Knight,45,Dark Elf,alternate,member,46,224,178,2025-09-17 00:26:07,2025-10-13 20:06:17
 Missappropriate,Missappropriate,Magician,60,Human,main,member,46,224,178,2025-09-17 00:26:07,2025-10-13 20:06:17
 Mixim,Noxxon,Necromancer,60,Iksar,main,member,177,754,577,2026-01-04 01:12:44,2026-01-24 03:25:36

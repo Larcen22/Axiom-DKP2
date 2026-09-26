@@ -62892,6 +62892,30 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Sanguine Robe",
+      "character_id": "297a5da1-45d3-4868-ab68-e9508cb9e4f8",
+      "character_name": "Mipsy",
+      "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+      "raid_id": "abcee08b-da95-4cfe-a1e7-9ed8cbb2be26",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Bone Necklace of Battle",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "abcee08b-da95-4cfe-a1e7-9ed8cbb2be26",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cloudy Steel Mask",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "abcee08b-da95-4cfe-a1e7-9ed8cbb2be26",
+      "item_dkp_value": 2
     }
   ]
 }
