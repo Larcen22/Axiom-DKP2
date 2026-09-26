@@ -62988,6 +62988,30 @@
       "username_id": "5478297b-aad6-450b-a252-965d124b6091",
       "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
       "item_dkp_value": 11
+    },
+    {
+      "item": "Girdle of Focus",
+      "character_id": "a53740b9-5310-4c76-bc27-533d03beb7c4",
+      "character_name": "Neki",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Leggings of Fiery Might",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Girdle of Focus",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 1
     }
   ]
 }
