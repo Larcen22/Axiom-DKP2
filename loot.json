@@ -62812,6 +62812,70 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "13cda208-364e-4dea-96c8-a7d5251bb9b8",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Living Symbol",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cord of Midnight",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cap of the Silent Star",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bracer of the Silent Star",
+      "character_id": "7f65b9fe-eaff-4bca-82e9-efb21e831005",
+      "character_name": "Hadrhune",
+      "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Umbracite Bracer",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Gorget of Superiority",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Boots of Silent Dreams",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 2
     }
   ]
 }
