@@ -63012,6 +63012,46 @@
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Breastplate of Speed",
+      "character_id": "70466fda-000e-41ac-b75e-2ba7e80ee270",
+      "character_name": "Linkseo",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Bow of Shadows",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Great Cloak of Shadows",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Umbral Vambraces",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "7f7a882c-dc1f-4a25-943f-7640676977e3",
+      "character_name": "Vaylon",
+      "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+      "raid_id": "82a3bffb-c332-4473-9d7f-08414d8144ed",
+      "item_dkp_value": 10
     }
   ]
 }

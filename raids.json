@@ -280745,10 +280745,6 @@
           "character_name": "Condiar"
         },
         {
-          "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
-          "character_name": "Bowo"
-        },
-        {
           "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
           "character_name": "Keilly"
         },
@@ -280915,6 +280911,10 @@
         {
           "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
           "character_name": "Balthemal"
+        },
+        {
+          "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+          "character_name": "Microizra"
         }
       ],
       "unclaimed": [],
