@@ -62876,6 +62876,22 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Floating Rune",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Shade Stone Amulet",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "ffded8d9-a6f5-49ed-934b-4a7a671858f5",
+      "item_dkp_value": 1
     }
   ]
 }
