@@ -62940,6 +62940,54 @@
       "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
       "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Orb of the Sky",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Amulet of Xuzl",
+      "character_id": "e8d8ea6c-fe37-47c9-b428-830ad7246e01",
+      "character_name": "Rotsouls",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Pendant of Malosini",
+      "character_id": "e4e3f3bf-72e4-4897-918d-05a029e6d346",
+      "character_name": "Sargas",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Robe of Luring Shadows",
+      "character_id": "d87c5a60-4e61-4e60-87ea-5aaf9e6f66ae",
+      "character_name": "Thunderquill",
+      "username_id": "187827da-db09-4b57-9622-457697a77c2e",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Book of Contemplation",
+      "character_id": "e4e3f3bf-72e4-4897-918d-05a029e6d346",
+      "character_name": "Sargas",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "edf0625b-0104-4d73-8700-150ca35ac563",
+      "item_dkp_value": 11
     }
   ]
 }
