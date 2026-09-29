@@ -6713,6 +6713,14 @@
           "role": "main",
           "level": 60,
           "race": "Iksar"
+        },
+        {
+          "name": "Startales",
+          "class": "Bard",
+          "race": "Vah Shir",
+          "level": 1,
+          "character_id": "05fdac7d-49cf-4208-a1fa-a233cf5f1591",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-03-05 02:31:56",
