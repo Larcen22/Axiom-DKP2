@@ -2452,11 +2452,11 @@
         },
         {
           "name": "Faith",
-          "class": "Paladin",
+          "class": "Cleric",
           "character_id": "f1dd48d3-ceaa-42d6-9ca0-d2bf195cc203",
           "role": "alternate",
-          "level": 33,
-          "race": "High Elf"
+          "level": 1,
+          "race": "Dark Elf"
         },
         {
           "name": "Thebanker",
