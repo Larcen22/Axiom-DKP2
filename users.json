@@ -2403,6 +2403,14 @@
           "level": 49,
           "character_id": "584a9be8-6a05-4b1d-ba9c-93248970d666",
           "role": "alternate"
+        },
+        {
+          "name": "Geldas",
+          "class": "Shaman",
+          "race": "Iksar",
+          "level": 36,
+          "character_id": "c6ed3a23-4b30-471c-8f5b-7fdacd8d050e",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-09-24 00:52:17",
