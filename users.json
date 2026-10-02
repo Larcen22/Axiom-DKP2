@@ -2139,8 +2139,8 @@
       "username_discord": "163231270178914304",
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "rank": "member",
-      "available_dkp": 22,
-      "dkp_earned": 1776,
+      "available_dkp": 47,
+      "dkp_earned": 1801,
       "dkp_spent": 1754,
       "dkp_adjustments": 13,
       "characters": [
@@ -2421,8 +2421,8 @@
       "username_discord": "260196436057128960",
       "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
       "rank": "officer",
-      "available_dkp": 17,
-      "dkp_earned": 1668,
+      "available_dkp": 42,
+      "dkp_earned": 1693,
       "dkp_spent": 1651,
       "dkp_adjustments": 4,
       "characters": [
@@ -2569,8 +2569,8 @@
       "username_discord": "678817297913085952",
       "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
       "rank": "member",
-      "available_dkp": 130,
-      "dkp_earned": 1380,
+      "available_dkp": 155,
+      "dkp_earned": 1405,
       "dkp_spent": 1250,
       "dkp_adjustments": 2,
       "characters": [
@@ -2833,8 +2833,8 @@
       "username_discord": "191620432732880896",
       "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
       "rank": "member",
-      "available_dkp": 125,
-      "dkp_earned": 1292,
+      "available_dkp": 150,
+      "dkp_earned": 1317,
       "dkp_spent": 1167,
       "dkp_adjustments": 30,
       "characters": [
@@ -3995,8 +3995,8 @@
       "username_discord": "138494705687068672",
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "rank": "member",
-      "available_dkp": 69,
-      "dkp_earned": 850,
+      "available_dkp": 94,
+      "dkp_earned": 875,
       "dkp_spent": 781,
       "dkp_adjustments": 4,
       "characters": [
@@ -6717,8 +6717,8 @@
       "username_discord": "218951013997084681",
       "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
       "rank": "officer",
-      "available_dkp": 40,
-      "dkp_earned": 1051,
+      "available_dkp": 65,
+      "dkp_earned": 1076,
       "dkp_spent": 1011,
       "dkp_adjustments": 120,
       "characters": [
@@ -11088,7 +11088,7 @@
       "username_discord": "682857397940912160",
       "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
       "rank": "member",
-      "available_dkp": 84,
+      "available_dkp": 109,
       "dkp_spent": 46,
       "characters": [
         {
@@ -11118,7 +11118,7 @@
       ],
       "ApplicationDate": "2026-08-17 16:37:34",
       "MembershipDate": "2026-09-07 12:01:58",
-      "dkp_earned": 130
+      "dkp_earned": 155
     },
     {
       "username": "Fullmetal",
