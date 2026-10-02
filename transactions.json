@@ -18799,6 +18799,15 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-09-24T23:49:49.319468+00:00"
+    },
+    {
+      "transaction_id": "55df50a9-3902-4d67-a584-da22d56636c3",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "username": "Eziekial",
+      "type": "BBC",
+      "transaction_amount": 7,
+      "reason": "VT kite, 5hrs +bonus - 9/26",
+      "date": "2026-10-02T01:25:08.915248+00:00"
     }
   ]
 }
