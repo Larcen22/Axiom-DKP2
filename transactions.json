@@ -18808,6 +18808,42 @@
       "transaction_amount": 7,
       "reason": "VT kite, 5hrs +bonus - 9/26",
       "date": "2026-10-02T01:25:08.915248+00:00"
+    },
+    {
+      "transaction_id": "b0e55452-43f8-4c7f-b82f-78a8d70c5df7",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "username": "Keilly",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "VT overtime rogue assist - 9/26",
+      "date": "2026-10-02T01:26:41.244524+00:00"
+    },
+    {
+      "transaction_id": "ec0c377c-2cf7-40e9-969c-5a55ecc97e59",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "username": "Darkthoughts",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "VT overtime rogue assist - 9/26",
+      "date": "2026-10-02T01:27:00.161363+00:00"
+    },
+    {
+      "transaction_id": "39985c59-5d0c-46f8-9124-3886e835e5bd",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "username": "Mephestus",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "VT overtime rogue assist - 9/26",
+      "date": "2026-10-02T01:27:27.815735+00:00"
+    },
+    {
+      "transaction_id": "71f370e0-0d50-477d-8a46-411de7d39f2e",
+      "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+      "username": "Frodolas",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-10-02T01:28:18.047274+00:00"
     }
   ]
 }
