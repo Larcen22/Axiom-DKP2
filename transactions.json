@@ -19006,6 +19006,96 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-03T07:34:52.985296+00:00"
+    },
+    {
+      "transaction_id": "45656908-ba9b-4c19-8e99-132d9a02d98b",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "username": "Mixim",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:44:22.988730+00:00"
+    },
+    {
+      "transaction_id": "b7d8b7e6-a3b5-4198-86ca-ceaafaeb4675",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "username": "Poppernug",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:44:48.229046+00:00"
+    },
+    {
+      "transaction_id": "572420de-9c9e-4da0-89e5-098ff5e096da",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "username": "Zerrina",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:45:16.820481+00:00"
+    },
+    {
+      "transaction_id": "ad456051-1086-4684-9103-9b110fe532de",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "username": "Mofa",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:45:42.725232+00:00"
+    },
+    {
+      "transaction_id": "c949fab0-5a7a-4d57-a7ee-36e350652daa",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "username": "Ayyini",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:46:10.398951+00:00"
+    },
+    {
+      "transaction_id": "99e6e0a4-17b8-421d-8ae0-e699680509ef",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "username": "Sever",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:46:38.227569+00:00"
+    },
+    {
+      "transaction_id": "ef22c806-8b3b-4461-8777-4ecbc44b629e",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "username": "Mixim",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-03T22:47:04.842076+00:00"
+    },
+    {
+      "transaction_id": "56d16b3b-f682-4980-b81e-847bb015e7c6",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "username": "Numb",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-03T22:47:21.344796+00:00"
+    },
+    {
+      "transaction_id": "03f36bc2-c017-42dc-aa49-75c2f25e6af8",
+      "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+      "username": "Zerrina",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-03T22:47:42.352152+00:00"
+    },
+    {
+      "transaction_id": "e79b3cc9-0117-4648-b38c-056246101695",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "username": "Beni",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T22:48:06.184990+00:00"
     }
   ]
 }
