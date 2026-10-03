@@ -18907,6 +18907,24 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-02T08:42:54.237628+00:00"
+    },
+    {
+      "transaction_id": "a9e6d261-2f0a-431a-a74c-38196fe1e17e",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "username": "Microizra",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T07:27:53.176289+00:00"
+    },
+    {
+      "transaction_id": "67b2bcbc-40a8-48a1-b293-f175a3ddf2d8",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "username": "Beibang",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-03T07:28:32.829629+00:00"
     }
   ]
 }
