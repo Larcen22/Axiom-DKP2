@@ -1069,14 +1069,14 @@
           "class": "Beastlord",
           "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Iksar"
         },
         {
           "name": "Moltenstare",
           "class": "Warrior",
           "race": "Iksar",
-          "level": 60,
+          "level": 65,
           "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
           "role": "main"
         },
