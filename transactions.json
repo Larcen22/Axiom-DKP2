@@ -19258,6 +19258,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-06T00:52:34.530034+00:00"
+    },
+    {
+      "transaction_id": "7838261f-a51d-46a5-9d43-d71d94cf7826",
+      "username_id": "d50788cc-0f1d-4539-9c20-a273d60b61c8",
+      "username": "Daluna",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-06T04:27:46.309824+00:00"
     }
   ]
 }
