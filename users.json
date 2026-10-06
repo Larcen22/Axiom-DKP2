@@ -5509,7 +5509,7 @@
           "class": "Bard",
           "character_id": "804c24a5-6d41-4918-9154-96009ede660b",
           "role": "alternate",
-          "level": 35,
+          "level": 52,
           "race": "Half-Elf"
         },
         {
@@ -5783,7 +5783,7 @@
           "class": "Enchanter",
           "character_id": "3a79bf24-b22c-4221-81d5-b51716e5c3a2",
           "role": "alternate",
-          "level": 1,
+          "level": 32,
           "race": "Dark Elf"
         },
         {
@@ -5791,7 +5791,7 @@
           "class": "Warrior",
           "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
           "role": "main",
-          "level": 60,
+          "level": 63,
           "race": "Ogre"
         }
       ],
@@ -5941,7 +5941,7 @@
           "class": "Shaman",
           "character_id": "d48975a9-5f8b-449a-9a32-59de275f5fb4",
           "role": "main",
-          "level": 60,
+          "level": 62,
           "race": "Barbarian"
         }
       ],
@@ -7757,7 +7757,7 @@
           "class": "Druid",
           "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
           "role": "main",
-          "level": 60,
+          "level": 62,
           "race": "Wood Elf"
         }
       ],
