@@ -5189,7 +5189,7 @@
           "class": "Druid",
           "character_id": "4b21a7ba-d976-4443-b048-bf0773939793",
           "role": "main",
-          "level": 60,
+          "level": 64,
           "race": "Half-Elf"
         },
         {
@@ -6291,6 +6291,14 @@
           "role": "alternate",
           "level": 25,
           "race": "Halfling"
+        },
+        {
+          "name": "Clixxar",
+          "class": "Enchanter",
+          "race": "High Elf",
+          "level": 12,
+          "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2025-08-22 20:02:36",
