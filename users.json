@@ -2219,7 +2219,7 @@
           "class": "Necromancer",
           "character_id": "53eda520-ca64-4af3-8df2-3ed45852c5f1",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Dark Elf"
         },
         {
@@ -4091,7 +4091,7 @@
           "class": "Bard",
           "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Vah Shir"
         },
         {
@@ -4123,7 +4123,7 @@
           "class": "Wizard",
           "character_id": "74c0ac37-6ffd-41ec-8a0e-61604d1b857f",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Dark Elf"
         },
         {
@@ -4453,7 +4453,7 @@
           "class": "Monk",
           "character_id": "6f06a35f-bf32-4b72-bcf1-38c8970ed10c",
           "role": "main",
-          "level": 60,
+          "level": 62,
           "race": "Human"
         }
       ],
