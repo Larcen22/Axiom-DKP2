@@ -2089,7 +2089,7 @@
           "class": "Beastlord",
           "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Dark Elf"
         },
         {
@@ -2097,7 +2097,7 @@
           "class": "Ranger",
           "character_id": "d2abd2bc-5deb-4f1d-b472-390ee78c0cb8",
           "role": "main",
-          "level": 60,
+          "level": 61,
           "race": "Halfling"
         }
       ],
@@ -3199,7 +3199,7 @@
           "class": "Warrior",
           "character_id": "ba68161b-afde-4419-9582-604b0a9e5a78",
           "role": "main",
-          "level": 64,
+          "level": 65,
           "race": "Ogre"
         },
         {
