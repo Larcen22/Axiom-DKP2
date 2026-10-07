@@ -63172,6 +63172,22 @@
       "username_id": "be4f9728-6484-4925-99ef-fc2c87fc2965",
       "raid_id": "d2322343-e49f-4af7-8d7c-5b67d2693aa9",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Self Contained Force Barrier",
+      "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
+      "character_name": "Gerien",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "raid_id": "fa7680db-7535-4c71-9c92-2134b7205d42",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Innovators Hammer",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "fa7680db-7535-4c71-9c92-2134b7205d42",
+      "item_dkp_value": 5
     }
   ]
 }
