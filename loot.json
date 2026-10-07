@@ -63148,6 +63148,14 @@
       "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
       "raid_id": "62d93115-c668-4d1f-931e-3b8198d1266e",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Torch of Lxvanvom",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "7b387fd8-860d-49ff-b5f9-a95907fd6f7f",
+      "item_dkp_value": 17
     }
   ]
 }
