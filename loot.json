@@ -63156,6 +63156,22 @@
       "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
       "raid_id": "7b387fd8-860d-49ff-b5f9-a95907fd6f7f",
       "item_dkp_value": 17
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
+      "character_name": "Gerien",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "raid_id": "7b387fd8-860d-49ff-b5f9-a95907fd6f7f",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "d48975a9-5f8b-449a-9a32-59de275f5fb4",
+      "character_name": "Wrenn",
+      "username_id": "be4f9728-6484-4925-99ef-fc2c87fc2965",
+      "raid_id": "d2322343-e49f-4af7-8d7c-5b67d2693aa9",
+      "item_dkp_value": 5
     }
   ]
 }
