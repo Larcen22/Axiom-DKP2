@@ -281260,6 +281260,46 @@
       ],
       "unclaimed": [],
       "summary_message_id": "1553292042564669501"
+    },
+    {
+      "raid_name": "Pod CoD PoI on time",
+      "date": "2026-10-06",
+      "raid_id": "62d93115-c668-4d1f-931e-3b8198d1266e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1557184153940660294",
+      "summary_message_id": "1557184159804559391"
+    },
+    {
+      "raid_name": "Pod CoD PoI 1",
+      "date": "2026-10-06",
+      "raid_id": "7b387fd8-860d-49ff-b5f9-a95907fd6f7f",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1557184166745874443",
+      "summary_message_id": "1557184174195216395"
+    },
+    {
+      "raid_name": "Pod CoD PoI 2",
+      "date": "2026-10-06",
+      "raid_id": "d2322343-e49f-4af7-8d7c-5b67d2693aa9",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1557184182088769577",
+      "summary_message_id": "1557184189177270294"
+    },
+    {
+      "raid_name": "Pod CoD PoI 3",
+      "date": "2026-10-06",
+      "raid_id": "fa7680db-7535-4c71-9c92-2134b7205d42",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1557184197284601906",
+      "summary_message_id": "1557184203643162748"
     }
   ]
 }

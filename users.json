@@ -1957,7 +1957,7 @@
           "class": "Necromancer",
           "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Iksar"
         },
         {
@@ -3959,7 +3959,7 @@
           "class": "Cleric",
           "character_id": "4d1884ab-5271-4dfa-99f0-e5625d7754aa",
           "role": "main",
-          "level": 60,
+          "level": 61,
           "race": "High Elf"
         },
         {
@@ -3983,7 +3983,7 @@
           "class": "Bard",
           "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Half-Elf"
         }
       ],
