@@ -19303,6 +19303,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-07T18:10:38.987487+00:00"
+    },
+    {
+      "transaction_id": "9fe8ae6f-dcbf-4832-a8e8-781dee02244e",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "username": "Litt",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-08T04:24:33.339439+00:00"
     }
   ]
 }

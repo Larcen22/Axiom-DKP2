@@ -5757,8 +5757,8 @@
       "username_discord": "332157297998561290",
       "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
       "rank": "member",
-      "available_dkp": 29,
-      "dkp_earned": 1076,
+      "available_dkp": 44,
+      "dkp_earned": 1091,
       "dkp_spent": 1047,
       "dkp_adjustments": 12,
       "characters": [
@@ -5791,7 +5791,7 @@
           "class": "Warrior",
           "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
           "role": "main",
-          "level": 64,
+          "level": 65,
           "race": "Ogre"
         }
       ],
