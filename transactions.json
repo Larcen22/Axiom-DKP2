@@ -19312,6 +19312,42 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-10-08T04:24:33.339439+00:00"
+    },
+    {
+      "transaction_id": "75bc1507-dfcb-402e-b017-5cc0d3975bfa",
+      "username_id": "c02d82a1-37da-4a6b-9923-96d5c816891c",
+      "username": "Taeolas",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-08T22:04:15.524671+00:00"
+    },
+    {
+      "transaction_id": "4f388ebf-66f3-4223-9249-bab51a7acc98",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "username": "Tigg",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-08T22:04:36.912554+00:00"
+    },
+    {
+      "transaction_id": "2f455324-f4f6-4dd2-b488-b6a63e1fb671",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "username": "Thiccsar",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-08T22:07:09.318844+00:00"
+    },
+    {
+      "transaction_id": "698fcde2-fc4b-429c-8649-bde5df80909e",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "username": "Tigg",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-10-08T22:07:39.560873+00:00"
     }
   ]
 }

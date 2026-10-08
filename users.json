@@ -1765,8 +1765,8 @@
       "username_discord": "264171032208867348",
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "rank": "member",
-      "available_dkp": 356,
-      "dkp_earned": 1115,
+      "available_dkp": 371,
+      "dkp_earned": 1130,
       "dkp_spent": 759,
       "dkp_adjustments": 2,
       "characters": [
@@ -3325,8 +3325,8 @@
       "username_discord": "269927503945007113",
       "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
       "rank": "member",
-      "available_dkp": 600,
-      "dkp_earned": 1187,
+      "available_dkp": 630,
+      "dkp_earned": 1217,
       "dkp_spent": 587,
       "dkp_adjustments": 15,
       "characters": [
@@ -4831,8 +4831,8 @@
       "username_discord": "187293708314476544",
       "username_id": "c02d82a1-37da-4a6b-9923-96d5c816891c",
       "rank": "member",
-      "available_dkp": 186,
-      "dkp_earned": 817,
+      "available_dkp": 201,
+      "dkp_earned": 832,
       "dkp_spent": 631,
       "dkp_adjustments": 27,
       "characters": [
@@ -7675,7 +7675,7 @@
           "class": "Ranger",
           "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Halfling"
         },
         {

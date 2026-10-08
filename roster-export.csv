@@ -477,7 +477,7 @@ Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,43,705,662,2025-02-19 04:5
 Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,43,705,662,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,Treack,Druid,46,Wood Elf,alternate,member,43,705,662,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,43,705,662,2025-02-19 04:56:40,2025-04-03 07:15:36
-Messimer,Pewster,Ranger,60,Halfling,main,member,120,454,334,2024-12-22 03:21:09,
+Messimer,Pewster,Ranger,65,Halfling,main,member,120,454,334,2024-12-22 03:21:09,
 Messimer,Messimer,Enchanter,60,High Elf,main,member,120,454,334,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,112,1640,1528,2024-10-26 00:50:50,
 Microizra,Microizra,Cleric,65,Halfling,main,officer,112,1640,1528,2024-10-26 00:50:50,
@@ -712,14 +712,14 @@ Sylex,Tetragon,Bard,1,Human,alternate,member,51,847,796,2024-10-25 22:50:28,2024
 Sylex,Soske,Wizard,52,Erudite,alternate,member,51,847,796,2024-10-25 22:50:28,2024-10-28 21:27:28
 Sylex,Virel,Necromancer,46,Iksar,alternate,member,51,847,796,2024-10-25 22:50:28,2024-10-28 21:27:28
 Sylex,Zarick,Bard,1,Wood Elf,alternate,member,51,847,796,2024-10-25 22:50:28,2024-10-28 21:27:28
-Taeolas,Xilis,Necromancer,33,Iksar,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Tankith,Warrior,1,Ogre,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Bowth,Ranger,56,Halfling,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Caedyan,Enchanter,60,High Elf,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Tanth,Bard,60,Vah Shir,main,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Tinyth,Cleric,60,Halfling,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Taeolas,Druid,60,Wood Elf,main,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
-Taeolas,Callith,Magician,50,High Elf,alternate,member,186,817,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Xilis,Necromancer,33,Iksar,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Tankith,Warrior,1,Ogre,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Bowth,Ranger,56,Halfling,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Caedyan,Enchanter,60,High Elf,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Tanth,Bard,60,Vah Shir,main,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Tinyth,Cleric,60,Halfling,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Taeolas,Druid,60,Wood Elf,main,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
+Taeolas,Callith,Magician,50,High Elf,alternate,member,201,832,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Tatump,Tatump,Ranger,60,Wood Elf,main,member,132,234,102,2024-10-25 23:48:04,2024-10-28 21:27:45
 Tazzak,Tazzak,Beastlord,32,Barbarian,main,applicant,0,0,0,2025-11-01 17:03:05,
 Tazzak,Tazzok,Cleric,21,Halfling,alternate,applicant,0,0,0,2025-11-01 17:03:05,
@@ -728,11 +728,11 @@ Tazzak,Wataru,Monk,6,Iksar,alternate,applicant,0,0,0,2025-11-01 17:03:05,
 Tergrat,Tergrat,Shaman,60,Ogre,main,member,20,67,47,2025-08-28 02:19:31,2025-10-02 03:30:44
 Thaotran,Thaotran,Beastlord,60,Vah Shir,main,member,69,84,15,2025-11-14 21:28:13,2025-12-06 02:36:31
 Therizle,Therizle,Bard,46,Wood Elf,main,member,0,0,0,2025-12-16 23:35:06,2025-12-25 18:27:58
-Thiccsar,Dirrk,Rogue,60,Wood Elf,alternate,member,356,1115,759,2024-12-03 14:09:49,2025-01-03 02:59:56
-Thiccsar,Stimm,Cleric,54,Human,alternate,member,356,1115,759,2024-12-03 14:09:49,2025-01-03 02:59:56
-Thiccsar,Deus,Paladin,60,High Elf,main,member,356,1115,759,2024-12-03 14:09:49,2025-01-03 02:59:56
-Thiccsar,Thiccsar,Necromancer,65,Iksar,main,member,356,1115,759,2024-12-03 14:09:49,2025-01-03 02:59:56
-Thiccsar,Fugli,Shaman,31,Ogre,alternate,member,356,1115,759,2024-12-03 14:09:49,2025-01-03 02:59:56
+Thiccsar,Dirrk,Rogue,60,Wood Elf,alternate,member,371,1130,759,2024-12-03 14:09:49,2025-01-03 02:59:56
+Thiccsar,Stimm,Cleric,54,Human,alternate,member,371,1130,759,2024-12-03 14:09:49,2025-01-03 02:59:56
+Thiccsar,Deus,Paladin,60,High Elf,main,member,371,1130,759,2024-12-03 14:09:49,2025-01-03 02:59:56
+Thiccsar,Thiccsar,Necromancer,65,Iksar,main,member,371,1130,759,2024-12-03 14:09:49,2025-01-03 02:59:56
+Thiccsar,Fugli,Shaman,31,Ogre,alternate,member,371,1130,759,2024-12-03 14:09:49,2025-01-03 02:59:56
 Thiicc,Thiicc,Ranger,50,Human,main,former,0,7,7,,
 Threx,Threx,Rogue,60,Wood Elf,main,member,38,48,10,2026-01-16 22:12:20,2026-02-09 01:37:56
 Thunderquill,Trackerquill,Ranger,42,Halfling,alternate,member,43,521,478,2024-10-26 02:34:01,2024-10-28 21:28:03
@@ -745,10 +745,10 @@ Thunderquill,Roundhousequill,Monk,1,Iksar,alternate,member,43,521,478,2024-10-26
 Thunderquill,Zoomzoomquill,Shaman,10,Vah Shir,alternate,member,43,521,478,2024-10-26 02:34:01,2024-10-28 21:28:03
 Thunderquill,Thunderquill,Magician,60,Human,main,member,43,521,478,2024-10-26 02:34:01,2024-10-28 21:28:03
 Thunderquill,Stabbityquill,Rogue,32,Vah Shir,alternate,member,43,521,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Tigg,Newbian,Magician,16,Erudite,alternate,member,600,1187,587,2025-09-02 19:25:03,2025-10-02 02:51:15
-Tigg,Tigg,Warrior,60,Ogre,main,member,600,1187,587,2025-09-02 19:25:03,2025-10-02 02:51:15
-Tigg,Hugeman,Shaman,50,Dark Elf,alternate,member,600,1187,587,2025-09-02 19:25:03,2025-10-02 02:51:15
-Tigg,Blicky,Bard,60,Half-Elf,alternate,member,600,1187,587,2025-09-02 19:25:03,2025-10-02 02:51:15
+Tigg,Newbian,Magician,16,Erudite,alternate,member,630,1217,587,2025-09-02 19:25:03,2025-10-02 02:51:15
+Tigg,Tigg,Warrior,60,Ogre,main,member,630,1217,587,2025-09-02 19:25:03,2025-10-02 02:51:15
+Tigg,Hugeman,Shaman,50,Dark Elf,alternate,member,630,1217,587,2025-09-02 19:25:03,2025-10-02 02:51:15
+Tigg,Blicky,Bard,60,Half-Elf,alternate,member,630,1217,587,2025-09-02 19:25:03,2025-10-02 02:51:15
 Tigrex,Tigrex,Shaman,54,Ogre,main,former,0,4,4,,
 Tokum,Tokum,Shadow Knight,60,Gnome,main,officer,5,340,335,2025-01-15 06:20:08,
 Tonik,Scruffs,Cleric,62,Halfling,main,officer,271,1657,1386,2024-10-23 13:18:56,
