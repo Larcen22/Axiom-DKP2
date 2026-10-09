@@ -19366,6 +19366,69 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-09T00:01:36.547727+00:00"
+    },
+    {
+      "transaction_id": "f283314b-5713-4f9c-bef1-65f4908ea89d",
+      "username_id": "80126a99-8671-4682-8d8d-5bbe949d5cf1",
+      "username": "Chaunce",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-09T00:49:19.946343+00:00"
+    },
+    {
+      "transaction_id": "5a66204c-3798-4975-abd3-f521805af6f0",
+      "username_id": "a1ce0be8-c8a7-4982-aa51-4c972d41395e",
+      "username": "Larzek",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-09T00:49:37.171959+00:00"
+    },
+    {
+      "transaction_id": "aacf57d9-2dfd-46c5-b36d-7d241d8cc977",
+      "username_id": "80126a99-8671-4682-8d8d-5bbe949d5cf1",
+      "username": "Chaunce",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-09T00:49:58.563079+00:00"
+    },
+    {
+      "transaction_id": "876c8c2c-5799-48b1-8c84-64e07709076e",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "username": "Artery",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-10-09T00:50:23.102373+00:00"
+    },
+    {
+      "transaction_id": "ca908e5d-df84-415b-9b8e-d493ee8050d5",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "username": "Artery",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-10-09T00:50:23.102373+00:00"
+    },
+    {
+      "transaction_id": "21a61cdc-79bb-42cc-b647-593d3d50215c",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "username": "Artery",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-09T00:50:38.720925+00:00"
+    },
+    {
+      "transaction_id": "b6c51002-acfd-4232-bb81-6ad96bc361f3",
+      "username_id": "a1ce0be8-c8a7-4982-aa51-4c972d41395e",
+      "username": "Larzek",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-09T00:50:51.019526+00:00"
     }
   ]
 }
