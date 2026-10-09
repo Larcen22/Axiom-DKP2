@@ -1927,7 +1927,7 @@
           "class": "Shaman",
           "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
           "role": "main",
-          "level": 60,
+          "level": 64,
           "race": "Troll"
         }
       ],
@@ -3525,7 +3525,7 @@
           "class": "Warrior",
           "character_id": "396c15fa-de8a-4555-94bc-cb8ac4f7294a",
           "role": "main",
-          "level": 60,
+          "level": 61,
           "race": "Wood Elf"
         },
         {
@@ -3573,7 +3573,7 @@
           "class": "Rogue",
           "character_id": "aa397d4c-2b7a-4454-a972-12f0857df70f",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Dwarf"
         },
         {
@@ -5941,7 +5941,7 @@
           "class": "Shaman",
           "character_id": "d48975a9-5f8b-449a-9a32-59de275f5fb4",
           "role": "main",
-          "level": 62,
+          "level": 63,
           "race": "Barbarian"
         }
       ],
@@ -7017,7 +7017,7 @@
           "class": "Bard",
           "character_id": "20faf2ff-1301-471a-8eae-868a70e26025",
           "role": "main",
-          "level": 60,
+          "level": 61,
           "race": "Half-Elf"
         },
         {
