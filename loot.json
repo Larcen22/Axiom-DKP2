@@ -63172,6 +63172,22 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "fa7680db-7535-4c71-9c92-2134b7205d42",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Indigo Snake Bracelet",
+      "character_id": "ee8cdaa3-e1cd-4fe2-b1c7-4f2edeccb190",
+      "character_name": "Sussudio",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "a4fd10c7-323a-4345-b2f9-5842df04df8a",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Indigo Snake Bracelet",
+      "character_id": "cb50dbd6-5965-412c-ac02-38f6be212355",
+      "character_name": "Ambien",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "a4fd10c7-323a-4345-b2f9-5842df04df8a",
+      "item_dkp_value": 3
     }
   ]
 }
