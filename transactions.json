@@ -19348,6 +19348,24 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-10-08T22:07:39.560873+00:00"
+    },
+    {
+      "transaction_id": "1043454e-08eb-433d-840f-875bb03fcbbd",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "username": "Ramphis",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-09T00:01:19.413095+00:00"
+    },
+    {
+      "transaction_id": "e7e32c5d-fea2-45fb-acf7-5ad3585f9fad",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "username": "Ramphis",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-09T00:01:36.547727+00:00"
     }
   ]
 }
