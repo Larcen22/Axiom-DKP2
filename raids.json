@@ -284355,6 +284355,14 @@
       "raid_dkp_value": 2,
       "attendees": [],
       "unclaimed": []
+    },
+    {
+      "raid_name": "First Kill: test first raid",
+      "date": "2026-10-08",
+      "raid_id": "ea75d113-18f8-4a9f-81f1-06f7832f8289",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": []
     }
   ]
 }
