@@ -63196,6 +63196,110 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "raid_id": "1112099d-1f3c-48a0-a6ca-70f891cea6e5",
       "item_dkp_value": 2
+    },
+    {
+      "item": "String of Beaded Slime",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Great Sword of Pestilence",
+      "character_id": "e05024bd-c2e7-4ce8-ab38-b145af7d511e",
+      "character_name": "Mephestus",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Boots of Silent Dreams",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadow Footpads",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Bracer of the Silent Star",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Living Symbol",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shadow Footpads",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Gauntlets of Dark Embers",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Wand of Deflection",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Sandals of Contemplation",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Gorget of Superiority",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
     }
   ]
 }
