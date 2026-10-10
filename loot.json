@@ -63524,6 +63524,38 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "61363371-0d3a-44f9-87e4-a2e2574155ce",
+      "character_name": "Killman",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 60
+    },
+    {
+      "item": "Aegis of Judgement",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Great Shadow Platemail",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 50
+    },
+    {
+      "item": "Leggings of Secrets",
+      "character_id": "9f92115a-6ee1-45dc-906e-200992061de5",
+      "character_name": "Thiccsar",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 10
     }
   ]
 }
