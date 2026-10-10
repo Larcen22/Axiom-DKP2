@@ -3995,9 +3995,9 @@
       "username_discord": "138494705687068672",
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "rank": "member",
-      "available_dkp": 115,
+      "available_dkp": 118,
       "dkp_earned": 904,
-      "dkp_spent": 789,
+      "dkp_spent": 786,
       "dkp_adjustments": 4,
       "characters": [
         {
@@ -4483,7 +4483,7 @@
           "class": "Shadow Knight",
           "character_id": "8529631f-6cc7-4c64-aaea-dac885103e33",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Ogre"
         },
         {
@@ -4499,7 +4499,7 @@
           "class": "Bard",
           "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Wood Elf"
         },
         {
