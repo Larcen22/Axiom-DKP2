@@ -63556,6 +63556,38 @@
       "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
       "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "69de3bad-2026-4e30-8029-80b7b0f99a7b",
+      "item_dkp_value": 9
+    },
+    {
+      "item": "Glowing Amber Band",
+      "character_id": "d87c5a60-4e61-4e60-87ea-5aaf9e6f66ae",
+      "character_name": "Thunderquill",
+      "username_id": "187827da-db09-4b57-9622-457697a77c2e",
+      "raid_id": "69de3bad-2026-4e30-8029-80b7b0f99a7b",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Bow of Storms",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "69de3bad-2026-4e30-8029-80b7b0f99a7b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Yttrium Wrapped Sleeves",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "69de3bad-2026-4e30-8029-80b7b0f99a7b",
+      "item_dkp_value": 3
     }
   ]
 }
