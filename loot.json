@@ -63420,6 +63420,54 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
       "item_dkp_value": 20
+    },
+    {
+      "item": "Circlet of Disguise",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Bracelet of Darkness",
+      "character_id": "f66e3fdc-c068-4daa-89ee-d02a6e99d369",
+      "character_name": "Feyah",
+      "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Nightcaller Leggings",
+      "character_id": "f448b3e2-5326-4cef-913c-102be2cddb67",
+      "character_name": "Wyndsmyr",
+      "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 26
+    },
+    {
+      "item": "Breastplate of Speed",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bow of Flames",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shadow Pearl Earring",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 10
     }
   ]
 }
