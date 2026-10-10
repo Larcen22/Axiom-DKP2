@@ -63372,6 +63372,54 @@
       "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
       "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Ring of Flamewarding",
+      "character_id": "38825e99-94d7-4bc7-be52-41b0b7ed94d8",
+      "character_name": "Ethiria",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Obsidian Necklace",
+      "character_id": "ee8cdaa3-e1cd-4fe2-b1c7-4f2edeccb190",
+      "character_name": "Sussudio",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Leggings of Fiery Might",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Earring of Falling Stars",
+      "character_id": "a53740b9-5310-4c76-bc27-533d03beb7c4",
+      "character_name": "Neki",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 21
+    },
+    {
+      "item": "Earring of Falling Stars",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 20
     }
   ]
 }
