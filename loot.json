@@ -63300,6 +63300,78 @@
       "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
       "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Necklace of Endless Concepts",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Lunar Fungus Covered Tunic",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 18
+    },
+    {
+      "item": "Cloudy Mark",
+      "character_id": "1c427159-7e80-4eec-b3c4-6d6c377ebaca",
+      "character_name": "Keilly",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Ring of Immobilization",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Rune of Judgement",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Staff of Lost Rituals",
+      "character_id": "2e7f46fd-fd29-4758-a65a-f76bfdce7e65",
+      "character_name": "Cyrotonic",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "795542c7-2afa-4503-9161-a62438f2c30b",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Veil of Flames",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Stein of Falling Tears",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloak of Destruction",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
+      "item_dkp_value": 5
     }
   ]
 }
