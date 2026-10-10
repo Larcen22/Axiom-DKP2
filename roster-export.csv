@@ -22,11 +22,11 @@ Arlen,Arlen,Ranger,54,Human,main,former,0,3,3,,
 Arnoldd,Arnoldd,Shaman,58,Ogre,main,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arnoldd,Redhawk,Druid,12,Halfling,alternate,member,28,46,18,2024-10-26 04:21:36,2024-10-28 21:12:11
 Arrowleaf,Arrowleaf,Ranger,60,Wood Elf,main,member,18,21,3,2026-03-11 23:07:35,2026-04-05 05:04:56
-Arshis,Arshis,Beastlord,65,Iksar,main,member,90,256,166,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Moltenstare,Warrior,65,Iksar,main,member,90,256,166,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,90,256,166,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Keessii,Cleric,1,Halfling,alternate,member,90,256,166,2026-07-16 18:57:11,2026-08-05 14:42:32
-Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,90,256,166,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Arshis,Beastlord,65,Iksar,main,member,79,256,177,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Moltenstare,Warrior,65,Iksar,main,member,79,256,177,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,79,256,177,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Keessii,Cleric,1,Halfling,alternate,member,79,256,177,2026-07-16 18:57:11,2026-08-05 14:42:32
+Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,79,256,177,2026-07-16 18:57:11,2026-08-05 14:42:32
 Artery,Artery,Cleric,60,Dark Elf,main,member,89,162,73,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artery,Denel,Paladin,60,Gnome,alternate,member,89,162,73,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artery,Kryn,Bard,60,Vah Shir,main,member,89,162,73,2026-08-10 10:58:31,2026-08-31 12:00:44
@@ -198,7 +198,7 @@ Darkthoughts,Narnia,Beastlord,57,Vah Shir,alternate,member,54,1834,1780,2024-10-
 Darkthoughts,Dragonstail,Monk,55,Iksar,alternate,member,54,1834,1780,2024-10-26 16:11:03,2024-10-28 21:17:03
 Darkthoughts,Fastsole,Druid,60,Wood Elf,main,member,54,1834,1780,2024-10-26 16:11:03,2024-10-28 21:17:03
 Darkthoughts,Soulsipper,Necromancer,54,Iksar,alternate,member,54,1834,1780,2024-10-26 16:11:03,2024-10-28 21:17:03
-Darkthoughts,Curare,Cleric,60,Dark Elf,alternate,member,54,1834,1780,2024-10-26 16:11:03,2024-10-28 21:17:03
+Darkthoughts,Curare,Cleric,61,Dark Elf,alternate,member,54,1834,1780,2024-10-26 16:11:03,2024-10-28 21:17:03
 Darqwyng,Darqwyng,Cleric,56,Dwarf,main,applicant,0,0,0,2026-02-09 01:51:39,
 Dedzi,Dedzi,Shaman,55,Iksar,main,member,33,35,2,2025-10-14 00:20:39,
 Demas,Dalura,Wizard,44,Erudite,alternate,inactive,169,227,58,2024-10-26 19:18:41,
@@ -467,16 +467,16 @@ Maori,Maori,Necromancer,57,Dark Elf,alternate,former,0,30,30,,
 Mardigras,Mardigras,Necromancer,60,Iksar,main,applicant,33,42,9,2026-01-21 23:09:24,
 Mcfleshman,Mcfleshman,Shaman,56,Barbarian,main,member,8,20,12,2025-04-10 02:33:39,2025-04-24 23:22:06
 Meekz,Meekz,Ranger,60,Dark Elf,main,member,406,690,284,2024-10-25 22:57:52,2024-10-28 21:23:32
-Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Fydekeen,Warrior,60,Ogre,main,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,Treack,Druid,46,Wood Elf,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
-Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,52,715,663,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Zathyrs,Monk,5,Iksar,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Eigthevil,Shadow Knight,20,Gnome,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydakin,Ranger,9,Wood Elf,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Fydekeen,Warrior,60,Ogre,main,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Cabbat,Magician,60,Dark Elf,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Ferath,Beastlord,5,Barbarian,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,Treack,Druid,46,Wood Elf,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
+Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,51,715,664,2025-02-19 04:56:40,2025-04-03 07:15:36
 Messimer,Pewster,Ranger,65,Halfling,main,member,102,465,363,2024-12-22 03:21:09,
 Messimer,Messimer,Enchanter,60,High Elf,main,member,102,465,363,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,102,1651,1549,2024-10-26 00:50:50,
@@ -540,12 +540,12 @@ Ninjavanish,Ninjavanish,Rogue,60,Barbarian,main,member,395,768,373,2025-04-21 01
 Nozzlecog,Nozzlecog,Magician,60,Gnome,main,inactive,55,273,218,2025-01-19 23:06:40,
 Nozzlecog,Skywaltzer,Bard,39,Half-Elf,alternate,inactive,55,273,218,2025-01-19 23:06:40,
 Nozzlecog,Reekin,Shadow Knight,10,Ogre,alternate,inactive,55,273,218,2025-01-19 23:06:40,
-Numb,Taishi,Shadow Knight,55,Gnome,alternate,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
-Numb,Smarshmallow,Warrior,52,Ogre,alternate,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
-Numb,Filya,Cleric,61,High Elf,main,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
-Numb,Ajja,Enchanter,59,High Elf,alternate,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
-Numb,Devos,Shaman,20,Iksar,alternate,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
-Numb,Numb,Bard,65,Half-Elf,main,member,117,1246,1129,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Taishi,Shadow Knight,55,Gnome,alternate,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Smarshmallow,Warrior,52,Ogre,alternate,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Filya,Cleric,61,High Elf,main,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Ajja,Enchanter,59,High Elf,alternate,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Devos,Shaman,20,Iksar,alternate,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
+Numb,Numb,Bard,65,Half-Elf,main,member,113,1246,1133,2024-10-27 23:46:10,2024-10-28 21:23:58
 Ohnoz,Ohnoz,Cleric,60,Gnome,main,member,51,252,201,2025-01-15 16:51:03,2025-01-20 22:37:32
 Peetho,Peetho,Ranger,60,Wood Elf,main,guild leader,315,938,623,2024-10-23 12:47:08,
 Peetho,Iria,Necromancer,17,Iksar,alternate,guild leader,315,938,623,2024-10-23 12:47:08,
@@ -631,7 +631,7 @@ Scheer,Scheer,Beastlord,60,Vah Shir,main,member,19,110,91,2026-02-16 20:37:06,20
 Scheer,Thornication,Druid,60,Half-Elf,alternate,member,19,110,91,2026-02-16 20:37:06,2026-05-07 00:12:56
 Scheer,Skanlan,Rogue,55,Halfling,alternate,member,19,110,91,2026-02-16 20:37:06,2026-05-07 00:12:56
 Scheer,Maestyr,Cleric,60,High Elf,main,member,19,110,91,2026-02-16 20:37:06,2026-05-07 00:12:56
-Seabright,Seabright,Shaman,64,Troll,main,member,30,120,90,2026-06-26 00:18:10,2026-07-20 15:59:26
+Seabright,Seabright,Shaman,64,Troll,main,member,29,120,91,2026-06-26 00:18:10,2026-07-20 15:59:26
 Sebasaz,Sebasaz,Necromancer,60,Iksar,main,former,0,4,4,,
 Selistryle,Alexsandara,Paladin,9,Halfling,alternate,applicant,0,0,0,2026-02-06 08:36:13,
 Selistryle,Selistryle,Beastlord,30,Barbarian,main,applicant,0,0,0,2026-02-06 08:36:13,
@@ -705,13 +705,13 @@ Styxs,Juck,Shadow Knight,34,Iksar,alternate,member,71,131,60,2025-04-20 20:47:02
 Susu,Susu,Ranger,65,Wood Elf,main,member,189,621,432,2025-08-08 03:46:49,2025-10-02 03:29:49
 Susu,Sussudio,Enchanter,64,High Elf,main,member,189,621,432,2025-08-08 03:46:49,2025-10-02 03:29:49
 Syldan,Syldan,Ranger,55,Human,main,former,0,6,6,,
-Sylex,Soko,Beastlord,60,Iksar,alternate,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Sylex,Enchanter,65,Dark Elf,main,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Darien,Paladin,65,Half-Elf,main,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Tetragon,Bard,1,Human,alternate,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Soske,Wizard,52,Erudite,alternate,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Virel,Necromancer,46,Iksar,alternate,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Zarick,Bard,1,Wood Elf,alternate,member,41,857,816,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soko,Beastlord,60,Iksar,alternate,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Sylex,Enchanter,65,Dark Elf,main,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Darien,Paladin,65,Half-Elf,main,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Tetragon,Bard,1,Human,alternate,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soske,Wizard,52,Erudite,alternate,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Virel,Necromancer,46,Iksar,alternate,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Zarick,Bard,1,Wood Elf,alternate,member,36,857,821,2024-10-25 22:50:28,2024-10-28 21:27:28
 Taeolas,Xilis,Necromancer,33,Iksar,alternate,member,208,839,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Tankith,Warrior,1,Ogre,alternate,member,208,839,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Bowth,Ranger,56,Halfling,alternate,member,208,839,631,2025-12-13 02:53:27,2026-01-02 18:25:16
@@ -735,16 +735,16 @@ Thiccsar,Thiccsar,Necromancer,65,Iksar,main,member,382,1141,759,2024-12-03 14:09
 Thiccsar,Fugli,Shaman,31,Ogre,alternate,member,382,1141,759,2024-12-03 14:09:49,2025-01-03 02:59:56
 Thiicc,Thiicc,Ranger,50,Human,main,former,0,7,7,,
 Threx,Threx,Rogue,60,Wood Elf,main,member,38,48,10,2026-01-16 22:12:20,2026-02-09 01:37:56
-Thunderquill,Trackerquill,Ranger,42,Halfling,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Sundialquill,Druid,47,Halfling,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Bulwarkquill,Warrior,14,Ogre,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Blessedquill,Paladin,8,Half-Elf,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Mezzaquill,Enchanter,44,Dark Elf,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Lifetakerquill,Shadow Knight,21,Ogre,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Roundhousequill,Monk,1,Iksar,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Zoomzoomquill,Shaman,10,Vah Shir,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Thunderquill,Magician,60,Human,main,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
-Thunderquill,Stabbityquill,Rogue,32,Vah Shir,alternate,member,45,523,478,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Trackerquill,Ranger,42,Halfling,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Sundialquill,Druid,47,Halfling,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Bulwarkquill,Warrior,14,Ogre,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Blessedquill,Paladin,8,Half-Elf,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Mezzaquill,Enchanter,44,Dark Elf,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Lifetakerquill,Shadow Knight,21,Ogre,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Roundhousequill,Monk,1,Iksar,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Zoomzoomquill,Shaman,10,Vah Shir,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Thunderquill,Magician,60,Human,main,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
+Thunderquill,Stabbityquill,Rogue,32,Vah Shir,alternate,member,40,523,483,2024-10-26 02:34:01,2024-10-28 21:28:03
 Tigg,Newbian,Magician,16,Erudite,alternate,member,641,1228,587,2025-09-02 19:25:03,2025-10-02 02:51:15
 Tigg,Tigg,Warrior,60,Ogre,main,member,641,1228,587,2025-09-02 19:25:03,2025-10-02 02:51:15
 Tigg,Hugeman,Shaman,50,Dark Elf,alternate,member,641,1228,587,2025-09-02 19:25:03,2025-10-02 02:51:15

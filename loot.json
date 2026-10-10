@@ -63468,6 +63468,62 @@
       "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
       "raid_id": "25246ec7-7f0d-4cf2-98c8-31671b9922df",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Crystal Shadow Cloak",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "d87c5a60-4e61-4e60-87ea-5aaf9e6f66ae",
+      "character_name": "Thunderquill",
+      "username_id": "187827da-db09-4b57-9622-457697a77c2e",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Dagger of Thought",
+      "character_id": "e05024bd-c2e7-4ce8-ab38-b145af7d511e",
+      "character_name": "Mephestus",
+      "username_id": "1b8d1628-b24c-450d-8c94-f5aa23a1a2b8",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Belt of Mastery",
+      "character_id": "aa3a2dfa-08b1-4f5c-88f4-fe88a5fd782b",
+      "character_name": "Numb",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Wand of Everlasting Water",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Crown of Energy",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Silver Steel Cloak",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "773430a0-b87b-496f-aa0b-82e1bfdea956",
+      "item_dkp_value": 10
     }
   ]
 }
