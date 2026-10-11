@@ -19447,6 +19447,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-10T23:24:36.701697+00:00"
+    },
+    {
+      "transaction_id": "ff7c9a7a-5189-4ab5-881b-5ecf606684f5",
+      "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+      "username": "Balthemal",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-11T07:19:42.401236+00:00"
     }
   ]
 }
