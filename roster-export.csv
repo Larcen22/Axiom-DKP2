@@ -57,7 +57,7 @@ Azira,Azira,Necromancer,60,Iksar,main,member,107,262,155,2025-12-13 19:29:57,202
 Badoo,Tarim,Shadow Knight,27,Dark Elf,alternate,former,0,9,9,,2025-01-06 16:07:21
 Badoo,Badoo,Cleric,60,High Elf,main,former,0,9,9,,2025-01-06 16:07:21
 Bakador,Bakador,Cleric,53,Dwarf,main,former,0,8,8,,
-Balthemal,Balthemal,Druid,64,Half-Elf,main,officer,299,1837,1538,2024-10-23 00:30:17,
+Balthemal,Balthemal,Druid,65,Half-Elf,main,officer,299,1837,1538,2024-10-23 00:30:17,
 Balthemal,Taringail,Monk,4,Iksar,alternate,officer,299,1837,1538,2024-10-23 00:30:17,
 Balthemal,Dadjokes,Monk,1,Human,alternate,officer,299,1837,1538,2024-10-23 00:30:17,
 Balthemal,Kukobak,Warrior,42,Ogre,alternate,officer,299,1837,1538,2024-10-23 00:30:17,
@@ -362,8 +362,8 @@ Keea,Keezz,Druid,55,Wood Elf,alternate,member,56,56,0,2026-01-05 17:03:21,2026-0
 Keea,Keea,Beastlord,60,Iksar,alternate,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
 Keea,Keeze,Monk,60,Dark Elf,main,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
 Keea,Keez,Shaman,60,Iksar,main,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
-Keilly,Keilly,Rogue,60,Halfling,main,officer,139,1891,1752,2024-10-23 18:22:44,
-Keilly,Zerobia,Wizard,60,Gnome,main,officer,139,1891,1752,2024-10-23 18:22:44,
+Keilly,Keilly,Rogue,65,Halfling,main,officer,139,1891,1752,2024-10-23 18:22:44,
+Keilly,Zerobia,Wizard,65,Gnome,main,officer,139,1891,1752,2024-10-23 18:22:44,
 Keilly,Grumblor,Cleric,37,Dwarf,alternate,officer,139,1891,1752,2024-10-23 18:22:44,
 Kelon,Kelom,Magician,53,Gnome,alternate,member,40,431,391,2025-02-08 14:36:21,2025-02-25 22:07:54
 Kelon,Kelon,Monk,62,Human,main,member,40,431,391,2025-02-08 14:36:21,2025-02-25 22:07:54
@@ -835,10 +835,10 @@ Wyndsmyr,Trizzel,Shaman,56,Troll,alternate,applicant,50,180,130,2026-07-09 21:01
 Xaktar,Xaktar,Beastlord,60,Iksar,main,applicant,0,0,0,2026-07-13 03:04:03,
 Xikikaz,Xikikaz,Beastlord,60,Iksar,main,member,13,254,241,2026-02-21 19:42:57,2026-03-06 01:43:27
 Xikikaz,Rablak,Wizard,7,High Elf,alternate,member,13,254,241,2026-02-21 19:42:57,2026-03-06 01:43:27
-Yeahbill,Stevejabs,Monk,60,Dark Elf,main,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
-Yeahbill,Yeahbill,Enchanter,60,Gnome,main,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
-Yeahbill,Frobow,Ranger,7,Halfling,alternate,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
-Yeahbill,Spookyscary,Necromancer,55,Iksar,alternate,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
+Yeahbill,Stevejabs,Monk,63,Dark Elf,main,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
+Yeahbill,Yeahbill,Enchanter,65,Gnome,main,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
+Yeahbill,Frobow,Ranger,56,Halfling,alternate,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
+Yeahbill,Spookyscary,Necromancer,60,Iksar,alternate,member,22,311,289,2024-10-28 00:12:46,2024-10-28 21:27:15
 Yoren,Yoren,Shadow Knight,60,Human,main,member,41,73,32,2025-09-06 03:18:07,
 Yoren,Horf,Shaman,49,Barbarian,alternate,member,41,73,32,2025-09-06 03:18:07,
 Zedlord,Uppies,Cleric,60,Dwarf,alternate,officer,89,1534,1445,2024-10-24 03:14:37,

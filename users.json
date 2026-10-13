@@ -1729,7 +1729,7 @@
           "class": "Monk",
           "character_id": "a9f0dce7-7956-43f0-b299-e28cc86f2a84",
           "role": "main",
-          "level": 60,
+          "level": 63,
           "race": "Dark Elf"
         },
         {
@@ -1737,7 +1737,7 @@
           "class": "Enchanter",
           "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Gnome"
         },
         {
@@ -1745,7 +1745,7 @@
           "class": "Ranger",
           "character_id": "a148e284-5a2e-4ad0-a86b-46a9975b5fc1",
           "role": "alternate",
-          "level": 7,
+          "level": 56,
           "race": "Halfling"
         },
         {
@@ -1753,7 +1753,7 @@
           "class": "Necromancer",
           "character_id": "dd39cfe1-bfdf-41c5-947f-87aaf986768e",
           "role": "alternate",
-          "level": 55,
+          "level": 60,
           "race": "Iksar"
         }
       ],
@@ -4605,7 +4605,7 @@
           "class": "Rogue",
           "character_id": "1c427159-7e80-4eec-b3c4-6d6c377ebaca",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Halfling"
         },
         {
@@ -4613,7 +4613,7 @@
           "class": "Wizard",
           "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Gnome"
         },
         {
@@ -5189,7 +5189,7 @@
           "class": "Druid",
           "character_id": "4b21a7ba-d976-4443-b048-bf0773939793",
           "role": "main",
-          "level": 64,
+          "level": 65,
           "race": "Half-Elf"
         },
         {
