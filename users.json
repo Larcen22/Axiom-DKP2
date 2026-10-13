@@ -11048,6 +11048,14 @@
           "level": 60,
           "character_id": "e6d3dc72-c877-4d1d-b5c5-589220807bf1",
           "role": "alternate"
+        },
+        {
+          "name": "Digitalis",
+          "class": "Druid",
+          "race": "Wood Elf",
+          "level": 60,
+          "character_id": "c93bee5e-700e-448a-b3cb-2a1e5f0e926f",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 20:00:30",
