@@ -63588,6 +63588,22 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "69de3bad-2026-4e30-8029-80b7b0f99a7b",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Longbow of the Stormcaller",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Stormriders Gauntlets",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 9
     }
   ]
 }
