@@ -285060,6 +285060,66 @@
       "unclaimed": [],
       "channel_id": "1558268102435672236",
       "summary_message_id": "1558268110044266539"
+    },
+    {
+      "raid_name": "BoT Innovation Tactics on time",
+      "date": "2026-10-13",
+      "raid_id": "7bc10c9c-9159-4c13-a8b2-29c2665ec4e1",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559719642371727411",
+      "summary_message_id": "1559719647945691268"
+    },
+    {
+      "raid_name": "BoT Innovation Tactics 1",
+      "date": "2026-10-13",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559719655843827792",
+      "summary_message_id": "1559719662705446934"
+    },
+    {
+      "raid_name": "BoT Innovation Tactics 2",
+      "date": "2026-10-13",
+      "raid_id": "5798e870-1a5b-461b-b4c2-66e2fc16802a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559719670687473765",
+      "summary_message_id": "1559719678132359300"
+    },
+    {
+      "raid_name": "BoT Innovation Tactics 3",
+      "date": "2026-10-13",
+      "raid_id": "4ff1483a-a974-45e6-9794-8bbf85932d45",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559719685459808397",
+      "summary_message_id": "1559719692397056173"
+    },
+    {
+      "raid_name": "First Kill: Tallon Zek",
+      "date": "2026-10-13",
+      "raid_id": "84ab4adc-adec-4f74-8c89-adab9bda78ca",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559720794458820668",
+      "summary_message_id": "1559720799248846889"
+    },
+    {
+      "raid_name": "First Kill: Vallon Zek",
+      "date": "2026-10-13",
+      "raid_id": "389a435d-6266-42b3-baee-d316ac075fa0",
+      "raid_dkp_value": 2,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559720895990206596",
+      "summary_message_id": "1559720901535203379"
     }
   ]
 }
