@@ -19474,6 +19474,69 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-12T23:39:52.195246+00:00"
+    },
+    {
+      "transaction_id": "0f403812-5fdb-4afe-9c3d-d67d20ad60ac",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "username": "Boonie",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-13T23:59:22.332853+00:00"
+    },
+    {
+      "transaction_id": "9fdc9b23-f66d-4ff1-bb8e-5b6c364c7928",
+      "username_id": "2b7d4c65-2458-46da-aab3-0dfdb934fcdc",
+      "username": "Kelon",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-13T23:59:52.603241+00:00"
+    },
+    {
+      "transaction_id": "f3271e97-d63c-49e9-be59-a7346096dc39",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "username": "Boonie",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-14T00:00:02.800127+00:00"
+    },
+    {
+      "transaction_id": "76d85cad-2aba-41cf-b1c6-71dd7b93c415",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "username": "Eziekial",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT bard kite < 1 hour - 10/9",
+      "date": "2026-10-14T00:01:13.038720+00:00"
+    },
+    {
+      "transaction_id": "7f4fac54-19ab-437b-a887-0ee2d4cdd548",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "username": "Nethi",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "new rogue pulling in VT - 10/9",
+      "date": "2026-10-14T00:02:10.164821+00:00"
+    },
+    {
+      "transaction_id": "f1cbbf5d-a382-4097-a83f-9e139dd0b847",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "username": "Lynxy",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "new rogue pulling in VT - 10/9",
+      "date": "2026-10-14T00:02:36.858617+00:00"
+    },
+    {
+      "transaction_id": "5835f46d-3d7b-4e2b-960f-84040a767120",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "username": "Zedlord",
+      "type": "BBC",
+      "transaction_amount": 2,
+      "reason": "new rogue pulling in VT - 10/9",
+      "date": "2026-10-14T00:03:03.937799+00:00"
     }
   ]
 }
