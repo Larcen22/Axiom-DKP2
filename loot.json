@@ -63636,6 +63636,22 @@
       "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
       "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
       "item_dkp_value": 9
+    },
+    {
+      "item": "Girdle of the Tactician",
+      "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
+      "character_name": "Gerien",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "raid_id": "5798e870-1a5b-461b-b4c2-66e2fc16802a",
+      "item_dkp_value": 13
+    },
+    {
+      "item": "Pendant of the Triumphant Victor",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "5798e870-1a5b-461b-b4c2-66e2fc16802a",
+      "item_dkp_value": 10
     }
   ]
 }
