@@ -19537,6 +19537,15 @@
       "transaction_amount": 2,
       "reason": "new rogue pulling in VT - 10/9",
       "date": "2026-10-14T00:03:03.937799+00:00"
+    },
+    {
+      "transaction_id": "462f946b-ec1d-4a6e-96e4-6148367e1867",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "username": "Redonkulous",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-14T04:45:33.433724+00:00"
     }
   ]
 }
