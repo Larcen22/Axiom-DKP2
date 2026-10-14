@@ -285313,6 +285313,16 @@
       "unclaimed": [],
       "channel_id": "1559720895990206596",
       "summary_message_id": "1559720901535203379"
+    },
+    {
+      "raid_name": "First Kill: Agnarr",
+      "date": "2026-10-13",
+      "raid_id": "48ec5d22-99b8-4345-8801-68bebe75aaf9",
+      "raid_dkp_value": 3,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1559738598545301544",
+      "summary_message_id": "1559738604916576277"
     }
   ]
 }
