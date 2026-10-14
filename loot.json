@@ -63604,6 +63604,22 @@
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
       "item_dkp_value": 9
+    },
+    {
+      "item": "Coil of Twisted Platinum Wire",
+      "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
+      "character_name": "Gerien",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Glowing Steel Shim",
+      "character_id": "9ca18a68-d349-45ea-9661-f838589e0e1c",
+      "character_name": "Vagary",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 1
     }
   ]
 }

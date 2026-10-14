@@ -297,7 +297,7 @@ Geenome,Geenome,Magician,60,Gnome,main,member,44,50,6,2026-03-09 20:38:13,2026-0
 Geenome,Rooty,Druid,43,Wood Elf,alternate,member,44,50,6,2026-03-09 20:38:13,2026-04-05 05:03:40
 Genlain,Luminaire,Wizard,16,Erudite,alternate,member,58,257,199,2026-03-10 17:32:13,2026-03-24 20:38:00
 Genlain,Genlain,Cleric,60,Human,main,member,58,257,199,2026-03-10 17:32:13,2026-03-24 20:38:00
-Gerien,Gerien,Druid,63,Wood Elf,main,member,31,46,15,2026-01-11 01:05:44,2026-02-01 04:01:35
+Gerien,Gerien,Druid,63,Wood Elf,main,member,30,46,16,2026-01-11 01:05:44,2026-02-01 04:01:35
 Gnokia,Ouya,Beastlord,60,Troll,alternate,member,153,535,382,2024-10-25 23:50:33,
 Gnokia,Gnokia,Warrior,60,Gnome,main,member,153,535,382,2024-10-25 23:50:33,
 Gnokia,Gnofat,Rogue,60,Gnome,main,member,153,535,382,2024-10-25 23:50:33,
@@ -444,7 +444,7 @@ Lizardential,Reformed,Wizard,57,Erudite,alternate,member,30,86,56,2025-09-19 02:
 Lluum,Lluum,Druid,55,Half-Elf,main,member,21,21,0,2025-12-13 20:12:18,2026-01-05 21:31:27
 Luanne,Luanne,Ranger,60,Wood Elf,main,applicant,0,0,0,2026-05-20 20:05:16,
 Lukor,Lukor,Cleric,60,Dwarf,main,member,27,46,19,2026-07-15 23:54:41,2026-07-18 01:32:25
-Luminara,Luminara,Paladin,63,High Elf,main,member,141,840,699,2025-10-02 23:12:14,
+Luminara,Luminara,Paladin,63,High Elf,main,member,142,841,699,2025-10-02 23:12:14,
 Lykan,Lykan,Beastlord,60,Ogre,main,member,75,105,30,2025-10-01 00:37:03,2025-10-02 02:50:41
 Lykan,Cexual,Enchanter,55,Gnome,alternate,member,75,105,30,2025-10-01 00:37:03,2025-10-02 02:50:41
 Lykan,Clairec,Cleric,26,Dwarf,alternate,member,75,105,30,2025-10-01 00:37:03,2025-10-02 02:50:41
@@ -601,8 +601,8 @@ Rhettsu,Rhettsu,Monk,60,Iksar,main,member,33,117,84,2026-07-19 19:44:45,2026-08-
 Rhizzle,Rhizzle,Cleric,57,Gnome,main,former,0,1,1,,
 Rookrue,Rookrue,Magician,11,Gnome,main,member,0,0,0,2026-05-24 22:10:00,2026-05-31 00:07:44
 Rootwind,Rootwind,Ranger,60,Half-Elf,main,member,38,135,97,2025-09-10 00:00:36,2025-10-02 03:25:53
-Rotsouls,Moroder,Bard,60,Half-Elf,main,member,107,295,188,2026-03-22 16:14:59,2026-05-07 00:12:20
-Rotsouls,Rotsouls,Necromancer,62,Iksar,main,member,107,295,188,2026-03-22 16:14:59,2026-05-07 00:12:20
+Rotsouls,Moroder,Bard,60,Half-Elf,main,member,108,296,188,2026-03-22 16:14:59,2026-05-07 00:12:20
+Rotsouls,Rotsouls,Necromancer,62,Iksar,main,member,108,296,188,2026-03-22 16:14:59,2026-05-07 00:12:20
 Rottonscale,Rottonscale,Necromancer,60,Iksar,main,member,79,114,35,2025-09-23 13:27:07,2025-10-02 03:27:30
 Rounds,Rounds,Bard,60,Half-Elf,main,member,86,86,0,2024-10-26 15:08:21,2024-10-28 21:25:34
 Rumford,Rumford,Ranger,60,Halfling,main,former,0,59,59,,
@@ -643,15 +643,15 @@ Setwo,Schro,Monk,60,Human,main,member,21,434,413,2026-01-06 18:40:14,2026-01-27 
 Setwo,Haywoodd,Enchanter,49,Human,alternate,member,21,434,413,2026-01-06 18:40:14,2026-01-27 02:11:41
 Setwo,Pyed,Bard,8,Half-Elf,alternate,member,21,434,413,2026-01-06 18:40:14,2026-01-27 02:11:41
 Setwo,Setwo,Necromancer,60,Human,main,member,21,434,413,2026-01-06 18:40:14,2026-01-27 02:11:41
-Sever,Sever,Wizard,60,Dark Elf,main,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Hinder,Warrior,54,Dark Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Clamor,Bard,1,Wood Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Vagary,Shadow Knight,60,Dark Elf,main,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Vesyla,Ranger,57,Wood Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Wane,Beastlord,1,Wood Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Snick,Beastlord,12,Wood Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Elzyana,Necromancer,12,Dark Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
-Sever,Aside,Cleric,16,Dark Elf,alternate,member,189,1356,1167,2024-11-23 21:40:39,
+Sever,Sever,Wizard,60,Dark Elf,main,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Hinder,Warrior,54,Dark Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Clamor,Bard,1,Wood Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Vagary,Shadow Knight,60,Dark Elf,main,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Vesyla,Ranger,57,Wood Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Wane,Beastlord,1,Wood Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Snick,Beastlord,12,Wood Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Elzyana,Necromancer,12,Dark Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
+Sever,Aside,Cleric,16,Dark Elf,alternate,member,188,1356,1168,2024-11-23 21:40:39,
 Shaamn,Shaamn,Shaman,53,Barbarian,main,member,0,0,0,2025-12-11 05:37:44,2025-12-31 18:15:01
 Shakur,Shakur,Shadow Knight,60,Ogre,main,inactive,45,59,14,2024-10-25 22:50:16,
 Shamis,Loone,Bard,60,Wood Elf,main,member,1,65,64,2026-04-29 23:27:45,
