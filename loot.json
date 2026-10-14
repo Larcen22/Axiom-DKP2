@@ -63620,6 +63620,22 @@
       "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
       "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Battle Fists",
+      "character_id": "6f06a35f-bf32-4b72-bcf1-38c8970ed10c",
+      "character_name": "Kelon",
+      "username_id": "2b7d4c65-2458-46da-aab3-0dfdb934fcdc",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Battle Fists",
+      "character_id": "a95b58f8-5ce8-41c5-b100-cb288ebf3a5b",
+      "character_name": "Xikikaz",
+      "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+      "raid_id": "41804a54-f467-4f56-a8c7-30c5ec383bc8",
+      "item_dkp_value": 9
     }
   ]
 }
