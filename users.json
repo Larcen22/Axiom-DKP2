@@ -11214,6 +11214,27 @@
       "ApplicationDate": "2026-09-09 05:42:00",
       "MembershipDate": "2026-09-11 16:05:52",
       "dkp_earned": 70
+    },
+    {
+      "username": "slor",
+      "username_discord": "623269137023500295",
+      "username_id": "8f36b9ea-b909-4780-bf59-36e19c4e165b",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "slor",
+          "class": "Beastlord",
+          "race": "Ogre",
+          "level": 60,
+          "character_id": "3417a877-d710-4b83-8ec5-a050f629f4f3",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-10-15 01:49:03",
+      "MembershipDate": "",
+      "dkp_earned": 0
     }
   ]
 }
