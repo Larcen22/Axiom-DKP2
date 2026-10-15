@@ -19546,6 +19546,60 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-10-14T04:45:33.433724+00:00"
+    },
+    {
+      "transaction_id": "8628e95b-42a5-40ec-b994-4c89e2ea3b69",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "username": "Bowdown",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-15T02:46:28.336907+00:00"
+    },
+    {
+      "transaction_id": "0f786eda-5b73-46ad-a5e0-4c5fd8021d11",
+      "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+      "username": "Rotsouls",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-15T02:46:37.694823+00:00"
+    },
+    {
+      "transaction_id": "c0d65d96-362c-42d7-ba1f-f8571598acc4",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "username": "Bowdown",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-15T02:47:13.298498+00:00"
+    },
+    {
+      "transaction_id": "e93affb0-8b46-47c9-b318-72914220c208",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "username": "Luminara",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-15T02:47:24.700994+00:00"
+    },
+    {
+      "transaction_id": "b4c8a8e3-15f9-4f4f-bf06-43b1d2404c43",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "username": "Gerien",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-10-15T02:48:00.834391+00:00"
+    },
+    {
+      "transaction_id": "5dc9ef27-8278-4af9-a949-fa3ed7666305",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "username": "Gerien",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-10-15T02:48:00.834391+00:00"
     }
   ]
 }
