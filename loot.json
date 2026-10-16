@@ -63652,6 +63652,22 @@
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "raid_id": "5798e870-1a5b-461b-b4c2-66e2fc16802a",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Symbol of the Plaguebringer",
+      "character_id": "63a7b727-34ef-4301-93ab-4101da67d06d",
+      "character_name": "Gerien",
+      "username_id": "69ac2ed8-604e-4dd2-81ac-b3992aa6b171",
+      "raid_id": "283166a3-52db-4d4b-b42a-c9e869eb6b4f",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "283166a3-52db-4d4b-b42a-c9e869eb6b4f",
+      "item_dkp_value": 14
     }
   ]
 }
