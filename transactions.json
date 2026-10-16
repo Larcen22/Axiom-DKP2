@@ -19618,6 +19618,24 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-10-15T23:56:32.834241+00:00"
+    },
+    {
+      "transaction_id": "517c4076-ed72-43ec-8d02-aba66d95f8ab",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "username": "Darkochanter",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-16T04:29:43.481559+00:00"
+    },
+    {
+      "transaction_id": "6e922a53-bed3-4746-bfe6-858a249cf938",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "username": "Darkochanter",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-16T04:30:04.288533+00:00"
     }
   ]
 }
