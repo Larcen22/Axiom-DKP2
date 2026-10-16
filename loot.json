@@ -63668,6 +63668,22 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "283166a3-52db-4d4b-b42a-c9e869eb6b4f",
       "item_dkp_value": 14
+    },
+    {
+      "item": "Indigo Snake Bracelet",
+      "character_id": "297a5da1-45d3-4868-ab68-e9508cb9e4f8",
+      "character_name": "Mipsy",
+      "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+      "raid_id": "7799a681-9589-4433-aa47-8614d2f7785e",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Knucklebone Beaded Veil",
+      "character_id": "a8fe6e83-cbfa-459f-bbc9-2c3cb9e9eb20",
+      "character_name": "Brunda",
+      "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
+      "raid_id": "7799a681-9589-4433-aa47-8614d2f7785e",
+      "item_dkp_value": 15
     }
   ]
 }
