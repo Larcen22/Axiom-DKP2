@@ -63684,6 +63684,22 @@
       "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
       "raid_id": "7799a681-9589-4433-aa47-8614d2f7785e",
       "item_dkp_value": 15
+    },
+    {
+      "item": "Wrath of Mithaniel",
+      "character_id": "30017d91-8759-4b0c-90c5-3c2b03d24e66",
+      "character_name": "Tuskin",
+      "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
+      "raid_id": "d1f29c3d-813f-4508-a41d-3b082bae90dd",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shoulderpads of the Visionary",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "d1f29c3d-813f-4508-a41d-3b082bae90dd",
+      "item_dkp_value": 1
     }
   ]
 }
