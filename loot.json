@@ -63980,6 +63980,38 @@
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
       "item_dkp_value": 21
+    },
+    {
+      "item": "Leg Guard of Shadows",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
+      "item_dkp_value": 50
+    },
+    {
+      "item": "Mask of Secrets",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Leggings of Judgement",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
+      "item_dkp_value": 15
     }
   ]
 }
