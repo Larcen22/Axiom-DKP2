@@ -19645,6 +19645,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-16T17:16:00.311391+00:00"
+    },
+    {
+      "transaction_id": "53a40354-4ae7-415b-960a-b6fe1f852d0f",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "username": "Luminara",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-17T20:58:50.627154+00:00"
     }
   ]
 }
