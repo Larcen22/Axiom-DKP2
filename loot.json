@@ -63772,6 +63772,78 @@
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Sanguine Robe",
+      "character_id": "ee8cdaa3-e1cd-4fe2-b1c7-4f2edeccb190",
+      "character_name": "Sussudio",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Bone Earring of Evasion",
+      "character_id": "ad5bfdf3-14bc-4745-9cd8-858a128aa44c",
+      "character_name": "Tuwva",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Necklace of Endless Concepts",
+      "character_id": "3632c964-78aa-4468-a21e-170bce06cff9",
+      "character_name": "Relus",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Staff of Lost Rituals",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Staff of Lost Rituals",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Orb of the Sky",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Bone Chill Shield",
+      "character_id": "6c951ee0-00d8-4843-b3bf-6ab9f0b5a9c2",
+      "character_name": "Jhena",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Bone Chill Shield",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "item_dkp_value": 5
     }
   ]
 }
