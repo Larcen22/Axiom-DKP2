@@ -287775,6 +287775,46 @@
       "unclaimed": [],
       "channel_id": "1560441982596161636",
       "summary_message_id": "1560441989135081487"
+    },
+    {
+      "raid_name": "VT Seru on time",
+      "date": "2026-10-16",
+      "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1560806023692816575",
+      "summary_message_id": "1560806029636407318"
+    },
+    {
+      "raid_name": "VT Seru 1",
+      "date": "2026-10-16",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1560806037626560552",
+      "summary_message_id": "1560806045138419793"
+    },
+    {
+      "raid_name": "VT Seru 2",
+      "date": "2026-10-16",
+      "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1560806053405266032",
+      "summary_message_id": "1560806061613785089"
+    },
+    {
+      "raid_name": "VT Seru 3",
+      "date": "2026-10-16",
+      "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1560806070518030406",
+      "summary_message_id": "1560806078491533325"
     }
   ]
 }

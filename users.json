@@ -1553,7 +1553,7 @@
           "class": "Paladin",
           "character_id": "c349e9bb-ef2f-4620-83ee-638d49bf7306",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "High Elf"
         },
         {
@@ -1569,7 +1569,7 @@
           "class": "Magician",
           "character_id": "e4e3f3bf-72e4-4897-918d-05a029e6d346",
           "role": "main",
-          "level": 60,
+          "level": 62,
           "race": "High Elf"
         }
       ],
