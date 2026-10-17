@@ -63844,6 +63844,70 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "402f1dd1-1a31-4d04-b42b-7108a8c28cb8",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Ring of the Crimson Bull",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Ring of Flamewarding",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Book of Contemplation",
+      "character_id": "18bf01c7-7722-4533-a91f-8813c0504f9e",
+      "character_name": "Bailler",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Gloves of Warding",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Leggings of Fiery Might",
+      "character_id": "e50d3ebe-667b-4beb-aaba-eaa7e3c27f04",
+      "character_name": "Seabright",
+      "username_id": "d7fe10a7-75fd-4dbe-a3d8-5ee56aaa12be",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Sanguine Gloves",
+      "character_id": "20faf2ff-1301-471a-8eae-868a70e26025",
+      "character_name": "Weasy",
+      "username_id": "f30d4e7a-ee5f-4756-9575-bc0c4db67679",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Shroud of Vigor",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "6dcd724f-a48c-4785-b1dc-eda8e93ef939",
+      "item_dkp_value": 10
     }
   ]
 }
