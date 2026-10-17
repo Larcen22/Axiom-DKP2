@@ -64012,6 +64012,38 @@
       "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
       "raid_id": "f2dae4d4-3279-4219-89e5-f95e17137c9a",
       "item_dkp_value": 15
+    },
+    {
+      "item": "Yttrium Wrapped Sleeves",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Yttrium Studded Veil",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Yttrium Studded Mantle",
+      "character_id": "fddeb30a-212a-459a-989b-d98c89b540e5",
+      "character_name": "Adrab",
+      "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+      "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
+      "item_dkp_value": 11
     }
   ]
 }
