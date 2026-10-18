@@ -11019,6 +11019,14 @@
           "level": 60,
           "character_id": "f7402876-439c-47f3-ac7f-5ad832856197",
           "role": "alternate"
+        },
+        {
+          "name": "Larcen",
+          "class": "Enchanter",
+          "race": "Dark Elf",
+          "level": 61,
+          "character_id": "dbdbccf3-6f4e-46e5-ae71-557ad2e34802",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 19:59:50",
