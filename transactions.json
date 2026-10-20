@@ -19699,6 +19699,24 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-19T00:29:43.295210+00:00"
+    },
+    {
+      "transaction_id": "3b6ada37-75c9-4833-84dc-b1953ae2d27e",
+      "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
+      "username": "Tuscan",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-20T02:17:17.903711+00:00"
+    },
+    {
+      "transaction_id": "3fd4b4dc-241d-45f7-9da6-7ef5d4bdb179",
+      "username_id": "be4f9728-6484-4925-99ef-fc2c87fc2965",
+      "username": "Wrenn",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-20T02:17:32.048745+00:00"
     }
   ]
 }
