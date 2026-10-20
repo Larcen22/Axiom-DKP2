@@ -11238,6 +11238,14 @@
           "level": 60,
           "character_id": "3417a877-d710-4b83-8ec5-a050f629f4f3",
           "role": "main"
+        },
+        {
+          "name": "smarm",
+          "class": "Enchanter",
+          "race": "Erudite",
+          "level": 61,
+          "character_id": "9f2529e6-5895-4ee4-8351-81b4824beb88",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-10-15 01:49:03",
