@@ -19717,6 +19717,15 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-10-20T02:17:32.048745+00:00"
+    },
+    {
+      "transaction_id": "09252a1f-c39d-42b3-8567-3bee9663903c",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "username": "Lynxy",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "suggesting new pull method for Lord Inquisitor - 10/16",
+      "date": "2026-10-20T02:19:12.792388+00:00"
     }
   ]
 }
