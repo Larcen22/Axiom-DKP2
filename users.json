@@ -11008,7 +11008,7 @@
           "name": "Larzek",
           "class": "Warrior",
           "race": "Ogre",
-          "level": 60,
+          "level": 65,
           "character_id": "fbb0c2af-f1ad-47da-91d4-7919f665ce5f",
           "role": "main"
         },
@@ -11016,7 +11016,7 @@
           "name": "Pyresta",
           "class": "Wizard",
           "race": "Dark Elf",
-          "level": 60,
+          "level": 61,
           "character_id": "f7402876-439c-47f3-ac7f-5ad832856197",
           "role": "alternate"
         },
