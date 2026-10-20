@@ -11224,7 +11224,7 @@
       "dkp_earned": 73
     },
     {
-      "username": "slor",
+      "username": "Slor",
       "username_discord": "623269137023500295",
       "username_id": "8f36b9ea-b909-4780-bf59-36e19c4e165b",
       "rank": "applicant",
@@ -11232,7 +11232,7 @@
       "dkp_spent": 0,
       "characters": [
         {
-          "name": "slor",
+          "name": "Slor",
           "class": "Beastlord",
           "race": "Ogre",
           "level": 60,
@@ -11240,7 +11240,7 @@
           "role": "main"
         },
         {
-          "name": "smarm",
+          "name": "Smarm",
           "class": "Enchanter",
           "race": "Erudite",
           "level": 61,
@@ -11251,6 +11251,27 @@
       "ApplicationDate": "2026-10-15 01:49:03",
       "MembershipDate": "",
       "dkp_earned": 1
+    },
+    {
+      "username": "Lynard",
+      "username_discord": "603063428042457100",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Lynard",
+          "class": "Bard",
+          "race": "Half-Elf",
+          "level": 65,
+          "character_id": "49ecb7e0-50c7-4f82-965a-7be79ed8b727",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-10-20 11:39:02",
+      "MembershipDate": "",
+      "dkp_earned": 0
     }
   ]
 }
