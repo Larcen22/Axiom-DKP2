@@ -64124,6 +64124,22 @@
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "raid_id": "1540ab2f-34a8-4d3a-ae74-41967784b2ad",
       "item_dkp_value": 9
+    },
+    {
+      "item": "Greatstaff of Misery",
+      "character_id": "c349e9bb-ef2f-4620-83ee-638d49bf7306",
+      "character_name": "Condiar",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "405a847c-b31b-458a-b2d5-b24cd0631fa2",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Withering Staff of Agony",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "405a847c-b31b-458a-b2d5-b24cd0631fa2",
+      "item_dkp_value": 30
     }
   ]
 }
