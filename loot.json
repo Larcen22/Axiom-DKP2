@@ -64060,6 +64060,38 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Resplendent War Maul",
+      "character_id": "ba619a76-a57b-4127-b7ab-f5e1af225dc8",
+      "character_name": "Darien",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Girdle of the Tactician",
+      "character_id": "d48975a9-5f8b-449a-9a32-59de275f5fb4",
+      "character_name": "Wrenn",
+      "username_id": "be4f9728-6484-4925-99ef-fc2c87fc2965",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Warmaster's Recurved Longbow",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Warmaster's Recurved Longbow",
+      "character_id": "c48de15f-d894-44bd-98c6-236569bbdf18",
+      "character_name": "Myns",
+      "username_id": "4940be12-273f-4819-80c3-e5ab4487a1d3",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 10
     }
   ]
 }
