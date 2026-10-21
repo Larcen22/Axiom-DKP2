@@ -19744,6 +19744,51 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-21T00:14:51.338819+00:00"
+    },
+    {
+      "transaction_id": "c437e2be-b431-41a8-a8e6-0b7795733a7b",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "username": "Nethi",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue pulling - 10/16",
+      "date": "2026-10-21T00:16:57.836958+00:00"
+    },
+    {
+      "transaction_id": "66a0ec9a-012f-4e81-9df1-fb7b092c8c64",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "username": "Keilly",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue pulling - 10/16",
+      "date": "2026-10-21T00:17:28.414783+00:00"
+    },
+    {
+      "transaction_id": "b1f111ee-9c3b-492e-b603-a03a397136af",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "username": "Lynxy",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue pulling - 10/16",
+      "date": "2026-10-21T00:17:48.593003+00:00"
+    },
+    {
+      "transaction_id": "1f9b4097-1f36-4b55-8817-67644bf66dfc",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "username": "Zedlord",
+      "type": "BBC",
+      "transaction_amount": 1,
+      "reason": "VT rogue pulling - 10/16",
+      "date": "2026-10-21T00:18:10.715519+00:00"
+    },
+    {
+      "transaction_id": "0e889baa-cbaa-4443-acde-678e08359aaa",
+      "username_id": "b5ba59c7-a002-40b9-b306-3235e4215dc4",
+      "username": "Numb",
+      "type": "BBC",
+      "transaction_amount": 3,
+      "reason": "VT bard kiting, 3hrs - 10/16",
+      "date": "2026-10-21T00:18:38.389614+00:00"
     }
   ]
 }
