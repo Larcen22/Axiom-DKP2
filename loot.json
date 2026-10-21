@@ -64116,6 +64116,14 @@
       "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
       "raid_id": "1540ab2f-34a8-4d3a-ae74-41967784b2ad",
       "item_dkp_value": 20
+    },
+    {
+      "item": "Amulet of the Rain",
+      "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
+      "character_name": "Zedlord",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "1540ab2f-34a8-4d3a-ae74-41967784b2ad",
+      "item_dkp_value": 9
     }
   ]
 }
