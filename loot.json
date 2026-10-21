@@ -64044,6 +64044,22 @@
       "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
       "raid_id": "11d495c2-07f9-4d3a-a2e1-6c79f3452168",
       "item_dkp_value": 11
+    },
+    {
+      "item": "Innovators Hammer",
+      "character_id": "272b8c04-98d7-435f-966b-12d1908bac38",
+      "character_name": "Thecheat",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Innovators Hammer",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
+      "item_dkp_value": 1
     }
   ]
 }
