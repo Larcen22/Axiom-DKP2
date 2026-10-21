@@ -64092,6 +64092,22 @@
       "username_id": "4940be12-273f-4819-80c3-e5ab4487a1d3",
       "raid_id": "5d5e4af9-83d7-444f-b8d4-fc890b7a8476",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Black Collar of Boundless Might",
+      "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
+      "character_name": "Clixxar",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "raid_id": "84c552ca-8c67-4f47-b3eb-db4bbe1b8662",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Blade of War",
+      "character_id": "dee16da6-974b-422a-83e7-322e353064bf",
+      "character_name": "Rumguts",
+      "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+      "raid_id": "84c552ca-8c67-4f47-b3eb-db4bbe1b8662",
+      "item_dkp_value": 45
     }
   ]
 }
