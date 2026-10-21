@@ -64108,6 +64108,14 @@
       "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
       "raid_id": "84c552ca-8c67-4f47-b3eb-db4bbe1b8662",
       "item_dkp_value": 45
+    },
+    {
+      "item": "Karana's Tear",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "1540ab2f-34a8-4d3a-ae74-41967784b2ad",
+      "item_dkp_value": 20
     }
   ]
 }
