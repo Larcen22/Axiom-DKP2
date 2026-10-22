@@ -19789,6 +19789,15 @@
       "transaction_amount": 3,
       "reason": "VT bard kiting, 3hrs - 10/16",
       "date": "2026-10-21T00:18:38.389614+00:00"
+    },
+    {
+      "transaction_id": "e6942168-68e0-4850-a407-c4aaed54f192",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "username": "Ayyini",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-22T02:56:36.175055+00:00"
     }
   ]
 }
