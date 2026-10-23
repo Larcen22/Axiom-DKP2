@@ -64172,6 +64172,14 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Valorous Quarterstaff",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
+      "item_dkp_value": 1
     }
   ]
 }
