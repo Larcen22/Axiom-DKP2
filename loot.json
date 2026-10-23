@@ -64140,6 +64140,38 @@
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "raid_id": "405a847c-b31b-458a-b2d5-b24cd0631fa2",
       "item_dkp_value": 30
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
+      "character_name": "Zedlord",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "The Rotting Fist",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Carved Bone Ring",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Sable Lined Mantle",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
+      "item_dkp_value": 4
     }
   ]
 }
