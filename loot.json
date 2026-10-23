@@ -64196,6 +64196,22 @@
       "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
       "raid_id": "e9913da6-0b19-468a-9fa1-91e0d5b50d21",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Warders Ornate Broadsword",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "169a9112-a71b-436f-a01f-78272d2244b7",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Platoon Leaders Pauldrons",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "169a9112-a71b-436f-a01f-78272d2244b7",
+      "item_dkp_value": 2
     }
   ]
 }
