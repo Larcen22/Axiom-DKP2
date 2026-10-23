@@ -64180,6 +64180,22 @@
       "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
       "raid_id": "e3dcf261-d9ce-4930-98fb-33d5d51694d0",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Grandmasters Mace",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "e9913da6-0b19-468a-9fa1-91e0d5b50d21",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Ornate Breastplate Mold",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "e9913da6-0b19-468a-9fa1-91e0d5b50d21",
+      "item_dkp_value": 6
     }
   ]
 }
