@@ -64468,6 +64468,86 @@
       "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
       "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Mask of Dark Thoughts",
+      "character_id": "539c311f-eb21-4ecb-ae98-6cadf92bb516",
+      "character_name": "Daluna",
+      "username_id": "d50788cc-0f1d-4539-9c20-a273d60b61c8",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Spiked Shoulderpads",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 19
+    },
+    {
+      "item": "Orb of Satisfaction",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 14
+    },
+    {
+      "item": "Cloak of Glowing Embers",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Girdle of Focus",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Earring of Falling Stars",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 36
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "1bad577e-6293-473b-b53c-b5a7a38d95a1",
+      "character_name": "Darkthoughts",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 65
+    },
+    {
+      "item": "Mask of Secrets",
+      "character_id": "cb50dbd6-5965-412c-ac02-38f6be212355",
+      "character_name": "Ambien",
+      "username_id": "5f90bf4e-f11a-475b-91a5-3b88e2bad196",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Armguard of Shadows",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 60
+    },
+    {
+      "item": "Mail of Judgement",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 29
     }
   ]
 }
