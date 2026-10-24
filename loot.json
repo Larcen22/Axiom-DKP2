@@ -64548,6 +64548,38 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
       "item_dkp_value": 29
+    },
+    {
+      "item": "Head of the Inquisitor",
+      "character_id": "ba68161b-afde-4419-9582-604b0a9e5a78",
+      "character_name": "Gnomocidal",
+      "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+      "raid_id": "344141ea-36c1-4d73-bdc6-3b667a04b66f",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Starred Yttrium Ring",
+      "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
+      "character_name": "Clixxar",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "raid_id": "344141ea-36c1-4d73-bdc6-3b667a04b66f",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Yttrium Wrapped Sleeves",
+      "character_id": "e4e3f3bf-72e4-4897-918d-05a029e6d346",
+      "character_name": "Sargas",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "344141ea-36c1-4d73-bdc6-3b667a04b66f",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Black Ornate Chain Bridle",
+      "character_id": "ee8cdaa3-e1cd-4fe2-b1c7-4f2edeccb190",
+      "character_name": "Sussudio",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "344141ea-36c1-4d73-bdc6-3b667a04b66f",
+      "item_dkp_value": 50
     }
   ]
 }
