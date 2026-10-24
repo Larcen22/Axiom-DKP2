@@ -1519,9 +1519,9 @@
       "username_discord": "689993721085034496",
       "username_id": "5478297b-aad6-450b-a252-965d124b6091",
       "rank": "member",
-      "available_dkp": 48,
+      "available_dkp": 46,
       "dkp_earned": 443,
-      "dkp_spent": 395,
+      "dkp_spent": 397,
       "dkp_adjustments": 10,
       "characters": [
         {
@@ -2747,9 +2747,9 @@
       "username_discord": "1426356797794685038",
       "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
       "rank": "member",
-      "available_dkp": 46,
-      "dkp_earned": 294,
-      "dkp_spent": 248,
+      "available_dkp": 44,
+      "dkp_earned": 295,
+      "dkp_spent": 251,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -3073,9 +3073,9 @@
       "username_discord": "1471577913714544793",
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "rank": "member",
-      "available_dkp": 36,
+      "available_dkp": 34,
       "dkp_earned": 536,
-      "dkp_spent": 500,
+      "dkp_spent": 502,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -3995,9 +3995,9 @@
       "username_discord": "138494705687068672",
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "rank": "member",
-      "available_dkp": 149,
+      "available_dkp": 148,
       "dkp_earned": 940,
-      "dkp_spent": 791,
+      "dkp_spent": 792,
       "dkp_adjustments": 4,
       "characters": [
         {
@@ -4405,9 +4405,9 @@
       "username_discord": "726109619214352405",
       "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
       "rank": "member",
-      "available_dkp": 31,
+      "available_dkp": 28,
       "dkp_earned": 801,
-      "dkp_spent": 770,
+      "dkp_spent": 773,
       "dkp_adjustments": 4,
       "characters": [
         {
@@ -5355,9 +5355,9 @@
       "username_discord": "101427407730270208",
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "rank": "member",
-      "available_dkp": 166,
+      "available_dkp": 154,
       "dkp_earned": 490,
-      "dkp_spent": 324,
+      "dkp_spent": 336,
       "dkp_adjustments": 2,
       "characters": [
         {
@@ -6309,9 +6309,9 @@
       "username_discord": "271745637165301763",
       "username_id": "4940be12-273f-4819-80c3-e5ab4487a1d3",
       "rank": "member",
-      "available_dkp": 54,
+      "available_dkp": 53,
       "dkp_earned": 117,
-      "dkp_spent": 63,
+      "dkp_spent": 64,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -6947,9 +6947,9 @@
       "username_discord": "156916937660694529",
       "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
       "rank": "member",
-      "available_dkp": 212,
+      "available_dkp": 207,
       "dkp_earned": 695,
-      "dkp_spent": 483,
+      "dkp_spent": 488,
       "dkp_adjustments": 0,
       "characters": [
         {
@@ -10956,8 +10956,8 @@
       "username_discord": "210518735599960065",
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "rank": "member",
-      "available_dkp": 71,
-      "dkp_spent": 121,
+      "available_dkp": 70,
+      "dkp_spent": 122,
       "characters": [
         {
           "name": "Artery",
@@ -11199,8 +11199,8 @@
       "username_discord": "1342323712007077968",
       "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
       "rank": "member",
-      "available_dkp": 27,
-      "dkp_spent": 46,
+      "available_dkp": 26,
+      "dkp_spent": 48,
       "characters": [
         {
           "name": "Starfyre",
@@ -11221,7 +11221,7 @@
       ],
       "ApplicationDate": "2026-09-09 05:42:00",
       "MembershipDate": "2026-09-11 16:05:52",
-      "dkp_earned": 73
+      "dkp_earned": 74
     },
     {
       "username": "Slor",

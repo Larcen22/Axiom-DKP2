@@ -64212,6 +64212,94 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "169a9112-a71b-436f-a01f-78272d2244b7",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Halberd of Destruction",
+      "character_id": "a4d13e8d-5cdb-436c-a515-54fa0a7a3b9a",
+      "character_name": "Tumbo",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Steel Skin Armplates",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Shaded Amice",
+      "character_id": "e4e3f3bf-72e4-4897-918d-05a029e6d346",
+      "character_name": "Sargas",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Ring of Rage",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Umbracite Bracer",
+      "character_id": "1995895f-4526-4549-872c-84d448fcf602",
+      "character_name": "Kryn",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "1fd808e6-7f97-4c55-88c2-1cd5d91c4f26",
+      "character_name": "Draaner",
+      "username_id": "d9ffac06-e145-47ba-ae68-e237c4c8af5c",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cord of Midnight",
+      "character_id": "c48de15f-d894-44bd-98c6-236569bbdf18",
+      "character_name": "Myns",
+      "username_id": "4940be12-273f-4819-80c3-e5ab4487a1d3",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "a46a6c0f-307a-48ce-83e9-52bb7f937546",
+      "character_name": "Starfyre",
+      "username_id": "925d3a38-1edd-4f86-bf09-7d02a188b92d",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Cloak of Icy Shadows",
+      "character_id": "70466fda-000e-41ac-b75e-2ba7e80ee270",
+      "character_name": "Linkseo",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shade Stone Amulet",
+      "character_id": "ee8cdaa3-e1cd-4fe2-b1c7-4f2edeccb190",
+      "character_name": "Sussudio",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Shade Stone Amulet",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "541fe827-13d0-4e31-bd1f-c931ed0cb9b2",
+      "item_dkp_value": 2
     }
   ]
 }
