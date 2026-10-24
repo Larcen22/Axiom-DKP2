@@ -11267,6 +11267,22 @@
           "level": 65,
           "character_id": "49ecb7e0-50c7-4f82-965a-7be79ed8b727",
           "role": "main"
+        },
+        {
+          "name": "nikot",
+          "class": "Shaman",
+          "race": "Ogre",
+          "level": 62,
+          "character_id": "cf40e5eb-1efe-4548-ad65-914f2707e185",
+          "role": "alternate"
+        },
+        {
+          "name": "Tieknee",
+          "class": "Warrior",
+          "race": "Ogre",
+          "level": 65,
+          "character_id": "909e12a2-72ca-440b-bc8d-e2f5cd12f17a",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-10-20 11:39:02",
