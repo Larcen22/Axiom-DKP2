@@ -19798,6 +19798,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-10-22T02:56:36.175055+00:00"
+    },
+    {
+      "transaction_id": "535c7ac2-b3fa-42ae-bf63-c5f6c4d40aae",
+      "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+      "username": "Frodolas",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-23T23:43:09.332000+00:00"
     }
   ]
 }
