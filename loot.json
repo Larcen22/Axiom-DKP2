@@ -64396,6 +64396,78 @@
       "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
       "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Cloak of the Black Wind",
+      "character_id": "1995895f-4526-4549-872c-84d448fcf602",
+      "character_name": "Kryn",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Umbracite Plate Leggings",
+      "character_id": "253817f9-9682-48be-84f3-ede2072b2b54",
+      "character_name": "Luminara",
+      "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Crown of Ambivalence",
+      "character_id": "d47b7a9a-81cb-4384-a7c1-e7ef18fad944",
+      "character_name": "Bowdown",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 50
+    },
+    {
+      "item": "Horn of Shadows",
+      "character_id": "1995895f-4526-4549-872c-84d448fcf602",
+      "character_name": "Kryn",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Cord of Insight",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Hoop of Chaos",
+      "character_id": "a53740b9-5310-4c76-bc27-533d03beb7c4",
+      "character_name": "Neki",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Umbral Vambraces",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Crystal Shadow Cloak",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Shroud of Vigor",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "f2fe4c6a-25a7-4655-ac7e-f12a36b721bc",
+      "item_dkp_value": 2
     }
   ]
 }
