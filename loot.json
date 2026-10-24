@@ -64580,6 +64580,22 @@
       "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
       "raid_id": "344141ea-36c1-4d73-bdc6-3b667a04b66f",
       "item_dkp_value": 50
+    },
+    {
+      "item": "Blade of the Tempest",
+      "character_id": "4b21a7ba-d976-4443-b048-bf0773939793",
+      "character_name": "Balthemal",
+      "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+      "raid_id": "58c9917b-b6e3-47fa-84cf-c074685d0a28",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Bow of Contortion",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "58c9917b-b6e3-47fa-84cf-c074685d0a28",
+      "item_dkp_value": 3
     }
   ]
 }
