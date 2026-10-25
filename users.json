@@ -2129,6 +2129,14 @@
           "role": "alternate",
           "level": 46,
           "race": "Human"
+        },
+        {
+          "name": "Thellion",
+          "class": "Paladin",
+          "race": "Human",
+          "level": 1,
+          "character_id": "3f57b5c7-aa85-420b-9bd8-2b159080448b",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-04-28 01:46:59",
