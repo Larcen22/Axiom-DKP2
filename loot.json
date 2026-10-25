@@ -64596,6 +64596,15 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "58c9917b-b6e3-47fa-84cf-c074685d0a28",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Swirling Sphere of Color",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-10-25T01:39:29.429696+00:00"
     }
   ]
 }
