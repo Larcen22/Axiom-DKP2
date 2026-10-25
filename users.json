@@ -11283,6 +11283,14 @@
           "level": 65,
           "character_id": "909e12a2-72ca-440b-bc8d-e2f5cd12f17a",
           "role": "alternate"
+        },
+        {
+          "name": "bigkid",
+          "class": "Cleric",
+          "race": "Halfling",
+          "level": 61,
+          "character_id": "fb7c8255-8867-4fe2-8d7d-da7075b3c71d",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-10-20 11:39:02",
