@@ -19807,6 +19807,24 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-10-23T23:43:09.332000+00:00"
+    },
+    {
+      "transaction_id": "6fcf7470-4ba9-4b22-916a-a50494892b6d",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "username": "Yeahbill",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-25T22:34:06.125203+00:00"
+    },
+    {
+      "transaction_id": "1da8763e-99dd-4641-aa56-41fa42b3f6d7",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "username": "Yeahbill",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-10-25T22:34:31.314332+00:00"
     }
   ]
 }
