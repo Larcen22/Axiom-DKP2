@@ -19825,6 +19825,24 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-10-25T22:34:31.314332+00:00"
+    },
+    {
+      "transaction_id": "19d7cbcb-f376-48da-b866-fafc38c7d234",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "username": "Erek",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-27T01:36:41.274092+00:00"
+    },
+    {
+      "transaction_id": "c964cb3e-a950-4439-b0f1-0c5183aa5b64",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "username": "Erek",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-10-27T01:37:05.991414+00:00"
     }
   ]
 }
