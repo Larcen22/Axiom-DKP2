@@ -292459,6 +292459,46 @@
       "unclaimed": [],
       "channel_id": "1563403677799153734",
       "summary_message_id": "1563403683251757108"
+    },
+    {
+      "raid_name": "BoT Torment HoH Tactics on time",
+      "date": "2026-10-27",
+      "raid_id": "7a4efd7b-38d3-4a48-a307-24787d3ef94e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1564796453421842503",
+      "summary_message_id": "1564796463912058891"
+    },
+    {
+      "raid_name": "BoT Torment HoH Tactics 1",
+      "date": "2026-10-27",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1564796477870706920",
+      "summary_message_id": "1564796490512207913"
+    },
+    {
+      "raid_name": "BoT Torment HoH Tactics 2",
+      "date": "2026-10-27",
+      "raid_id": "3cc23d17-a884-4fc9-bc5f-4e8319682e95",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1564796504877703369",
+      "summary_message_id": "1564796517552881726"
+    },
+    {
+      "raid_name": "BoT Torment HoH Tactics 3",
+      "date": "2026-10-27",
+      "raid_id": "8f6fc94f-99f5-4a73-83ca-9d67bf1b544e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1564796533549957221",
+      "summary_message_id": "1564796543997841469"
     }
   ]
 }
