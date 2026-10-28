@@ -64632,6 +64632,22 @@
       "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
       "item_dkp_value": 1,
       "date": "2026-10-27T07:00:03.368008+00:00"
+    },
+    {
+      "item": "Orb of Thunderous Spirits",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "7a4efd7b-38d3-4a48-a307-24787d3ef94e",
+      "item_dkp_value": 13
+    },
+    {
+      "item": "Longbow of the Stormcaller",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "7a4efd7b-38d3-4a48-a307-24787d3ef94e",
+      "item_dkp_value": 12
     }
   ]
 }
