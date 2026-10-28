@@ -64664,6 +64664,46 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Greatstaff of Misery",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Unadorned Cloak of Battle",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "item_dkp_value": 13
+    },
+    {
+      "item": "Greater Poleaxe of Sorrow",
+      "character_id": "d2abd2bc-5deb-4f1d-b472-390ee78c0cb8",
+      "character_name": "Cusswords",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Ornate Breastplate Mold",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ornate Breastplate Mold",
+      "character_id": "c52cdb1c-e475-442c-983a-2ca19d6f6381",
+      "character_name": "Redonkulous",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
+      "item_dkp_value": 1
     }
   ]
 }
