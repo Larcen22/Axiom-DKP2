@@ -64704,6 +64704,22 @@
       "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
       "raid_id": "a301812c-69ee-4827-a4db-4989f29701ef",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Staff of Swiftness",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "3cc23d17-a884-4fc9-bc5f-4e8319682e95",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Warders Ornate Broadsword",
+      "character_id": "c48de15f-d894-44bd-98c6-236569bbdf18",
+      "character_name": "Myns",
+      "username_id": "4940be12-273f-4819-80c3-e5ab4487a1d3",
+      "raid_id": "3cc23d17-a884-4fc9-bc5f-4e8319682e95",
+      "item_dkp_value": 1
     }
   ]
 }

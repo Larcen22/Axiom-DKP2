@@ -42,15 +42,15 @@ Asharak,Gotthatbag,Warrior,1,Halfling,alternate,officer,223,1748,1525,2024-10-25
 Asharak,Flippy,Monk,46,Iksar,alternate,officer,223,1748,1525,2024-10-25 23:12:11,
 Ashdon,Zulnak,Monk,42,Iksar,alternate,inactive,10,11,1,2025-05-13 01:19:10,
 Ashdon,Ashdon,Druid,52,Halfling,main,inactive,10,11,1,2025-05-13 01:19:10,
-Avient,Avient,Rogue,60,Dwarf,main,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Mynfel,Bard,33,Half-Elf,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Mynril,Shadow Knight,11,Gnome,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Mynth,Wizard,16,Gnome,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Cenarius,Druid,1,Halfling,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Myns,Ranger,65,Halfling,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Mynro,Magician,22,Gnome,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Verius,Warrior,51,Dwarf,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
-Avient,Atlas,Paladin,24,Gnome,alternate,member,63,127,64,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Avient,Rogue,60,Dwarf,main,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Mynfel,Bard,33,Half-Elf,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Mynril,Shadow Knight,11,Gnome,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Mynth,Wizard,16,Gnome,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Cenarius,Druid,1,Halfling,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Myns,Ranger,65,Halfling,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Mynro,Magician,22,Gnome,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Verius,Warrior,51,Dwarf,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
+Avient,Atlas,Paladin,24,Gnome,alternate,member,62,127,65,2025-02-17 02:31:35,2025-10-02 03:13:53
 Ayyini,Maura,Paladin,65,Halfling,main,member,140,459,319,2026-04-22 22:44:33,
 Ayyini,Ayyini,Druid,65,Wood Elf,main,member,140,459,319,2026-04-22 22:44:33,
 Azira,Azira,Necromancer,60,Iksar,main,member,107,262,155,2025-12-13 19:29:57,2026-01-05 21:31:10
@@ -714,13 +714,13 @@ Styxs,Juck,Shadow Knight,34,Iksar,alternate,member,71,131,60,2025-04-20 20:47:02
 Susu,Susu,Ranger,65,Wood Elf,main,member,159,705,546,2025-08-08 03:46:49,2025-10-02 03:29:49
 Susu,Sussudio,Enchanter,65,High Elf,main,member,159,705,546,2025-08-08 03:46:49,2025-10-02 03:29:49
 Syldan,Syldan,Ranger,55,Human,main,former,0,6,6,,
-Sylex,Soko,Beastlord,60,Iksar,alternate,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Sylex,Enchanter,65,Dark Elf,main,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Darien,Paladin,65,Half-Elf,main,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Tetragon,Bard,1,Human,alternate,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Soske,Wizard,52,Erudite,alternate,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Virel,Necromancer,46,Iksar,alternate,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Zarick,Bard,1,Wood Elf,alternate,member,95,917,822,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soko,Beastlord,60,Iksar,alternate,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Sylex,Enchanter,65,Dark Elf,main,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Darien,Paladin,65,Half-Elf,main,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Tetragon,Bard,1,Human,alternate,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soske,Wizard,52,Erudite,alternate,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Virel,Necromancer,46,Iksar,alternate,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Zarick,Bard,1,Wood Elf,alternate,member,65,917,852,2024-10-25 22:50:28,2024-10-28 21:27:28
 Taeolas,Xilis,Necromancer,33,Iksar,alternate,member,252,883,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Tankith,Warrior,1,Ogre,alternate,member,252,883,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Bowth,Ranger,56,Halfling,alternate,member,252,883,631,2025-12-13 02:53:27,2026-01-02 18:25:16
