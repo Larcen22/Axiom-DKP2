@@ -4377,7 +4377,7 @@
           "class": "Druid",
           "character_id": "23a57abf-ac09-42ca-97a3-d5973179e9c0",
           "role": "alternate",
-          "level": 58,
+          "level": 59,
           "race": "Wood Elf"
         },
         {
@@ -5383,6 +5383,14 @@
           "role": "main",
           "level": 60,
           "race": "Human"
+        },
+        {
+          "name": "Tankers",
+          "class": "Warrior",
+          "race": "Ogre",
+          "level": 48,
+          "character_id": "98313bfe-057c-49aa-803b-999568cc93f2",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-01-11 20:32:29",
