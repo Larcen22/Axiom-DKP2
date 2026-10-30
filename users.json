@@ -3099,14 +3099,14 @@
           "class": "Shadow Knight",
           "character_id": "61363371-0d3a-44f9-87e4-a2e2574155ce",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Iksar"
         },
         {
           "name": "elementaal",
           "class": "Magician",
           "race": "Gnome",
-          "level": 8,
+          "level": 65,
           "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
           "role": "alternate"
         }
