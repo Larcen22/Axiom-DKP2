@@ -64800,6 +64800,22 @@
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "b13cac2b-d751-44d6-9470-202e55211da1",
+      "character_name": "Saldien",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Decayed Shoes of the Plaguebringer",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
+      "item_dkp_value": 1
     }
   ]
 }
