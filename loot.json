@@ -64752,6 +64752,22 @@
       "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
       "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Bone Spiked Crusher",
+      "character_id": "db1af176-3990-4036-b995-a4e53ebfd6da",
+      "character_name": "Phorest",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ring of the Pox-bearer",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 1
     }
   ]
 }
