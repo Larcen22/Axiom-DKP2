@@ -293684,6 +293684,46 @@
       "unclaimed": [],
       "channel_id": "1564851354927636600",
       "summary_message_id": "1564851367003033672"
+    },
+    {
+      "raid_name": "PoI PoD PoN PoV CoD on time",
+      "date": "2026-10-29",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565518582656409692",
+      "summary_message_id": "1565518592219418737"
+    },
+    {
+      "raid_name": "PoI PoD PoN PoV CoD 1",
+      "date": "2026-10-29",
+      "raid_id": "9f98006b-0719-4acd-a2cd-2cd0ee382512",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565518605989322802",
+      "summary_message_id": "1565518618249138340"
+    },
+    {
+      "raid_name": "PoI PoD PoN PoV CoD 2",
+      "date": "2026-10-29",
+      "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565518631779967066",
+      "summary_message_id": "1565518644379652187"
+    },
+    {
+      "raid_name": "PoI PoD PoN PoV CoD 3",
+      "date": "2026-10-29",
+      "raid_id": "73d24d7c-5176-4f88-bc16-b1c3e33b5e92",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565518657889632477",
+      "summary_message_id": "1565518670480802003"
     }
   ]
 }
