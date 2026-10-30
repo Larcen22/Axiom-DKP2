@@ -64768,6 +64768,30 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Knucklebone Beaded Veil",
+      "character_id": "3ec95bb2-7b83-4ca1-90ba-e2b492d18a4e",
+      "character_name": "Kiladyen",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Carved Bone Ring",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Wrath of Mithaniel",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "9f98006b-0719-4acd-a2cd-2cd0ee382512",
+      "item_dkp_value": 1
     }
   ]
 }
