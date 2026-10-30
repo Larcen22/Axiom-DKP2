@@ -19879,6 +19879,60 @@
       "transaction_amount": 1,
       "reason": "VT rogue pulling - 10/23",
       "date": "2026-10-28T00:17:26.470430+00:00"
+    },
+    {
+      "transaction_id": "7ce1b90c-325c-4b7e-b461-a2b6e2971dda",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "Level46",
+      "transaction_amount": 1,
+      "reason": "Achievement: Level46",
+      "date": "2026-10-30T23:57:44.965674+00:00"
+    },
+    {
+      "transaction_id": "617f7ffc-623c-48d6-b74b-f1229777298f",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "Level50",
+      "transaction_amount": 3,
+      "reason": "Achievement: Level50",
+      "date": "2026-10-30T23:57:44.965674+00:00"
+    },
+    {
+      "transaction_id": "ca5bcf8a-bc5e-448d-9f80-6187da25f22a",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "Level55",
+      "transaction_amount": 6,
+      "reason": "Achievement: Level55",
+      "date": "2026-10-30T23:57:44.965674+00:00"
+    },
+    {
+      "transaction_id": "7e84f079-d779-4176-b8aa-03518d50c539",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "Level60",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level60",
+      "date": "2026-10-30T23:57:44.965674+00:00"
+    },
+    {
+      "transaction_id": "614a9631-11c7-4883-90db-6eb3e4a399c9",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-10-30T23:57:44.965674+00:00"
+    },
+    {
+      "transaction_id": "14e4ec3e-1861-4508-9b0e-69edae60f456",
+      "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
+      "username": "Tuscan",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-10-30T23:58:18.188602+00:00"
     }
   ]
 }

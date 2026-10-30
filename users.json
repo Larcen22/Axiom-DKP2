@@ -5499,8 +5499,8 @@
       "username_discord": "78241573883617280",
       "username_id": "0f144e5d-f002-4475-a54b-9ce1101bf02b",
       "rank": "member",
-      "available_dkp": 125,
-      "dkp_earned": 306,
+      "available_dkp": 140,
+      "dkp_earned": 321,
       "dkp_spent": 181,
       "dkp_adjustments": 55,
       "characters": [
@@ -11273,7 +11273,7 @@
       "username_discord": "603063428042457100",
       "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
       "rank": "applicant",
-      "available_dkp": 27,
+      "available_dkp": 62,
       "dkp_spent": 0,
       "characters": [
         {
@@ -11311,7 +11311,7 @@
       ],
       "ApplicationDate": "2026-10-20 11:39:02",
       "MembershipDate": "",
-      "dkp_earned": 27
+      "dkp_earned": 62
     }
   ]
 }
