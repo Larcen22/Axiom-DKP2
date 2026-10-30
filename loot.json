@@ -64792,6 +64792,14 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "9f98006b-0719-4acd-a2cd-2cd0ee382512",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Torch of Lxvanvom",
+      "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
+      "character_name": "Zedlord",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
+      "item_dkp_value": 3
     }
   ]
 }
