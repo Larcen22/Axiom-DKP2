@@ -64736,6 +64736,22 @@
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "raid_id": "3c5a6d69-3319-4e21-bf53-0a3b865fa625",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Glowing Steel Shim",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Protective Dust Drape",
+      "character_id": "c0460820-bd1f-4205-908a-c8d118d96c6a",
+      "character_name": "Dottieby",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "f8be4f49-57d9-426d-b32d-c7954c3ff3ad",
+      "item_dkp_value": 1
     }
   ]
 }
