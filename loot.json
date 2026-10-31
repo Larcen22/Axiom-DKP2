@@ -64832,6 +64832,22 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Girdle of the Tactician",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Furious Hammer of Zek",
+      "character_id": "d47b7a9a-81cb-4384-a7c1-e7ef18fad944",
+      "character_name": "Bowdown",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
+      "item_dkp_value": 1
     }
   ]
 }
