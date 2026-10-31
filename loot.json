@@ -64816,6 +64816,22 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "46239cf4-4fe9-4309-b16d-de40a2930bda",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Veteran's Battle Charm",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Visor of Endless Sight",
+      "character_id": "cabd29ff-d074-48ac-b516-82cb32cb7783",
+      "character_name": "Yeahbill",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
+      "item_dkp_value": 3
     }
   ]
 }
