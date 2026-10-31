@@ -19933,6 +19933,33 @@
       "transaction_amount": 15,
       "reason": "Achievement: AA100",
       "date": "2026-10-30T23:58:18.188602+00:00"
+    },
+    {
+      "transaction_id": "9f6a9c34-5055-4feb-871a-deebc8a7b74e",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-10-30T23:58:47.497282+00:00"
+    },
+    {
+      "transaction_id": "92a084f8-b699-4214-a241-2a7769b40e7a",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-10-30T23:58:47.497282+00:00"
+    },
+    {
+      "transaction_id": "ac6477ee-b951-4e99-8eba-4d12d464b1f9",
+      "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+      "username": "Lynard",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-10-30T23:58:47.497282+00:00"
     }
   ]
 }

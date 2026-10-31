@@ -294464,6 +294464,46 @@
       "unclaimed": [],
       "channel_id": "1565518657889632477",
       "summary_message_id": "1565518670480802003"
+    },
+    {
+      "raid_name": "Tactics Torment BoT on time",
+      "date": "2026-10-30",
+      "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565881122456342658",
+      "summary_message_id": "1565881134016110685"
+    },
+    {
+      "raid_name": "Tactics Torment BoT 1",
+      "date": "2026-10-30",
+      "raid_id": "4d49596c-09b4-4e1a-9939-11798e65f51a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565881148805091518",
+      "summary_message_id": "1565881162088579283"
+    },
+    {
+      "raid_name": "Tactics Torment BoT 2",
+      "date": "2026-10-30",
+      "raid_id": "aa6f61d1-deec-455d-84c5-5ada3049d9a0",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565881177821282314",
+      "summary_message_id": "1565881191255511141"
+    },
+    {
+      "raid_name": "Tactics Torment BoT 3",
+      "date": "2026-10-30",
+      "raid_id": "73bfb53c-8c0c-4d0c-8e5c-56061e19b5fb",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565881207063838801",
+      "summary_message_id": "1565881222117331048"
     }
   ]
 }
