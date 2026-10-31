@@ -64864,6 +64864,30 @@
       "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
       "raid_id": "aa6f61d1-deec-455d-84c5-5ada3049d9a0",
       "item_dkp_value": 25
+    },
+    {
+      "item": "Tormentor's Chain Collar",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "aa6f61d1-deec-455d-84c5-5ada3049d9a0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Greater Poleaxe of Sorrow",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "73bfb53c-8c0c-4d0c-8e5c-56061e19b5fb",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Miserable Bauble",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "73bfb53c-8c0c-4d0c-8e5c-56061e19b5fb",
+      "item_dkp_value": 8
     }
   ]
 }

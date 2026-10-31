@@ -295110,10 +295110,208 @@
       "date": "2026-10-30",
       "raid_id": "73bfb53c-8c0c-4d0c-8e5c-56061e19b5fb",
       "raid_dkp_value": 1,
-      "attendees": [],
-      "unclaimed": [],
+      "attendees": [
+        {
+          "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+          "character_name": "Sever"
+        },
+        {
+          "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+          "character_name": "Fortunae"
+        },
+        {
+          "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+          "character_name": "Keilly"
+        },
+        {
+          "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+          "character_name": "Vivomind"
+        },
+        {
+          "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+          "character_name": "Yeahbill"
+        },
+        {
+          "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+          "character_name": "Mixim"
+        },
+        {
+          "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+          "character_name": "Darkonites"
+        },
+        {
+          "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+          "character_name": "Killman"
+        },
+        {
+          "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+          "character_name": "Wildwind"
+        },
+        {
+          "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+          "character_name": "Maura"
+        },
+        {
+          "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+          "character_name": "Moltenstare"
+        },
+        {
+          "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+          "character_name": "Rotsouls"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Bailler"
+        },
+        {
+          "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+          "character_name": "Chasaris"
+        },
+        {
+          "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+          "character_name": "Ethiria"
+        },
+        {
+          "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+          "character_name": "Scruffs"
+        },
+        {
+          "username_id": "f929e543-83c6-472e-bbab-5051f0c6f32c",
+          "character_name": "Wyndsmyr"
+        },
+        {
+          "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+          "character_name": "Xikikaz"
+        },
+        {
+          "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+          "character_name": "Fushigi"
+        },
+        {
+          "username_id": "fe027d6b-6ed9-4d3d-ab8a-e55b28734a13",
+          "character_name": "Brochure"
+        },
+        {
+          "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+          "character_name": "Thiccsar"
+        },
+        {
+          "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+          "character_name": "Kelisti"
+        },
+        {
+          "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+          "character_name": "Fastsole"
+        },
+        {
+          "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
+          "character_name": "Frodolas"
+        },
+        {
+          "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+          "character_name": "Bowd"
+        },
+        {
+          "username_id": "8cdd8632-b958-4638-bd00-6e49f1ea01d3",
+          "character_name": "Vaylon"
+        },
+        {
+          "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+          "character_name": "Arrowheart"
+        },
+        {
+          "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+          "character_name": "Litt"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Tigg"
+        },
+        {
+          "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+          "character_name": "Sargas"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Bravebrave"
+        },
+        {
+          "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+          "character_name": "Cusswords"
+        },
+        {
+          "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+          "character_name": "Luminara"
+        },
+        {
+          "username_id": "58097934-5e01-4b56-9fde-83f64159b979",
+          "character_name": "Rumguts"
+        },
+        {
+          "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+          "character_name": "Feyah"
+        },
+        {
+          "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+          "character_name": "Poppernug"
+        },
+        {
+          "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+          "character_name": "Mofa"
+        },
+        {
+          "username_id": "c02d82a1-37da-4a6b-9923-96d5c816891c",
+          "character_name": "Tanth"
+        },
+        {
+          "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+          "character_name": "Mipsy"
+        },
+        {
+          "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+          "character_name": "Puarissa"
+        },
+        {
+          "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+          "character_name": "Saldien"
+        },
+        {
+          "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+          "character_name": "Zedlord"
+        },
+        {
+          "username_id": "f30d4e7a-ee5f-4756-9575-bc0c4db67679",
+          "character_name": "Weasy"
+        },
+        {
+          "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+          "character_name": "Foolsgold"
+        },
+        {
+          "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+          "character_name": "Tieknee"
+        },
+        {
+          "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+          "character_name": "Stardrakin"
+        }
+      ],
+      "unclaimed": [
+        "Treblecleft",
+        "Mistahapie"
+      ],
       "channel_id": "1565881207063838801",
       "summary_message_id": "1565881222117331048"
+    },
+    {
+      "raid_name": "tactics-torment-bot-4-2026-10-30",
+      "date": "2026-10-30",
+      "raid_id": "1d4b6e75-9453-4f5d-8ecc-95362fe5c31e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1565933278194573443",
+      "summary_message_id": "1565933289124929617"
     }
   ]
 }
