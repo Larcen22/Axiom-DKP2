@@ -64848,6 +64848,22 @@
       "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
       "raid_id": "28131883-ecec-4de4-85ad-f30b7ac972db",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Blade of War",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "aa6f61d1-deec-455d-84c5-5ada3049d9a0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Blade of War",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "aa6f61d1-deec-455d-84c5-5ada3049d9a0",
+      "item_dkp_value": 25
     }
   ]
 }
