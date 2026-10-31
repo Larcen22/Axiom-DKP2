@@ -64888,6 +64888,22 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "73bfb53c-8c0c-4d0c-8e5c-56061e19b5fb",
       "item_dkp_value": 8
+    },
+    {
+      "item": "Amulet of the Rain",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "1d4b6e75-9453-4f5d-8ecc-95362fe5c31e",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Stormriders Gauntlets",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "1d4b6e75-9453-4f5d-8ecc-95362fe5c31e",
+      "item_dkp_value": 10
     }
   ]
 }
