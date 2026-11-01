@@ -5391,6 +5391,14 @@
           "level": 48,
           "character_id": "98313bfe-057c-49aa-803b-999568cc93f2",
           "role": "alternate"
+        },
+        {
+          "name": "Remkis",
+          "class": "Monk",
+          "race": "Iksar",
+          "level": 50,
+          "character_id": "280384a4-4ecc-412e-a5eb-7445dcb73684",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-01-11 20:32:29",
