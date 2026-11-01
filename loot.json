@@ -64904,6 +64904,24 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "1d4b6e75-9453-4f5d-8ecc-95362fe5c31e",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Undead Dragongut Strings",
+      "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+      "character_name": "Fortunae",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-11-01T16:55:43.251408+00:00"
+    },
+    {
+      "item": "Kedge Backbone",
+      "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+      "character_name": "Fortunae",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-11-01T16:55:59.567871+00:00"
     }
   ]
 }
