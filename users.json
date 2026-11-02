@@ -3343,7 +3343,7 @@
           "class": "Magician",
           "character_id": "5df30db7-167f-421e-bd09-9b1e7e63a040",
           "role": "alternate",
-          "level": 16,
+          "level": 65,
           "race": "Erudite"
         },
         {
@@ -3351,7 +3351,7 @@
           "class": "Warrior",
           "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
           "role": "main",
-          "level": 60,
+          "level": 65,
           "race": "Ogre"
         },
         {
