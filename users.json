@@ -2610,7 +2610,7 @@
           "name": "Tuvv",
           "class": "Rogue",
           "character_id": "5b06dac6-120e-4e55-b548-64d775648583",
-          "role": "alternate",
+          "role": "main",
           "level": 65,
           "race": "Halfling"
         },
@@ -2658,7 +2658,7 @@
           "name": "Tuvva",
           "class": "Druid",
           "character_id": "e9a30e5e-7d9e-46ff-aac7-e247a45ebdc5",
-          "role": "main",
+          "role": "alternate",
           "level": 60,
           "race": "Halfling"
         },
