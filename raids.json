@@ -295464,6 +295464,16 @@
       "unclaimed": [],
       "channel_id": "1565933278194573443",
       "summary_message_id": "1565933289124929617"
+    },
+    {
+      "raid_name": "Sol Ro on time",
+      "date": "2026-11-03",
+      "raid_id": "24cbf79b-55d0-4ff4-9b35-996560453f9a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1567346264176205894",
+      "summary_message_id": "1567346276373364780"
     }
   ]
 }
