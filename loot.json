@@ -64994,6 +64994,30 @@
       "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
       "raid_id": "d8843cfa-0f22-415c-9362-726bd2e27309",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Raiment of the Fire Son",
+      "character_id": "d9e48171-3fe3-4ab0-bcc5-c0cff3b5d991",
+      "character_name": "Mixim",
+      "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+      "raid_id": "e92a489f-244f-4611-b70e-f69ba073bfdd",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Raiment of the Fire Son",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "e92a489f-244f-4611-b70e-f69ba073bfdd",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Sparkling Shortsword",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "b09b181a-14f4-4078-aec8-a82aea0b0707",
+      "item_dkp_value": 3
     }
   ]
 }
