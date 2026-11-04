@@ -64930,6 +64930,22 @@
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "raid_id": "24cbf79b-55d0-4ff4-9b35-996560453f9a",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Ornate Silk Robe Pattern",
+      "character_id": "7f65b9fe-eaff-4bca-82e9-efb21e831005",
+      "character_name": "Hadrhune",
+      "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
+      "raid_id": "24cbf79b-55d0-4ff4-9b35-996560453f9a",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Collar of Corrupted Flame",
+      "character_id": "5391c1bc-da70-4a45-b975-3326160d4c74",
+      "character_name": "Pewster",
+      "username_id": "d14f644c-e97e-4995-861b-f4ab1f89256f",
+      "raid_id": "24cbf79b-55d0-4ff4-9b35-996560453f9a",
+      "item_dkp_value": 6
     }
   ]
 }

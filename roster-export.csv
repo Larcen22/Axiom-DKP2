@@ -181,13 +181,13 @@ Danrather,Schizophrenic,Enchanter,36,High Elf,alternate,member,23,30,7,2025-10-2
 Danrather,Wulvgeng,Ranger,58,Wood Elf,alternate,member,23,30,7,2025-10-20 03:53:58,2025-11-10 23:09:49
 Danrather,Danrather,Necromancer,60,Dark Elf,main,member,23,30,7,2025-10-20 03:53:58,2025-11-10 23:09:49
 Danrather,Edsheeran,Bard,36,Half-Elf,alternate,member,23,30,7,2025-10-20 03:53:58,2025-11-10 23:09:49
-Danshir,Ascalan,Necromancer,1,Iksar,alternate,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Danshir,Beastlord,61,Iksar,main,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Ceallac,Cleric,49,Dark Elf,alternate,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Shirow,Shaman,60,Iksar,alternate,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Lonnlarcan,Druid,60,Wood Elf,alternate,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Hadrhune,Magician,65,Dark Elf,main,officer,82,665,583,2024-10-25 22:52:57,
-Danshir,Ahrimin,Ranger,51,Wood Elf,alternate,officer,82,665,583,2024-10-25 22:52:57,
+Danshir,Ascalan,Necromancer,1,Iksar,alternate,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Danshir,Beastlord,61,Iksar,main,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Ceallac,Cleric,49,Dark Elf,alternate,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Shirow,Shaman,60,Iksar,alternate,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Lonnlarcan,Druid,60,Wood Elf,alternate,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Hadrhune,Magician,65,Dark Elf,main,officer,79,665,586,2024-10-25 22:52:57,
+Danshir,Ahrimin,Ranger,51,Wood Elf,alternate,officer,79,665,586,2024-10-25 22:52:57,
 Darkochanter,Darkoranger,Ranger,1,Wood Elf,alternate,member,376,950,574,2025-11-02 23:20:30,2025-12-06 02:37:22
 Darkochanter,Darkochanter,Enchanter,60,High Elf,main,member,376,950,574,2025-11-02 23:20:30,2025-12-06 02:37:22
 Darkochanter,Darkowar,Warrior,60,Ogre,alternate,member,376,950,574,2025-11-02 23:20:30,2025-12-06 02:37:22
@@ -358,7 +358,7 @@ Joris,Joris,Necromancer,56,Iksar,main,member,16,38,22,2025-09-19 02:14:10,2025-1
 Kaldolin,Kaldolin,Cleric,60,Dwarf,main,member,12,14,2,2025-05-21 22:55:17,
 Kallado,Kallado,Druid,60,Human,main,member,19,141,122,2025-11-11 17:24:24,2025-12-06 02:36:44
 Kappa,Stunted,Magician,56,Gnome,alternate,member,135,1801,1666,2024-10-25 23:42:34,2024-11-18 22:30:13
-Kappa,Kappa,Monk,60,Iksar,main,member,135,1801,1666,2024-10-25 23:42:34,2024-11-18 22:30:13
+Kappa,Kappa,Monk,65,Iksar,main,member,135,1801,1666,2024-10-25 23:42:34,2024-11-18 22:30:13
 Kappa,Antagonist,Wizard,48,Gnome,alternate,member,135,1801,1666,2024-10-25 23:42:34,2024-11-18 22:30:13
 Kappa,Nineteen,Cleric,60,Dark Elf,alternate,member,135,1801,1666,2024-10-25 23:42:34,2024-11-18 22:30:13
 Keea,Keezz,Druid,55,Wood Elf,alternate,member,56,56,0,2026-01-05 17:03:21,2026-02-19 04:21:53
@@ -485,8 +485,8 @@ Mephestus,Mephestus,Enchanter,60,Dark Elf,main,member,54,723,669,2025-02-19 04:5
 Mephestus,Galnack,Rogue,60,Dark Elf,alternate,member,54,723,669,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,Treack,Druid,46,Wood Elf,alternate,member,54,723,669,2025-02-19 04:56:40,2025-04-03 07:15:36
 Mephestus,vampre,Necromancer,13,Dark Elf,alternate,member,54,723,669,2025-02-19 04:56:40,2025-04-03 07:15:36
-Messimer,Pewster,Ranger,65,Halfling,main,member,115,490,375,2024-12-22 03:21:09,
-Messimer,Messimer,Enchanter,60,High Elf,main,member,115,490,375,2024-12-22 03:21:09,
+Messimer,Pewster,Ranger,65,Halfling,main,member,109,490,381,2024-12-22 03:21:09,
+Messimer,Messimer,Enchanter,60,High Elf,main,member,109,490,381,2024-12-22 03:21:09,
 Microizra,Neku,Shadow Knight,16,Troll,alternate,officer,142,1728,1586,2024-10-26 00:50:50,
 Microizra,Microizra,Cleric,65,Halfling,main,officer,142,1728,1586,2024-10-26 00:50:50,
 Microizra,Dric,Beastlord,20,Troll,alternate,officer,142,1728,1586,2024-10-26 00:50:50,
