@@ -64922,6 +64922,14 @@
       "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
       "item_dkp_value": 1,
       "date": "2026-11-01T16:55:59.567871+00:00"
+    },
+    {
+      "item": "Ornate Leather Tunic Pattern",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "24cbf79b-55d0-4ff4-9b35-996560453f9a",
+      "item_dkp_value": 3
     }
   ]
 }
