@@ -64978,6 +64978,22 @@
       "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
       "raid_id": "d8843cfa-0f22-415c-9362-726bd2e27309",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Wand of the Firestorm",
+      "character_id": "de21d848-3fee-429b-8077-efb5c0cbcb2a",
+      "character_name": "Vivomind",
+      "username_id": "ac8ac580-643e-4df4-9a7d-80c25a08a31c",
+      "raid_id": "d8843cfa-0f22-415c-9362-726bd2e27309",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Gleaming Obsidian Shard",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "d8843cfa-0f22-415c-9362-726bd2e27309",
+      "item_dkp_value": 1
     }
   ]
 }
