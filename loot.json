@@ -65026,6 +65026,14 @@
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "raid_id": "b09b181a-14f4-4078-aec8-a82aea0b0707",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Elemental Chain Bracelet Pattern",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "b09b181a-14f4-4078-aec8-a82aea0b0707",
+      "item_dkp_value": 12
     }
   ]
 }
