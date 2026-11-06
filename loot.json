@@ -65082,6 +65082,30 @@
       "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
       "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
       "item_dkp_value": 25
+    },
+    {
+      "item": "Elemental Silk Bracelet Pattern",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "090d134c-4120-4820-ac42-912d88be8a02",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Elemental Bracer Mold",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "090d134c-4120-4820-ac42-912d88be8a02",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Shroud of the Stonecrafter",
+      "character_id": "d47b7a9a-81cb-4384-a7c1-e7ef18fad944",
+      "character_name": "Bowdown",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "raid_id": "090d134c-4120-4820-ac42-912d88be8a02",
+      "item_dkp_value": 15
     }
   ]
 }
