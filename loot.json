@@ -65066,6 +65066,22 @@
       "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
       "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Circular Crystalline Formation",
+      "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
+      "character_name": "Clixxar",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
+      "item_dkp_value": 20
+    },
+    {
+      "item": "Wristband of the Rathe",
+      "character_id": "4b21a7ba-d976-4443-b048-bf0773939793",
+      "character_name": "Balthemal",
+      "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+      "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
+      "item_dkp_value": 25
     }
   ]
 }
