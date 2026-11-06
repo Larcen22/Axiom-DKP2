@@ -297265,6 +297265,56 @@
       "unclaimed": [],
       "channel_id": "1568067618378612873",
       "summary_message_id": "1568067630890488030"
+    },
+    {
+      "raid_name": "Earth Agnarr 4 2026 11 05 on time",
+      "date": "2026-11-05",
+      "raid_id": "56690c4e-2815-4598-a98a-f3014f69b39a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568121878999207986",
+      "summary_message_id": "1568121889593888861"
+    },
+    {
+      "raid_name": "Earth Agnarr 4 2026 11 05 1",
+      "date": "2026-11-05",
+      "raid_id": "55f9d558-05ee-4a2a-8ba3-698bba3974fd",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568121903367856159",
+      "summary_message_id": "1568121931264303185"
+    },
+    {
+      "raid_name": "Earth Agnarr 4 2026 11 05 2",
+      "date": "2026-11-05",
+      "raid_id": "c290db10-6d1b-4019-9e07-db29cb1d0861",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568121944853717022",
+      "summary_message_id": "1568121958976069643"
+    },
+    {
+      "raid_name": "Earth Agnarr 4 2026 11 05 3",
+      "date": "2026-11-05",
+      "raid_id": "28bc891d-12e5-44e3-b47d-9cb037501bfb",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568121972288655370",
+      "summary_message_id": "1568121985391656962"
+    },
+    {
+      "raid_name": "Earth Agnarr 4 2026 11 05",
+      "date": "2026-11-05",
+      "raid_id": "39a4f442-d635-4f10-bfdf-bb21a156d330",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568122123367485490",
+      "summary_message_id": "1568122134390378537"
     }
   ]
 }
