@@ -65050,6 +65050,22 @@
       "username_id": "f30d4e7a-ee5f-4756-9575-bc0c4db67679",
       "raid_id": "575e72e2-7375-4992-8196-6d7fd8fb1d8e",
       "item_dkp_value": 25
+    },
+    {
+      "item": "Bracers of Earthen Energy",
+      "character_id": "d47b7a9a-81cb-4384-a7c1-e7ef18fad944",
+      "character_name": "Bowdown",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Stone Etched Mallet",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
+      "item_dkp_value": 6
     }
   ]
 }
