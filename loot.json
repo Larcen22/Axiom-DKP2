@@ -65106,6 +65106,22 @@
       "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
       "raid_id": "090d134c-4120-4820-ac42-912d88be8a02",
       "item_dkp_value": 15
+    },
+    {
+      "item": "Aegis of the Earth",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "39a4f442-d635-4f10-bfdf-bb21a156d330",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Earring of Living Earth",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "39a4f442-d635-4f10-bfdf-bb21a156d330",
+      "item_dkp_value": 11
     }
   ]
 }
