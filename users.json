@@ -11320,6 +11320,27 @@
       "ApplicationDate": "2026-10-20 11:39:02",
       "MembershipDate": "",
       "dkp_earned": 99
+    },
+    {
+      "username": "Pmup",
+      "username_discord": "148135373837434880",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Pmup",
+          "class": "Cleric",
+          "race": "High Elf",
+          "level": 65,
+          "character_id": "b950db09-0c5b-48ef-9a61-945be849e8aa",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-11-06 12:47:42",
+      "MembershipDate": "",
+      "dkp_earned": 0
     }
   ]
 }
