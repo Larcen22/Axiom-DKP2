@@ -65034,6 +65034,14 @@
       "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
       "raid_id": "b09b181a-14f4-4078-aec8-a82aea0b0707",
       "item_dkp_value": 12
+    },
+    {
+      "item": "Girdle of Earthen Stability",
+      "character_id": "d2abd2bc-5deb-4f1d-b472-390ee78c0cb8",
+      "character_name": "Cusswords",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "575e72e2-7375-4992-8196-6d7fd8fb1d8e",
+      "item_dkp_value": 25
     }
   ]
 }
