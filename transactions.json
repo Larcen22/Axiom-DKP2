@@ -19978,6 +19978,24 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-11-03T02:43:34.263926+00:00"
+    },
+    {
+      "transaction_id": "7a1287c6-cf4a-4862-899e-7035372edb08",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "username": "Inapp",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-11-06T06:46:57.870514+00:00"
+    },
+    {
+      "transaction_id": "13e9061a-9879-4d6f-ae0e-1cbb90653a8f",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "username": "Inapp",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-11-06T06:47:23.451026+00:00"
     }
   ]
 }
