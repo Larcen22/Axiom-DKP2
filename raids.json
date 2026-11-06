@@ -295681,6 +295681,10 @@
         {
           "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
           "character_name": "Balthemal"
+        },
+        {
+          "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
+          "character_name": "Hadrhune"
         }
       ],
       "unclaimed": [],
@@ -296642,6 +296646,46 @@
       "unclaimed": [],
       "channel_id": "1567387696215625868",
       "summary_message_id": "1567387707267616941"
+    },
+    {
+      "raid_name": "Earth Agnarr on time",
+      "date": "2026-11-05",
+      "raid_id": "575e72e2-7375-4992-8196-6d7fd8fb1d8e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568067535134527579",
+      "summary_message_id": "1568067546530447402"
+    },
+    {
+      "raid_name": "Earth Agnarr 1",
+      "date": "2026-11-05",
+      "raid_id": "9df0ea57-706b-4b48-a148-8ef47ee60749",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568067560950206505",
+      "summary_message_id": "1568067575475343451"
+    },
+    {
+      "raid_name": "Earth Agnarr 2",
+      "date": "2026-11-05",
+      "raid_id": "090d134c-4120-4820-ac42-912d88be8a02",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568067590893346931",
+      "summary_message_id": "1568067603761725502"
+    },
+    {
+      "raid_name": "Earth Agnarr 3",
+      "date": "2026-11-05",
+      "raid_id": "288e2b8a-41d3-4e0d-963b-fc6ad9a6b653",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568067618378612873",
+      "summary_message_id": "1568067630890488030"
     }
   ]
 }
