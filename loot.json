@@ -65130,6 +65130,38 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Furious Hammer of Zek",
+      "character_id": "c52cdb1c-e475-442c-983a-2ca19d6f6381",
+      "character_name": "Redonkulous",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Obsidian Scimitar of War",
+      "character_id": "5b06dac6-120e-4e55-b548-64d775648583",
+      "character_name": "Tuvv",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Battle Fists",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Battle Fists",
+      "character_id": "741ba1ff-f6cc-4167-ac7a-91c4875df6ae",
+      "character_name": "Dismy",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "item_dkp_value": 1
     }
   ]
 }
