@@ -19996,6 +19996,213 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-11-06T06:47:23.451026+00:00"
+    },
+    {
+      "transaction_id": "8494110f-d9ed-4f47-b293-4f63a7507164",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "Level46",
+      "transaction_amount": 1,
+      "reason": "Achievement: Level46",
+      "date": "2026-11-07T03:02:56.899315+00:00"
+    },
+    {
+      "transaction_id": "4df23ada-5492-4800-91b8-eee6be57097f",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "Level50",
+      "transaction_amount": 3,
+      "reason": "Achievement: Level50",
+      "date": "2026-11-07T03:02:56.899315+00:00"
+    },
+    {
+      "transaction_id": "e8900a4c-d148-47b9-9f7c-b26a7da732cd",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "Level55",
+      "transaction_amount": 6,
+      "reason": "Achievement: Level55",
+      "date": "2026-11-07T03:02:56.899315+00:00"
+    },
+    {
+      "transaction_id": "3e0cfc87-b4ac-4d02-8853-259049c7be78",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "Level60",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level60",
+      "date": "2026-11-07T03:02:56.899315+00:00"
+    },
+    {
+      "transaction_id": "02e469c7-f0b6-4970-aff9-14fa680538aa",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-11-07T03:02:56.899315+00:00"
+    },
+    {
+      "transaction_id": "f61ac8fb-f8cd-4a16-983f-9e6205bed5ca",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-11-07T03:05:15.297419+00:00"
+    },
+    {
+      "transaction_id": "8a8421c7-a216-412a-8932-6ae8d492d555",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-11-07T03:05:15.297419+00:00"
+    },
+    {
+      "transaction_id": "120186b7-89da-4051-b0f9-2243863a878d",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-11-07T03:05:15.297419+00:00"
+    },
+    {
+      "transaction_id": "fd65c541-359f-4ab9-ab1d-795cb91daef2",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-11-07T03:06:07.341875+00:00"
+    },
+    {
+      "transaction_id": "3b1c5b90-5259-43cb-a64d-de6f3b8f8543",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-11-07T03:06:07.341875+00:00"
+    },
+    {
+      "transaction_id": "a46db0cf-5a56-40e8-9723-cf8d70179209",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "username": "Pmup",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-11-07T03:06:07.341875+00:00"
+    },
+    {
+      "transaction_id": "04ae031f-e2d7-4db2-a9c4-950aad45620b",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "Level46",
+      "transaction_amount": 1,
+      "reason": "Achievement: Level46",
+      "date": "2026-11-07T03:16:33.870007+00:00"
+    },
+    {
+      "transaction_id": "edbad56a-1be2-4380-9d5e-4410b3360a97",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "Level50",
+      "transaction_amount": 3,
+      "reason": "Achievement: Level50",
+      "date": "2026-11-07T03:16:33.870007+00:00"
+    },
+    {
+      "transaction_id": "8a67bf47-0e0d-44f7-9562-31a01908d64b",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "Level55",
+      "transaction_amount": 6,
+      "reason": "Achievement: Level55",
+      "date": "2026-11-07T03:16:33.870007+00:00"
+    },
+    {
+      "transaction_id": "7b04c00f-0ed2-4d78-8241-13979562b86e",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "Level60",
+      "transaction_amount": 10,
+      "reason": "Achievement: Level60",
+      "date": "2026-11-07T03:16:33.870007+00:00"
+    },
+    {
+      "transaction_id": "5efb0f5c-6d37-498d-8faa-0b5e439d7d0e",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-11-07T03:16:33.870007+00:00"
+    },
+    {
+      "transaction_id": "8a2c3a3e-85d8-430f-a061-ee414c4d3db7",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-11-07T03:16:51.181240+00:00"
+    },
+    {
+      "transaction_id": "3c1a9d7d-1410-4290-a62b-a61af5b2fd55",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "AA50",
+      "transaction_amount": 10,
+      "reason": "Achievement: AA50",
+      "date": "2026-11-07T03:16:51.181240+00:00"
+    },
+    {
+      "transaction_id": "a7844bcd-3911-4118-8f4a-e98edca82f6e",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "AA100",
+      "transaction_amount": 15,
+      "reason": "Achievement: AA100",
+      "date": "2026-11-07T03:16:51.181240+00:00"
+    },
+    {
+      "transaction_id": "22136525-51d8-4203-8bfd-0c4290d14219",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-11-07T03:16:51.181240+00:00"
+    },
+    {
+      "transaction_id": "1628086e-a508-494a-96d7-de3e65dddb2d",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "MR60",
+      "transaction_amount": 3,
+      "reason": "Achievement: MR60",
+      "date": "2026-11-07T03:18:50.679654+00:00"
+    },
+    {
+      "transaction_id": "12632baf-7cbb-4a3d-9c0b-3c60fef2a58b",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-11-07T03:18:50.679654+00:00"
+    },
+    {
+      "transaction_id": "9341b86c-c10f-467c-9188-4142eb7bec3c",
+      "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+      "username": "bubss",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-11-07T03:18:50.679654+00:00"
     }
   ]
 }
