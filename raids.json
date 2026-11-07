@@ -298086,8 +298086,7 @@
         "Bombon",
         "Nami",
         "Tegrdy",
-        "Avengelyn",
-        "Bubss"
+        "Avengelyn"
       ],
       "channel_id": "1568436985687711795",
       "summary_message_id": "1568436997297541273"
@@ -298552,11 +298551,28 @@
         {
           "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
           "character_name": "Balthemal"
+        },
+        {
+          "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+          "character_name": "Tildaria"
+        },
+        {
+          "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+          "character_name": "Tumbo"
+        },
+        {
+          "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+          "character_name": "Tuwva"
+        },
+        {
+          "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+          "character_name": "Scruffs"
         }
       ],
       "unclaimed": [
         "Blithey",
-        "Tegrdy"
+        "Tegrdy",
+        "Stopar"
       ],
       "channel_id": "1568492496219279410",
       "summary_message_id": "1568492506780278858"
