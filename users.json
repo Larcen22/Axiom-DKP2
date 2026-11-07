@@ -11378,6 +11378,27 @@
       "ApplicationDate": "2026-11-06 21:11:53",
       "MembershipDate": "",
       "dkp_earned": 119
+    },
+    {
+      "username": "Googly",
+      "username_discord": "731393932734496768",
+      "username_id": "4faeabef-a082-4d9c-a4a3-092ec6d086f6",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Googly",
+          "class": "Necromancer",
+          "race": "Iksar",
+          "level": 53,
+          "character_id": "526f86f7-d3dc-46cb-aaca-ddc35fc90656",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-11-07 16:59:55",
+      "MembershipDate": "",
+      "dkp_earned": 0
     }
   ]
 }
