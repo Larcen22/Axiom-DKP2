@@ -297721,6 +297721,46 @@
       ],
       "channel_id": "1568122123367485490",
       "summary_message_id": "1568122134390378537"
+    },
+    {
+      "raid_name": "Tactics HoH VT on time",
+      "date": "2026-11-06",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568436960911958106",
+      "summary_message_id": "1568436970961506367"
+    },
+    {
+      "raid_name": "Tactics HoH VT 1",
+      "date": "2026-11-06",
+      "raid_id": "64923ed0-c773-44de-9563-6d1b353df2ff",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568436985687711795",
+      "summary_message_id": "1568436997297541273"
+    },
+    {
+      "raid_name": "Tactics HoH VT 2",
+      "date": "2026-11-06",
+      "raid_id": "1cf57747-4e56-4cb5-8d44-b3a06c1abb3e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568437011172430006",
+      "summary_message_id": "1568437039819653133"
+    },
+    {
+      "raid_name": "Tactics HoH VT 3",
+      "date": "2026-11-06",
+      "raid_id": "efa4d436-9476-4f7a-a5c0-fe8556af4897",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568437053085982810",
+      "summary_message_id": "1568437064721235979"
     }
   ]
 }
