@@ -297727,8 +297727,167 @@
       "date": "2026-11-06",
       "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
       "raid_dkp_value": 1,
-      "attendees": [],
-      "unclaimed": [],
+      "attendees": [
+        {
+          "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+          "character_name": "Cheat"
+        },
+        {
+          "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+          "character_name": "Maura"
+        },
+        {
+          "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+          "character_name": "Kiladyen"
+        },
+        {
+          "username_id": "d50788cc-0f1d-4539-9c20-a273d60b61c8",
+          "character_name": "Daluna"
+        },
+        {
+          "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+          "character_name": "Puarissa"
+        },
+        {
+          "username_id": "b6a514fe-9db8-4d20-86ff-fd8deb4ec538",
+          "character_name": "Lynard"
+        },
+        {
+          "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+          "character_name": "Bowdown"
+        },
+        {
+          "username_id": "80126a99-8671-4682-8d8d-5bbe949d5cf1",
+          "character_name": "Chaunce"
+        },
+        {
+          "username_id": "eddfc7ce-4d37-4b8e-94d8-64a10c8bee17",
+          "character_name": "Hadrhune"
+        },
+        {
+          "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+          "character_name": "Darkonites"
+        },
+        {
+          "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
+          "character_name": "Feyah"
+        },
+        {
+          "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+          "character_name": "Xikikaz"
+        },
+        {
+          "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+          "character_name": "Cusswords"
+        },
+        {
+          "username_id": "4366059c-40d7-4bfa-a29c-38141becf064",
+          "character_name": "Luminara"
+        },
+        {
+          "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+          "character_name": "Arrowheart"
+        },
+        {
+          "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+          "character_name": "Redonkulous"
+        },
+        {
+          "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+          "character_name": "Moltenstare"
+        },
+        {
+          "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+          "character_name": "Keilly"
+        },
+        {
+          "username_id": "5d809f73-f41a-4b43-a4a1-2d90aefc4104",
+          "character_name": "Mipsy"
+        },
+        {
+          "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+          "character_name": "Susu"
+        },
+        {
+          "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+          "character_name": "Balthemal"
+        },
+        {
+          "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+          "character_name": "Inapp"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Bravebrave"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Jenmar"
+        },
+        {
+          "username_id": "b3824a6c-51cc-4804-bf74-8340a9c0e2ae",
+          "character_name": "Mixim"
+        },
+        {
+          "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+          "character_name": "Anoirif"
+        },
+        {
+          "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+          "character_name": "Curare"
+        },
+        {
+          "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+          "character_name": "Tumbo"
+        },
+        {
+          "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+          "character_name": "Fortunae"
+        },
+        {
+          "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+          "character_name": "Scruffs"
+        },
+        {
+          "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+          "character_name": "Sargas"
+        },
+        {
+          "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+          "character_name": "Jhena"
+        },
+        {
+          "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+          "character_name": "Tayuya"
+        },
+        {
+          "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+          "character_name": "Tuvv"
+        },
+        {
+          "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+          "character_name": "Pmup"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Tigg"
+        },
+        {
+          "username_id": "a1ce0be8-c8a7-4982-aa51-4c972d41395e",
+          "character_name": "Larzek"
+        },
+        {
+          "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+          "character_name": "Deluyi"
+        },
+        {
+          "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+          "character_name": "Nethi"
+        }
+      ],
+      "unclaimed": [
+        "Bubss"
+      ],
       "channel_id": "1568436960911958106",
       "summary_message_id": "1568436970961506367"
     },
