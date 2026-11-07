@@ -5399,6 +5399,14 @@
           "level": 50,
           "character_id": "280384a4-4ecc-412e-a5eb-7445dcb73684",
           "role": "alternate"
+        },
+        {
+          "name": "Windhaven",
+          "class": "Bard",
+          "race": "Wood Elf",
+          "level": 56,
+          "character_id": "303a8ab7-80fe-4584-a27f-b6d16da68eb0",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-01-11 20:32:29",
