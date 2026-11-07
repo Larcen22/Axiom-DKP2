@@ -65122,6 +65122,14 @@
       "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
       "raid_id": "39a4f442-d635-4f10-bfdf-bb21a156d330",
       "item_dkp_value": 11
+    },
+    {
+      "item": "Ornate Chain Pant Pattern",
+      "character_id": "1c427159-7e80-4eec-b3c4-6d6c377ebaca",
+      "character_name": "Keilly",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
+      "item_dkp_value": 10
     }
   ]
 }
