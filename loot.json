@@ -65178,6 +65178,22 @@
       "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
       "raid_id": "1cf57747-4e56-4cb5-8d44-b3a06c1abb3e",
       "item_dkp_value": 30
+    },
+    {
+      "item": "Elven Bow of Mysticism",
+      "character_id": "d2abd2bc-5deb-4f1d-b472-390ee78c0cb8",
+      "character_name": "Cusswords",
+      "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+      "raid_id": "efa4d436-9476-4f7a-a5c0-fe8556af4897",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Ornate Breastplate Mold",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "efa4d436-9476-4f7a-a5c0-fe8556af4897",
+      "item_dkp_value": 2
     }
   ]
 }

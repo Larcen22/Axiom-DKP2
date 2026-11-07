@@ -298430,6 +298430,16 @@
       ],
       "channel_id": "1568437053085982810",
       "summary_message_id": "1568437064721235979"
+    },
+    {
+      "raid_name": "Tactics HoH VT 4",
+      "date": "2026-11-06",
+      "raid_id": "cd193579-89b7-4bf0-815f-cb8462d33528",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1568492496219279410",
+      "summary_message_id": "1568492506780278858"
     }
   ]
 }
