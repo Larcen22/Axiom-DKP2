@@ -65162,6 +65162,22 @@
       "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
       "raid_id": "a4fe4d00-4eec-425f-bf63-27d1e14f8af0",
       "item_dkp_value": 1
+    },
+    {
+      "item": "War Charm of Crossed Blades",
+      "character_id": "abaf418e-4557-44ec-a493-d41f40c66178",
+      "character_name": "Mofa",
+      "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+      "raid_id": "1cf57747-4e56-4cb5-8d44-b3a06c1abb3e",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Grimfaced Visor",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "1cf57747-4e56-4cb5-8d44-b3a06c1abb3e",
+      "item_dkp_value": 30
     }
   ]
 }
