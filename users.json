@@ -1755,6 +1755,14 @@
           "role": "alternate",
           "level": 60,
           "race": "Iksar"
+        },
+        {
+          "name": "Doodlesack",
+          "class": "Bard",
+          "race": "Vah Shir",
+          "level": 18,
+          "character_id": "f6faa6ca-c112-477b-9f9e-d664a082cc6a",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2024-10-28 00:12:46",
