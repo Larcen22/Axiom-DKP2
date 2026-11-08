@@ -11339,6 +11339,14 @@
           "level": 61,
           "character_id": "7c5eb9c8-5c71-43c4-b096-97b7cbfbec93",
           "role": "alternate"
+        },
+        {
+          "name": "mrgoodstuff",
+          "class": "Enchanter",
+          "race": "Gnome",
+          "level": 64,
+          "character_id": "405e9f4e-25ca-44e4-84d5-271f2b369088",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-10-20 11:39:02",
