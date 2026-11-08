@@ -11373,6 +11373,14 @@
           "level": 65,
           "character_id": "1daad11d-0b22-45a8-9666-5ded40b1ea43",
           "role": "main"
+        },
+        {
+          "name": "Kriin",
+          "class": "Necromancer",
+          "race": "Iksar",
+          "level": 65,
+          "character_id": "5669df53-7990-493d-be94-c576066026cd",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-11-06 21:11:53",
