@@ -65194,6 +65194,24 @@
       "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
       "raid_id": "efa4d436-9476-4f7a-a5c0-fe8556af4897",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Kedge Backbone",
+      "character_id": "303a8ab7-80fe-4584-a27f-b6d16da68eb0",
+      "character_name": "Windhaven",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-11-08T06:58:19.708520+00:00"
+    },
+    {
+      "item": "Undead Dragongut Strings",
+      "character_id": "303a8ab7-80fe-4584-a27f-b6d16da68eb0",
+      "character_name": "Windhaven",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "293f711a-5bbd-49f6-8072-204f9db2a52e",
+      "item_dkp_value": 1,
+      "date": "2026-11-08T06:58:41.350358+00:00"
     }
   ]
 }
