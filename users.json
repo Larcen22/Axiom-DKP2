@@ -11331,6 +11331,14 @@
           "level": 61,
           "character_id": "fb7c8255-8867-4fe2-8d7d-da7075b3c71d",
           "role": "alternate"
+        },
+        {
+          "name": "lunchmeat",
+          "class": "Ranger",
+          "race": "Halfling",
+          "level": 61,
+          "character_id": "7c5eb9c8-5c71-43c4-b096-97b7cbfbec93",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-10-20 11:39:02",
