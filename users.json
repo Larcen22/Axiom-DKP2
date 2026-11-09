@@ -2004,7 +2004,7 @@
           "name": "Tayuya",
           "class": "Bard",
           "character_id": "ce6d204f-ae68-430f-b8dd-42b8a27bf754",
-          "role": "alternate",
+          "role": "main",
           "level": 60,
           "race": "Wood Elf"
         },
@@ -2012,7 +2012,7 @@
           "name": "Nightshayde",
           "class": "Rogue",
           "character_id": "fd429267-9a3a-41d4-9b91-4e29c4be69ce",
-          "role": "main",
+          "role": "alternate",
           "level": 60,
           "race": "Gnome"
         }

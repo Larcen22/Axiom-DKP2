@@ -298576,6 +298576,15 @@
       ],
       "channel_id": "1568492496219279410",
       "summary_message_id": "1568492506780278858"
+    },
+    {
+      "raid_name": "SundayFunday HoH MM PoW Bonus on time",
+      "date": "2026-11-08",
+      "raid_id": "d50d5e47-fe3a-42a4-b550-e95c55c253f7",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1569165131714142219"
     }
   ]
 }
