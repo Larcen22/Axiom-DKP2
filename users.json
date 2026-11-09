@@ -11067,6 +11067,14 @@
           "level": 61,
           "character_id": "dbdbccf3-6f4e-46e5-ae71-557ad2e34802",
           "role": "alternate"
+        },
+        {
+          "name": "Frodough",
+          "class": "Cleric",
+          "race": "Halfling",
+          "level": 60,
+          "character_id": "d6c433dc-2d85-432a-b42c-fe989b2b4c14",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-08-10 19:59:50",
