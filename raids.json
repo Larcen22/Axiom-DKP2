@@ -298706,8 +298706,133 @@
       "date": "2026-11-08",
       "raid_id": "0fcf44df-7a21-40e4-99c5-414d19a5067d",
       "raid_dkp_value": 1,
-      "attendees": [],
-      "unclaimed": [],
+      "attendees": [
+        {
+          "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+          "character_name": "Sever"
+        },
+        {
+          "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+          "character_name": "Darkthoughts"
+        },
+        {
+          "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+          "character_name": "Saldien"
+        },
+        {
+          "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+          "character_name": "Darkonites"
+        },
+        {
+          "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+          "character_name": "Cheat"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Jenmar"
+        },
+        {
+          "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+          "character_name": "Slowurrole"
+        },
+        {
+          "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+          "character_name": "Inapp"
+        },
+        {
+          "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+          "character_name": "Fortunae"
+        },
+        {
+          "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+          "character_name": "Kelisti"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Newbian"
+        },
+        {
+          "username_id": "98f33843-6bf4-41ff-988a-7177fcf38454",
+          "character_name": "Cusswords"
+        },
+        {
+          "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+          "character_name": "Tumbo"
+        },
+        {
+          "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+          "character_name": "Xikikaz"
+        },
+        {
+          "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+          "character_name": "Pmup"
+        },
+        {
+          "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+          "character_name": "Yeahbill"
+        },
+        {
+          "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+          "character_name": "Ethiria"
+        },
+        {
+          "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+          "character_name": "Microizra"
+        },
+        {
+          "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+          "character_name": "Tuvv"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Bravebrave"
+        },
+        {
+          "username_id": "d2420a07-9b55-4497-b6cb-b2e31471d5c3",
+          "character_name": "Zerrina"
+        },
+        {
+          "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+          "character_name": "Bubss"
+        },
+        {
+          "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+          "character_name": "Wildwind"
+        },
+        {
+          "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+          "character_name": "Puarissa"
+        },
+        {
+          "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+          "character_name": "Ahmezu"
+        },
+        {
+          "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+          "character_name": "Stardrakin"
+        },
+        {
+          "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+          "character_name": "Sargas"
+        },
+        {
+          "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+          "character_name": "Keilly"
+        },
+        {
+          "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
+          "character_name": "Balthemal"
+        }
+      ],
+      "unclaimed": [
+        "Enkill",
+        "Nastyboi",
+        "Korfer",
+        "Stopar",
+        "Oneeye",
+        "Blithey",
+        "Risingdarkness"
+      ],
       "channel_id": "1569165179420287026",
       "summary_message_id": "1569165194461061284"
     },
