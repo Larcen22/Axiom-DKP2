@@ -65252,6 +65252,22 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "136563ac-55cc-496b-a25e-355ea34027a3",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Elemental Chain Bracelet Pattern",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "136563ac-55cc-496b-a25e-355ea34027a3",
+      "item_dkp_value": 12
+    },
+    {
+      "item": "Elemental Silk Bracelet Pattern",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "136563ac-55cc-496b-a25e-355ea34027a3",
+      "item_dkp_value": 10
     }
   ]
 }
