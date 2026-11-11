@@ -65324,6 +65324,30 @@
       "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
       "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Elemental Chain Boot Pattern",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "29261ff9-655f-4046-b084-1838b856a297",
+      "item_dkp_value": 18
+    },
+    {
+      "item": "Elemental Chain Glove Pattern",
+      "character_id": "a53740b9-5310-4c76-bc27-533d03beb7c4",
+      "character_name": "Neki",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "29261ff9-655f-4046-b084-1838b856a297",
+      "item_dkp_value": 8
+    },
+    {
+      "item": "Elemental Silk Boot Pattern",
+      "character_id": "6c727a01-6bd6-41f4-a9bc-7285f4748811",
+      "character_name": "Ramphis",
+      "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
+      "raid_id": "29261ff9-655f-4046-b084-1838b856a297",
+      "item_dkp_value": 15
     }
   ]
 }
