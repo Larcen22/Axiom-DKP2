@@ -65292,6 +65292,22 @@
       "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
       "raid_id": "9714fcb7-8cff-4a67-b21d-6b2c6bc7b61a",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Clay Bracers of the Golem",
+      "character_id": "0d9ba5e3-8e76-4c76-b3e3-387aadc2cd89",
+      "character_name": "Brochure",
+      "username_id": "fe027d6b-6ed9-4d3d-ab8a-e55b28734a13",
+      "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Clay Bracers of the Golem",
+      "character_id": "a8fe6e83-cbfa-459f-bbc9-2c3cb9e9eb20",
+      "character_name": "Brunda",
+      "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
+      "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
+      "item_dkp_value": 6
     }
   ]
 }
