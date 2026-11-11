@@ -65308,6 +65308,22 @@
       "username_id": "8451a4c2-5769-4608-b070-01757d00867c",
       "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
       "item_dkp_value": 6
+    },
+    {
+      "item": "Earring of Living Earth",
+      "character_id": "6f06a35f-bf32-4b72-bcf1-38c8970ed10c",
+      "character_name": "Kelon",
+      "username_id": "2b7d4c65-2458-46da-aab3-0dfdb934fcdc",
+      "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Cloak of Flickering Flame",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
+      "item_dkp_value": 6
     }
   ]
 }
