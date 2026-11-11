@@ -65348,6 +65348,22 @@
       "username_id": "24723b61-f96c-47e3-bd1d-9f98cea7b597",
       "raid_id": "29261ff9-655f-4046-b084-1838b856a297",
       "item_dkp_value": 15
+    },
+    {
+      "item": "Reinforced Mephit Talon",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "ed12f282-af3e-4cd2-a31a-3defae351a30",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Elemental Leather Sleeve Pattern",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "ed12f282-af3e-4cd2-a31a-3defae351a30",
+      "item_dkp_value": 40
     }
   ]
 }
