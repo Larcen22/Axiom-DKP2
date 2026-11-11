@@ -2155,9 +2155,9 @@
       "username_discord": "163231270178914304",
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "rank": "member",
-      "available_dkp": 48,
+      "available_dkp": 44,
       "dkp_earned": 1902,
-      "dkp_spent": 1854,
+      "dkp_spent": 1858,
       "dkp_adjustments": 13,
       "characters": [
         {
@@ -3089,16 +3089,16 @@
       "username_discord": "1471577913714544793",
       "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
       "rank": "member",
-      "available_dkp": 112,
+      "available_dkp": 102,
       "dkp_earned": 616,
-      "dkp_spent": 504,
+      "dkp_spent": 514,
       "dkp_adjustments": 0,
       "characters": [
         {
           "name": "Slowurrole",
           "class": "Shaman",
           "character_id": "52e023ae-586e-4a66-9fdb-51904fdb8d8b",
-          "role": "main",
+          "role": "alternate",
           "level": 65,
           "race": "Iksar"
         },
@@ -3116,7 +3116,7 @@
           "race": "Gnome",
           "level": 65,
           "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
-          "role": "alternate"
+          "role": "main"
         }
       ],
       "ApplicationDate": "2026-02-18 01:48:05",
@@ -3540,7 +3540,7 @@
           "name": "Bigdumb",
           "class": "Warrior",
           "character_id": "396c15fa-de8a-4555-94bc-cb8ac4f7294a",
-          "role": "main",
+          "role": "alternate",
           "level": 61,
           "race": "Wood Elf"
         },
@@ -3548,7 +3548,7 @@
           "name": "Bravebrave",
           "class": "Ranger",
           "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
-          "role": "alternate",
+          "role": "main",
           "level": 65,
           "race": "Wood Elf"
         },
@@ -4068,7 +4068,7 @@
           "name": "Beni",
           "class": "Wizard",
           "character_id": "c7b2f61c-d148-44a1-a9f7-1f983f934d0a",
-          "role": "main",
+          "role": "alternate",
           "level": 60,
           "race": "Gnome"
         },
@@ -4078,7 +4078,7 @@
           "race": "Human",
           "level": 65,
           "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
-          "role": "alternate"
+          "role": "main"
         }
       ],
       "ApplicationDate": "2025-09-09 20:08:02",
@@ -6338,7 +6338,7 @@
           "race": "High Elf",
           "level": 65,
           "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
-          "role": "alternate"
+          "role": "main"
         }
       ],
       "ApplicationDate": "2025-08-22 20:02:36",
@@ -11185,7 +11185,7 @@
           "race": "Vah Shir",
           "level": 65,
           "character_id": "3632c964-78aa-4468-a21e-170bce06cff9",
-          "role": "alternate"
+          "role": "main"
         },
         {
           "name": "Deluyi",
