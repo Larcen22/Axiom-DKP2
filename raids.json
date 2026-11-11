@@ -299086,6 +299086,46 @@
       "unclaimed": [],
       "channel_id": "1569165238019039364",
       "summary_message_id": "1569165252006781121"
+    },
+    {
+      "raid_name": "Earth on time",
+      "date": "2026-11-10",
+      "raid_id": "136563ac-55cc-496b-a25e-355ea34027a3",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1569880134628937748",
+      "summary_message_id": "1569880145920266281"
+    },
+    {
+      "raid_name": "Earth 1",
+      "date": "2026-11-10",
+      "raid_id": "9714fcb7-8cff-4a67-b21d-6b2c6bc7b61a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1569880159106896012",
+      "summary_message_id": "1569880172604170294"
+    },
+    {
+      "raid_name": "Earth 2",
+      "date": "2026-11-10",
+      "raid_id": "6fc1dd04-54bc-473c-86eb-1c42a10bc603",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1569880186281926778",
+      "summary_message_id": "1569880198613176424"
+    },
+    {
+      "raid_name": "Earth 3",
+      "date": "2026-11-10",
+      "raid_id": "29261ff9-655f-4046-b084-1838b856a297",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1569880213418942487",
+      "summary_message_id": "1569880226907951229"
     }
   ]
 }

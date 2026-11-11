@@ -20248,6 +20248,15 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-11-11T00:55:46.733692+00:00"
+    },
+    {
+      "transaction_id": "70faa706-eb04-46ce-a7d8-2fc01a9f44aa",
+      "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+      "username": "Chasaris",
+      "type": "AA200",
+      "transaction_amount": 25,
+      "reason": "Achievement: AA200",
+      "date": "2026-11-11T00:56:10.947382+00:00"
     }
   ]
 }
