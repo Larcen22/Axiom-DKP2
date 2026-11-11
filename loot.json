@@ -65268,6 +65268,22 @@
       "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
       "raid_id": "136563ac-55cc-496b-a25e-355ea34027a3",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Entropy Pendant",
+      "character_id": "c349e9bb-ef2f-4620-83ee-638d49bf7306",
+      "character_name": "Condiar",
+      "username_id": "5478297b-aad6-450b-a252-965d124b6091",
+      "raid_id": "9714fcb7-8cff-4a67-b21d-6b2c6bc7b61a",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Wristband of the Rathe",
+      "character_id": "8382d51e-1369-421e-bfdf-1d8d20d65660",
+      "character_name": "Erek",
+      "username_id": "fff40363-9dac-4fe5-b7a3-37db3013cd20",
+      "raid_id": "9714fcb7-8cff-4a67-b21d-6b2c6bc7b61a",
+      "item_dkp_value": 10
     }
   ]
 }
