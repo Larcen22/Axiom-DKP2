@@ -65364,6 +65364,22 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "ed12f282-af3e-4cd2-a31a-3defae351a30",
       "item_dkp_value": 40
+    },
+    {
+      "item": "Elemental Chain Sleeve Pattern",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "ce553ee4-681e-4cea-a65a-a525ae20771f",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Elemental Leather Sleeve Pattern",
+      "character_id": "7dc13d2f-a661-4ea0-8a40-4a01e56c9f27",
+      "character_name": "Nethi",
+      "username_id": "cf4dbde5-6f41-4f60-ab1f-275d60fa4903",
+      "raid_id": "ce553ee4-681e-4cea-a65a-a525ae20771f",
+      "item_dkp_value": 20
     }
   ]
 }
