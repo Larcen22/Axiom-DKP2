@@ -300136,6 +300136,16 @@
       "unclaimed": [],
       "channel_id": "1569942778195214429",
       "summary_message_id": "1569942798915076148"
+    },
+    {
+      "raid_name": "water-minis-elevated-11-11",
+      "date": "2026-11-11",
+      "raid_id": "ce553ee4-681e-4cea-a65a-a525ae20771f",
+      "raid_dkp_value": 0,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570281339167444994",
+      "summary_message_id": "1570281351226073099"
     }
   ]
 }
