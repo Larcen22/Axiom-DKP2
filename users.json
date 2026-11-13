@@ -1947,9 +1947,9 @@
       "username_discord": "426237970111135744",
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "rank": "officer",
-      "available_dkp": 155,
+      "available_dkp": 154,
       "dkp_earned": 1618,
-      "dkp_spent": 1463,
+      "dkp_spent": 1464,
       "dkp_adjustments": 30,
       "characters": [
         {
@@ -4703,9 +4703,9 @@
       "username_discord": "175247038554832896",
       "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
       "rank": "member",
-      "available_dkp": 73,
+      "available_dkp": 48,
       "dkp_earned": 936,
-      "dkp_spent": 863,
+      "dkp_spent": 888,
       "dkp_adjustments": 18,
       "characters": [
         {
@@ -5396,7 +5396,7 @@
           "name": "Tankers",
           "class": "Warrior",
           "race": "Ogre",
-          "level": 48,
+          "level": 61,
           "character_id": "98313bfe-057c-49aa-803b-999568cc93f2",
           "role": "alternate"
         },
@@ -5412,7 +5412,7 @@
           "name": "Windhaven",
           "class": "Bard",
           "race": "Wood Elf",
-          "level": 56,
+          "level": 64,
           "character_id": "303a8ab7-80fe-4584-a27f-b6d16da68eb0",
           "role": "alternate"
         }
@@ -10996,8 +10996,8 @@
       "username_discord": "210518735599960065",
       "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
       "rank": "member",
-      "available_dkp": 85,
-      "dkp_spent": 143,
+      "available_dkp": 70,
+      "dkp_spent": 158,
       "characters": [
         {
           "name": "Artery",

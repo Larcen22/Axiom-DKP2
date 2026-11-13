@@ -65452,6 +65452,30 @@
       "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
       "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Wand of the Firestorm",
+      "character_id": "0b88372d-4874-49fb-af68-adeef6a7137e",
+      "character_name": "Zedlord",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Raiment of the Fire Son",
+      "character_id": "bbff863d-e593-4416-8890-d53f903a3069",
+      "character_name": "Artery",
+      "username_id": "f6f6a2c4-07ef-4732-b064-9b97db452c60",
+      "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Gauntlets of the Burning Prince",
+      "character_id": "262a1c2b-93ab-4457-aa82-a5e0f77310cb",
+      "character_name": "Sylex",
+      "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
+      "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
+      "item_dkp_value": 25
     }
   ]
 }

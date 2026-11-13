@@ -27,10 +27,10 @@ Arshis,Moltenstare,Warrior,65,Iksar,main,member,69,337,268,2026-07-16 18:57:11,2
 Arshis,Tarlain,Shaman,14,Barbarian,alternate,member,69,337,268,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Keessii,Cleric,1,Halfling,alternate,member,69,337,268,2026-07-16 18:57:11,2026-08-05 14:42:32
 Arshis,Stormheaven,Druid,53,Wood Elf,alternate,member,69,337,268,2026-07-16 18:57:11,2026-08-05 14:42:32
-Artery,Artery,Cleric,65,Dark Elf,main,member,85,228,143,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Denel,Paladin,60,Gnome,alternate,member,85,228,143,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Kryn,Bard,64,Vah Shir,main,member,85,228,143,2026-08-10 10:58:31,2026-08-31 12:00:44
-Artery,Enyk,Monk,55,Iksar,alternate,member,85,228,143,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Artery,Cleric,65,Dark Elf,main,member,70,228,158,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Denel,Paladin,60,Gnome,alternate,member,70,228,158,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Kryn,Bard,64,Vah Shir,main,member,70,228,158,2026-08-10 10:58:31,2026-08-31 12:00:44
+Artery,Enyk,Monk,55,Iksar,alternate,member,70,228,158,2026-08-10 10:58:31,2026-08-31 12:00:44
 Artex,Artex,Necromancer,21,Iksar,main,member,0,0,0,2025-12-12 16:11:25,2026-04-24 01:34:25
 Asharak,Struggles,Ranger,53,Halfling,alternate,officer,247,1772,1525,2024-10-25 23:12:11,
 Asharak,Thecheat,Bard,65,Vah Shir,main,officer,247,1772,1525,2024-10-25 23:12:11,
@@ -260,9 +260,9 @@ Feyah,Carale,Bard,29,Wood Elf,alternate,member,332,624,292,2026-02-11 03:27:51,2
 Fharskei,Fharskei,Wizard,60,Dark Elf,main,member,26,275,249,2026-01-26 15:22:31,2026-02-25 03:58:39
 Firstname,Arrowheart,Ranger,65,Wood Elf,main,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
 Firstname,Firstname,Magician,60,Human,main,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
-Firstname,Tankers,Warrior,48,Ogre,alternate,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
+Firstname,Tankers,Warrior,61,Ogre,alternate,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
 Firstname,Remkis,Monk,50,Iksar,alternate,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
-Firstname,Windhaven,Bard,56,Wood Elf,alternate,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
+Firstname,Windhaven,Bard,64,Wood Elf,alternate,member,115,522,407,2026-01-11 20:32:29,2026-02-01 04:01:23
 Fivez,Sarazy,Beastlord,53,Iksar,alternate,member,15,299,284,2025-01-12 14:39:16,2025-02-10 23:51:29
 Fivez,Onceover,Shaman,60,Ogre,main,member,15,299,284,2025-01-12 14:39:16,2025-02-10 23:51:29
 Fivez,Verynice,Rogue,10,Vah Shir,alternate,member,15,299,284,2025-01-12 14:39:16,2025-02-10 23:51:29
@@ -724,13 +724,13 @@ Styxs,Juck,Shadow Knight,34,Iksar,alternate,member,71,131,60,2025-04-20 20:47:02
 Susu,Susu,Ranger,65,Wood Elf,main,member,141,732,591,2025-08-08 03:46:49,2025-10-02 03:29:49
 Susu,Sussudio,Enchanter,65,High Elf,main,member,141,732,591,2025-08-08 03:46:49,2025-10-02 03:29:49
 Syldan,Syldan,Ranger,55,Human,main,former,0,6,6,,
-Sylex,Soko,Beastlord,60,Iksar,alternate,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Sylex,Enchanter,65,Dark Elf,main,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Darien,Paladin,65,Half-Elf,main,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Tetragon,Bard,1,Human,alternate,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Soske,Wizard,52,Erudite,alternate,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Virel,Necromancer,46,Iksar,alternate,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
-Sylex,Zarick,Bard,1,Wood Elf,alternate,member,73,936,863,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soko,Beastlord,60,Iksar,alternate,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Sylex,Enchanter,65,Dark Elf,main,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Darien,Paladin,65,Half-Elf,main,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Tetragon,Bard,1,Human,alternate,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Soske,Wizard,52,Erudite,alternate,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Virel,Necromancer,46,Iksar,alternate,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
+Sylex,Zarick,Bard,1,Wood Elf,alternate,member,48,936,888,2024-10-25 22:50:28,2024-10-28 21:27:28
 Taeolas,Xilis,Necromancer,33,Iksar,alternate,member,276,907,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Tankith,Warrior,1,Ogre,alternate,member,276,907,631,2025-12-13 02:53:27,2026-01-02 18:25:16
 Taeolas,Bowth,Ranger,56,Halfling,alternate,member,276,907,631,2025-12-13 02:53:27,2026-01-02 18:25:16
@@ -860,14 +860,14 @@ Yeahbill,Spookyscary,Necromancer,60,Iksar,alternate,member,78,403,325,2024-10-28
 Yeahbill,Doodlesack,Bard,18,Vah Shir,alternate,member,78,403,325,2024-10-28 00:12:46,2024-10-28 21:27:15
 Yoren,Yoren,Shadow Knight,60,Human,main,member,41,73,32,2025-09-06 03:18:07,
 Yoren,Horf,Shaman,49,Barbarian,alternate,member,41,73,32,2025-09-06 03:18:07,
-Zedlord,Uppies,Cleric,60,Dwarf,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Zedlord,Necromancer,65,Iksar,main,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Hemophile,Shadow Knight,35,Iksar,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Martyrdom,Monk,38,Iksar,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Holyshirt,Paladin,60,Dark Elf,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Birche,Druid,60,Wood Elf,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Tayuya,Bard,60,Wood Elf,main,officer,155,1618,1463,2024-10-24 03:14:37,
-Zedlord,Nightshayde,Rogue,60,Gnome,alternate,officer,155,1618,1463,2024-10-24 03:14:37,
+Zedlord,Uppies,Cleric,60,Dwarf,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Zedlord,Necromancer,65,Iksar,main,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Hemophile,Shadow Knight,35,Iksar,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Martyrdom,Monk,38,Iksar,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Holyshirt,Paladin,60,Dark Elf,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Birche,Druid,60,Wood Elf,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Tayuya,Bard,60,Wood Elf,main,officer,154,1618,1464,2024-10-24 03:14:37,
+Zedlord,Nightshayde,Rogue,60,Gnome,alternate,officer,154,1618,1464,2024-10-24 03:14:37,
 Zenghu,Zenghu,Enchanter,50,Dark Elf,main,former,0,3,3,,
 Zeny,Rinderpest,Shadow Knight,21,Human,alternate,inactive,116,543,427,2024-10-26 20:13:48,
 Zeny,Allurer,Enchanter,6,Dark Elf,alternate,inactive,116,543,427,2024-10-26 20:13:48,
