@@ -300141,6 +300141,46 @@
       "unclaimed": [],
       "channel_id": "1570281339167444994",
       "summary_message_id": "1570281351226073099"
+    },
+    {
+      "raid_name": "Sol Ro on time",
+      "date": "2026-11-12",
+      "raid_id": "b0b36af0-8de4-4fc7-a9d0-e0ba5fed29bc",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570607899972079648",
+      "summary_message_id": "1570607911674056735"
+    },
+    {
+      "raid_name": "Sol Ro 1",
+      "date": "2026-11-12",
+      "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570607926299590776",
+      "summary_message_id": "1570607939566305392"
+    },
+    {
+      "raid_name": "Sol Ro 2",
+      "date": "2026-11-12",
+      "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570607953730478151",
+      "summary_message_id": "1570607967525675040"
+    },
+    {
+      "raid_name": "Sol Ro 3",
+      "date": "2026-11-12",
+      "raid_id": "247cfc27-e538-48de-bc0d-e2e115850d4a",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570607981446307883",
+      "summary_message_id": "1570608012576555169"
     }
   ]
 }
