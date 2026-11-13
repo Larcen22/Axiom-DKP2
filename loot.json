@@ -65444,6 +65444,14 @@
       "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
       "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Gleaming Obsidian Shard",
+      "character_id": "ebcfbf3f-9a75-468a-856b-3c96989085da",
+      "character_name": "Litt",
+      "username_id": "be64d056-3fa1-41a5-a319-a8ed8f6fb40d",
+      "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
+      "item_dkp_value": 1
     }
   ]
 }
