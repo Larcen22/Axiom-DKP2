@@ -65412,6 +65412,38 @@
       "username_id": "55739b7b-e01c-438b-ba85-2199144dbd1d",
       "raid_id": "b0b36af0-8de4-4fc7-a9d0-e0ba5fed29bc",
       "item_dkp_value": 2
+    },
+    {
+      "item": "Black Basalt Band",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Black Basalt Band",
+      "character_id": "a9f0dce7-7956-43f0-b299-e28cc86f2a84",
+      "character_name": "Stevejabs",
+      "username_id": "94896c6d-9e53-4ace-923e-f171644bfd4b",
+      "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
+      "item_dkp_value": 15
+    },
+    {
+      "item": "Ornate Greaves Mold",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Flame Encased Earring",
+      "character_id": "23ca00fd-c6d6-480e-8edf-7df14e7b4c84",
+      "character_name": "Zerobia",
+      "username_id": "a4a2104a-9453-4eb0-8acb-4ea43ef22e06",
+      "raid_id": "edbe03ae-c4d0-4f9e-985f-e399a85eef8d",
+      "item_dkp_value": 2
     }
   ]
 }
