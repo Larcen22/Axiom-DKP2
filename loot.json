@@ -65476,6 +65476,22 @@
       "username_id": "ab3fb80a-d69a-4090-bb9f-e26b3db5cd3f",
       "raid_id": "a7e06d75-fa97-4442-8296-9258d3b9ed75",
       "item_dkp_value": 25
+    },
+    {
+      "item": "Carved Bone Ring",
+      "character_id": "b950db09-0c5b-48ef-9a61-945be849e8aa",
+      "character_name": "Pmup",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "raid_id": "247cfc27-e538-48de-bc0d-e2e115850d4a",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Indigo Snake Bracelet",
+      "character_id": "a72aa347-db1a-4c59-b1bb-7603f1de0124",
+      "character_name": "Clixxar",
+      "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
+      "raid_id": "247cfc27-e538-48de-bc0d-e2e115850d4a",
+      "item_dkp_value": 3
     }
   ]
 }
