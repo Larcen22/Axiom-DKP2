@@ -65508,6 +65508,14 @@
       "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
       "raid_id": "e2d28ab8-326e-4f77-aa4e-c4c8ac5cad3e",
       "item_dkp_value": 4
+    },
+    {
+      "item": "Aegis of Gloom",
+      "character_id": "3ec95bb2-7b83-4ca1-90ba-e2b492d18a4e",
+      "character_name": "Kiladyen",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "raid_id": "4a278761-db17-49b4-88cd-a8b000b6b607",
+      "item_dkp_value": 1
     }
   ]
 }
