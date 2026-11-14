@@ -65492,6 +65492,22 @@
       "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
       "raid_id": "247cfc27-e538-48de-bc0d-e2e115850d4a",
       "item_dkp_value": 3
+    },
+    {
+      "item": "Amulet of the Rain",
+      "character_id": "74c0ac37-6ffd-41ec-8a0e-61604d1b857f",
+      "character_name": "Tildaria",
+      "username_id": "14b652d5-be05-4444-862d-e037d6ac0aa7",
+      "raid_id": "e2d28ab8-326e-4f77-aa4e-c4c8ac5cad3e",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Double Edged Stormblade",
+      "character_id": "db093e8b-4af7-47dd-bb34-f49ca5ea6032",
+      "character_name": "Fortunae",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "e2d28ab8-326e-4f77-aa4e-c4c8ac5cad3e",
+      "item_dkp_value": 4
     }
   ]
 }
