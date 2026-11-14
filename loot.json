@@ -65516,6 +65516,14 @@
       "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
       "raid_id": "4a278761-db17-49b4-88cd-a8b000b6b607",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Great Blade of Malise",
+      "character_id": "77815c84-4c65-41ff-be93-38c8156d4ba0",
+      "character_name": "Maura",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "4a278761-db17-49b4-88cd-a8b000b6b607",
+      "item_dkp_value": 1
     }
   ]
 }
