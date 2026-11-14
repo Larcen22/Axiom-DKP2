@@ -300877,6 +300877,46 @@
       "unclaimed": [],
       "channel_id": "1570607981446307883",
       "summary_message_id": "1570608012576555169"
+    },
+    {
+      "raid_name": "Agnarr Saryrn MB on time",
+      "date": "2026-11-13",
+      "raid_id": "e2d28ab8-326e-4f77-aa4e-c4c8ac5cad3e",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570971228024348892",
+      "summary_message_id": "1570971240968097846"
+    },
+    {
+      "raid_name": "Agnarr Saryrn MB 1",
+      "date": "2026-11-13",
+      "raid_id": "4a278761-db17-49b4-88cd-a8b000b6b607",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570971257309237248",
+      "summary_message_id": "1570971271343243416"
+    },
+    {
+      "raid_name": "Agnarr Saryrn MB 2",
+      "date": "2026-11-13",
+      "raid_id": "c95af894-d756-4f65-aa7a-4ac1232d7973",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570971287462084729",
+      "summary_message_id": "1570971318625509548"
+    },
+    {
+      "raid_name": "Agnarr Saryrn MB 3",
+      "date": "2026-11-13",
+      "raid_id": "7449aa83-1096-4eb1-b1ab-b2ab2f13dc5c",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1570971332869357748",
+      "summary_message_id": "1570971345884418219"
     }
   ]
 }
