@@ -65524,6 +65524,38 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "4a278761-db17-49b4-88cd-a8b000b6b607",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Miserable Bauble",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "c95af894-d756-4f65-aa7a-4ac1232d7973",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Greatstaff of Misery",
+      "character_id": "61363371-0d3a-44f9-87e4-a2e2574155ce",
+      "character_name": "Killman",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "c95af894-d756-4f65-aa7a-4ac1232d7973",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Coil of Twisted Platinum Wire",
+      "character_id": "b950db09-0c5b-48ef-9a61-945be849e8aa",
+      "character_name": "Pmup",
+      "username_id": "48e73c17-44ef-43ab-8377-0d913761c089",
+      "raid_id": "7449aa83-1096-4eb1-b1ab-b2ab2f13dc5c",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Self Contained Force Barrier",
+      "character_id": "c4e2c45a-f65b-4ba7-934a-4213efc3fb8b",
+      "character_name": "Bowd",
+      "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
+      "raid_id": "7449aa83-1096-4eb1-b1ab-b2ab2f13dc5c",
+      "item_dkp_value": 1
     }
   ]
 }
