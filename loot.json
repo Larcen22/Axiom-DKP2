@@ -65580,6 +65580,22 @@
       "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
       "raid_id": "6c7cbe2d-179a-4f6b-ab7a-26e673785e4e",
       "item_dkp_value": 15
+    },
+    {
+      "item": "Elemental Vambrace Mold",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "2185c10c-1b67-48a4-b15b-abd5699896d9",
+      "item_dkp_value": 23
+    },
+    {
+      "item": "Bands of Earthen Energy",
+      "character_id": "a631f65b-0b1b-4603-96fb-ac7f2edb63da",
+      "character_name": "Ahmezu",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "2185c10c-1b67-48a4-b15b-abd5699896d9",
+      "item_dkp_value": 25
     }
   ]
 }
