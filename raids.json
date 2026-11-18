@@ -301499,6 +301499,16 @@
       "unclaimed": [],
       "channel_id": "1572419530922266746",
       "summary_message_id": "1572419544683913300"
+    },
+    {
+      "raid_name": "First Kill: Rathe Council",
+      "date": "2026-11-17",
+      "raid_id": "f809decb-a828-467f-ad33-f2894f4adf6c",
+      "raid_dkp_value": 4,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1572421471593037884",
+      "summary_message_id": "1572421481986654300"
     }
   ]
 }

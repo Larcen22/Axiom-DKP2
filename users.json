@@ -6753,7 +6753,7 @@
           "class": "Magician",
           "character_id": "b13cac2b-d751-44d6-9470-202e55211da1",
           "role": "main",
-          "level": 61,
+          "level": 65,
           "race": "Gnome"
         },
         {
@@ -6761,7 +6761,7 @@
           "class": "Druid",
           "character_id": "3ec95bb2-7b83-4ca1-90ba-e2b492d18a4e",
           "role": "main",
-          "level": 61,
+          "level": 63,
           "race": "Wood Elf"
         }
       ],
