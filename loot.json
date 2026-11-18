@@ -65556,6 +65556,30 @@
       "username_id": "9958b54a-39c3-4d6d-aadd-a4a17156e9e7",
       "raid_id": "7449aa83-1096-4eb1-b1ab-b2ab2f13dc5c",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Elemental Chain Boot Pattern",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "6c7cbe2d-179a-4f6b-ab7a-26e673785e4e",
+      "item_dkp_value": 28
+    },
+    {
+      "item": "Elemental Silk Boot Pattern",
+      "character_id": "bf57c216-fa4c-43f2-9e64-1e74cd09eb81",
+      "character_name": "Puarissa",
+      "username_id": "5d09b027-7cd5-4844-9df9-3809a8e74b18",
+      "raid_id": "6c7cbe2d-179a-4f6b-ab7a-26e673785e4e",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Elemental Chain Glove Pattern",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "6c7cbe2d-179a-4f6b-ab7a-26e673785e4e",
+      "item_dkp_value": 15
     }
   ]
 }
