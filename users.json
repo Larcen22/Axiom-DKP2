@@ -2134,7 +2134,7 @@
           "name": "Boonie",
           "class": "Monk",
           "character_id": "b745b895-cb84-43eb-a4c8-b9fdf39d4244",
-          "role": "alternate",
+          "role": "main",
           "level": 65,
           "race": "Human"
         },
@@ -5388,7 +5388,7 @@
           "name": "Firstname",
           "class": "Magician",
           "character_id": "5be8a797-046e-495a-85b4-28601c3d0cb0",
-          "role": "main",
+          "role": "alternate",
           "level": 60,
           "race": "Human"
         },
