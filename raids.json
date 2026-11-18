@@ -302290,6 +302290,10 @@
         {
           "username_id": "49be8463-5d98-408f-822f-22249ca1c4a9",
           "character_name": "Balthemal"
+        },
+        {
+          "username_id": "26a8fce1-4056-430c-b762-fcd9a1423f16",
+          "character_name": "bubss"
         }
       ],
       "unclaimed": [],
@@ -302302,9 +302306,7 @@
       "raid_id": "f809decb-a828-467f-ad33-f2894f4adf6c",
       "raid_dkp_value": 4,
       "attendees": [],
-      "unclaimed": [],
-      "channel_id": "1572421471593037884",
-      "summary_message_id": "1572421481986654300"
+      "unclaimed": []
     }
   ]
 }
