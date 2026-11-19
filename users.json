@@ -5415,6 +5415,14 @@
           "level": 64,
           "character_id": "303a8ab7-80fe-4584-a27f-b6d16da68eb0",
           "role": "alternate"
+        },
+        {
+          "name": "Wings",
+          "class": "Enchanter",
+          "race": "High Elf",
+          "level": 53,
+          "character_id": "4c939cc2-93da-446e-97d4-8a8aacf0d791",
+          "role": "alternate"
         }
       ],
       "ApplicationDate": "2026-01-11 20:32:29",
