@@ -20311,6 +20311,15 @@
       "transaction_amount": 25,
       "reason": "Achievement: AA200",
       "date": "2026-11-17T06:02:11.227935+00:00"
+    },
+    {
+      "transaction_id": "c770f7e4-ebbd-4272-93dd-0bd3716faf4f",
+      "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+      "username": "Xikikaz",
+      "type": "Level65",
+      "transaction_amount": 15,
+      "reason": "Achievement: Level65",
+      "date": "2026-11-19T04:56:13.680127+00:00"
     }
   ]
 }
