@@ -302303,6 +302303,46 @@
       "raid_dkp_value": 4,
       "attendees": [],
       "unclaimed": []
+    },
+    {
+      "raid_name": "EarthB Air on time",
+      "date": "2026-11-19",
+      "raid_id": "1630287a-17d1-4f43-90cf-5666875ec63c",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573144936910553278",
+      "summary_message_id": "1573144948176588951"
+    },
+    {
+      "raid_name": "EarthB Air 1",
+      "date": "2026-11-19",
+      "raid_id": "a8302c6f-cb64-497b-b63c-0d77fe1e13cd",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573144964676718672",
+      "summary_message_id": "1573144977628733601"
+    },
+    {
+      "raid_name": "EarthB Air 2",
+      "date": "2026-11-19",
+      "raid_id": "76468015-eefe-4a50-b3c1-6a14294b34a2",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573144992333963328",
+      "summary_message_id": "1573145005323845733"
+    },
+    {
+      "raid_name": "EarthB Air 3",
+      "date": "2026-11-19",
+      "raid_id": "6caddd5e-1dee-403b-be54-0c15bd41df3c",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573145019110531072",
+      "summary_message_id": "1573145048160141395"
     }
   ]
 }
