@@ -313,7 +313,7 @@ Gnomocidal,Razel,Enchanter,60,High Elf,alternate,member,120,360,240,2026-06-11 1
 Gnomocidal,Foolsgold,Cleric,61,High Elf,alternate,member,120,360,240,2026-06-11 16:37:12,2026-07-02 17:00:34
 Gnomocidal,Gnomocidal,Warrior,65,Ogre,main,member,120,360,240,2026-06-11 16:37:12,2026-07-02 17:00:34
 Gnomocidal,Beeflord,Beastlord,58,Ogre,alternate,member,120,360,240,2026-06-11 16:37:12,2026-07-02 17:00:34
-Googly,Googly,Necromancer,64,Iksar,main,applicant,40,40,0,2026-11-07 16:59:55,
+Googly,Googly,Necromancer,64,Iksar,main,applicant,38,40,2,2026-11-07 16:59:55,
 Grihl,Grihl,Wizard,60,Dark Elf,main,former,0,1,1,,
 Gwydon,Gwydon,Wizard,54,Erudite,main,member,0,0,0,2025-09-06 00:03:06,2025-09-06 00:06:07
 Haji,Haji,Paladin,39,Half-Elf,main,applicant,0,0,0,2026-04-06 14:55:12,
@@ -844,9 +844,9 @@ Watchyaback,Healyaz,Cleric,47,Dark Elf,alternate,member,117,216,99,2025-01-10 14
 Watchyaback,Watchyaback,Rogue,60,Gnome,main,member,117,216,99,2025-01-10 14:19:15,2025-01-20 20:47:56
 Watchyaback,Laramie,Beastlord,5,Barbarian,alternate,member,117,216,99,2025-01-10 14:19:15,2025-01-20 20:47:56
 Watchyaback,Necrodad,Necromancer,31,Dark Elf,alternate,member,117,216,99,2025-01-10 14:19:15,2025-01-20 20:47:56
-Weasy,Weasy,Bard,65,Half-Elf,main,member,56,709,653,2024-10-25 23:48:44,2024-10-28 21:28:46
-Weasy,Berek,Shaman,5,Barbarian,alternate,member,56,709,653,2024-10-25 23:48:44,2024-10-28 21:28:46
-Weasy,Mithrilon,Enchanter,46,High Elf,alternate,member,56,709,653,2024-10-25 23:48:44,2024-10-28 21:28:46
+Weasy,Weasy,Bard,65,Half-Elf,main,member,49,709,660,2024-10-25 23:48:44,2024-10-28 21:28:46
+Weasy,Berek,Shaman,5,Barbarian,alternate,member,49,709,660,2024-10-25 23:48:44,2024-10-28 21:28:46
+Weasy,Mithrilon,Enchanter,46,High Elf,alternate,member,49,709,660,2024-10-25 23:48:44,2024-10-28 21:28:46
 Whoplays,Whoplays,Paladin,60,Human,main,member,56,61,5,2025-11-28 16:00:58,2025-12-20 01:51:26
 Wiserunner,Wiserunner,Shaman,60,Barbarian,main,member,117,178,61,2026-01-19 20:44:29,2026-02-09 01:38:22
 Wrenn,Wrenn,Shaman,65,Barbarian,main,member,168,188,20,2026-01-02 19:37:36,2026-01-05 21:29:02
