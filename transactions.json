@@ -20338,6 +20338,33 @@
       "transaction_amount": 15,
       "reason": "Achievement: Level65",
       "date": "2026-11-21T23:01:52.144475+00:00"
+    },
+    {
+      "transaction_id": "de555acb-f9ad-4c9a-b6bb-d9fb575c5f41",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "username": "Saldien",
+      "type": "AA25",
+      "transaction_amount": 5,
+      "reason": "Achievement: AA25",
+      "date": "2026-11-21T23:02:27.898671+00:00"
+    },
+    {
+      "transaction_id": "ca9be9eb-f77b-4e1e-9222-f580b838b6cb",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "username": "Saldien",
+      "type": "MR90",
+      "transaction_amount": 6,
+      "reason": "Achievement: MR90",
+      "date": "2026-11-21T23:02:51.847653+00:00"
+    },
+    {
+      "transaction_id": "e96eb5ac-ef9a-4e2d-a093-870d32506b9e",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "username": "Saldien",
+      "type": "MR120",
+      "transaction_amount": 11,
+      "reason": "Achievement: MR120",
+      "date": "2026-11-21T23:02:51.847653+00:00"
     }
   ]
 }
