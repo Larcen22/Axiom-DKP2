@@ -65620,6 +65620,54 @@
       "username_id": "de897919-f8e1-4abc-a961-74ab72dee61f",
       "raid_id": "2245fb0f-d8f3-410e-9f1f-344d20370d9d",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Elemental Leather Glove Pattern",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 17
+    },
+    {
+      "item": "Elemental Leather Glove Pattern",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 11
+    },
+    {
+      "item": "Elemental Leather Wrist Pattern",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Blackflame Sphere",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Elemental Boot Mold",
+      "character_id": "60d79896-7c03-4f4d-b424-232216fbc928",
+      "character_name": "Poppernug",
+      "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 22
+    },
+    {
+      "item": "Elemental Silk Boot Pattern",
+      "character_id": "9e1348f5-abb1-48ad-b705-8b6db7d1ae66",
+      "character_name": "Kelisti",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 10
     }
   ]
 }

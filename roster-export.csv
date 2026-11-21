@@ -51,8 +51,8 @@ Avient,Myns,Ranger,65,Halfling,alternate,member,72,137,65,2025-02-17 02:31:35,20
 Avient,Mynro,Magician,22,Gnome,alternate,member,72,137,65,2025-02-17 02:31:35,2025-10-02 03:13:53
 Avient,Verius,Warrior,51,Dwarf,alternate,member,72,137,65,2025-02-17 02:31:35,2025-10-02 03:13:53
 Avient,Atlas,Paladin,24,Gnome,alternate,member,72,137,65,2025-02-17 02:31:35,2025-10-02 03:13:53
-Ayyini,Maura,Paladin,65,Halfling,main,member,188,513,325,2026-04-22 22:44:33,
-Ayyini,Ayyini,Druid,65,Wood Elf,main,member,188,513,325,2026-04-22 22:44:33,
+Ayyini,Maura,Paladin,65,Halfling,main,member,171,513,342,2026-04-22 22:44:33,
+Ayyini,Ayyini,Druid,65,Wood Elf,main,member,171,513,342,2026-04-22 22:44:33,
 Azira,Azira,Necromancer,60,Iksar,main,member,107,262,155,2025-12-13 19:29:57,2026-01-05 21:31:10
 Badoo,Tarim,Shadow Knight,27,Dark Elf,alternate,former,0,9,9,,2025-01-06 16:07:21
 Badoo,Badoo,Cleric,60,High Elf,main,former,0,9,9,,2025-01-06 16:07:21
@@ -81,14 +81,14 @@ Beibang,Derpudy,Druid,52,Halfling,alternate,member,263,1689,1426,2024-12-18 02:3
 Bela,Spacemen,Magician,12,Dark Elf,alternate,member,71,737,666,2025-06-11 05:10:41,2025-08-10 04:37:13
 Bela,Mingus,Shaman,60,Vah Shir,main,member,71,737,666,2025-06-11 05:10:41,2025-08-10 04:37:13
 Bela,Bela,Ranger,60,Wood Elf,main,member,71,737,666,2025-06-11 05:10:41,2025-08-10 04:37:13
-Beni,Hazeel,Shadow Knight,38,Erudite,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Judero,Shaman,56,Barbarian,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Ferg,Warrior,60,Barbarian,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Tumbo,Paladin,65,Halfling,main,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Nieve,Beastlord,60,Barbarian,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Ploop,Shaman,55,Troll,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Beni,Wizard,60,Gnome,alternate,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
-Beni,Fushigi,Monk,65,Human,main,member,104,1001,897,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Hazeel,Shadow Knight,38,Erudite,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Judero,Shaman,56,Barbarian,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Ferg,Warrior,60,Barbarian,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Tumbo,Paladin,65,Halfling,main,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Nieve,Beastlord,60,Barbarian,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Ploop,Shaman,55,Troll,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Beni,Wizard,60,Gnome,alternate,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
+Beni,Fushigi,Monk,65,Human,main,member,81,1001,920,2025-09-09 20:08:02,2025-10-02 03:22:02
 Bigbak,Epyon,Necromancer,60,Dark Elf,alternate,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Ician,Bard,47,Half-Elf,alternate,member,24,416,392,2025-09-30 04:30:08,
 Bigbak,Rokem,Monk,43,Iksar,alternate,member,24,416,392,2025-09-30 04:30:08,
@@ -575,7 +575,7 @@ Plucking,Plucking,Ranger,60,Wood Elf,main,member,2,288,286,2026-01-10 07:15:06,2
 Plucking,Greenmoist,Shadow Knight,20,Iksar,alternate,member,2,288,286,2026-01-10 07:15:06,2026-02-01 04:01:51
 Plucking,Lizor,Monk,38,Iksar,alternate,member,2,288,286,2026-01-10 07:15:06,2026-02-01 04:01:51
 Pmup,Pmup,Cleric,65,High Elf,main,applicant,134,141,7,2026-11-06 12:47:42,
-Poppernug,Poppernug,Shadow Knight,65,Human,main,member,148,360,212,2026-06-23 15:57:25,2026-06-29 17:29:48
+Poppernug,Poppernug,Shadow Knight,65,Human,main,member,126,360,234,2026-06-23 15:57:25,2026-06-29 17:29:48
 Puarissa,Puarissa,Magician,65,Gnome,main,member,167,874,707,2025-11-30 06:07:10,2025-12-27 01:54:54
 Puarissa,Puarella,Cleric,51,Gnome,alternate,member,167,874,707,2025-11-30 06:07:10,2025-12-27 01:54:54
 Rainfall,Rainfall,Ranger,60,Wood Elf,main,member,11,224,213,2026-04-10 04:01:18,2026-05-07 00:11:07
@@ -592,11 +592,11 @@ Rawket,Battlebuddy,Cleric,10,Gnome,alternate,member,129,894,765,2025-10-30 03:44
 Rawket,Fatchance,Warrior,36,Troll,alternate,member,129,894,765,2025-10-30 03:44:12,2025-11-14 02:14:29
 Razk,Rathir,Shadow Knight,51,Iksar,alternate,member,32,96,64,2025-09-06 19:53:13,2025-10-02 03:33:23
 Razk,Razk,Necromancer,60,Iksar,main,member,32,96,64,2025-09-06 19:53:13,2025-10-02 03:33:23
-Redonkulous,Radeekulous,Wizard,51,Dark Elf,alternate,member,463,1364,901,2024-10-29 00:55:20,2024-11-18 22:22:51
-Redonkulous,Redeekulous,Necromancer,60,Iksar,alternate,member,463,1364,901,2024-10-29 00:55:20,2024-11-18 22:22:51
-Redonkulous,Kelisti,Enchanter,65,Dark Elf,main,member,463,1364,901,2024-10-29 00:55:20,2024-11-18 22:22:51
-Redonkulous,Redonkulous,Cleric,65,Dark Elf,main,member,463,1364,901,2024-10-29 00:55:20,2024-11-18 22:22:51
-Redonkulous,Amue,Bard,60,Wood Elf,alternate,member,463,1364,901,2024-10-29 00:55:20,2024-11-18 22:22:51
+Redonkulous,Radeekulous,Wizard,51,Dark Elf,alternate,member,453,1364,911,2024-10-29 00:55:20,2024-11-18 22:22:51
+Redonkulous,Redeekulous,Necromancer,60,Iksar,alternate,member,453,1364,911,2024-10-29 00:55:20,2024-11-18 22:22:51
+Redonkulous,Kelisti,Enchanter,65,Dark Elf,main,member,453,1364,911,2024-10-29 00:55:20,2024-11-18 22:22:51
+Redonkulous,Redonkulous,Cleric,65,Dark Elf,main,member,453,1364,911,2024-10-29 00:55:20,2024-11-18 22:22:51
+Redonkulous,Amue,Bard,60,Wood Elf,alternate,member,453,1364,911,2024-10-29 00:55:20,2024-11-18 22:22:51
 Redwolf,Redwolf,Ranger,60,Wood Elf,main,member,317,372,55,2025-11-20 20:39:48,2025-12-16 01:00:58
 Reija,Reija,Druid,58,Human,main,member,2,2,0,2026-02-11 20:05:23,2026-02-19 04:22:18
 Relvinian,Galdous,Cleric,60,Erudite,alternate,member,88,161,73,2025-02-17 21:07:17,2025-10-02 03:25:03
