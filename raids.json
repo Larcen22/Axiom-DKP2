@@ -303067,6 +303067,46 @@
       "unclaimed": [],
       "channel_id": "1573145019110531072",
       "summary_message_id": "1573145048160141395"
+    },
+    {
+      "raid_name": "Fire on time",
+      "date": "2026-11-20",
+      "raid_id": "2245fb0f-d8f3-410e-9f1f-344d20370d9d",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573509313081770147",
+      "summary_message_id": "1573509323638710446"
+    },
+    {
+      "raid_name": "Fire 1",
+      "date": "2026-11-20",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573509352177012826",
+      "summary_message_id": "1573509364281507932"
+    },
+    {
+      "raid_name": "Fire 2",
+      "date": "2026-11-20",
+      "raid_id": "c8acb1de-7a36-4167-9cf2-06788ca2d5b5",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573509378546335785",
+      "summary_message_id": "1573509391657992225"
+    },
+    {
+      "raid_name": "Fire 3",
+      "date": "2026-11-20",
+      "raid_id": "0a9a8461-06b1-4968-b41b-e5e1a30810c9",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1573509403875999747",
+      "summary_message_id": "1573509417444446329"
     }
   ]
 }
