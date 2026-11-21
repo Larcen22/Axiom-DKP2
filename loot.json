@@ -65716,6 +65716,22 @@
       "username_id": "735a62db-ec4b-4d9a-8579-08f752c8730b",
       "raid_id": "c8acb1de-7a36-4167-9cf2-06788ca2d5b5",
       "item_dkp_value": 11
+    },
+    {
+      "item": "Blaring Horn of Fire",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "c8acb1de-7a36-4167-9cf2-06788ca2d5b5",
+      "item_dkp_value": 10
+    },
+    {
+      "item": "Band of Elder Understanding",
+      "character_id": "98a6fbf0-01da-4274-b6e0-e13413acedbb",
+      "character_name": "Stardrakin",
+      "username_id": "5c81c114-9af9-4fdf-abb6-e41e7d75306e",
+      "raid_id": "c8acb1de-7a36-4167-9cf2-06788ca2d5b5",
+      "item_dkp_value": 10
     }
   ]
 }
