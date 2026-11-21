@@ -65668,6 +65668,38 @@
       "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
       "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
       "item_dkp_value": 10
+    },
+    {
+      "item": "Elemental Silk Bracelet Pattern",
+      "character_id": "b13cac2b-d751-44d6-9470-202e55211da1",
+      "character_name": "Saldien",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 14
+    },
+    {
+      "item": "Necklace of Reflected Flames",
+      "character_id": "55516dc4-8029-42c8-83ab-ef3f15a9537c",
+      "character_name": "Arrowheart",
+      "username_id": "60daf70e-be94-410a-9a11-48e06298f133",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 40
+    },
+    {
+      "item": "Elemental Silk Turban Pattern",
+      "character_id": "b13cac2b-d751-44d6-9470-202e55211da1",
+      "character_name": "Saldien",
+      "username_id": "ef9b2d9f-c471-4f72-84a0-23d8cf17361a",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 17
+    },
+    {
+      "item": "Elemental Leather Helm Pattern",
+      "character_id": "ad5bfdf3-14bc-4745-9cd8-858a128aa44c",
+      "character_name": "Tuwva",
+      "username_id": "00d1d21a-0016-48da-83b5-5d8f991e3c12",
+      "raid_id": "b3c3f623-5db3-4ae8-a658-e6d7688cfd00",
+      "item_dkp_value": 15
     }
   ]
 }
