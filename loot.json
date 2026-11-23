@@ -65796,6 +65796,30 @@
       "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
       "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Leggings of the Fiery Star",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Grimoire of Enchantment",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 4
+    },
+    {
+      "item": "Helmet of Shadow",
+      "character_id": "d808f36b-cab7-4428-9bae-d186e0d9a58c",
+      "character_name": "Amue",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 1
     }
   ]
 }
