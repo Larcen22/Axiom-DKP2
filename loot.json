@@ -65868,6 +65868,54 @@
       "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
       "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Cord of Insight",
+      "character_id": "9e1348f5-abb1-48ad-b705-8b6db7d1ae66",
+      "character_name": "Kelisti",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Boots of the Wind",
+      "character_id": "bb9ff6cf-63f1-4722-88dd-b2f1c076c588",
+      "character_name": "elementaal",
+      "username_id": "f824e9c8-f965-4706-989b-2b8def1d6544",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 2
+    },
+    {
+      "item": "Hoop of Chaos",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 17
+    },
+    {
+      "item": "Karn's Armplates of Retaliation",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Earring of Battle",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 18
+    },
+    {
+      "item": "Pauldrons of Seething Darkness",
+      "character_id": "4fb81a33-b1ae-4563-8126-8adb3519adc3",
+      "character_name": "Moltenstare",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 5
     }
   ]
 }
