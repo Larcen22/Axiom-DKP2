@@ -65772,6 +65772,30 @@
       "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
       "raid_id": "c4dd4de8-b0ad-465c-9408-9133329d79ae",
       "item_dkp_value": 13
+    },
+    {
+      "item": "Leggings of the Fiery Star",
+      "character_id": "ce6d204f-ae68-430f-b8dd-42b8a27bf754",
+      "character_name": "Tayuya",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "78137bc8-2390-4ba3-8064-ac74d61a4007",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Shade Stone Amulet",
+      "character_id": "9e1348f5-abb1-48ad-b705-8b6db7d1ae66",
+      "character_name": "Kelisti",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Seething Mantle",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 5
     }
   ]
 }
