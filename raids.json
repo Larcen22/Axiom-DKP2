@@ -304173,6 +304173,36 @@
       "unclaimed": [],
       "channel_id": "1573564801853161602",
       "summary_message_id": "1573564810715603016"
+    },
+    {
+      "raid_name": "Stardrakin Sunday Funday - VT>EmpLord>Water 11-22 on time",
+      "date": "2026-11-22",
+      "raid_id": "78137bc8-2390-4ba3-8064-ac74d61a4007",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574235990938226758",
+      "summary_message_id": "1574236002967486538"
+    },
+    {
+      "raid_name": "Stardrakin Sunday Funday - VT>EmpLord>Water 11-22 1",
+      "date": "2026-11-22",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574236019039932607",
+      "summary_message_id": "1574236033506345022"
+    },
+    {
+      "raid_name": "Stardrakin Sunday Funday - VT>EmpLord>Water 11-22 2",
+      "date": "2026-11-22",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574236049993895976",
+      "summary_message_id": "1574236063793418400"
     }
   ]
 }
