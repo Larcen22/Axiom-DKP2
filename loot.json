@@ -65820,6 +65820,54 @@
       "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
       "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
       "item_dkp_value": 1
+    },
+    {
+      "item": "Pendant of Malosini",
+      "character_id": "0d9ba5e3-8e76-4c76-b3e3-387aadc2cd89",
+      "character_name": "Brochure",
+      "username_id": "fe027d6b-6ed9-4d3d-ab8a-e55b28734a13",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Tiny Bone Bracelet",
+      "character_id": "1b2e0317-5d0a-4daa-af5b-41aa2546e854",
+      "character_name": "Lynxy",
+      "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 5
+    },
+    {
+      "item": "Orb of the Sky",
+      "character_id": "04fa147b-3d84-409c-9339-c2d6922a3e29",
+      "character_name": "Fushigi",
+      "username_id": "b3dc55d6-9406-4e57-94ca-2fcf393d7cb5",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 1
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "00864799-cd14-4185-9ceb-949181274af2",
+      "character_name": "Momula",
+      "username_id": "3fa2b98e-c146-4bbd-b8cc-4fdc084f84f0",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 3
+    },
+    {
+      "item": "Cerulean Sleeves",
+      "character_id": "20faf2ff-1301-471a-8eae-868a70e26025",
+      "character_name": "Weasy",
+      "username_id": "f30d4e7a-ee5f-4756-9575-bc0c4db67679",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 7
+    },
+    {
+      "item": "Twilight Shroud",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "f74d9856-54ae-4b80-bb14-6c697e32f6b9",
+      "item_dkp_value": 1
     }
   ]
 }
