@@ -65916,6 +65916,38 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Mail of Judgement",
+      "character_id": "1642f173-0474-4cc9-9fdf-04aaac1ae659",
+      "character_name": "Microizra",
+      "username_id": "c323b20e-4329-415b-888c-d40c13781a10",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 22
+    },
+    {
+      "item": "Soul Essence of Aten Ha Ra",
+      "character_id": "fd429267-9a3a-41d4-9b91-4e29c4be69ce",
+      "character_name": "Nightshayde",
+      "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 55
+    },
+    {
+      "item": "Mask of Secrets",
+      "character_id": "9e1348f5-abb1-48ad-b705-8b6db7d1ae66",
+      "character_name": "Kelisti",
+      "username_id": "677a5501-ab0a-474f-83d9-6ba5528e0922",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Crimson Runed Mask",
+      "character_id": "5daf44bd-8523-4d6a-885a-073333632fbd",
+      "character_name": "Bravebrave",
+      "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+      "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
+      "item_dkp_value": 55
     }
   ]
 }
