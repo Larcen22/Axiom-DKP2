@@ -65956,6 +65956,22 @@
       "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
       "raid_id": "f229bb01-3a22-48cf-bc4c-bb25e6484c39",
       "item_dkp_value": 7
+    },
+    {
+      "item": "Elemental Boot Mold",
+      "character_id": "76dbdc38-4525-43a9-936f-1fbb3844d1aa",
+      "character_name": "Tigg",
+      "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+      "raid_id": "f229bb01-3a22-48cf-bc4c-bb25e6484c39",
+      "item_dkp_value": 17
+    },
+    {
+      "item": "Elemental Silk Boot Pattern",
+      "character_id": "526f86f7-d3dc-46cb-aaca-ddc35fc90656",
+      "character_name": "Googly",
+      "username_id": "4faeabef-a082-4d9c-a4a3-092ec6d086f6",
+      "raid_id": "5ab7874c-6d62-4e84-9924-9dac78649f3d",
+      "item_dkp_value": 17
     }
   ]
 }
