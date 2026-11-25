@@ -65972,6 +65972,46 @@
       "username_id": "4faeabef-a082-4d9c-a4a3-092ec6d086f6",
       "raid_id": "5ab7874c-6d62-4e84-9924-9dac78649f3d",
       "item_dkp_value": 17
+    },
+    {
+      "item": "Elemental Chain Sleeve Pattern",
+      "character_id": "eb4cd6d6-f1b8-431b-b874-830cb172aa2b",
+      "character_name": "Susu",
+      "username_id": "9d5992e1-86ca-4cdd-bb60-d964f227edb1",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "item_dkp_value": 25
+    },
+    {
+      "item": "Abalone Engraved Tribal Mask",
+      "character_id": "fbed4a6c-a513-40cd-8361-8e35d2ecafd7",
+      "character_name": "Darkonites",
+      "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "item_dkp_value": 30
+    },
+    {
+      "item": "Elemental Leather Wrist Pattern",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "item_dkp_value": 6
+    },
+    {
+      "item": "Ornate Abalone Recurve Bow",
+      "character_id": "2df60613-0ac5-498e-88cf-990b6c72c119",
+      "character_name": "Wildwind",
+      "username_id": "7362d831-a964-4c4f-8c8f-d5b7ad2b54da",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "item_dkp_value": 60
+    },
+    {
+      "item": "Elemental Leather Wrist Pattern",
+      "character_id": "afdfba9f-3564-4efb-8d38-49b22b31b98c",
+      "character_name": "Arshis",
+      "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "item_dkp_value": 5
     }
   ]
 }
