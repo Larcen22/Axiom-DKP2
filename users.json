@@ -11447,6 +11447,27 @@
       "ApplicationDate": "2026-11-07 16:59:55",
       "MembershipDate": "",
       "dkp_earned": 51
+    },
+    {
+      "username": "Vaelgrim",
+      "username_discord": "1204939867642007592",
+      "username_id": "1c5294db-7007-4589-9160-2afc6ca859e2",
+      "rank": "applicant",
+      "available_dkp": 0,
+      "dkp_spent": 0,
+      "characters": [
+        {
+          "name": "Vaelgrim",
+          "class": "Shaman",
+          "race": "Barbarian",
+          "level": 61,
+          "character_id": "2e707280-025c-40d2-b047-186ec68e69ef",
+          "role": "main"
+        }
+      ],
+      "ApplicationDate": "2026-11-24 21:35:11",
+      "MembershipDate": "",
+      "dkp_earned": 0
     }
   ]
 }
