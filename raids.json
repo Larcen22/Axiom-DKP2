@@ -304541,6 +304541,46 @@
       "unclaimed": [],
       "channel_id": "1574236078171230388",
       "summary_message_id": "1574236117824184461"
+    },
+    {
+      "raid_name": "Turkey Adventure on time",
+      "date": "2026-11-24",
+      "raid_id": "f229bb01-3a22-48cf-bc4c-bb25e6484c39",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574954107876278383",
+      "summary_message_id": "1574954119641170133"
+    },
+    {
+      "raid_name": "Turkey Adventure 1",
+      "date": "2026-11-24",
+      "raid_id": "5ab7874c-6d62-4e84-9924-9dac78649f3d",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574954135781113887",
+      "summary_message_id": "1574954149982769304"
+    },
+    {
+      "raid_name": "Turkey Adventure 2",
+      "date": "2026-11-24",
+      "raid_id": "a9817455-f32b-41be-a98d-3f6d7ead92f8",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574954180118843432",
+      "summary_message_id": "1574954194794971177"
+    },
+    {
+      "raid_name": "Turkey Adventure 3",
+      "date": "2026-11-24",
+      "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1574954210318094426",
+      "summary_message_id": "1574954223504855051"
     }
   ]
 }
