@@ -65948,6 +65948,14 @@
       "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
       "raid_id": "69a6f601-8914-42a4-8587-883e70df93d9",
       "item_dkp_value": 55
+    },
+    {
+      "item": "Elemental Leather Boot Pattern",
+      "character_id": "e0d8299b-66fd-41bd-b39e-363bd35cfd97",
+      "character_name": "Ayyini",
+      "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+      "raid_id": "f229bb01-3a22-48cf-bc4c-bb25e6484c39",
+      "item_dkp_value": 7
     }
   ]
 }
