@@ -305132,7 +305132,64 @@
       "date": "2026-11-27",
       "raid_id": "c4589e39-1c77-422f-ac1b-da9fce66bdac",
       "raid_dkp_value": 1,
-      "attendees": [],
+      "attendees": [
+        {
+          "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+          "character_name": "Poppernug"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Bailler"
+        },
+        {
+          "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+          "character_name": "Moltenstare"
+        },
+        {
+          "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+          "character_name": "Rotsouls"
+        },
+        {
+          "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+          "character_name": "Mofa"
+        },
+        {
+          "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+          "character_name": "Darkonites"
+        },
+        {
+          "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+          "character_name": "Thiccsar"
+        },
+        {
+          "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+          "character_name": "Jhena"
+        },
+        {
+          "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+          "character_name": "Ayyini"
+        },
+        {
+          "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+          "character_name": "Darkthoughts"
+        },
+        {
+          "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+          "character_name": "Chasaris"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Tigg"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Bravebrave"
+        },
+        {
+          "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+          "character_name": "Ahmezu"
+        }
+      ],
       "unclaimed": [],
       "channel_id": "1576044644909977660",
       "summary_message_id": "1576044657240965242"
@@ -305156,6 +305213,16 @@
       "unclaimed": [],
       "channel_id": "1576044719627309289",
       "summary_message_id": "1576044735141912718"
+    },
+    {
+      "raid_name": "Turkey Recovery 3",
+      "date": "2026-11-27",
+      "raid_id": "856c1208-3465-45c4-a23f-c1d0d0534136",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1576044751335989359",
+      "summary_message_id": "1576044773587030104"
     }
   ]
 }
