@@ -66020,6 +66020,22 @@
       "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
       "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
       "item_dkp_value": 11
+    },
+    {
+      "item": "Clawed Earthcrafter's Hoop",
+      "character_id": "9ca18a68-d349-45ea-9661-f838589e0e1c",
+      "character_name": "Vagary",
+      "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+      "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
+      "item_dkp_value": 45
+    },
+    {
+      "item": "Elemental Silk Boot Pattern",
+      "character_id": "9f92115a-6ee1-45dc-906e-200992061de5",
+      "character_name": "Thiccsar",
+      "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+      "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
+      "item_dkp_value": 15
     }
   ]
 }
