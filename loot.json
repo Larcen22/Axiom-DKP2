@@ -66012,6 +66012,14 @@
       "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
       "raid_id": "c616eb32-3ef2-4919-ab66-7091a983f375",
       "item_dkp_value": 5
+    },
+    {
+      "item": "Elemental Leather Helm Pattern",
+      "character_id": "9fcdcdd8-ddf1-4219-b7a3-2773dd375086",
+      "character_name": "Fastsole",
+      "username_id": "ff8c344e-03ce-4347-b1c1-036668ce5beb",
+      "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
+      "item_dkp_value": 11
     }
   ]
 }

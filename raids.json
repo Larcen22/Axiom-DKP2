@@ -305199,7 +305199,80 @@
       "date": "2026-11-27",
       "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
       "raid_dkp_value": 1,
-      "attendees": [],
+      "attendees": [
+        {
+          "username_id": "e096d066-d8e3-44e3-9be6-24975c223514",
+          "character_name": "Vagary"
+        },
+        {
+          "username_id": "afcf0df8-ed65-4e5c-bb8c-fc85acdd927e",
+          "character_name": "Chasaris"
+        },
+        {
+          "username_id": "5dd6add1-ddbd-4963-b5fa-734846a5eee9",
+          "character_name": "Darkonites"
+        },
+        {
+          "username_id": "20c1ed1a-269b-41bf-9837-3baf610ea046",
+          "character_name": "Tigg"
+        },
+        {
+          "username_id": "aeb99d69-3cab-4b79-bf79-51ca21d5bc06",
+          "character_name": "Poppernug"
+        },
+        {
+          "username_id": "79d06b75-3fb6-40ea-87b5-69f353eff052",
+          "character_name": "Scruffs"
+        },
+        {
+          "username_id": "70fd55ff-47f8-4b7e-b2b9-adf0795155d0",
+          "character_name": "Ahmezu"
+        },
+        {
+          "username_id": "fcd24ba1-6492-4d8c-8799-f497b1d0fb0f",
+          "character_name": "Mofa"
+        },
+        {
+          "username_id": "ecf7efef-2541-4f33-881c-eadf1b969a8e",
+          "character_name": "Ayyini"
+        },
+        {
+          "username_id": "97e94b29-f19c-43a9-a0a1-97594b628ad4",
+          "character_name": "Bailler"
+        },
+        {
+          "username_id": "e16329d7-72d5-4160-85cd-d72a702ab9af",
+          "character_name": "Rotsouls"
+        },
+        {
+          "username_id": "4faeabef-a082-4d9c-a4a3-092ec6d086f6",
+          "character_name": "Googly"
+        },
+        {
+          "username_id": "f82efcb6-e245-4438-b7a9-e74bbdac3890",
+          "character_name": "Thiccsar"
+        },
+        {
+          "username_id": "073d22be-d260-46d1-8cf3-bcf2d4bf1e04",
+          "character_name": "Foolsgold"
+        },
+        {
+          "username_id": "a4fea942-8048-4428-8c31-2d659ba9de5c",
+          "character_name": "Moltenstare"
+        },
+        {
+          "username_id": "bca8307a-5dc5-4482-9161-9f096e460352",
+          "character_name": "Bravebrave"
+        },
+        {
+          "username_id": "34525db3-d480-4e5e-80f2-b685f43598cf",
+          "character_name": "Xikikaz"
+        },
+        {
+          "username_id": "1ee1c764-ea93-4b1c-8e79-a278cf288046",
+          "character_name": "Tayuya"
+        }
+      ],
       "unclaimed": [],
       "channel_id": "1576044689973583963",
       "summary_message_id": "1576044704561111121"
