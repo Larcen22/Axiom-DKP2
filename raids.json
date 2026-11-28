@@ -305126,6 +305126,36 @@
       "unclaimed": [],
       "channel_id": "1575020337651785788",
       "summary_message_id": "1575020347743277118"
+    },
+    {
+      "raid_name": "Turkey Recovery on time",
+      "date": "2026-11-27",
+      "raid_id": "c4589e39-1c77-422f-ac1b-da9fce66bdac",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1576044644909977660",
+      "summary_message_id": "1576044657240965242"
+    },
+    {
+      "raid_name": "Turkey Recovery 1",
+      "date": "2026-11-27",
+      "raid_id": "27eedd1a-77e6-45ea-a3fe-d20113f6def1",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1576044689973583963",
+      "summary_message_id": "1576044704561111121"
+    },
+    {
+      "raid_name": "Turkey Recovery 2",
+      "date": "2026-11-27",
+      "raid_id": "70280022-32b4-48b5-8673-eefb478a7dc4",
+      "raid_dkp_value": 1,
+      "attendees": [],
+      "unclaimed": [],
+      "channel_id": "1576044719627309289",
+      "summary_message_id": "1576044735141912718"
     }
   ]
 }
